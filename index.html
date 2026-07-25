@@ -378,7 +378,7 @@ button{font-family:var(--font-body);cursor:pointer;}
   border-radius:8px;
 }
 
-/* ===== NEW SECTION: PRICING BY COUNTRY ===== */
+/* ===== PRICING BY COUNTRY ===== */
 .country-pricing-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
@@ -456,6 +456,86 @@ button{font-family:var(--font-body);cursor:pointer;}
   color:var(--muted);
   line-height:1.5;
   margin-bottom:20px;
+}
+
+/* ===== TESTIMONIALS SECTION ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+.testi-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+.testi-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.testi-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ===== FAQ ACCORDION ===== */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.faq-question {
+  padding: 20px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-answer {
+  padding: 0 24px 20px;
+  color: var(--muted);
+  font-size: 14.5px;
+  display: none;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ===== TOAST NOTIFICATIONS ===== */
+.payout-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 28px;
+  background: #FFFFFF;
+  border: 1px solid var(--accent);
+  padding: 14px 20px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 999;
+  transform: translateY(150%);
+  transition: transform 0.5s ease;
+}
+.payout-toast.show {
+  transform: translateY(0);
 }
 
 /* POPUP MODAL */
@@ -599,6 +679,7 @@ button{font-family:var(--font-body);cursor:pointer;}
   .float-chip{display:none;}
   .phone{max-width:285px;}
   .ticker-card-single{font-size:12.5px;}
+  .payout-toast{bottom:90px;left:14px;right:14px;}
 }
 </style>
 </head>
@@ -639,8 +720,8 @@ button{font-family:var(--font-body);cursor:pointer;}
       <li><a href='#top'>Mwanzo</a></li>
       <li><a href='#foreigners'>💬 Live Foreigners</a></li>
       <li><a href='#pricing'>💳 Ada kwa Nchi</a></li>
-      <li><a href='#how-it-works'>Jinsi Inavyofanya Kazi</a></li>
-      <li><a href='#contact'>Msaada</a></li>
+      <li><a href='#testimonials'>&#11088; Ushuhuda</a></li>
+      <li><a href='#faq'>&#10067; Maswali</a></li>
     </ul>
 
     <div class='nav-actions'>
@@ -800,7 +881,7 @@ button{font-family:var(--font-body);cursor:pointer;}
 </section>
 
 <!-- NEW SECTION: BEI NA ADA KWA KILA NCHI (PRICING BY COUNTRY) -->
-<section class='section section-alt' id='pricing'>
+<section class='section' id='pricing'>
   <div class='wrap'>
     <div class='section-head center reveal'>
       <span class='eyebrow'>💳 ACTIVATION YA KILA NCHI</span>
@@ -814,7 +895,7 @@ button{font-family:var(--font-body);cursor:pointer;}
       <div class='country-card tz-highlight reveal'>
         <span class='country-badge-auto'>&#9889; Normal Payment</span>
         <div class='country-header'>
-          <span class='country-flag'>TZ</span>
+          <span class='country-flag'>🇹🇿</span>
           <span class='country-name'>Tanzania</span>
         </div>
         <div class='country-price'>TZS 14,500</div>
@@ -882,6 +963,55 @@ button{font-family:var(--font-body);cursor:pointer;}
         <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class='section section-alt' id='testimonials'>
+  <div class='wrap'>
+    <div class='section-head center reveal'>
+      <span class='eyebrow'>&#11088; USHUHUDA HAUKO SIKU ZOTE</span>
+      <h2>Watu Wanasemaje Kuhusu DuniSwahili?</h2>
+      <p>Hawa hapa ni baadhi ya wanachama wetu walioweza kubadilisha muda wao kuwa pesa halisi.</p>
+    </div>
+
+    <div class='testimonials-grid'>
+      <div class='testi-card reveal'>
+        <div class='testi-user'>
+          <img class='testi-avatar' src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+          <div>
+            <div style='font-weight:800;'>Amina K.</div>
+            <div style='font-size:12px; color:var(--muted);'>Dar es Salaam, TZ</div>
+          </div>
+        </div>
+        <p style='font-size:14px; color:var(--muted);'>&quot;Mwanzo nilifikiri ni utani lakini nilipotoa TZS 45,000 yangu ya kwanza kwenda M-Pesa ndio nikaamini. Mfumo ni rahisi sana!&quot;</p>
+        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+
+      <div class='testi-card reveal'>
+        <div class='testi-user'>
+          <img class='testi-avatar' src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+          <div>
+            <div style='font-weight:800;'>Kelvin M.</div>
+            <div style='font-size:12px; color:var(--muted);'>Nairobi, KE</div>
+          </div>
+        </div>
+        <p style='font-size:14px; color:var(--muted);'>&quot;The language exchange group is amazing. I chat with people learning Swahili and I get paid seamlessly via M-Pesa.&quot;</p>
+        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
+
+      <div class='testi-card reveal'>
+        <div class='testi-user'>
+          <img class='testi-avatar' src='https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+          <div>
+            <div style='font-weight:800;'>Baraka J.</div>
+            <div style='font-size:12px; color:var(--muted);'>Arusha, TZ</div>
+          </div>
+        </div>
+        <p style='font-size:14px; color:var(--muted);'>&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako.&quot;</p>
+        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      </div>
     </div>
   </div>
 </section>
@@ -987,7 +1117,7 @@ button{font-family:var(--font-body);cursor:pointer;}
       <div class='benefit-card reveal'><h3>&#9889; Malipo ya Haraka</h3><p>Omba kutoa pesa yako muda wowote na uipokee kwenye M-Pesa au Mixx by Yas.</p></div>
       <div class='benefit-card reveal'><h3>🎓 Msaada wa Lugha</h3><p>Mfumo wetu unakusaidia kutafsiri maneno kwa urahisi kabisa.</p></div>
       <div class='benefit-card reveal'><h3>🤝 Wageni wa Kweli</h3><p>Wageni wote wamethibitishwa na kuweka amana zao tayari kukulipa.</p></div>
-      <div class='benefit-card reveal'><h3>🔒 Usalama 100%</h3><p>Salio lako na data zako zipo salama muda wote.</p></div>
+      <div class='benefit-card reveal'><h3>🔒 Usalama 100%</h3><p>Salio lak na data zako zipo salama muda wote.</p></div>
     </div>
 
     <!-- ONYO KALI CARD -->
@@ -999,6 +1129,31 @@ button{font-family:var(--font-body);cursor:pointer;}
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class='section section-alt' id='faq'>
+  <div class='wrap'>
+    <div class='section-head center reveal'>
+      <span class='eyebrow'>&#10067; MASWALI YANAYOULIZWA MARA KWA MARA</span>
+      <h2>Je, Unaswali Lolote? Tunayo Majibu.</h2>
+    </div>
+
+    <div class='faq-list reveal'>
+      <div class='faq-item'>
+        <div class='faq-question'>1. Je, nitatoleaje pesa zangu nikishalipwa? <span>+</span></div>
+        <div class='faq-answer'>Unaweza kutoa pesa zako muda wowote kupitia M-Pesa, Mixx by Yas, Airtel Money au Bank. Pesa inaingia papo hapo bila kuchelewa.</div>
+      </div>
+      <div class='faq-item'>
+        <div class='faq-question'>2. Je, kuna ada ya kila mwezi? <span>+</span></div>
+        <div class='faq-answer'>Hapana! Unalipia ada ya activation mara moja pekee na unatumia mfumo bure milele.</div>
+      </div>
+      <div class='faq-item'>
+        <div class='faq-question'>3. Nisipojua Kiingereza vizuri nitachat vipi? <span>+</span></div>
+        <div class='faq-answer'>Mfumo wetu una sehemu ya auto-translation inayokusaidia kutafsiri ujumbe wa mgeni kwa Kiswahili na kutafsiri majibu yako kwenda Kiingereza.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1049,6 +1204,15 @@ button{font-family:var(--font-body);cursor:pointer;}
     </div>
   </div>
 </footer>
+
+<!-- TOAST PAYOUT NOTIFICATION -->
+<div class='payout-toast' id='payoutToast'>
+  <div style='background:#10B981; color:#fff; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:bold;'>&#10003;</div>
+  <div>
+    <div id='toastText' style='font-weight:700; font-size:13px;'>Grace M. ametoa TZS 80,000</div>
+    <div style='font-size:11px; color:var(--muted);'>Pape hapo kupitia M-Pesa</div>
+  </div>
+</div>
 
 <a aria-label='Chat on WhatsApp' class='wa-float' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>
   <svg fill='#ffffff' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z'/></svg>
@@ -1235,6 +1399,30 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
     if (liveHeaderEl) liveHeaderEl.innerText = countHeader.toLocaleString();
     if (liveNavEl) liveNavEl.innerText = countNav.toLocaleString();
   }, 4000);
+
+  // FAQ ACCORDION HANDLER
+  document.querySelectorAll(&#39;.faq-question&#39;).forEach(function(item) {
+    item.addEventListener(&#39;click&#39;, function() {
+      var parent = this.parentElement;
+      parent.classList.toggle(&#39;active&#39;);
+    });
+  });
+
+  // TOAST PAYOUT ENGINE
+  var toastEl = document.getElementById(&#39;payoutToast&#39;);
+  var toastTxt = document.getElementById(&#39;toastText&#39;);
+
+  function triggerToast() {
+    if(!toastEl) return;
+    var data = generateRandomWithdrawal();
+    toastTxt.innerText = data.name + &#39; ametoa &#39; + data.amount;
+    toastEl.classList.add(&#39;show&#39;);
+    setTimeout(function() {
+      toastEl.classList.remove(&#39;show&#39;);
+    }, 4000);
+  }
+
+  setInterval(triggerToast, 12000);
 
   // SELF-GENERATED LIVE WITHDRAWAL ENGINE (1 NEW WITHDRAWAL EVERY 10 SECONDS)
   var tickerContainer = document.getElementById(&#39;tickerViewport&#39;);
