@@ -1,779 +1,774 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<html b:css='false' b:defaultwidgetversion='2' b:layoutsversion='3' b:responsive='true' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<html lang="sw">
 <head>
-<meta charset='UTF-8'/>
-<meta content='width=device-width, initial-scale=1' name='viewport'/>
-<title>DUNISWAHILI &#8212; Kozenachat Live Foreigners Portal</title>
-<meta content='Geuza muda wako wa kuchat kuwa pesa! Chat na wageni kutoka nchi mbalimbali na ulipwe kwa kila dakika na saa unayotumia.' name='description'/>
-<b:include data='blog' name='all-head-content'/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>DUNISWAHILI &#8212; Kozenachat Live Foreigners Portal</title>
+  <meta name="description" content="Geuza muda wako wa kuchat kuwa pesa! Chat na wageni kutoka nchi mbalimbali na ulipwe kwa kila dakika na saa unayotumia."/>
 
-<link href='https://fonts.googleapis.com' rel='preconnect'/>
-<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
-<link href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 
-<b:skin><![CDATA[
-body { margin:0; padding:0; background:#FAFAFC; color:#0F172A; font-family:'Plus Jakarta Sans', sans-serif; }
-]]></b:skin>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --dark-blue: #0F172A;
+      --light-blue: #3B82F6;
+      --accent: #10B981;
+      --bg: #FAFAFC;
+      --text: #0F172A;
+      --muted: #64748B;
+      --line: #E2E8F0;
+      --surface: #FFFFFF;
+      --radius: 24px;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --shadow-glow: 0 25px 50px -12px rgba(37,99,235,0.18);
+      --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.04), 0 0 1px rgba(0,0,0,0.1);
+    }
 
-<style>
-:root{
-  --primary:#2563EB;
-  --dark-blue:#0F172A;
-  --light-blue:#3B82F6;
-  --accent:#10B981;
-  --bg:#FAFAFC;
-  --text:#0F172A;
-  --muted:#64748B;
-  --line:#E2E8F0;
-  --surface:#FFFFFF;
-  --radius:24px;
-  --font-display:&#39;Space Grotesk&#39;, sans-serif;
-  --font-body:&#39;Plus Jakarta Sans&#39;, sans-serif;
-  --shadow-glow:0 25px 50px -12px rgba(37,99,235,0.18);
-  --shadow-card:0 10px 30px -5px rgba(0,0,0,0.04), 0 0 1px rgba(0,0,0,0.1);
-}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -0.03em; }
+    p { margin: 0; }
+    ul { margin: 0; padding: 0; list-style: none; }
+    button { font-family: var(--font-body); cursor: pointer; }
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--font-body);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-img{max-width:100%;display:block;}
-a{color:inherit;text-decoration:none;}
-h1,h2,h3,h4{font-family:var(--font-display);margin:0;letter-spacing:-0.03em;}
-p{margin:0;}
-ul{margin:0;padding:0;list-style:none;}
-button{font-family:var(--font-body);cursor:pointer;}
-.wrap{max-width:1240px;margin:0 auto;padding:0 24px;}
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.2);
+      padding: 6px 16px; border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.06);
+    }
 
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:12px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;
-  color:var(--primary);
-  background:rgba(37,99,235,0.08);
-  border:1px solid rgba(37,99,235,0.2);
-  padding:6px 16px;border-radius:999px;
-  box-shadow:0 4px 12px rgba(37,99,235,0.06);
-}
+    /* PRELOADER WITH LOGO */
+    #preloader {
+      position: fixed; inset: 0; background: #FFFFFF; z-index: 99999;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      transition: opacity .5s ease, visibility .5s ease;
+    }
+    #preloader.hidden { opacity: 0; visibility: hidden; }
+    .preloader-logo-wrapper {
+      position: relative; width: 70px; height: 70px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .preloader-spinner {
+      position: absolute; inset: 0;
+      border: 4px solid #EFF6FF; border-top: 4px solid var(--primary);
+      border-radius: 50%; animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
+    }
+    .preloader-icon { width: 36px; height: 36px; z-index: 2; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-/* PRELOADER WITH LOGO */
-#preloader{
-  position:fixed;inset:0;background:#FFFFFF;z-index:99999;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  transition:opacity .5s ease, visibility .5s ease;
-}
-#preloader.hidden{opacity:0;visibility:hidden;}
-.preloader-logo-wrapper{
-  position:relative;width:70px;height:70px;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:16px;
-}
-.preloader-spinner{
-  position:absolute;inset:0;
-  border:4px solid #EFF6FF;border-top:4px solid var(--primary);
-  border-radius:50%;animation:spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
-}
-.preloader-icon{width:36px;height:36px;z-index:2;}
-@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+    .hidden-section { display: none !important; }
 
-.hidden-section{ display:none !important; }
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(0.16,1,0.3,1), transform .8s cubic-bezier(0.16,1,0.3,1);}
-.reveal.is-visible{opacity:1;transform:translateY(0);}
+    /* ===== NAVIGATION ===== */
+    .site-nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      width: 100%;
+    }
+    .nav-inner {
+      max-width: 1240px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      position: relative;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--font-display); font-weight: 800; font-size: 21px; color: var(--text);
+      flex-shrink: 0;
+    }
+    .logo-mark { position: relative; width: 40px; height: 40px; flex-shrink: 0; }
+    .logo-mark svg { width: 100%; height: 100%; }
+    .logo-text span { color: var(--primary); }
 
-/* ===== NAVIGATION ===== */
-.site-nav{
-  position:sticky;top:0;z-index:200;
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid rgba(226, 232, 240, 0.8);
-  width:100%;
-}
-.nav-inner{
-  max-width:1240px;margin:0 auto;padding:14px 24px;
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  position:relative;
-}
-.logo{
-  display:flex;align-items:center;gap:10px;
-  font-family:var(--font-display);font-weight:800;font-size:21px;color:var(--text);
-  flex-shrink:0;
-}
-.logo-mark{position:relative;width:40px;height:40px;flex-shrink:0;}
-.logo-mark svg{width:100%;height:100%;}
-.logo-text span{color:var(--primary);}
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 14px; font-weight: 600; color: var(--muted);
+      transition: all .2s ease; position: relative; white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 
-.nav-links{display:flex;align-items:center;gap:28px;}
-.nav-links a{
-  font-size:14px;font-weight:600;color:var(--muted);
-  transition:all .2s ease;position:relative;white-space:nowrap;
-}
-.nav-links a:hover{color:var(--primary);}
-.nav-actions{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+    .nav-toggle {
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; background: none; border: none; padding: 8px; cursor: pointer;
+      width: 40px; height: 40px; border-radius: 10px;
+    }
+    .nav-toggle:hover { background: #F1F5F9; }
+    .nav-toggle span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all .3s ease; }
 
-.nav-toggle{
-  display:none;flex-direction:column;justify-content:center;align-items:center;
-  gap:5px;background:none;border:none;padding:8px;cursor:pointer;
-  width:40px;height:40px;border-radius:10px;
-}
-.nav-toggle:hover{background:#F1F5F9;}
-.nav-toggle span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:all .3s ease;}
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      font-weight: 700; font-size: 14px;
+      padding: 12px 22px; border-radius: 14px; border: 1px solid transparent;
+      transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+      white-space: nowrap; position: relative; overflow: hidden;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary {
+      background: linear-gradient(135deg, #2563EB, #1D4ED8);
+      color: #fff; box-shadow: 0 12px 25px -8px rgba(37,99,235,0.5);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 35px -8px rgba(37,99,235,0.65); }
+    .btn-secondary {
+      background: #25D366; color: #fff; border-color: transparent;
+      box-shadow: 0 10px 20px -8px rgba(37,211,102,0.4);
+    }
+    .btn-secondary:hover { background: #20bd5a; transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); padding: 11px 20px; }
+    .btn-ghost:hover { border-color: var(--primary); color: var(--primary); background: rgba(37,99,235,0.04); }
+    .btn-sm { padding: 9px 18px; font-size: 13px; border-radius: 12px; }
+    .btn-block { width: 100%; }
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  font-weight:700;font-size:14px;
-  padding:12px 22px;border-radius:14px;border:1px solid transparent;
-  transition:all .3s cubic-bezier(0.16, 1, 0.3, 1);
-  white-space:nowrap;position:relative;overflow:hidden;
-}
-.btn:active{transform:scale(0.97);}
-.btn-primary{
-  background:linear-gradient(135deg, #2563EB, #1D4ED8);
-  color:#fff;box-shadow:0 12px 25px -8px rgba(37,99,235,0.5);
-}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 35px -8px rgba(37,99,235,0.65);}
-.btn-secondary{
-  background:#25D366;color:#fff;border-color:transparent;
-  box-shadow:0 10px 20px -8px rgba(37,211,102,0.4);
-}
-.btn-secondary:hover{background:#20bd5a;transform:translateY(-2px);}
-.btn-ghost{background:transparent;color:var(--text);border-color:var(--line);padding:11px 20px;}
-.btn-ghost:hover{border-color:var(--primary);color:var(--primary);background:rgba(37,99,235,0.04);}
-.btn-sm{padding:9px 18px;font-size:13px;border-radius:12px;}
-.btn-block{width:100%;}
+    /* ===== HERO WITH WORLD NETWORK CANVAS BACKGROUND ===== */
+    .hero {
+      position: relative; padding: 80px 0 60px;
+      background: #FAFAFC;
+      overflow: hidden;
+    }
+    #networkCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 48px; align-items: center;
+    }
+    .hero-copy h1 {
+      font-size: clamp(32px, 4.5vw, 54px); font-weight: 800; line-height: 1.15; color: var(--text); margin-top: 16px;
+    }
+    .hero-copy h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #2563EB, #059669);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-copy p.lead { margin-top: 20px; font-size: 17px; color: var(--muted); max-width: 540px; line-height: 1.65; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 
-/* ===== HERO WITH WORLD NETWORK CANVAS BACKGROUND ===== */
-.hero{
-  position:relative;padding:80px 0 60px;
-  background:#FAFAFC;
-  overflow:hidden;
-}
-#networkCanvas{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  z-index:1;
-  opacity:0.6;
-  pointer-events:none;
-}
-.hero-inner{
-  position:relative;z-index:2;
-  display:grid;grid-template-columns:1.05fr 0.95fr;gap:48px;align-items:center;
-}
-.hero-copy h1{
-  font-size:clamp(32px, 4.5vw, 54px);font-weight:800;line-height:1.15;color:var(--text);margin-top:16px;
-}
-.hero-copy h1 em{
-  font-style:normal;
-  background:linear-gradient(135deg, #2563EB, #059669);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.hero-copy p.lead{margin-top:20px;font-size:17px;color:var(--muted);max-width:540px;line-height:1.65;}
-.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;}
+    .hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 0; }
+    .phone {
+      position: relative; width: 100%; max-width: 310px; height: auto; border-radius: 42px;
+      background: linear-gradient(160deg, #0F172A, #1E3A8A);
+      padding: 12px; box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.35); z-index: 3;
+    }
+    .phone-screen {
+      width: 100%; border-radius: 32px; background: #fff; overflow: hidden;
+      display: flex; flex-direction: column; min-height: 440px;
+    }
+    .phone-bar {
+      padding: 16px 14px; display: flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--dark-blue)); color: #fff;
+    }
+    .phone-bar .avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; border: 1px solid rgba(255,255,255,0.3);
+    }
+    .phone-bar .who { font-size: 13px; font-weight: 700; }
+    .phone-bar .status { font-size: 11px; opacity: 0.9; display: flex; align-items: center; gap: 5px; }
+    .phone-bar .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; display: inline-block; }
+    .phone-body { flex: 1; padding: 16px; background: #F8FAFC; display: flex; flex-direction: column; gap: 12px; }
+    .bubble { max-width: 88%; padding: 11px 14px; border-radius: 16px; font-size: 12.5px; line-height: 1.45; }
+    .bubble.in { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+    .bubble.out { background: linear-gradient(135deg, var(--primary), #1D4ED8); color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .bubble.alert { background: #FEF3C7; border: 1px solid #FCD34D; color: #92400E; align-self: center; text-align: center; font-weight: 700; font-size: 11.5px; }
 
-.hero-visual{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 0;}
-.phone{
-  position:relative;width:100%;max-width:310px;height:auto;border-radius:42px;
-  background:linear-gradient(160deg, #0F172A, #1E3A8A);
-  padding:12px;box-shadow:0 30px 60px -15px rgba(15, 23, 42, 0.35);z-index:3;
-}
-.phone-screen{
-  width:100%;border-radius:32px;background:#fff;overflow:hidden;
-  display:flex;flex-direction:column;min-height:440px;
-}
-.phone-bar{
-  padding:16px 14px;display:flex;align-items:center;gap:10px;
-  background:linear-gradient(135deg, var(--primary), var(--dark-blue));color:#fff;
-}
-.phone-bar .avatar{
-  width:36px;height:36px;border-radius:50%;
-  background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:700;border:1px solid rgba(255,255,255,0.3);
-}
-.phone-bar .who{font-size:13px;font-weight:700;}
-.phone-bar .status{font-size:11px;opacity:0.9;display:flex;align-items:center;gap:5px;}
-.phone-bar .dot{width:7px;height:7px;border-radius:50%;background:#4ADE80;display:inline-block;}
-.phone-body{flex:1;padding:16px;background:#F8FAFC;display:flex;flex-direction:column;gap:12px;}
-.bubble{max-width:88%;padding:11px 14px;border-radius:16px;font-size:12.5px;line-height:1.45;}
-.bubble.in{background:#fff;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:4px;box-shadow:0 2px 5px rgba(0,0,0,0.02);}
-.bubble.out{background:linear-gradient(135deg, var(--primary), #1D4ED8);color:#fff;align-self:flex-end;border-bottom-right-radius:4px;}
-.bubble.alert{background:#FEF3C7;border:1px solid #FCD34D;color:#92400E;align-self:center;text-align:center;font-weight:700;font-size:11.5px;}
+    /* FLOATING CHIPS OUTSIDE THE PHONE */
+    .float-chip {
+      position: absolute; display: flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      border: 1px solid rgba(226, 232, 240, 0.8); border-radius: 16px;
+      padding: 10px 16px; box-shadow: 0 20px 40px -15px rgba(15,23,42,0.12);
+      font-size: 12.5px; font-weight: 800; z-index: 4;
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .float-chip.chip-a { top: -2%; left: -8%; color: #10B981; }
+    .float-chip.chip-b { bottom: -2%; right: -8%; color: var(--primary); }
+    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-/* FLOATING CHIPS OUTSIDE THE PHONE */
-.float-chip{
-  position:absolute;display:flex;align-items:center;gap:10px;
-  background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);
-  border:1px solid rgba(226, 232, 240, 0.8);border-radius:16px;
-  padding:10px 16px;box-shadow:0 20px 40px -15px rgba(15,23,42,0.12);
-  font-size:12.5px;font-weight:800;z-index:4;
-  animation:floaty 6s ease-in-out infinite;
-}
-.float-chip.chip-a{top:-2%;left:-8%;color:#10B981;}
-.float-chip.chip-b{bottom:-2%;right:-8%;color:var(--primary);}
-@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+    .online-pill {
+      position: absolute; top: 10px; right: -10px; z-index: 4;
+      background: var(--dark-blue); color: #fff; font-size: 11.5px; font-weight: 700;
+      padding: 8px 14px; border-radius: 14px; display: flex; align-items: center; gap: 8px;
+      box-shadow: 0 15px 30px -10px rgba(15,23,42,0.4);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .online-pill .pulse { width: 8px; height: 8px; border-radius: 50%; background: #4ADE80; box-shadow: 0 0 0 rgba(74,222,128,0.6); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 10px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
 
-.online-pill{
-  position:absolute;top:10px;right:-10px;z-index:4;
-  background:var(--dark-blue);color:#fff;font-size:11.5px;font-weight:700;
-  padding:8px 14px;border-radius:14px;display:flex;align-items:center;gap:8px;
-  box-shadow:0 15px 30px -10px rgba(15,23,42,0.4);
-  border:1px solid rgba(255,255,255,0.15);
-}
-.online-pill .pulse{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 rgba(74,222,128,0.6);animation:pulse 1.8s infinite;}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,0.6);}70%{box-shadow:0 0 0 10px rgba(74,222,128,0);}100%{box-shadow:0 0 0 0 rgba(74,222,128,0);}}
+    /* TRUST BADGES BAR */
+    .trust-bar {
+      margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line);
+      display: flex; align-items: center; gap: 24px; flex-wrap: wrap;
+      font-size: 12.5px; font-weight: 600; color: var(--muted);
+    }
+    .trust-item { display: flex; align-items: center; gap: 6px; }
 
-/* TRUST BADGES BAR */
-.trust-bar{
-  margin-top:40px;padding-top:24px;border-top:1px solid var(--line);
-  display:flex;align-items:center;gap:24px;flex-wrap:wrap;
-  font-size:12.5px;font-weight:600;color:var(--muted);
-}
-.trust-item{display:flex;align-items:center;gap:6px;}
+    /* ===== LIVE FOREIGNERS & GROUPS ===== */
+    .foreigners-section {
+      background: #FFFFFF; color: var(--text); padding: 90px 0 60px;
+      position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .foreigners-header-box {
+      background: linear-gradient(180deg, #FFFFFF, #F8FAFC);
+      border: 1px solid var(--line); border-radius: 28px;
+      padding: 32px; margin-bottom: 48px; box-shadow: var(--shadow-card);
+    }
+    .stats-banner {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line);
+    }
+    .stat-item .val { font-size: 22px; font-weight: 800; color: var(--primary); font-family: var(--font-display); }
+    .stat-item .lbl { font-size: 13px; color: var(--muted); font-weight: 500; }
 
-/* ===== LIVE FOREIGNERS &amp; GROUPS ===== */
-.foreigners-section{
-  background:#FFFFFF;color:var(--text);padding:90px 0 60px;
-  position:relative;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-}
-.foreigners-header-box{
-  background:linear-gradient(180deg, #FFFFFF, #F8FAFC);
-  border:1px solid var(--line);border-radius:28px;
-  padding:32px;margin-bottom:48px;box-shadow:var(--shadow-card);
-}
-.stats-banner{
-  display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
-  gap:20px;margin-top:24px;padding-top:24px;border-top:1px solid var(--line);
-}
-.stat-item .val{font-size:22px;font-weight:800;color:var(--primary);font-family:var(--font-display);}
-.stat-item .lbl{font-size:13px;color:var(--muted);font-weight:500;}
+    /* 4 GRID LAYOUT FOR GROUPS WITH HOVER GLOW */
+    .chat-groups-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .chat-group-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 28px;
+      padding: 28px; display: flex; flex-direction: column; justify-content: space-between;
+      transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-card); position: relative; overflow: hidden;
+    }
+    .chat-group-card:hover {
+      transform: translateY(-6px); border-color: rgba(37,99,235,0.4);
+      box-shadow: 0 20px 40px -10px rgba(37,99,235,0.12);
+    }
+    .group-badge {
+      display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+      font-weight: 800; padding: 5px 14px; border-radius: 999px;
+      background: #EFF6FF; color: var(--primary); margin-bottom: 14px;
+    }
+    .group-title { font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 6px; }
+    .group-desc { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
 
-/* 4 GRID LAYOUT FOR GROUPS WITH HOVER GLOW */
-.chat-groups-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:28px;}
-.chat-group-card{
-  background:#fff;border:1px solid var(--line);border-radius:28px;
-  padding:28px;display:flex;flex-direction:column;justify-content:space-between;
-  transition:all .3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow:var(--shadow-card);position:relative;overflow:hidden;
-}
-.chat-group-card:hover{
-  transform:translateY(-6px);border-color:rgba(37,99,235,0.4);
-  box-shadow:0 20px 40px -10px rgba(37,99,235,0.12);
-}
-.group-badge{
-  display:inline-flex;align-items:center;gap:6px;font-size:12px;
-  font-weight:800;padding:5px 14px;border-radius:999px;
-  background:#EFF6FF;color:var(--primary);margin-bottom:14px;
-}
-.group-title{font-size:22px;font-weight:800;color:var(--text);margin-bottom:6px;}
-.group-desc{font-size:14px;color:var(--muted);margin-bottom:20px;}
+    .foreigner-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 22px; min-height: 165px; }
+    .foreigner-item {
+      background: #F8FAFC; border: 1px solid var(--line); border-radius: 18px;
+      padding: 12px 16px; display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; transition: all .3s ease;
+      animation: fadeIn .5s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.96); } to { opacity: 1; transform: scale(1); } }
 
-.foreigner-list{display:flex;flex-direction:column;gap:12px;margin-bottom:22px;min-height:165px;}
-.foreigner-item{
-  background:#F8FAFC;border:1px solid var(--line);border-radius:18px;
-  padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
-  cursor:pointer;transition:all .3s ease;
-  animation:fadeIn .5s ease;
-}
-@keyframes fadeIn{from{opacity:0;transform:scale(0.96);}to{opacity:1;transform:scale(1);}}
+    .foreigner-item:hover { background: #EFF6FF; border-color: var(--primary); transform: scale(1.01); }
+    .foreigner-info { display: flex; align-items: center; gap: 14px; }
+    .foreigner-avatar-box { position: relative; width: 46px; height: 46px; flex-shrink: 0; }
+    .foreigner-avatar-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
+    .foreigner-avatar-box .flag-badge {
+      position: absolute; bottom: -2px; right: -2px; font-size: 13px;
+      background: #fff; border-radius: 50%; padding: 2px; line-height: 1; box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .foreigner-details .name { font-size: 14.5px; font-weight: 700; color: var(--text); }
+    .foreigner-details .rate { font-size: 12.5px; color: var(--primary); font-weight: 700; }
 
-.foreigner-item:hover{background:#EFF6FF;border-color:var(--primary);transform:scale(1.01);}
-.foreigner-info{display:flex;align-items:center;gap:14px;}
-.foreigner-avatar-box{position:relative;width:46px;height:46px;flex-shrink:0;}
-.foreigner-avatar-box img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--primary);}
-.foreigner-avatar-box .flag-badge{
-  position:absolute;bottom:-2px;right:-2px;font-size:13px;
-  background:#fff;border-radius:50%;padding:2px;line-height:1;box-shadow:0 2px 6px rgba(0,0,0,0.12);
-}
-.foreigner-details .name{font-size:14.5px;font-weight:700;color:var(--text);}
-.foreigner-details .rate{font-size:12.5px;color:var(--primary);font-weight:700;}
+    .chat-btn-action {
+      background: var(--primary); color: #fff; border: none; padding: 8px 16px;
+      border-radius: 12px; font-weight: 700; font-size: 13px; transition: all .2s ease;
+    }
+    .chat-btn-action:hover { background: var(--dark-blue); }
 
-.chat-btn-action{
-  background:var(--primary);color:#fff;border:none;padding:8px 16px;
-  border-radius:12px;font-weight:700;font-size:13px;transition:all .2s ease;
-}
-.chat-btn-action:hover{background:var(--dark-blue);}
+    /* ===== VERTICAL TICKER: BADGE TOP, TRANSACTIONS BELOW ===== */
+    .withdraw-ticker-wrapper {
+      margin-top: 60px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 20px 24px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 14px;
+      box-shadow: var(--shadow-card);
+    }
+    .withdraw-ticker-title {
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: #fff;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      box-shadow: 0 6px 16px rgba(16,185,129,0.25);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .ticker-viewport {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      height: 48px;
+    }
+    .ticker-card-single {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-wrap: wrap;
+    }
+    .ticker-card-single.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ticker-card-single .method {
+      color: var(--accent);
+      font-weight: 800;
+      background: #ECFDF5;
+      padding: 4px 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      border: 1px solid #A7F3D0;
+    }
+    .ticker-card-single .acc-num {
+      color: var(--muted);
+      font-size: 13px;
+      font-family: monospace;
+    }
+    .ticker-card-single .time-badge {
+      margin-left: auto;
+      font-size: 11.5px;
+      color: var(--muted);
+      background: #F1F5F9;
+      padding: 3px 10px;
+      border-radius: 8px;
+    }
 
-/* ===== VERTICAL TICKER: BADGE TOP, TRANSACTIONS BELOW ===== */
-.withdraw-ticker-wrapper{
-  margin-top:60px;
-  background:#FFFFFF;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:20px 24px;
-  position:relative;
-  display:flex;
-  flex-direction:column;
-  align-items:stretch;
-  gap:14px;
-  box-shadow:var(--shadow-card);
-}
-.withdraw-ticker-title{
-  background:linear-gradient(135deg, #10B981, #059669);
-  color:#fff;
-  font-size:12.5px;
-  font-weight:800;
-  padding:8px 16px;
-  border-radius:12px;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  align-self:flex-start;
-  box-shadow:0 6px 16px rgba(16,185,129,0.25);
-  text-transform:uppercase;
-  letter-spacing:0.04em;
-}
-.ticker-viewport{
-  width:100%;
-  overflow:hidden;
-  position:relative;
-  height:48px;
-}
-.ticker-card-single{
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-size:14px;
-  font-weight:600;
-  color:var(--text);
-  opacity:0;
-  transform:translateY(20px);
-  transition:all .5s cubic-bezier(0.16, 1, 0.3, 1);
-  flex-wrap:wrap;
-}
-.ticker-card-single.active{
-  opacity:1;
-  transform:translateY(0);
-}
-.ticker-card-single .method{
-  color:var(--accent);
-  font-weight:800;
-  background:#ECFDF5;
-  padding:4px 12px;
-  border-radius:10px;
-  font-size:12px;
-  border:1px solid #A7F3D0;
-}
-.ticker-card-single .acc-num{
-  color:var(--muted);
-  font-size:13px;
-  font-family:monospace;
-}
-.ticker-card-single .time-badge{
-  margin-left:auto;
-  font-size:11.5px;
-  color:var(--muted);
-  background:#F1F5F9;
-  padding:3px 10px;
-  border-radius:8px;
-}
+    /* ===== PRICING BY COUNTRY ===== */
+    .country-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .country-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+      transition: all .3s ease;
+      position: relative;
+    }
+    .country-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+    }
+    .country-card.tz-highlight {
+      border: 2px solid var(--primary);
+      background: linear-gradient(180deg, #FFFFFF, #EFF6FF);
+    }
+    .country-badge-auto {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.3);
+    }
+    .country-badge-wa {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: #25D366;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      box-shadow: 0 4px 12px rgba(37,211,102,0.3);
+    }
+    .country-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .country-flag {
+      font-size: 32px;
+      line-height: 1;
+    }
+    .country-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .country-price {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: var(--font-display);
+      margin-bottom: 8px;
+    }
+    .country-note {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
 
-/* ===== PRICING BY COUNTRY ===== */
-.country-pricing-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-  gap:24px;
-  margin-top:36px;
-}
-.country-card{
-  background:#fff;
-  border:1px solid var(--line);
-  border-radius:24px;
-  padding:26px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  box-shadow:var(--shadow-card);
-  transition:all .3s ease;
-  position:relative;
-}
-.country-card:hover{
-  transform:translateY(-4px);
-  border-color:var(--primary);
-}
-.country-card.tz-highlight{
-  border:2px solid var(--primary);
-  background:linear-gradient(180deg, #FFFFFF, #EFF6FF);
-}
-.country-badge-auto{
-  position:absolute;
-  top:-12px;
-  right:16px;
-  background:var(--primary);
-  color:#fff;
-  font-size:11px;
-  font-weight:800;
-  padding:4px 12px;
-  border-radius:999px;
-  box-shadow:0 4px 12px rgba(37,99,235,0.3);
-}
-.country-badge-wa{
-  position:absolute;
-  top:-12px;
-  right:16px;
-  background:#25D366;
-  color:#fff;
-  font-size:11px;
-  font-weight:800;
-  padding:4px 12px;
-  border-radius:999px;
-  box-shadow:0 4px 12px rgba(37,211,102,0.3);
-}
-.country-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:12px;
-}
-.country-flag{
-  font-size:32px;
-  line-height:1;
-}
-.country-name{
-  font-size:18px;
-  font-weight:800;
-  color:var(--text);
-}
-.country-price{
-  font-size:26px;
-  font-weight:800;
-  color:var(--primary);
-  font-family:var(--font-display);
-  margin-bottom:8px;
-}
-.country-note{
-  font-size:13px;
-  color:var(--muted);
-  line-height:1.5;
-  margin-bottom:20px;
-}
+    /* ===== TESTIMONIALS SECTION ===== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .testi-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow-card);
+    }
+    .testi-user {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .testi-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-/* ===== TESTIMONIALS SECTION ===== */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-}
-.testi-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 28px;
-  box-shadow: var(--shadow-card);
-}
-.testi-user {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 16px;
-}
-.testi-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+    /* ===== FAQ ACCORDION ===== */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: var(--muted);
+      font-size: 14.5px;
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
 
-/* ===== FAQ ACCORDION ===== */
-.faq-list {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.faq-item {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  overflow: hidden;
-}
-.faq-question {
-  padding: 20px 24px;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq-answer {
-  padding: 0 24px 20px;
-  color: var(--muted);
-  font-size: 14.5px;
-  display: none;
-}
-.faq-item.active .faq-answer {
-  display: block;
-}
+    /* ===== TOAST NOTIFICATIONS ===== */
+    .payout-toast {
+      position: fixed;
+      bottom: 28px;
+      left: 28px;
+      background: #FFFFFF;
+      border: 1px solid var(--accent);
+      padding: 14px 20px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 999;
+      transform: translateY(150%);
+      transition: transform 0.5s ease;
+    }
+    .payout-toast.show {
+      transform: translateY(0);
+    }
 
-/* ===== TOAST NOTIFICATIONS ===== */
-.payout-toast {
-  position: fixed;
-  bottom: 28px;
-  left: 28px;
-  background: #FFFFFF;
-  border: 1px solid var(--accent);
-  padding: 14px 20px;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  z-index: 999;
-  transform: translateY(150%);
-  transition: transform 0.5s ease;
-}
-.payout-toast.show {
-  transform: translateY(0);
-}
+    /* POPUP MODAL */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(15,23,42,0.8);
+      backdrop-filter: blur(12px); z-index: 999; display: none;
+      align-items: center; justify-content: center; padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-card {
+      background: #fff; border: 1px solid var(--line); border-radius: 32px;
+      max-width: 460px; width: 100%; padding: 32px 28px; color: var(--text);
+      position: relative; box-shadow: 0 35px 70px -15px rgba(0,0,0,0.35);
+      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes popupAnim {
+      from { opacity: 0; transform: scale(0.92) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .modal-header { text-align: center; margin-bottom: 20px; }
+    .modal-header h3 { font-size: 22px; font-weight: 800; color: var(--text); margin-top: 8px; }
+    .modal-price-tag {
+      background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+      border: 1px solid #BFDBFE; color: var(--primary);
+      padding: 14px; border-radius: 18px; text-align: center; font-size: 24px;
+      font-weight: 800; margin-bottom: 20px;
+    }
+    .modal-price-tag span { display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); }
+    .modal-bullet-list { display: flex; flex-direction: column; gap: 12px; font-size: 13.5px; color: var(--muted); margin-bottom: 22px; }
+    .modal-bullet-list div { display: flex; align-items: flex-start; gap: 10px; }
+    .modal-actions { display: flex; flex-direction: column; gap: 12px; }
 
-/* POPUP MODAL */
-.modal-overlay{
-  position:fixed;inset:0;background:rgba(15,23,42,0.8);
-  backdrop-filter:blur(12px);z-index:999;display:none;
-  align-items:center;justify-content:center;padding:20px;
-}
-.modal-overlay.active{display:flex;}
-.modal-card{
-  background:#fff;border:1px solid var(--line);border-radius:32px;
-  max-width:460px;width:100%;padding:32px 28px;color:var(--text);
-  position:relative;box-shadow:0 35px 70px -15px rgba(0,0,0,0.35);
-  animation:popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-@keyframes popupAnim{
-  from{opacity:0;transform:scale(0.92) translateY(10px);}
-  to{opacity:1;transform:scale(1) translateY(0);}
-}
-.modal-header{text-align:center;margin-bottom:20px;}
-.modal-header h3{font-size:22px;font-weight:800;color:var(--text);margin-top:8px;}
-.modal-price-tag{
-  background:linear-gradient(135deg, #EFF6FF, #DBEAFE);
-  border:1px solid #BFDBFE;color:var(--primary);
-  padding:14px;border-radius:18px;text-align:center;font-size:24px;
-  font-weight:800;margin-bottom:20px;
-}
-.modal-price-tag span{display:block;font-size:12.5px;font-weight:600;color:var(--muted);}
-.modal-bullet-list{display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:var(--muted);margin-bottom:22px;}
-.modal-bullet-list div{display:flex;align-items:flex-start;gap:10px;}
-.modal-actions{display:flex;flex-direction:column;gap:12px;}
+    /* ===== OTHER SECTIONS ===== */
+    .section { padding: 90px 0; }
+    .section-alt { background: #F8FAFC; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { max-width: 700px; margin: 0 0 48px; }
+    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .section-head h2 { font-size: clamp(26px,3.5vw,40px); margin-top: 14px; font-weight: 800; }
+    .section-head p { color: var(--muted); margin-top: 12px; font-size: 16.5px; }
 
-/* ===== OTHER SECTIONS ===== */
-.section{padding:90px 0;}
-.section-alt{background:#F8FAFC;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.section-head{max-width:700px;margin:0 0 48px;}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-.section-head h2{font-size:clamp(26px,3.5vw,40px);margin-top:14px;font-weight:800;}
-.section-head p{color:var(--muted);margin-top:12px;font-size:16.5px;}
+    .pulse-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .pulse-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; box-shadow: var(--shadow-card); transition: all .3s ease; }
+    .pulse-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+    .pulse-card .icon { width: 52px; height: 52px; border-radius: 16px; background: rgba(37,99,235,0.08); display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
 
-.pulse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-.pulse-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow-card);transition:all .3s ease;}
-.pulse-card:hover{transform:translateY(-5px);border-color:var(--primary);}
-.pulse-card .icon{width:52px;height:52px;border-radius:16px;background:rgba(37,99,235,0.08);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    .step-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 24px; box-shadow: var(--shadow-card); }
+    .step-num { font-family: var(--font-display); font-weight: 800; font-size: 36px; color: var(--primary); margin-bottom: 12px; }
 
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.step-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px;box-shadow:var(--shadow-card);}
-.step-num{font-family:var(--font-display);font-weight:800;font-size:36px;color:var(--primary);margin-bottom:12px;}
+    .benefits { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+    .benefit-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px 22px; box-shadow: var(--shadow-card); }
 
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.benefit-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;box-shadow:var(--shadow-card);}
+    /* ONYO KALI CARD */
+    .warning-box {
+      background: #FFF1F2;
+      border: 2px solid #FECDD3;
+      border-radius: 28px;
+      padding: 32px;
+      margin: 48px auto 0;
+      max-width: 980px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      box-shadow: 0 15px 35px -10px rgba(225,29,72,0.1);
+    }
+    .warning-icon {
+      width: 64px;
+      height: 64px;
+      background: #FFE4E6;
+      color: #E11D48;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      flex-shrink: 0;
+    }
+    .warning-content h3 {
+      color: #9F1239;
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+    .warning-content p {
+      color: #4C0519;
+      font-size: 14px;
+      line-height: 1.6;
+      font-weight: 500;
+    }
 
-/* ONYO KALI CARD */
-.warning-box{
-  background:#FFF1F2;
-  border:2px solid #FECDD3;
-  border-radius:28px;
-  padding:32px;
-  margin:48px auto 0;
-  max-width:980px;
-  display:flex;
-  align-items:center;
-  gap:24px;
-  box-shadow:0 15px 35px -10px rgba(225,29,72,0.1);
-}
-.warning-icon{
-  width:64px;
-  height:64px;
-  background:#FFE4E6;
-  color:#E11D48;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
-  flex-shrink:0;
-}
-.warning-content h3{
-  color:#9F1239;
-  font-size:18px;
-  font-weight:800;
-  margin-bottom:6px;
-  text-transform:uppercase;
-  letter-spacing:0.02em;
-}
-.warning-content p{
-  color:#4C0519;
-  font-size:14px;
-  line-height:1.6;
-  font-weight:500;
-}
+    .cta-section {
+      position: relative; overflow: hidden; border-radius: 32px;
+      margin: 0; padding: 80px 32px; text-align: center;
+      background: linear-gradient(135deg, #0F172A, #1E3A8A);
+      color: #fff;
+      box-shadow: 0 30px 60px -20px rgba(15,23,42,0.4);
+    }
 
-.cta-section{
-  position:relative;overflow:hidden;border-radius:32px;
-  margin:0;padding:80px 32px;text-align:center;
-  background:linear-gradient(135deg, #0F172A, #1E3A8A);
-  color:#fff;
-  box-shadow:0 30px 60px -20px rgba(15,23,42,0.4);
-}
+    .site-footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 70px 0 32px; margin-top: 80px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; }
+    .footer-bottom { margin-top: 48px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; gap: 10px; font-size: 13px; }
 
-.site-footer{background:var(--text);color:rgba(255,255,255,0.7);padding:70px 0 32px;margin-top:80px;}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;}
-.footer-bottom{margin-top:48px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;gap:10px;font-size:13px;}
+    .wa-float {
+      position: fixed; bottom: 28px; right: 28px; z-index: 500;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 18px 35px -8px rgba(37,211,102,0.6);
+      transition: transform .3s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); }
 
-.wa-float{
-  position:fixed;bottom:28px;right:28px;z-index:500;
-  width:60px;height:60px;border-radius:50%;
-  background:#25D366;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 18px 35px -8px rgba(37,211,102,0.6);
-  transition:transform .3s ease;
-}
-.wa-float:hover{transform:scale(1.1);}
+    @media (max-width:960px){
+      .chat-groups-grid { grid-template-columns: 1fr; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: #ffffff; border-bottom: 1px solid var(--line);
+        box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+        flex-direction: column; align-items: flex-start;
+        padding: 24px; gap: 18px; display: none;
+      }
+      .nav-links.active { display: flex; }
+      .nav-links a { font-size: 16px; width: 100%; padding: 4px 0; }
 
-@media (max-width:960px){
-  .chat-groups-grid{grid-template-columns:1fr;}
-  .nav-toggle{display:flex;}
-  .nav-links{
-    position:absolute;top:100%;left:0;width:100%;
-    background:#ffffff;border-bottom:1px solid var(--line);
-    box-shadow:0 20px 30px rgba(0,0,0,0.08);
-    flex-direction:column;align-items:flex-start;
-    padding:24px;gap:18px;display:none;
-  }
-  .nav-links.active{display:flex;}
-  .nav-links a{font-size:16px;width:100%;padding:4px 0;}
+      .hero { padding-top: 50px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { order: -1; }
+      .pulse-grid { grid-template-columns: 1fr; }
+      .steps, .benefits { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .warning-box { flex-direction: column; text-align: center; padding: 26px; }
+    }
 
-  .hero{padding-top:50px;}
-  .hero-inner{grid-template-columns:1fr;gap:36px;}
-  .hero-visual{order:-1;}
-  .pulse-grid{grid-template-columns:1fr;}
-  .steps, .benefits{grid-template-columns:repeat(2,1fr);}
-  .footer-grid{grid-template-columns:1fr 1fr;}
-  .warning-box{flex-direction:column;text-align:center;padding:26px;}
-}
-
-@media (max-width:640px){
-  .nav-actions .btn-secondary{display:none;}
-  .hero-cta{flex-direction:column;}
-  .hero-cta .btn{width:100%;}
-  .steps, .benefits, .footer-grid{grid-template-columns:1fr;}
-  .float-chip{display:none;}
-  .phone{max-width:285px;}
-  .ticker-card-single{font-size:12.5px;}
-  .payout-toast{bottom:90px;left:14px;right:14px;}
-}
-</style>
+    @media (max-width:640px){
+      .nav-actions .btn-secondary { display: none; }
+      .hero-cta { flex-direction: column; }
+      .hero-cta .btn { width: 100%; }
+      .steps, .benefits, .footer-grid { grid-template-columns: 1fr; }
+      .float-chip { display: none; }
+      .phone { max-width: 285px; }
+      .ticker-card-single { font-size: 12.5px; }
+      .payout-toast { bottom: 90px; left: 14px; right: 14px; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- PRELOADER WITH LOGO -->
-<div id='preloader'>
-  <div class='preloader-logo-wrapper'>
-    <div class='preloader-spinner'/>
-    <svg class='preloader-icon' viewBox='0 0 40 40'>
-      <circle cx='20' cy='20' fill='none' r='17' stroke='#2563EB' stroke-opacity='0.25' stroke-width='2'/>
-      <path d='M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z' fill='#2563EB'/>
-      <circle cx='16.5' cy='20' fill='#fff' r='1.7'/>
-      <circle cx='20.5' cy='20' fill='#fff' r='1.7'/>
-      <circle cx='24.5' cy='20' fill='#fff' r='1.7'/>
+<div id="preloader">
+  <div class="preloader-logo-wrapper">
+    <div class="preloader-spinner"></div>
+    <svg class="preloader-icon" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity="0.25" stroke-width="2"></circle>
+      <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"></path>
+      <circle cx="16.5" cy="20" fill="#fff" r="1.7"></circle>
+      <circle cx="20.5" cy="20" fill="#fff" r="1.7"></circle>
+      <circle cx="24.5" cy="20" fill="#fff" r="1.7"></circle>
     </svg>
   </div>
-  <p style='margin-top:8px; font-weight:800; color:var(--primary); font-family:var(--font-display); font-size:18px; letter-spacing:0.05em;'>DUNISWAHILI</p>
+  <p style="margin-top:8px; font-weight:800; color:var(--primary); font-family:var(--font-display); font-size:18px; letter-spacing:0.05em;">DUNISWAHILI</p>
 </div>
 
 <!-- NAVIGATION BAR -->
-<nav class='site-nav'>
-  <div class='nav-inner'>
-    <a class='logo' href='#top'>
-      <span class='logo-mark'>
-        <svg viewBox='0 0 40 40'>
-          <circle cx='20' cy='20' fill='none' r='17' stroke='#2563EB' stroke-opacity='0.25' stroke-width='2'/>
-          <path d='M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z' fill='#2563EB'/>
-          <circle cx='16.5' cy='20' fill='#fff' r='1.7'/>
-          <circle cx='20.5' cy='20' fill='#fff' r='1.7'/>
-          <circle cx='24.5' cy='20' fill='#fff' r='1.7'/>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">
+        <svg viewBox="0 0 40 40">
+          <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity="0.25" stroke-width="2"></circle>
+          <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"></path>
+          <circle cx="16.5" cy="20" fill="#fff" r="1.7"></circle>
+          <circle cx="20.5" cy="20" fill="#fff" r="1.7"></circle>
+          <circle cx="24.5" cy="20" fill="#fff" r="1.7"></circle>
         </svg>
       </span>
-      <span class='logo-text'>DUNI<span>SWAHILI</span></span>
+      <span class="logo-text">DUNI<span>SWAHILI</span></span>
     </a>
 
-    <ul class='nav-links' id='navLinks'>
-      <li><a href='#top'>Mwanzo</a></li>
-      <li><a href='#foreigners'>💬 Live Foreigners</a></li>
-      <li><a href='#pricing'>💳 Ada kwa Nchi</a></li>
-      <li><a href='#testimonials'>&#11088; Ushuhuda</a></li>
-      <li><a href='#faq'>&#10067; Maswali</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">Mwanzo</a></li>
+      <li><a href="#foreigners">&#128172; Live Foreigners</a></li>
+      <li><a href="#pricing">&#128179; Ada kwa Nchi</a></li>
+      <li><a href="#testimonials">&#11088; Ushuhuda</a></li>
+      <li><a href="#faq">&#10067; Maswali</a></li>
     </ul>
 
-    <div class='nav-actions'>
-      <a class='btn btn-secondary btn-sm' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 WhatsApp Group</a>
-      <a class='btn btn-primary btn-sm js-register' href='https://kozenasite.com/register?ref=Nico45'>🚀 Tengeneza Hela</a>
-      <button aria-label='Toggle menu' class='nav-toggle' id='navToggle'><span/><span/><span/></button>
+    <div class="nav-actions">
+      <a class="btn btn-secondary btn-sm" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; WhatsApp Group</a>
+      <a class="btn btn-primary btn-sm js-register" href="https://kozenasite.com/register?ref=Nico45">&#128640; Tengeneza Hela</a>
+      <button aria-label="Toggle menu" class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
 
-<header class='hero' id='top'>
+<header class="hero" id="top">
   <!-- WORLD NETWORK CONNECTION MOVING BACKGROUND CANVAS -->
-  <canvas id='networkCanvas'/>
+  <canvas id="networkCanvas"></canvas>
 
-  <div class='wrap hero-inner'>
-    <div class='hero-copy reveal is-visible'>
-      <span class='eyebrow'>🔥 KOZENACHAT PORTAL 2026</span>
+  <div class="wrap hero-inner">
+    <div class="hero-copy reveal is-visible">
+      <span class="eyebrow">&#128293; KOZENACHAT PORTAL 2026</span>
       <h1>Acha Kupoteza Bando Bure! <em>Chat na Wageni &amp; Utengeneze Kipato Kila Saa.</em></h1>
-      <p class='lead'>Wageni kutoka nchi mbalimbali wapo tayari kukulipa kwa ajili ya muda wako! Sajili account yako uanze kupokea malipo kwenye M-Pesa, Mixx by Yas au Bank.</p>
-      
-      <div class='hero-cta'>
-        <a class='btn btn-primary js-register' href='https://kozenasite.com/register?ref=Nico45'>💰 Sajili Account Yako Sasa</a>
-        <a class='btn btn-secondary' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Jiunge WhatsApp Group</a>
+      <p class="lead">Wageni kutoka nchi mbalimbali wapo tayari kukulipa kwa ajili ya muda wako! Sajili account yako uanze kupokea malipo kwenye M-Pesa, Mixx by Yas au Bank.</p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary js-register" href="https://kozenasite.com/register?ref=Nico45">&#128176; Sajili Account Yako Sasa</a>
+        <a class="btn btn-secondary" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Jiunge WhatsApp Group</a>
       </div>
 
-      <div class='trust-bar'>
-        <div class='trust-item'>🔒 SSL Encrypted</div>
-        <div class='trust-item'>&#9889; Instant Payouts</div>
-        <div class='trust-item'>&#9989; Verified Clients</div>
+      <div class="trust-bar">
+        <div class="trust-item">&#128274; SSL Encrypted</div>
+        <div class="trust-item">&#9889; Instant Payouts</div>
+        <div class="trust-item">&#9989; Verified Clients</div>
       </div>
     </div>
 
-    <div class='hero-visual reveal is-visible'>
-      <div class='float-chip chip-a'>💵 TSH 108,000/= Zimeingia!</div>
-      <div class='float-chip chip-b'>🇨🇭 Wayne Martin is typing...</div>
-      
-      <!-- REAL-TIME CHANGING COUNTER ON PHONE -->
-      <div class='online-pill'><span class='pulse'/><span id='liveCountNav'>18,450</span> Foreigners Online</div>
+    <div class="hero-visual reveal is-visible">
+      <div class="float-chip chip-a">&#128181; TSH 108,000/= Zimeingia!</div>
+      <div class="float-chip chip-b">&#127464;&#127470; Wayne Martin is typing...</div>
 
-      <div class='phone'>
-        <div class='phone-screen'>
-          <div class='phone-bar'>
-            <span class='avatar'>DS</span>
+      <!-- REAL-TIME CHANGING COUNTER ON PHONE -->
+      <div class="online-pill"><span class="pulse"></span><span id="liveCountNav">18,450</span> Foreigners Online</div>
+
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="phone-bar">
+            <span class="avatar">DS</span>
             <div>
-              <div class='who'>DuniSwahili Live Chat</div>
-              <div class='status'><span class='dot'/> Live Payments Active</div>
+              <div class="who">DuniSwahili Live Chat</div>
+              <div class="status"><span class="dot"></span> Live Payments Active</div>
             </div>
           </div>
-          <div class='phone-body'>
-            <div class='bubble in'>Hivi kweli naweza kuchat na wageni na nikapewa hela? 🤔</div>
-            <div class='bubble out'>Nimechat ndani ya nusu saa tu na nimelipwa 30,000! 🔥</div>
-            <div class='bubble alert'>🎉 Malipo: TZS 30,000 yameingia kwenye Account Yako!</div>
+          <div class="phone-body">
+            <div class="bubble in">Hivi kweli naweza kuchat na wageni na nikapewa hela? &#129300;</div>
+            <div class="bubble out">Nimechat ndani ya nusu saa tu na nimelipwa 30,000! &#128293;</div>
+            <div class="bubble alert">&#127881; Malipo: TZS 30,000 yameingia kwenye Account Yako!</div>
           </div>
         </div>
       </div>
@@ -782,97 +777,97 @@ button{font-family:var(--font-body);cursor:pointer;}
 </header>
 
 <!-- SECTION MPYA: LIVE FOREIGNERS ONLINE & GROUPS -->
-<section class='foreigners-section' id='foreigners'>
-  <div class='wrap'>
-    
-    <div class='foreigners-header-box reveal'>
-      <div style='display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;'>
+<section class="foreigners-section" id="foreigners">
+  <div class="wrap">
+
+    <div class="foreigners-header-box reveal">
+      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
         <div>
-          <span style='color:var(--primary); font-weight:800; font-size:13px; text-transform:uppercase;'>💬 Kozenachat Network</span>
-          <h2 style='font-size:30px; font-weight:800; margin-top:4px; color:var(--text);'>📍 Global Chatters Active</h2>
+          <span style="color:var(--primary); font-weight:800; font-size:13px; text-transform:uppercase;">&#128172; Kozenachat Network</span>
+          <h2 style="font-size:30px; font-weight:800; margin-top:4px; color:var(--text);">&#128205; Global Chatters Active</h2>
         </div>
-        
+
         <!-- REAL-TIME CHANGING COUNTER IN HEADER -->
-        <div style='background:#EFF6FF; border:1px solid #BFDBFE; padding:10px 18px; border-radius:14px; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:8px;'>
-          <span class='pulse' style='width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block;'/> <span id='liveHeaderCounter'>24,890</span> Foreigners Active Now
+        <div style="background:#EFF6FF; border:1px solid #BFDBFE; padding:10px 18px; border-radius:14px; color:var(--primary); font-weight:800; display:flex; align-items:center; gap:8px;">
+          <span class="pulse" style="width:8px;height:8px;border-radius:50%;background:var(--primary);display:inline-block;"></span> <span id="liveHeaderCounter">24,890</span> Foreigners Active Now
         </div>
       </div>
-      
-      <div class='stats-banner'>
-        <div class='stat-item'>
-          <span class='val'>TSh 20,769 &#8211; 93,462</span>
-          <span class='lbl'>Typical Chatters Earn Daily</span>
+
+      <div class="stats-banner">
+        <div class="stat-item">
+          <span class="val">TSh 20,769 &#8211; 93,462</span>
+          <span class="lbl">Typical Chatters Earn Daily</span>
         </div>
-        <div class='stat-item'>
-          <span class='val'>Up to TSh 1,038,462+</span>
-          <span class='lbl'>Monthly Earnings Potential</span>
+        <div class="stat-item">
+          <span class="val">Up to TSh 1,038,462+</span>
+          <span class="lbl">Monthly Earnings Potential</span>
         </div>
-        <div class='stat-item'>
-          <span class='val'>&#9200; Activate Once</span>
-          <span class='lbl'>Earn Forever (No Monthly Fees)</span>
+        <div class="stat-item">
+          <span class="val">&#9200; Activate Once</span>
+          <span class="lbl">Earn Forever (No Monthly Fees)</span>
         </div>
       </div>
     </div>
 
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>💬 Live Foreigners Online</span>
+    <div class="section-head center reveal">
+      <span class="eyebrow">&#128172; Live Foreigners Online</span>
       <h2>Choose a chat group. Foreigners pay for your time.</h2>
       <p>Chagua group hapa chini. Wageni wanatengenezwa LIVE na kubadilika mtandaoni kila muda tayari kukulipa!</p>
     </div>
 
     <!-- 4 GROUPS GRID -->
-    <div class='chat-groups-grid'>
-      
+    <div class="chat-groups-grid">
+
       <!-- Group 1: Work & Jobs -->
-      <div class='chat-group-card reveal'>
+      <div class="chat-group-card reveal">
         <div>
-          <span class='group-badge'>🟢 Hiring Now</span>
-          <div class='group-title'>💼 Work &amp; Job Offers</div>
-          <div class='group-desc'>Foreigners hiring remote workers &amp; freelancers for quick tasks.</div>
-          <div class='foreigner-list' id='workList'><!-- Auto Generated --></div>
+          <span class="group-badge">&#128994; Hiring Now</span>
+          <div class="group-title">&#128092; Work &amp; Job Offers</div>
+          <div class="group-desc">Foreigners hiring remote workers &amp; freelancers for quick tasks.</div>
+          <div class="foreigner-list" id="workList"><!-- Auto Generated --></div>
         </div>
-        <a class='btn btn-primary btn-block open-pop' data-name='💼 Work &amp; Job Group' data-price='TZS 95,000 Avg' data-time='Per Session' href='javascript:void(0)'>Join Work Group</a>
+        <a class="btn btn-primary btn-block open-pop" data-name="💼 Work &amp; Job Group" data-price="TZS 95,000 Avg" data-time="Per Session" href="javascript:void(0)">Join Work Group</a>
       </div>
 
       <!-- Group 2: Fun & Friendship -->
-      <div class='chat-group-card reveal'>
+      <div class="chat-group-card reveal">
         <div>
-          <span class='group-badge'>🟢 Very Active</span>
-          <div class='group-title'>🎉 Fun &amp; Friendship</div>
-          <div class='group-desc'>Friendly foreigners who want to chat, share stories &amp; laugh together.</div>
-          <div class='foreigner-list' id='funList'><!-- Auto Generated --></div>
+          <span class="group-badge">&#128994; Very Active</span>
+          <div class="group-title">&#127881; Fun &amp; Friendship</div>
+          <div class="group-desc">Friendly foreigners who want to chat, share stories &amp; laugh together.</div>
+          <div class="foreigner-list" id="funList"><!-- Auto Generated --></div>
         </div>
-        <a class='btn btn-primary btn-block open-pop' data-name='🎉 Fun &amp; Friendship Group' data-price='TZS 75,000 Avg' data-time='Per Session' href='javascript:void(0)'>Join Friendship Group</a>
+        <a class="btn btn-primary btn-block open-pop" data-name="🎉 Fun &amp; Friendship Group" data-price="TZS 75,000 Avg" data-time="Per Session" href="javascript:void(0)">Join Friendship Group</a>
       </div>
 
       <!-- Group 3: Romance & Dating -->
-      <div class='chat-group-card reveal'>
+      <div class="chat-group-card reveal">
         <div>
-          <span class='group-badge'>🟢 Online Singles</span>
-          <div class='group-title'>💕 Romance &amp; Dating</div>
-          <div class='group-desc'>Singles from abroad seeking genuine connections &amp; chats.</div>
-          <div class='foreigner-list' id='datingList'><!-- Auto Generated --></div>
+          <span class="group-badge">&#128994; Online Singles</span>
+          <div class="group-title">&#128149; Romance &amp; Dating</div>
+          <div class="group-desc">Singles from abroad seeking genuine connections &amp; chats.</div>
+          <div class="foreigner-list" id="datingList"><!-- Auto Generated --></div>
         </div>
-        <a class='btn btn-primary btn-block open-pop' data-name='💕 Romance &amp; Dating Group' data-price='TZS 110,000 Avg' data-time='Per Session' href='javascript:void(0)'>Join Dating Group</a>
+        <a class="btn btn-primary btn-block open-pop" data-name="💕 Romance &amp; Dating Group" data-price="TZS 110,000 Avg" data-time="Per Session" href="javascript:void(0)">Join Dating Group</a>
       </div>
 
       <!-- Group 4: Education & Language Exchange -->
-      <div class='chat-group-card reveal'>
+      <div class="chat-group-card reveal">
         <div>
-          <span class='group-badge'>🟢 Learning Swahili</span>
-          <div class='group-title'>📚 Language &amp; Culture</div>
-          <div class='group-desc'>Foreigners eager to learn Swahili &amp; discuss African cultures.</div>
-          <div class='foreigner-list' id='eduList'><!-- Auto Generated --></div>
+          <span class="group-badge">&#128994; Learning Swahili</span>
+          <div class="group-title">&#128218; Language &amp; Culture</div>
+          <div class="group-desc">Foreigners eager to learn Swahili &amp; discuss African cultures.</div>
+          <div class="foreigner-list" id="eduList"><!-- Auto Generated --></div>
         </div>
-        <a class='btn btn-primary btn-block open-pop' data-name='📚 Language &amp; Culture Group' data-price='TZS 85,000 Avg' data-time='Per Session' href='javascript:void(0)'>Join Culture Group</a>
+        <a class="btn btn-primary btn-block open-pop" data-name="📚 Language &amp; Culture Group" data-price="TZS 85,000 Avg" data-time="Per Session" href="javascript:void(0)">Join Culture Group</a>
       </div>
 
     </div>
 
-    <!-- SELF-GENERATED DYNAMIC LIVE WITHDRAW TICKER (BADGE TOP, TRANSACTIONS BELOW) -->
-    <div class='withdraw-ticker-wrapper reveal'>
-      <div class='withdraw-ticker-title'>&#9889; Live Withdrawal Feed</div>
-      <div class='ticker-viewport' id='tickerViewport'>
+    <!-- SELF-GENERATED DYNAMIC LIVE WITHDRAW TICKER -->
+    <div class="withdraw-ticker-wrapper reveal">
+      <div class="withdraw-ticker-title">&#9889; Live Withdrawal Feed</div>
+      <div class="ticker-viewport" id="tickerViewport">
         <!-- Injected dynamically via JS every 10 seconds -->
       </div>
     </div>
@@ -880,87 +875,87 @@ button{font-family:var(--font-body);cursor:pointer;}
   </div>
 </section>
 
-<!-- NEW SECTION: BEI NA ADA KWA KILA NCHI (PRICING BY COUNTRY) -->
-<section class='section' id='pricing'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>💳 ACTIVATION YA KILA NCHI</span>
+<!-- SECTION: BEI NA ADA KWA KILA NCHI (PRICING BY COUNTRY) -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">&#128173; ACTIVATION YA KILA NCHI</span>
       <h2>Bei ya Usajili kwa Kila Nchi</h2>
       <p>Chagua nchi yako kuona gharama halisi za ku-activate account yako mara moja pekee bila makato ya kila mwezi.</p>
     </div>
 
-    <div class='country-pricing-grid'>
-      
+    <div class="country-pricing-grid">
+
       <!-- TANZANIA -->
-      <div class='country-card tz-highlight reveal'>
-        <span class='country-badge-auto'>&#9889; Normal Payment</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇹🇿</span>
-          <span class='country-name'>Tanzania</span>
+      <div class="country-card tz-highlight reveal">
+        <span class="country-badge-auto">&#9889; Normal Payment</span>
+        <div class="country-header">
+          <span class="country-flag">&#127481;&#127485;</span>
+          <span class="country-name">Tanzania</span>
         </div>
-        <div class='country-price'>TZS 14,500</div>
-        <p class='country-note'>Watanzania wanaweza kulipia moja kwa moja (Normal Automatic) kupitia M-Pesa, Mixx by Yas, au Airtel Money kama kawaida tu kupitia Menyu ya malipo kwenye simu yako.</p>
-        <a class='btn btn-primary btn-block js-register' href='https://kozenasite.com/register?ref=Nico45'>Lipia Automatic Sasa</a>
+        <div class="country-price">TZS 14,500</div>
+        <p class="country-note">Watanzania wanaweza kulipia moja kwa moja (Normal Automatic) kupitia M-Pesa, Mixx by Yas, au Airtel Money kama kawaida tu kupitia Menyu ya malipo kwenye simu yako.</p>
+        <a class="btn btn-primary btn-block js-register" href="https://kozenasite.com/register?ref=Nico45">Lipia Automatic Sasa</a>
       </div>
 
       <!-- KENYA -->
-      <div class='country-card reveal'>
-        <span class='country-badge-wa'>📲 Tuma WhatsApp</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇰🇪</span>
-          <span class='country-name'>Kenya</span>
+      <div class="country-card reveal">
+        <span class="country-badge-wa">&#128242; Tuma WhatsApp</span>
+        <div class="country-header">
+          <span class="country-flag">&#127472;&#127466;</span>
+          <span class="country-name">Kenya</span>
         </div>
-        <div class='country-price'>KES 700</div>
-        <p class='country-note'>Ukishalipia ada yako ya KES 700, tafadhali tuma ushahidi na taarifa zako kwenye group la WhatsApp kupata uthibitisho wa haraka.</p>
-        <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
+        <div class="country-price">KES 700</div>
+        <p class="country-note">Ukishalipia ada yako ya KES 700, tafadhali tuma ushahidi na taarifa zako kwenye group la WhatsApp kupata uthibitisho wa haraka.</p>
+        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- UGANDA -->
-      <div class='country-card reveal'>
-        <span class='country-badge-wa'>📲 Tuma WhatsApp</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇺🇬</span>
-          <span class='country-name'>Uganda</span>
+      <div class="country-card reveal">
+        <span class="country-badge-wa">&#128242; Tuma WhatsApp</span>
+        <div class="country-header">
+          <span class="country-flag">&#127482;&#127468;</span>
+          <span class="country-name">Uganda</span>
         </div>
-        <div class='country-price'>UGX 23,000</div>
-        <p class='country-note'>Ukishalipia ada yako ya UGX 23,000, tafadhali tuma ushahidi na taarifa zako kwenye group la WhatsApp ili akaunti yako ifunguliwe.</p>
-        <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
+        <div class="country-price">UGX 23,000</div>
+        <p class="country-note">Ukishalipia ada yako ya UGX 23,000, tafadhali tuma ushahidi na taarifa zako kwenye group la WhatsApp ili akaunti yako ifunguliwe.</p>
+        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- RWANDA -->
-      <div class='country-card reveal'>
-        <span class='country-badge-wa'>📲 Tuma WhatsApp</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇷🇼</span>
-          <span class='country-name'>Rwanda</span>
+      <div class="country-card reveal">
+        <span class="country-badge-wa">&#128242; Tuma WhatsApp</span>
+        <div class="country-header">
+          <span class="country-flag">&#127479;&#127484;</span>
+          <span class="country-name">Rwanda</span>
         </div>
-        <div class='country-price'>RWF 8,000</div>
-        <p class='country-note'>Ukishalipia ada yako ya RWF 8,000, tafadhali tuma ushahidi wa malipo kwenye group la WhatsApp kukamilisha usajili wako.</p>
-        <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
+        <div class="country-price">RWF 8,000</div>
+        <p class="country-note">Ukishalipia ada yako ya RWF 8,000, tafadhali tuma ushahidi wa malipo kwenye group la WhatsApp kukamilisha usajili wako.</p>
+        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- BURUNDI -->
-      <div class='country-card reveal'>
-        <span class='country-badge-wa'>📲 Tuma WhatsApp</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇧🇮</span>
-          <span class='country-name'>Burundi</span>
+      <div class="country-card reveal">
+        <span class="country-badge-wa">&#128242; Tuma WhatsApp</span>
+        <div class="country-header">
+          <span class="country-flag">&#127463;&#127470;</span>
+          <span class="country-name">Burundi</span>
         </div>
-        <div class='country-price'>BIF 25,000</div>
-        <p class='country-note'>Ukishalipia ada yako ya BIF 25,000, tafadhali tuma risiti au ujumbe wa malipo kwenye group la WhatsApp ili account yako iwe active.</p>
-        <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
+        <div class="country-price">BIF 25,000</div>
+        <p class="country-note">Ukishalipia ada yako ya BIF 25,000, tafadhali tuma risiti au ujumbe wa malipo kwenye group la WhatsApp ili account yako iwe active.</p>
+        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- MALAWI -->
-      <div class='country-card reveal'>
-        <span class='country-badge-wa'>📲 Tuma WhatsApp</span>
-        <div class='country-header'>
-          <span class='country-flag'>🇲🇼</span>
-          <span class='country-name'>Malawi</span>
+      <div class="country-card reveal">
+        <span class="country-badge-wa">&#128242; Tuma WhatsApp</span>
+        <div class="country-header">
+          <span class="country-flag">&#127474;&#127484;</span>
+          <span class="country-name">Malawi</span>
         </div>
-        <div class='country-price'>MWK 12,000</div>
-        <p class='country-note'>Ukishalipia ada yako ya MWK 12,000, tafadhali tuma ushahidi wa malipo kwenye group la WhatsApp ili uweze kuunganishwa.</p>
-        <a class='btn btn-secondary btn-block' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>📲 Tuma Taarifa WhatsApp</a>
+        <div class="country-price">MWK 12,000</div>
+        <p class="country-note">Ukishalipia ada yako ya MWK 12,000, tafadhali tuma ushahidi wa malipo kwenye group la WhatsApp ili uweze kuunganishwa.</p>
+        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128242; Tuma Taarifa WhatsApp</a>
       </div>
 
     </div>
@@ -968,106 +963,106 @@ button{font-family:var(--font-body);cursor:pointer;}
 </section>
 
 <!-- TESTIMONIALS -->
-<section class='section section-alt' id='testimonials'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>&#11088; USHUHUDA HAUKO SIKU ZOTE</span>
+<section class="section section-alt" id="testimonials">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">&#11088; USHUHUDA HAUKO SIKU ZOTE</span>
       <h2>Watu Wanasemaje Kuhusu DuniSwahili?</h2>
       <p>Hawa hapa ni baadhi ya wanachama wetu walioweza kubadilisha muda wao kuwa pesa halisi.</p>
     </div>
 
-    <div class='testimonials-grid'>
-      <div class='testi-card reveal'>
-        <div class='testi-user'>
-          <img class='testi-avatar' src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="testi-user">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&amp;auto=format&amp;fit=crop&amp;q=80" alt="Amina K."/>
           <div>
-            <div style='font-weight:800;'>Amina K.</div>
-            <div style='font-size:12px; color:var(--muted);'>Dar es Salaam, TZ</div>
+            <div style="font-weight:800;">Amina K.</div>
+            <div style="font-size:12px; color:var(--muted);">Dar es Salaam, TZ</div>
           </div>
         </div>
-        <p style='font-size:14px; color:var(--muted);'>&quot;Mwanzo nilifikiri ni utani lakini nilipotoa TZS 45,000 yangu ya kwanza kwenda M-Pesa ndio nikaamini. Mfumo ni rahisi sana!&quot;</p>
-        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-size:14px; color:var(--muted);">&quot;Mwanzo nilifikiri ni utani lakini nilipotoa TZS 45,000 yangu ya kwanza kwenda M-Pesa ndio nikaamini. Mfumo ni rahisi sana!&quot;</p>
+        <div style="color:#F59E0B; margin-top:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       </div>
 
-      <div class='testi-card reveal'>
-        <div class='testi-user'>
-          <img class='testi-avatar' src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+      <div class="testi-card reveal">
+        <div class="testi-user">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&amp;auto=format&amp;fit=crop&amp;q=80" alt="Kelvin M."/>
           <div>
-            <div style='font-weight:800;'>Kelvin M.</div>
-            <div style='font-size:12px; color:var(--muted);'>Nairobi, KE</div>
+            <div style="font-weight:800;">Kelvin M.</div>
+            <div style="font-size:12px; color:var(--muted);">Nairobi, KE</div>
           </div>
         </div>
-        <p style='font-size:14px; color:var(--muted);'>&quot;The language exchange group is amazing. I chat with people learning Swahili and I get paid seamlessly via M-Pesa.&quot;</p>
-        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-size:14px; color:var(--muted);">&quot;The language exchange group is amazing. I chat with people learning Swahili and I get paid seamlessly via M-Pesa.&quot;</p>
+        <div style="color:#F59E0B; margin-top:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       </div>
 
-      <div class='testi-card reveal'>
-        <div class='testi-user'>
-          <img class='testi-avatar' src='https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&amp;auto=format&amp;fit=crop&amp;q=80'/>
+      <div class="testi-card reveal">
+        <div class="testi-user">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=100&amp;auto=format&amp;fit=crop&amp;q=80" alt="Baraka J."/>
           <div>
-            <div style='font-weight:800;'>Baraka J.</div>
-            <div style='font-size:12px; color:var(--muted);'>Arusha, TZ</div>
+            <div style="font-weight:800;">Baraka J.</div>
+            <div style="font-size:12px; color:var(--muted);">Arusha, TZ</div>
           </div>
         </div>
-        <p style='font-size:14px; color:var(--muted);'>&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako.&quot;</p>
-        <div style='color:#F59E0B; margin-top:12px;'>&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-size:14px; color:var(--muted);">&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako.&quot;</p>
+        <div style="color:#F59E0B; margin-top:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- POPUP MODAL KOZENACHAT -->
-<div class='modal-overlay' id='chatModal'>
-  <div class='modal-card'>
-    <div class='modal-header'>
-      <div style='font-size:38px; margin-bottom:6px;'>🔒</div>
-      <h3 id='modalUserTitle'>Wayne Martin wants to connect with you</h3>
+<div class="modal-overlay" id="chatModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div style="font-size:38px; margin-bottom:6px;">&#128274;</div>
+      <h3 id="modalUserTitle">Wayne Martin wants to connect with you</h3>
     </div>
 
-    <div class='modal-price-tag'>
-      <div id='modalPrice'>TZS 108,000</div>
-      <span id='modalTime'>they pay you &#183; 1h 30m session</span>
+    <div class="modal-price-tag">
+      <div id="modalPrice">TZS 108,000</div>
+      <span id="modalTime">they pay you &#183; 1h 30m session</span>
     </div>
 
-    <div class='modal-bullet-list'>
+    <div class="modal-bullet-list">
       <div>&#9888;&#65039; <span><strong>Only active accounts receive payments.</strong> Activate your account to get paid immediately.</span></div>
-      <div>👛 <span>Earnings go directly to your main account balance.</span></div>
-      <div>📲 <span>Withdraw to M-Pesa, Mixx by Yas, or Bank anytime without delays.</span></div>
-      <div>📈 <span>Track every earning in real-time on your dashboard.</span></div>
-      <div>🔒 <span>One-time activation &#8212; no hidden or monthly fees.</span></div>
+      <div>&#128588; <span>Earnings go directly to your main account balance.</span></div>
+      <div>&#128242; <span>Withdraw to M-Pesa, Mixx by Yas, or Bank anytime without delays.</span></div>
+      <div>&#128200; <span>Track every earning in real-time on your dashboard.</span></div>
+      <div>&#128274; <span>One-time activation &#8212; no hidden or monthly fees.</span></div>
     </div>
 
-    <div style='background:#FEF3C7; border:1px solid #FCD34D; padding:12px; border-radius:14px; color:#92400E; font-size:12.5px; margin-bottom:20px; text-align:center;'>
-      &#9203; <span id='modalWaitText'>Wayne Martin is waiting to connect right now!</span>
+    <div style="background:#FEF3C7; border:1px solid #FCD34D; padding:12px; border-radius:14px; color:#92400E; font-size:12.5px; margin-bottom:20px; text-align:center;">
+      &#9203; <span id="modalWaitText">Wayne Martin is waiting to connect right now!</span>
     </div>
 
-    <div class='modal-actions'>
-      <a class='btn btn-primary btn-block' href='https://kozenasite.com/register?ref=Nico45' style='font-size:15px;'>&#10024; Create Free Account &amp; Get Paid</a>
-      <button class='btn btn-ghost btn-block' id='closeModal' style='color:var(--muted); border-color:transparent;'>Later</button>
+    <div class="modal-actions">
+      <a class="btn btn-primary btn-block" href="https://kozenasite.com/register?ref=Nico45" style="font-size:15px;">&#10024; Create Free Account &amp; Get Paid</a>
+      <button class="btn btn-ghost btn-block" id="closeModal" style="color:var(--muted); border-color:transparent;">Later</button>
     </div>
   </div>
 </div>
 
-<section class='section' id='community'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>KWANINI DUNISWAHILI?</span>
+<section class="section" id="community">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">KWANINI DUNISWAHILI?</span>
       <h2>Kwanini Uendelee Kulia Hali Ngumu Wakati Una Simu?</h2>
       <p>Kila siku unatumia bando kwenye mtandao bila kuingiza pesa. DuniSwahili inakupa fursa ya kulipwa kwa muda wako wa kuchat na wageni!</p>
     </div>
-    <div class='pulse-grid'>
-      <div class='pulse-card reveal'>
-        <div class='icon'>💰</div>
+    <div class="pulse-grid">
+      <div class="pulse-card reveal">
+        <div class="icon">&#128176;</div>
         <h3>Chat &amp; Tengeneza Pesa</h3>
         <p>Pata malipo yanayoweza kutolewa kwenda M-Pesa au Mixx by Yas kwa kila saa unayochat na wageni waliopo mtandaoni.</p>
       </div>
-      <div class='pulse-card reveal'>
-        <div class='icon'>🌐</div>
+      <div class="pulse-card reveal">
+        <div class="icon">&#127760;</div>
         <h3>Mtandao wa Kimataifa</h3>
         <p>Kutana na wageni wa kweli kutoka Switzerland, USA, UK, Germany na zaidi waliopo tayari kukulipa.</p>
       </div>
-      <div class='pulse-card reveal'>
-        <div class='icon'>📱</div>
+      <div class="pulse-card reveal">
+        <div class="icon">&#128241;</div>
         <h3>Rahisi Kushiriki</h3>
         <p>Hutaji kompyuta wala uzoefu. Unachohitaji ni simu yako tu kuanza kujiingizia kipato.</p>
       </div>
@@ -1076,30 +1071,30 @@ button{font-family:var(--font-body);cursor:pointer;}
 </section>
 
 <!-- HATUA RAHISI 4 SECTION -->
-<section class='section section-alt' id='how-it-works'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>HATUA RAHISI 4</span>
+<section class="section section-alt" id="how-it-works">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">HATUA RAHISI 4</span>
       <h2>Jinsi Ya Kuanza Kupata Hela Leo</h2>
     </div>
-    <div class='steps'>
-      <div class='step-card reveal'>
-        <div class='step-num'>01</div>
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
         <h3>Sajili Account Yako</h3>
         <p>Tengeneza account yako bure kabisa kwenye Kozenasite ili ufungue mfumo na uweze kupokea pesa.</p>
       </div>
-      <div class='step-card reveal'>
-        <div class='step-num'>02</div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
         <h3>Chagua Mgeni &amp; Chat</h3>
         <p>Chagua mgeni yeyote aliyepo mtandaoni kwenye list yetu, anza kuchat naye na kutumia muda wako.</p>
       </div>
-      <div class='step-card reveal'>
-        <div class='step-num'>03</div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
         <h3>Pata Malipo / Pesa</h3>
         <p>Pokea malipo yako moja kwa moja na utoe kwenda M-Pesa, Mixx by Yas, Airtel Money au Bank.</p>
       </div>
-      <div class='step-card reveal'>
-        <div class='step-num'>04</div>
+      <div class="step-card reveal">
+        <div class="step-num">04</div>
         <h3>Jiunge WhatsApp Group</h3>
         <p>Ukiisha kamilisha kujisajili na kuwa na account, jiunge na group la WhatsApp kwa updates na ushirikiano.</p>
       </div>
@@ -1107,23 +1102,23 @@ button{font-family:var(--font-body);cursor:pointer;}
   </div>
 </section>
 
-<section class='section' id='benefits'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>FAIDA ZAKO</span>
+<section class="section" id="benefits">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">FAIDA ZAKO</span>
       <h2>Kila Kitu Unachohitaji Ili Ufanikiwe</h2>
     </div>
-    <div class='benefits'>
-      <div class='benefit-card reveal'><h3>&#9889; Malipo ya Haraka</h3><p>Omba kutoa pesa yako muda wowote na uipokee kwenye M-Pesa au Mixx by Yas.</p></div>
-      <div class='benefit-card reveal'><h3>🎓 Msaada wa Lugha</h3><p>Mfumo wetu unakusaidia kutafsiri maneno kwa urahisi kabisa.</p></div>
-      <div class='benefit-card reveal'><h3>🤝 Wageni wa Kweli</h3><p>Wageni wote wamethibitishwa na kuweka amana zao tayari kukulipa.</p></div>
-      <div class='benefit-card reveal'><h3>🔒 Usalama 100%</h3><p>Salio lak na data zako zipo salama muda wote.</p></div>
+    <div class="benefits">
+      <div class="benefit-card reveal"><h3>&#9889; Malipo ya Haraka</h3><p>Omba kutoa pesa yako muda wowote na uipokee kwenye M-Pesa au Mixx by Yas.</p></div>
+      <div class="benefit-card reveal"><h3>&#127891; Msaada wa Lugha</h3><p>Mfumo wetu unakusaidia kutafsiri maneno kwa urahisi kabisa.</p></div>
+      <div class="benefit-card reveal"><h3>&#129309; Wageni wa Kweli</h3><p>Wageni wote wamethibitishwa na kuweka amana zao tayari kukulipa.</p></div>
+      <div class="benefit-card reveal"><h3>&#128274; Usalama 100%</h3><p>Salio lak na data zako zipo salama muda wote.</p></div>
     </div>
 
     <!-- ONYO KALI CARD -->
-    <div class='warning-box reveal'>
-      <div class='warning-icon'>🚫</div>
-      <div class='warning-content'>
+    <div class="warning-box reveal">
+      <div class="warning-icon">&#128683;</div>
+      <div class="warning-content">
         <h3>ONYO KALI NA MASHARTI YA USALAMA!</h3>
         <p>Mazungumzo (Chatting) yote ndani ya mtandao huu ni ya siri kubwa. **NI MARUFUKU KABISA** kupiga picha, kuchukua Screenshot, au kumtumia mtu mwingine yeyote mazungumzo au picha za wageni wetu. Yeyote atakayebainika kukiuka sheria hii, account yake itafungiwa msimamo (Permanent Ban) na salio lake lote litataifishwa mara moja!</p>
       </div>
@@ -1133,72 +1128,72 @@ button{font-family:var(--font-body);cursor:pointer;}
 </section>
 
 <!-- FAQ SECTION -->
-<section class='section section-alt' id='faq'>
-  <div class='wrap'>
-    <div class='section-head center reveal'>
-      <span class='eyebrow'>&#10067; MASWALI YANAYOULIZWA MARA KWA MARA</span>
+<section class="section section-alt" id="faq">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">&#10067; MASWALI YANAYOULIZWA MARA KWA MARA</span>
       <h2>Je, Unaswali Lolote? Tunayo Majibu.</h2>
     </div>
 
-    <div class='faq-list reveal'>
-      <div class='faq-item'>
-        <div class='faq-question'>1. Je, nitatoleaje pesa zangu nikishalipwa? <span>+</span></div>
-        <div class='faq-answer'>Unaweza kutoa pesa zako muda wowote kupitia M-Pesa, Mixx by Yas, Airtel Money au Bank. Pesa inaingia papo hapo bila kuchelewa.</div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <div class="faq-question">1. Je, nitatoleaje pesa zangu nikishalipwa? <span>+</span></div>
+        <div class="faq-answer">Unaweza kutoa pesa zako muda wowote kupitia M-Pesa, Mixx by Yas, Airtel Money au Bank. Pesa inaingia papo hapo bila kuchelewa.</div>
       </div>
-      <div class='faq-item'>
-        <div class='faq-question'>2. Je, kuna ada ya kila mwezi? <span>+</span></div>
-        <div class='faq-answer'>Hapana! Unalipia ada ya activation mara moja pekee na unatumia mfumo bure milele.</div>
+      <div class="faq-item">
+        <div class="faq-question">2. Je, kuna ada ya kila mwezi? <span>+</span></div>
+        <div class="faq-answer">Hapana! Unalipia ada ya activation mara moja pekee na unatumia mfumo bure milele.</div>
       </div>
-      <div class='faq-item'>
-        <div class='faq-question'>3. Nisipojua Kiingereza vizuri nitachat vipi? <span>+</span></div>
-        <div class='faq-answer'>Mfumo wetu una sehemu ya auto-translation inayokusaidia kutafsiri ujumbe wa mgeni kwa Kiswahili na kutafsiri majibu yako kwenda Kiingereza.</div>
+      <div class="faq-item">
+        <div class="faq-question">3. Nisipojua Kiingereza vizuri nitachat vipi? <span>+</span></div>
+        <div class="faq-answer">Mfumo wetu una sehemu ya auto-translation inayokusaidia kutafsiri ujumbe wa mgeni kwa Kiswahili na kutafsiri majibu yako kwenda Kiingereza.</div>
       </div>
     </div>
   </div>
 </section>
 
-<section class='section' id='contact'>
-  <div class='wrap'>
-    <div class='cta-section reveal'>
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="cta-section reveal">
       <h2>Unasubiri Nini? Wageni Wapo Online Sasa Hivi!</h2>
       <p>Acha kutazama fursa ikipita. Fungua account yako sasa hivi na uanze kupokea malipo yako ya kwanza leo!</p>
-      <div style='display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:32px;'>
-        <a class='btn btn-secondary' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>💬 Jiunge WhatsApp Group</a>
-        <a class='btn btn-ghost js-register' href='https://kozenasite.com/register?ref=Nico45' style='color:#fff; border-color:rgba(255,255,255,0.3);'>🚀 Tengeneza Account Uanze</a>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-top:32px;">
+        <a class="btn btn-secondary" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">&#128172; Jiunge WhatsApp Group</a>
+        <a class="btn btn-ghost js-register" href="https://kozenasite.com/register?ref=Nico45" style="color:#fff; border-color:rgba(255,255,255,0.3);">&#128640; Tengeneza Account Uanze</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer class='site-footer'>
-  <div class='wrap'>
-    <div class='footer-grid'>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
       <div>
-        <a class='logo' href='#top' style='color:#fff;'>DUNISWAHILI</a>
-        <p style='font-size:13.5px; margin-top:12px; line-height:1.6;'>Platform ya kuunganisha waafrika na wageni wa kimataifa kwa ajili ya kuchat na kulipwa.</p>
+        <a class="logo" href="#top" style="color:#fff;">DUNISWAHILI</a>
+        <p style="font-size:13.5px; margin-top:12px; line-height:1.6;">Platform ya kuunganisha waafrika na wageni wa kimataifa kwa ajili ya kuchat na kulipwa.</p>
       </div>
       <div>
-        <h4 style='color:#fff; font-size:14px;'>Ukurasa</h4>
-        <ul style='margin-top:12px;'>
-          <li><a href='#top'>Mwanzo</a></li>
-          <li><a href='#foreigners'>Live Foreigners</a></li>
-          <li><a href='#pricing'>Ada kwa Nchi</a></li>
+        <h4 style="color:#fff; font-size:14px;">Ukurasa</h4>
+        <ul style="margin-top:12px;">
+          <li><a href="#top">Mwanzo</a></li>
+          <li><a href="#foreigners">Live Foreigners</a></li>
+          <li><a href="#pricing">Ada kwa Nchi</a></li>
         </ul>
       </div>
       <div>
-        <h4 style='color:#fff; font-size:14px;'>Usajili</h4>
-        <ul style='margin-top:12px;'>
-          <li><a class='js-register' href='https://kozenasite.com/register?ref=Nico45'>Tengeneza Account</a></li>
+        <h4 style="color:#fff; font-size:14px;">Usajili</h4>
+        <ul style="margin-top:12px;">
+          <li><a class="js-register" href="https://kozenasite.com/register?ref=Nico45">Tengeneza Account</a></li>
         </ul>
       </div>
       <div>
-        <h4 style='color:#fff; font-size:14px;'>Support</h4>
-        <ul style='margin-top:12px;'>
-          <li><a href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>WhatsApp Group</a></li>
+        <h4 style="color:#fff; font-size:14px;">Support</h4>
+        <ul style="margin-top:12px;">
+          <li><a href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">WhatsApp Group</a></li>
         </ul>
       </div>
     </div>
-    <div class='footer-bottom'>
+    <div class="footer-bottom">
       <span>&#160; 2026 DUNISWAHILI.SITE &#8212; Haki Zote Zimehifadhiwa.</span>
       <span>Verified Gateway Security</span>
     </div>
@@ -1206,53 +1201,36 @@ button{font-family:var(--font-body);cursor:pointer;}
 </footer>
 
 <!-- TOAST PAYOUT NOTIFICATION -->
-<div class='payout-toast' id='payoutToast'>
-  <div style='background:#10B981; color:#fff; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:bold;'>&#10003;</div>
+<div class="payout-toast" id="payoutToast">
+  <div style="background:#10B981; color:#fff; border-radius:50%; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-weight:bold;">&#10003;</div>
   <div>
-    <div id='toastText' style='font-weight:700; font-size:13px;'>Grace M. ametoa TZS 80,000</div>
-    <div style='font-size:11px; color:var(--muted);'>Pape hapo kupitia M-Pesa</div>
+    <div id="toastText" style="font-weight:700; font-size:13px;">Grace M. ametoa TZS 80,000</div>
+    <div style="font-size:11px; color:var(--muted);">Pape hapo kupitia M-Pesa</div>
   </div>
 </div>
 
-<a aria-label='Chat on WhatsApp' class='wa-float' href='https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY' rel='noopener' target='_blank'>
-  <svg fill='#ffffff' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z'/></svg>
+<a aria-label="Chat on WhatsApp" class="wa-float" href="https://chat.whatsapp.com/BImHa2NGfSxFYGjzugrKeY" rel="noopener" target="_blank">
+  <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
-<!-- REQUIRED BLOGGER WIDGET SECTION -->
-<div class='hidden-section'>
-  <b:section class='main' id='main' showaddelement='no'>
-    <b:widget id='HTML1' locked='false' title='DuniSwahili' type='HTML' version='2' visible='true'>
-      <b:widget-settings>
-        <b:widget-setting name='content'/>
-      </b:widget-settings>
-      <b:includable id='main'>
-        <b:if cond='data:title != &quot;&quot;'>
-          <h2 class='title'><data:title/></h2>
-        </b:if>
-        <div class='widget-content'><data:content/></div>
-      </b:includable>
-    </b:widget>
-  </b:section>
-</div>
-
 <script>
-window.addEventListener(&#39;load&#39;, function() {
-  var preloader = document.getElementById(&#39;preloader&#39;);
-  if(preloader) preloader.classList.add(&#39;hidden&#39;);
+window.addEventListener('load', function() {
+  var preloader = document.getElementById('preloader');
+  if(preloader) preloader.classList.add('hidden');
 });
 
 // DATA POOL FOR AUTO-GENERATING FOREIGNERS
-var foreignNames = [&#39;Wayne Martin&#39;, &#39;David Smith&#39;, &#39;Robert Taylor&#39;, &#39;Alex Mueller&#39;, &#39;Sarah Jenkins&#39;, &#39;Mark Wilson&#39;, &#39;Julie Dubois&#39;, &#39;Marco Rossi&#39;, &#39;Chloe Bennett&#39;, &#39;Lukas Weber&#39;, &#39;Elena Gomez&#39;, &#39;Sven Jansen&#39;, &#39;Emma Lindqvist&#39;, &#39;Lars Hansen&#39;, &#39;Sophie Clark&#39;];
-var foreignFlags = [&#39;🇨🇭&#39;, &#39;🇬🇧&#39;, &#39;🇺🇸&#39;, &#39;🇩🇪&#39;, &#39;🇨🇦&#39;, &#39;🇫🇷&#39;, &#39;🇮🇹&#39;, &#39;🇦🇺&#39;, &#39;🇪🇸&#39;, &#39;🇳🇱&#39;, &#39;🇸🇪&#39;, &#39;🇳🇴&#39;];
+var foreignNames = ['Wayne Martin', 'David Smith', 'Robert Taylor', 'Alex Mueller', 'Sarah Jenkins', 'Mark Wilson', 'Julie Dubois', 'Marco Rossi', 'Chloe Bennett', 'Lukas Weber', 'Elena Gomez', 'Sven Jansen', 'Emma Lindqvist', 'Lars Hansen', 'Sophie Clark'];
+var foreignFlags = ['🇨🇭', '🇬🇧', '🇺🇸', '🇩🇪', '🇨🇦', '🇫🇷', '🇮🇹', '🇦🇺', '🇪🇸', '🇳🇱', '🇸🇪', '🇳🇴'];
 var avatarImgs = [
-  &#39;https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;,
-  &#39;https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&amp;auto=format&amp;fit=crop&amp;q=80&#39;
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80'
 ];
 
 function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
@@ -1261,42 +1239,42 @@ function generateRandomForeigner() {
   var name = foreignNames[Math.floor(Math.random() * foreignNames.length)];
   var flag = foreignFlags[Math.floor(Math.random() * foreignFlags.length)];
   var img = avatarImgs[Math.floor(Math.random() * avatarImgs.length)];
-  var price = &#39;TZS &#39; + (getRandomInt(6, 16) * 10000).toLocaleString();
-  var time = getRandomInt(1, 2) + &#39;h &#39; + (getRandomInt(0, 3) * 15) + &#39;m session&#39;;
+  var price = 'TZS ' + (getRandomInt(6, 16) * 10000).toLocaleString();
+  var time = getRandomInt(1, 2) + 'h ' + (getRandomInt(0, 3) * 15) + 'm session';
   return { name: name, flag: flag, img: img, price: price, time: time };
 }
 
 // DATA POOLS FOR SELF-GENERATING DYNAMIC REAL-TIME WITHDRAWALS
-var firstNames = [&#39;Amani&#39;, &#39;Neema&#39;, &#39;Juma&#39;, &#39;Grace&#39;, &#39;Baraka&#39;, &#39;Doreen&#39;, &#39;Kelvin&#39;, &#39;Rashid&#39;, &#39;Vanessa&#39;, &#39;Goodluck&#39;, &#39;Agnes&#39;, &#39;Innocent&#39;, &#39;Aisha&#39;, &#39;Frank&#39;, &#39;Hassan&#39;, &#39;Fatuma&#39;, &#39;Gift&#39;, &#39;Faraja&#39;];
-var lastInitial = [&#39;M.&#39;, &#39;S.&#39;, &#39;K.&#39;, &#39;P.&#39;, &#39;R.&#39;, &#39;T.&#39;, &#39;L.&#39;, &#39;H.&#39;, &#39;B.&#39;, &#39;J.&#39;, &#39;A.&#39;, &#39;C.&#39;];
-var amounts = [&#39;TZS 35,000&#39;, &#39;TZS 50,000&#39;, &#39;TZS 65,000&#39;, &#39;TZS 80,000&#39;, &#39;TZS 95,000&#39;, &#39;TZS 120,000&#39;, &#39;TZS 150,000&#39;, &#39;TZS 180,000&#39;, &#39;TZS 210,000&#39;];
-var paymentMethods = [&#39;Airtel Money&#39;, &#39;M-Pesa&#39;, &#39;Mixx by Yas&#39;, &#39;Tigo Pesa&#39;, &#39;CRDB Bank&#39;, &#39;NMB Bank&#39;];
+var firstNames = ['Amani', 'Neema', 'Juma', 'Grace', 'Baraka', 'Doreen', 'Kelvin', 'Rashid', 'Vanessa', 'Goodluck', 'Agnes', 'Innocent', 'Aisha', 'Frank', 'Hassan', 'Fatuma', 'Gift', 'Faraja'];
+var lastInitial = ['M.', 'S.', 'K.', 'P.', 'R.', 'T.', 'L.', 'H.', 'B.', 'J.', 'A.', 'C.'];
+var amounts = ['TZS 35,000', 'TZS 50,000', 'TZS 65,000', 'TZS 80,000', 'TZS 95,000', 'TZS 120,000', 'TZS 150,000', 'TZS 180,000', 'TZS 210,000'];
+var paymentMethods = ['Airtel Money', 'M-Pesa', 'Mixx by Yas', 'Tigo Pesa', 'CRDB Bank', 'NMB Bank'];
 
 function generateRandomWithdrawal() {
   var fn = firstNames[Math.floor(Math.random() * firstNames.length)];
   var ln = lastInitial[Math.floor(Math.random() * lastInitial.length)];
   var amt = amounts[Math.floor(Math.random() * amounts.length)];
   var method = paymentMethods[Math.floor(Math.random() * paymentMethods.length)];
-  var num = &#39;*******&#39; + getRandomInt(100, 999);
-  return { name: fn + &#39; &#39; + ln, amount: amt, via: method, acc: num };
+  var num = '*******' + getRandomInt(100, 999);
+  return { name: fn + ' ' + ln, amount: amt, via: method, acc: num };
 }
 
-document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   // WORLD NETWORK BACKGROUND CANVAS ANIMATION
-  var canvas = document.getElementById(&#39;networkCanvas&#39;);
+  var canvas = document.getElementById('networkCanvas');
   if (canvas) {
-    var ctx = canvas.getContext(&#39;2d&#39;);
+    var ctx = canvas.getContext('2d');
     var width = canvas.width = window.innerWidth;
     var height = canvas.height = canvas.offsetHeight || 600;
 
-    window.addEventListener(&#39;resize&#39;, function() {
+    window.addEventListener('resize', function() {
       width = canvas.width = window.innerWidth;
       height = canvas.height = canvas.offsetHeight || 600;
     });
 
     var nodes = [];
-    for (var i = 0; i &lt; 45; i++) {
+    for (var i = 0; i < 45; i++) {
       nodes.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -1308,25 +1286,25 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
 
     function animateNetwork() {
       ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = &#39;rgba(37, 99, 235, 0.4)&#39;;
-      ctx.strokeStyle = &#39;rgba(37, 99, 235, 0.12)&#39;;
+      ctx.fillStyle = 'rgba(37, 99, 235, 0.4)';
+      ctx.strokeStyle = 'rgba(37, 99, 235, 0.12)';
 
-      for (var a = 0; a &lt; nodes.length; a++) {
+      for (var a = 0; a < nodes.length; a++) {
         var nodeA = nodes[a];
         nodeA.x += nodeA.vx;
         nodeA.y += nodeA.vy;
 
-        if (nodeA.x &lt; 0 || nodeA.x &gt; width) nodeA.vx *= -1;
-        if (nodeA.y &lt; 0 || nodeA.y &gt; height) nodeA.vy *= -1;
+        if (nodeA.x < 0 || nodeA.x > width) nodeA.vx *= -1;
+        if (nodeA.y < 0 || nodeA.y > height) nodeA.vy *= -1;
 
         ctx.beginPath();
         ctx.arc(nodeA.x, nodeA.y, nodeA.r, 0, Math.PI * 2);
         ctx.fill();
 
-        for (var b = a + 1; b &lt; nodes.length; b++) {
+        for (var b = a + 1; b < nodes.length; b++) {
           var nodeB = nodes[b];
           var dist = Math.hypot(nodeA.x - nodeB.x, nodeA.y - nodeB.y);
-          if (dist &lt; 140) {
+          if (dist < 140) {
             ctx.beginPath();
             ctx.moveTo(nodeA.x, nodeA.y);
             ctx.lineTo(nodeB.x, nodeB.y);
@@ -1340,12 +1318,12 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
   }
 
   // NAV TOGGLE
-  var navToggle = document.getElementById(&#39;navToggle&#39;);
-  var navLinks = document.getElementById(&#39;navLinks&#39;);
-  if (navToggle &amp;&amp; navLinks) {
-    navToggle.addEventListener(&#39;click&#39;, function () { navLinks.classList.toggle(&#39;active&#39;); });
-    navLinks.querySelectorAll(&#39;a&#39;).forEach(function (l) {
-      l.addEventListener(&#39;click&#39;, function () { navLinks.classList.remove(&#39;active&#39;); });
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () { navLinks.classList.toggle('active'); });
+    navLinks.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', function () { navLinks.classList.remove('active'); });
     });
   }
 
@@ -1354,43 +1332,43 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
     var container = document.getElementById(listId);
     if (!container) return;
 
-    var itemsHtml = &#39;&#39;;
-    for (var i = 0; i &lt; 2; i++) {
+    var itemsHtml = '';
+    for (var i = 0; i < 2; i++) {
       var person = generateRandomForeigner();
-      itemsHtml += &#39;&lt;div class=&quot;foreigner-item open-pop&quot; data-name=&quot;&#39; + person.flag + &#39; &#39; + person.name + &#39;&quot; data-price=&quot;&#39; + person.price + &#39;&quot; data-time=&quot;&#39; + person.time + &#39;&quot;&gt;&#39; +
-        &#39;&lt;div class=&quot;foreigner-info&quot;&gt;&#39; +
-          &#39;&lt;div class=&quot;foreigner-avatar-box&quot;&gt;&#39; +
-            &#39;&lt;img src=&quot;&#39; + person.img + &#39;&quot; alt=&quot;&#39; + person.name + &#39;&quot;/&gt;&#39; +
-            &#39;&lt;span class=&quot;flag-badge&quot;&gt;&#39; + person.flag + &#39;&lt;/span&gt;&#39; +
-          &#39;&lt;/div&gt;&#39; +
-          &#39;&lt;div class=&quot;foreigner-details&quot;&gt;&#39; +
-            &#39;&lt;div class=&quot;name&quot;&gt;&#39; + person.name + &#39;&lt;/div&gt;&#39; +
-            &#39;&lt;div class=&quot;rate&quot;&gt;Pays: &#39; + person.price + &#39;&lt;/div&gt;&#39; +
-          &#39;&lt;/div&gt;&#39; +
-        &#39;&lt;/div&gt;&#39; +
-        &#39;&lt;button class=&quot;chat-btn-action&quot;&gt;Chat&lt;/button&gt;&#39; +
-      &#39;&lt;/div&gt;&#39;;
+      itemsHtml += '<div class="foreigner-item open-pop" data-name="' + person.flag + ' ' + person.name + '" data-price="' + person.price + '" data-time="' + person.time + '">' +
+        '<div class="foreigner-info">' +
+          '<div class="foreigner-avatar-box">' +
+            '<img src="' + person.img + '" alt="' + person.name + '"/>' +
+            '<span class="flag-badge">' + person.flag + '</span>' +
+          '</div>' +
+          '<div class="foreigner-details">' +
+            '<div class="name">' + person.name + '</div>' +
+            '<div class="rate">Pays: ' + person.price + '</div>' +
+          '</div>' +
+        '</div>' +
+        '<button class="chat-btn-action">Chat</button>' +
+      '</div>';
     }
     container.innerHTML = itemsHtml;
     bindPopups();
   }
 
   function updateAllGroups() {
-    populateGroup(&#39;workList&#39;);
-    populateGroup(&#39;funList&#39;);
-    populateGroup(&#39;datingList&#39;);
-    populateGroup(&#39;eduList&#39;);
+    populateGroup('workList');
+    populateGroup('funList');
+    populateGroup('datingList');
+    populateGroup('eduList');
   }
 
-  // INITIAL &amp; AUTO REFRESH FOREIGNERS EVERY 6 SECONDS
+  // INITIAL & AUTO REFRESH FOREIGNERS EVERY 6 SECONDS
   updateAllGroups();
   setInterval(updateAllGroups, 6000);
 
   // REAL-TIME DYNAMIC COUNTERS (FLUCTUATING ONLINE USERS)
   var countHeader = 24890;
   var countNav = 18450;
-  var liveHeaderEl = document.getElementById(&#39;liveHeaderCounter&#39;);
-  var liveNavEl = document.getElementById(&#39;liveCountNav&#39;);
+  var liveHeaderEl = document.getElementById('liveHeaderCounter');
+  var liveNavEl = document.getElementById('liveCountNav');
 
   setInterval(function() {
     countHeader += getRandomInt(-8, 12);
@@ -1401,51 +1379,51 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
   }, 4000);
 
   // FAQ ACCORDION HANDLER
-  document.querySelectorAll(&#39;.faq-question&#39;).forEach(function(item) {
-    item.addEventListener(&#39;click&#39;, function() {
+  document.querySelectorAll('.faq-question').forEach(function(item) {
+    item.addEventListener('click', function() {
       var parent = this.parentElement;
-      parent.classList.toggle(&#39;active&#39;);
+      parent.classList.toggle('active');
     });
   });
 
   // TOAST PAYOUT ENGINE
-  var toastEl = document.getElementById(&#39;payoutToast&#39;);
-  var toastTxt = document.getElementById(&#39;toastText&#39;);
+  var toastEl = document.getElementById('payoutToast');
+  var toastTxt = document.getElementById('toastText');
 
   function triggerToast() {
     if(!toastEl) return;
     var data = generateRandomWithdrawal();
-    toastTxt.innerText = data.name + &#39; ametoa &#39; + data.amount;
-    toastEl.classList.add(&#39;show&#39;);
+    toastTxt.innerText = data.name + ' ametoa ' + data.amount;
+    toastEl.classList.add('show');
     setTimeout(function() {
-      toastEl.classList.remove(&#39;show&#39;);
+      toastEl.classList.remove('show');
     }, 4000);
   }
 
   setInterval(triggerToast, 12000);
 
   // SELF-GENERATED LIVE WITHDRAWAL ENGINE (1 NEW WITHDRAWAL EVERY 10 SECONDS)
-  var tickerContainer = document.getElementById(&#39;tickerViewport&#39;);
-  
+  var tickerContainer = document.getElementById('tickerViewport');
+
   function pushNewWithdrawal() {
     if (!tickerContainer) return;
-    
-    var data = generateRandomWithdrawal();
-    var card = document.createElement(&#39;div&#39;);
-    card.className = &#39;ticker-card-single&#39;;
-    card.innerHTML = &#39;<span><strong>&#39; + data.name + &#39;</strong> ametoa <strong>&#39; + data.amount + &#39;</strong></span>&#39; +
-      &#39;&lt;span class=&quot;method&quot;&gt;&#39; + data.via + &#39;&lt;/span&gt;&#39; +
-      &#39;&lt;span class=&quot;acc-num&quot;&gt;&#39; + data.acc + &#39;&lt;/span&gt;&#39; +
-      &#39;&lt;span class=&quot;time-badge&quot;&gt;Just now&lt;/span&gt;&#39;;
 
-    var currentActive = tickerContainer.querySelector(&#39;.ticker-card-single.active&#39;);
+    var data = generateRandomWithdrawal();
+    var card = document.createElement('div');
+    card.className = 'ticker-card-single';
+    card.innerHTML = '<span><strong>' + data.name + '</strong> ametoa <strong>' + data.amount + '</strong></span>' +
+      '<span class="method">' + data.via + '</span>' +
+      '<span class="acc-num">' + data.acc + '</span>' +
+      '<span class="time-badge">Just now</span>';
+
+    var currentActive = tickerContainer.querySelector('.ticker-card-single.active');
     if (currentActive) {
-      currentActive.classList.remove(&#39;active&#39;);
+      currentActive.classList.remove('active');
       setTimeout(function() { if(currentActive.parentNode) currentActive.parentNode.removeChild(currentActive); }, 500);
     }
 
     tickerContainer.appendChild(card);
-    setTimeout(function() { card.classList.add(&#39;active&#39;); }, 50);
+    setTimeout(function() { card.classList.add('active'); }, 50);
   }
 
   // FIRST PUSH AND THEN RUN EVERY 10 SECONDS EXACTLY
@@ -1453,48 +1431,48 @@ document.addEventListener(&#39;DOMContentLoaded&#39;, function () {
   setInterval(pushNewWithdrawal, 10000);
 
   // MODAL HANDLERS
-  var modalOverlay = document.getElementById(&#39;chatModal&#39;);
-  var closeModalBtn = document.getElementById(&#39;closeModal&#39;);
-  var modalUserTitle = document.getElementById(&#39;modalUserTitle&#39;);
-  var modalPrice = document.getElementById(&#39;modalPrice&#39;);
-  var modalTime = document.getElementById(&#39;modalTime&#39;);
-  var modalWaitText = document.getElementById(&#39;modalWaitText&#39;);
+  var modalOverlay = document.getElementById('chatModal');
+  var closeModalBtn = document.getElementById('closeModal');
+  var modalUserTitle = document.getElementById('modalUserTitle');
+  var modalPrice = document.getElementById('modalPrice');
+  var modalTime = document.getElementById('modalTime');
+  var modalWaitText = document.getElementById('modalWaitText');
 
   function bindPopups() {
-    document.querySelectorAll(&#39;.open-pop&#39;).forEach(function (btn) {
+    document.querySelectorAll('.open-pop').forEach(function (btn) {
       btn.onclick = function (e) {
         e.preventDefault();
-        var name = this.getAttribute(&#39;data-name&#39;) || &#39;Foreigner Client&#39;;
-        var price = this.getAttribute(&#39;data-price&#39;) || &#39;TZS 108,000&#39;;
-        var time = this.getAttribute(&#39;data-time&#39;) || &#39;1h session&#39;;
+        var name = this.getAttribute('data-name') || 'Foreigner Client';
+        var price = this.getAttribute('data-price') || 'TZS 108,000';
+        var time = this.getAttribute('data-time') || '1h session';
 
-        modalUserTitle.innerText = name + &#39; wants to connect with you&#39;;
+        modalUserTitle.innerText = name + ' wants to connect with you';
         modalPrice.innerText = price;
-        modalTime.innerText = &#39;they pay you &#183; &#39; + time;
-        modalWaitText.innerText = name + &#39; is waiting to connect right now!&#39;;
+        modalTime.innerText = 'they pay you · ' + time;
+        modalWaitText.innerText = name + ' is waiting to connect right now!';
 
-        modalOverlay.classList.add(&#39;active&#39;);
+        modalOverlay.classList.add('active');
       };
     });
   }
 
-  if (closeModalBtn) closeModalBtn.addEventListener(&#39;click&#39;, function () { modalOverlay.classList.remove(&#39;active&#39;); });
-  if (modalOverlay) modalOverlay.addEventListener(&#39;click&#39;, function (e) { if (e.target === modalOverlay) modalOverlay.classList.remove(&#39;active&#39;); });
+  if (closeModalBtn) closeModalBtn.addEventListener('click', function () { modalOverlay.classList.remove('active'); });
+  if (modalOverlay) modalOverlay.addEventListener('click', function (e) { if (e.target === modalOverlay) modalOverlay.classList.remove('active'); });
 
   // REVEAL ANIMATIONS
-  var revealEls = document.querySelectorAll(&#39;.reveal&#39;);
-  if (&#39;IntersectionObserver&#39; in window) {
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add(&#39;is-visible&#39;);
+          entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1 });
     revealEls.forEach(function (el) { observer.observe(el); });
   } else {
-    revealEls.forEach(function (el) { el.classList.add(&#39;is-visible&#39;); });
+    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
 });
