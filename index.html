@@ -1834,6 +1834,20 @@ function generateRandomWithdrawal() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // SCROLL REVEAL ANIMATION ENGINE
+  var reveals = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    var windowHeight = window.innerHeight;
+    reveals.forEach(function(el) {
+      var elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 50) {
+        el.classList.add('is-visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+
   // WORLD NETWORK BACKGROUND CANVAS ANIMATION
   var canvas = document.getElementById('networkCanvas');
   if (canvas) {
@@ -1905,7 +1919,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var container = document.getElementById(listId);
     if (!container) return;
 
-    // Generates between 3 and 4 items as requested
     var count = getRandomInt(3, 4);
     var itemsHtml = '';
     for (var i = 0; i < count; i++) {
@@ -1925,7 +1938,6 @@ document.addEventListener('DOMContentLoaded', function () {
       '</div>';
     }
     container.innerHTML = itemsHtml;
-    bindPopups();
   }
 
   function updateAllGroups() {
@@ -1936,13 +1948,14 @@ document.addEventListener('DOMContentLoaded', function () {
     populateGroup('funList');
     populateGroup('datingList');
     populateGroup('eduList');
+    bindPopups();
   }
 
   // INITIAL & AUTO REFRESH FOREIGNERS EVERY 7 SECONDS
   updateAllGroups();
   setInterval(updateAllGroups, 7000);
 
-  // AUTOMATIC TESTIMONIAL CAROUSEL ENGINE (ROTTING ONE BY ONE)
+  // AUTOMATIC TESTIMONIAL CAROUSEL ENGINE
   var slides = document.querySelectorAll('.testi-slide');
   var dots = document.querySelectorAll('.testi-dot');
   var currentSlide = 0;
@@ -1952,8 +1965,8 @@ document.addEventListener('DOMContentLoaded', function () {
     dots.forEach(function(d) { d.classList.remove('active'); });
     
     currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    if(slides[currentSlide]) slides[currentSlide].classList.add('active');
+    if(dots[currentSlide]) dots[currentSlide].classList.add('active');
   }
 
   setInterval(function() {
@@ -2032,82 +2045,63 @@ document.addEventListener('DOMContentLoaded', function () {
   pushNewWithdrawal();
   setInterval(pushNewWithdrawal, 10000);
 
-  // MODAL HANDLERS FOR STANDARD CHAT MODAL
-  var modalOverlay = document.getElementById('chatModal');
+  // MODAL HANDLERS FOR STANDARD CHAT MODAL & RECENT CHAT MODAL
+  var chatModal = document.getElementById('chatModal');
   var closeModalBtn = document.getElementById('closeModal');
-  var modalUserTitle = document.getElementById('modalUserTitle');
-  var modalPrice = document.getElementById('modalPrice');
-  var modalTime = document.getElementById('modalTime');
-  var modalWaitText = document.getElementById('modalWaitText');
+  var recentChatModal = document.getElementById('recentChatModal');
+  var closeRecentChatModalBtn = document.getElementById('closeRecentChatModal');
+  var openRecentChatBtn = document.getElementById('openRecentChatBtn');
 
   function bindPopups() {
-    document.querySelectorAll('.open-pop').forEach(function (btn) {
-      btn.onclick = function (e) {
+    document.querySelectorAll('.open-pop').forEach(function(btn) {
+      btn.onclick = function(e) {
         e.preventDefault();
-        var name = this.getAttribute('data-name') || 'Foreigner Client';
-        var price = this.getAttribute('data-price') || 'TZS 108,000';
-        var time = this.getAttribute('data-time') || '1h session';
+        var name = this.getAttribute('data-name') || 'Foreign User';
+        var price = this.getAttribute('data-price') || 'TZS 100,000';
+        var time = this.getAttribute('data-time') || '1 Session';
 
-        modalUserTitle.innerText = name + ' wants to connect with you';
-        modalPrice.innerText = price;
-        modalTime.innerText = 'they pay you · ' + time;
-        modalWaitText.innerText = name + ' is waiting to connect right now!';
+        document.getElementById('modalUserTitle').innerText = name + ' wants to connect with you';
+        document.getElementById('modalPrice').innerText = price;
+        document.getElementById('modalTime').innerText = 'they pay you · ' + time;
+        document.getElementById('modalWaitText').innerText = name + ' is waiting to connect right now!';
 
-        modalOverlay.classList.add('active');
+        if(chatModal) chatModal.classList.add('active');
       };
     });
   }
 
-  if (closeModalBtn) closeModalBtn.addEventListener('click', function () { modalOverlay.classList.remove('active'); });
-  if (modalOverlay) modalOverlay.addEventListener('click', function (e) { if (e.target === modalOverlay) modalOverlay.classList.remove('active'); });
-
-  // RECENT CHAT MESSENGER MODAL HANDLERS
-  var recentChatModal = document.getElementById('recentChatModal');
-  var openRecentChatBtn = document.getElementById('openRecentChatBtn');
-  var closeRecentChatModal = document.getElementById('closeRecentChatModal');
-  var messengerBody = document.getElementById('messengerBody');
-
-  if (openRecentChatBtn && recentChatModal) {
-    openRecentChatBtn.addEventListener('click', function () {
-      recentChatModal.classList.add('active');
-      // Auto-scroll to bottom of chat
-      setTimeout(function() {
-        if(messengerBody) messengerBody.scrollTop = messengerBody.scrollHeight;
-      }, 100);
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', function() {
+      if(chatModal) chatModal.classList.remove('active');
     });
   }
 
-  if (closeRecentChatModal && recentChatModal) {
-    closeRecentChatModal.addEventListener('click', function () {
-      recentChatModal.classList.remove('active');
-    });
-  }
-
-  if (recentChatModal) {
-    recentChatModal.addEventListener('click', function (e) {
-      if (e.target === recentChatModal) recentChatModal.classList.remove('active');
-    });
-  }
-
-  // REVEAL ANIMATIONS (SCROLL ENTRANCE AND EXIT INTERSECTION OBSERVER)
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible'); // Trigger exit animation on scroll out
+  // Open Recent Chat Modal Handler
+  if (openRecentChatBtn) {
+    openRecentChatBtn.addEventListener('click', function() {
+      if(recentChatModal) {
+        recentChatModal.classList.add('active');
+        var messengerBody = document.getElementById('messengerBody');
+        if (messengerBody) {
+          messengerBody.scrollTop = messengerBody.scrollHeight;
         }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+      }
+    });
   }
+
+  if (closeRecentChatModalBtn) {
+    closeRecentChatModalBtn.addEventListener('click', function() {
+      if(recentChatModal) recentChatModal.classList.remove('active');
+    });
+  }
+
+  // Close modals when clicking overlay background
+  window.addEventListener('click', function(e) {
+    if (e.target === chatModal) chatModal.classList.remove('active');
+    if (e.target === recentChatModal) recentChatModal.classList.remove('active');
+  });
 
 });
 </script>
-
 </body>
 </html>
