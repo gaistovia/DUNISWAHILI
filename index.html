@@ -724,6 +724,167 @@
     .modal-bullet-list div { display: flex; align-items: flex-start; gap: 10px; }
     .modal-actions { display: flex; flex-direction: column; gap: 12px; }
 
+    /* ===== MESSENGER REAL CHAT MODAL STYLES ===== */
+    .messenger-modal-card {
+      background: #FFFFFF;
+      border-radius: 28px;
+      max-width: 420px;
+      width: 100%;
+      height: 85vh;
+      max-height: 620px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35);
+      position: relative;
+      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .messenger-header {
+      background: #FFFFFF;
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    .messenger-user-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .messenger-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      position: relative;
+    }
+    .messenger-avatar-wrap {
+      position: relative;
+    }
+    .messenger-online-dot {
+      width: 11px;
+      height: 11px;
+      background: #10B981;
+      border: 2px solid #FFF;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+    }
+    .messenger-user-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .category-badge-friend {
+      background: #E0E7FF;
+      color: #4338CA;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .messenger-status {
+      font-size: 12px;
+      color: #64748B;
+    }
+    .messenger-close-btn {
+      background: #F1F5F9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #64748B;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .messenger-close-btn:hover { background: #E2E8F0; color: #0F172A; }
+
+    /* Scrollable Chat Area */
+    .messenger-body {
+      flex: 1;
+      padding: 16px;
+      background: #F8FAFC;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      scroll-behavior: smooth;
+    }
+    .chat-time-divider {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94A3B8;
+      margin: 10px 0 4px;
+      position: relative;
+    }
+    .msg-bubble {
+      max-width: 82%;
+      padding: 10px 14px;
+      border-radius: 18px;
+      font-size: 13px;
+      line-height: 1.45;
+      position: relative;
+      word-wrap: break-word;
+    }
+    .msg-bubble.incoming {
+      background: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid #E2E8F0;
+      align-self: flex-start;
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .msg-bubble.outgoing {
+      background: #2563EB;
+      color: #FFFFFF;
+      align-self: flex-end;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.25);
+    }
+    .msg-meta {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+      font-size: 10px;
+      margin-top: 4px;
+      opacity: 0.85;
+    }
+    .msg-bubble.outgoing .msg-meta { color: #E0E7FF; }
+    .msg-bubble.incoming .msg-meta { color: #94A3B8; }
+    .blue-tick { color: #38BDF8; font-weight: bold; }
+
+    /* Payment Proof Card Inside Chat */
+    .chat-payment-card {
+      align-self: center;
+      width: 100%;
+      max-width: 320px;
+      background: linear-gradient(135deg, #059669, #10B981);
+      color: #FFF;
+      border-radius: 20px;
+      padding: 16px;
+      margin: 14px 0;
+      box-shadow: 0 10px 25px -5px rgba(16,185,129,0.4);
+      text-align: center;
+    }
+    .chat-payment-card .p-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.9; font-weight: 700; }
+    .chat-payment-card .p-amount { font-size: 26px; font-weight: 800; font-family: var(--font-display); margin: 6px 0; }
+    .chat-payment-card .p-desc { font-size: 11.5px; background: rgba(255,255,255,0.18); padding: 6px 12px; border-radius: 12px; }
+
     /* ===== OTHER SECTIONS ===== */
     .section { padding: 90px 0; position: relative; z-index: 2; }
     .section-alt { background: rgba(248, 250, 252, 0.75); backdrop-filter: blur(12px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -1037,6 +1198,13 @@
 
     </div>
 
+    <!-- BUTTON YA CHAT YA MWISHO (CHINI YA MAGROUP) -->
+    <div style="text-align: center; margin-top: 36px;" class="reveal">
+      <button class="btn btn-primary" id="openRecentChatBtn" style="padding: 16px 32px; font-size: 16px; background: linear-gradient(135deg, #10B981, #059669); box-shadow: 0 10px 25px -5px rgba(16,185,129,0.4); border-radius: 16px;">
+        👁️ Angalia chat yako ya mwisho
+      </button>
+    </div>
+
     <!-- LIVE WITHDRAW TICKER -->
     <div class="withdraw-ticker-wrapper reveal">
       <div class="withdraw-ticker-title">⚡ Live Withdrawal Feed</div>
@@ -1255,7 +1423,7 @@
               <img class="testi-avatar" src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=120&auto=format&fit=crop&q=80" alt="Baraka J."/>
               <div>
                 <div style="font-weight:800; font-size:16px;">Baraka Joel</div>
-                <div style="font-size:12.5px; color:var(--muted);">🇹🇿 Arusha, Tanzania</div>
+                <div style="font-size:12.5px; color:var(--muted);">🇹ℤ Arusha, Tanzania</div>
               </div>
             </div>
             <p style="font-size:15px; color:var(--muted); line-height:1.6;">&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako kwenye Mixx by Yas au M-Pesa.&quot;</p>
@@ -1278,7 +1446,7 @@
   </div>
 </section>
 
-<!-- POPUP MODAL CHAT -->
+<!-- POPUP MODAL CHAT STANDARD -->
 <div class="modal-overlay" id="chatModal">
   <div class="modal-card">
     <div class="modal-header">
@@ -1306,6 +1474,109 @@
     <div class="modal-actions">
       <a class="btn btn-primary btn-block" href="https://kozenasite.site/register?ref=Nico45" style="font-size:15px;">✨ Create Free Account &amp; Get Paid</a>
       <button class="btn btn-ghost btn-block" id="closeModal" style="color:var(--muted); border-color:transparent;">Later</button>
+    </div>
+  </div>
+</div>
+
+<!-- POPUP MODAL MPYA: REAL MESSENGER CHAT HISTORY -->
+<div class="modal-overlay" id="recentChatModal">
+  <div class="messenger-modal-card">
+    <!-- Messenger Header -->
+    <div class="messenger-header">
+      <div class="messenger-user-info">
+        <div class="messenger-avatar-wrap">
+          <img class="messenger-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Sarah Jenkins">
+          <span class="messenger-online-dot"></span>
+        </div>
+        <div>
+          <div class="messenger-user-name">
+            Sarah Jenkins 🇺🇸
+            <span class="category-badge-friend">FRIEND</span>
+          </div>
+          <div class="messenger-status">Active 2m ago · Messenger</div>
+        </div>
+      </div>
+      <button class="messenger-close-btn" id="closeRecentChatModal">&times;</button>
+    </div>
+
+    <!-- Messenger Chat Scroll Area -->
+    <div class="messenger-body" id="messengerBody">
+      <div class="chat-time-divider">TODAY · 14:15 PM</div>
+
+      <!-- Message 1 -->
+      <div class="msg-bubble outgoing">
+        Hello Sarah! How are you doing? I saw your profile here in DuniSwahili.
+        <div class="msg-meta">14:15 <span class="blue-tick">✓✓</span></div>
+      </div>
+
+      <!-- Message 2 -->
+      <div class="msg-bubble incoming">
+        Hey Nic45! I'm doing great, thanks for reaching out! 😊 Are you from Tanzania?
+        <div class="msg-meta">14:17</div>
+      </div>
+
+      <!-- Message 3 -->
+      <div class="msg-bubble outgoing">
+        Yes I am Tanzanian! But my English is not very good brother... sorry if I make mistakes.
+        <div class="msg-meta">14:20 <span class="blue-tick">✓✓</span></div>
+      </div>
+
+      <!-- Message 4 -->
+      <div class="msg-bubble incoming">
+        Oh don't worry at all Nic45! Just type whatever you can. I am using a Translator app right now on my phone so I understand you perfectly! 👍
+        <div class="msg-meta">14:22</div>
+      </div>
+
+      <!-- Message 5 -->
+      <div class="msg-bubble outgoing">
+        Aha That is awesome! 😃 Karibu Tanzania!
+        <div class="msg-meta">14:25 <span class="blue-tick">✓✓</span></div>
+      </div>
+
+      <!-- Message 6 -->
+      <div class="msg-bubble incoming">
+        Thank you!! I have been reading so much about East Africa lately. I really really wish to visit Tanzania soon! 🇹🇿 I want to see the Serengeti wildebeest migration and visit the beaches in Zanzibar! Is it beautiful there?
+        <div class="msg-meta">14:28</div>
+      </div>
+
+      <div class="chat-time-divider">14:32 PM</div>
+
+      <!-- Message 7 -->
+      <div class="msg-bubble outgoing">
+        Yes Sarah, Zanzibar is very beautiful! Very clean beaches and nice weather. You will love it when you come.
+        <div class="msg-meta">14:33 <span class="blue-tick">✓✓</span></div>
+      </div>
+
+      <!-- Message 8 -->
+      <div class="msg-bubble incoming">
+        That sounds like paradise! I am definitely planning my vacation there next year. Thank you so much for chatting with me and sharing about your country, Nic45. I really enjoyed our conversation!
+        <div class="msg-meta">14:40</div>
+      </div>
+
+      <!-- Message 9 -->
+      <div class="msg-bubble incoming">
+        I have sent you a tip for your time and for being so nice to talk to! Check your account.
+        <div class="msg-meta">14:44</div>
+      </div>
+
+      <!-- REAL PAYMENT RECEIPT CARD INSIDE CHAT -->
+      <div class="chat-payment-card">
+        <div class="p-title">🎉 Malipo Ya Chat Yamefanikiwa</div>
+        <div class="p-amount">TZS 67,000</div>
+        <div class="p-desc">Umepokea TZS 67,000 kutoka kwa <strong>Sarah Jenkins</strong> kwenda kwenye akaunti yako ya DuniSwahili.</div>
+      </div>
+
+      <!-- Message 10 -->
+      <div class="msg-bubble outgoing">
+        Wow Sarah!! Thank you so much! I received TZS 67,000 in my account! God bless you and welcome to Tanzania anytime! 🙏
+        <div class="msg-meta">14:46 <span class="blue-tick">✓✓</span></div>
+      </div>
+
+      <!-- Message 11 -->
+      <div class="msg-bubble incoming">
+        You are very welcome Nic45! Have a wonderful day! 👋😊
+        <div class="msg-meta">14:47</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1761,7 +2032,7 @@ document.addEventListener('DOMContentLoaded', function () {
   pushNewWithdrawal();
   setInterval(pushNewWithdrawal, 10000);
 
-  // MODAL HANDLERS
+  // MODAL HANDLERS FOR STANDARD CHAT MODAL
   var modalOverlay = document.getElementById('chatModal');
   var closeModalBtn = document.getElementById('closeModal');
   var modalUserTitle = document.getElementById('modalUserTitle');
@@ -1789,6 +2060,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (closeModalBtn) closeModalBtn.addEventListener('click', function () { modalOverlay.classList.remove('active'); });
   if (modalOverlay) modalOverlay.addEventListener('click', function (e) { if (e.target === modalOverlay) modalOverlay.classList.remove('active'); });
+
+  // RECENT CHAT MESSENGER MODAL HANDLERS
+  var recentChatModal = document.getElementById('recentChatModal');
+  var openRecentChatBtn = document.getElementById('openRecentChatBtn');
+  var closeRecentChatModal = document.getElementById('closeRecentChatModal');
+  var messengerBody = document.getElementById('messengerBody');
+
+  if (openRecentChatBtn && recentChatModal) {
+    openRecentChatBtn.addEventListener('click', function () {
+      recentChatModal.classList.add('active');
+      // Auto-scroll to bottom of chat
+      setTimeout(function() {
+        if(messengerBody) messengerBody.scrollTop = messengerBody.scrollHeight;
+      }, 100);
+    });
+  }
+
+  if (closeRecentChatModal && recentChatModal) {
+    closeRecentChatModal.addEventListener('click', function () {
+      recentChatModal.classList.remove('active');
+    });
+  }
+
+  if (recentChatModal) {
+    recentChatModal.addEventListener('click', function (e) {
+      if (e.target === recentChatModal) recentChatModal.classList.remove('active');
+    });
+  }
 
   // REVEAL ANIMATIONS (SCROLL ENTRANCE AND EXIT INTERSECTION OBSERVER)
   var revealEls = document.querySelectorAll('.reveal');
