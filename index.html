@@ -1478,7 +1478,7 @@
   </div>
 </div>
 
-<!-- POPUP MODAL MPYA: REAL MESSENGER CHAT HISTORY -->
+<!-- POPUP MODAL MPYA: REAL MESSENGER CHAT HISTORY (LANGUAGE & CULTURE GROUP) -->
 <div class="modal-overlay" id="recentChatModal">
   <div class="messenger-modal-card">
     <!-- Messenger Header -->
@@ -1491,7 +1491,7 @@
         <div>
           <div class="messenger-user-name">
             Sarah Jenkins 🇺🇸
-            <span class="category-badge-friend">FRIEND</span>
+            <span class="category-badge-friend">LANGUAGE & CULTURE</span>
           </div>
           <div class="messenger-status">Active 2m ago · Messenger</div>
         </div>
@@ -1505,37 +1505,37 @@
 
       <!-- Message 1 -->
       <div class="msg-bubble outgoing">
-        Hello Sarah! How are you doing? I saw your profile here in DuniSwahili.
+        Hello Sarah! Jambo! How are you doing? I saw your profile here in the Language &amp; Culture group.
         <div class="msg-meta">14:15 <span class="blue-tick">✓✓</span></div>
       </div>
 
       <!-- Message 2 -->
       <div class="msg-bubble incoming">
-        Hey Nic45! I'm doing great, thanks for reaching out! 😊 Are you from Tanzania?
+        Jambo Nic45! Habari yako? 😊 I'm doing great, thank you for reaching out! Are you a Swahili native speaker?
         <div class="msg-meta">14:17</div>
       </div>
 
       <!-- Message 3 -->
       <div class="msg-bubble outgoing">
-        Yes I am Tanzanian! But my English is not very good brother... sorry if I make mistakes.
+        Nzuri sana! Yes, I am Tanzanian and Swahili is my mother tongue! Are you learning Swahili?
         <div class="msg-meta">14:20 <span class="blue-tick">✓✓</span></div>
       </div>
 
       <!-- Message 4 -->
       <div class="msg-bubble incoming">
-        Oh don't worry at all Nic45! Just type whatever you can. I am using a Translator app right now on my phone so I understand you perfectly! 👍
+        Yes!! Ndio, ninajifunza Kiswahili! I love East African culture and I'm practice-chatting every day. Please help me practice! 👍
         <div class="msg-meta">14:22</div>
       </div>
 
       <!-- Message 5 -->
       <div class="msg-bubble outgoing">
-        Aha That is awesome! 😃 Karibu Tanzania!
+        Karibu sana! Swahili yako ni nzuri sana. Feel free to ask me anything about Kiswahili na utamaduni wetu! 😃
         <div class="msg-meta">14:25 <span class="blue-tick">✓✓</span></div>
       </div>
 
       <!-- Message 6 -->
       <div class="msg-bubble incoming">
-        Thank you!! I have been reading so much about East Africa lately. I really really wish to visit Tanzania soon! 🇹🇿 I want to see the Serengeti wildebeest migration and visit the beaches in Zanzibar! Is it beautiful there?
+        Asante sana Nic45! I am planning a trip to Serengeti and Zanzibar next year, so I want to know both language and places! Is Zanzibar clean and nice?
         <div class="msg-meta">14:28</div>
       </div>
 
@@ -1543,19 +1543,19 @@
 
       <!-- Message 7 -->
       <div class="msg-bubble outgoing">
-        Yes Sarah, Zanzibar is very beautiful! Very clean beaches and nice weather. You will love it when you come.
+        Zanzibar ni nzuri sana! Very clean beaches, rich Swahili culture, and great food. Utapenda sana ukifika.
         <div class="msg-meta">14:33 <span class="blue-tick">✓✓</span></div>
       </div>
 
       <!-- Message 8 -->
       <div class="msg-bubble incoming">
-        That sounds like paradise! I am definitely planning my vacation there next year. Thank you so much for chatting with me and sharing about your country, Nic45. I really enjoyed our conversation!
+        That sounds like paradise! I learned so many new Swahili words from you today. Thank you so much for chatting with me and teaching me, Nic45!
         <div class="msg-meta">14:40</div>
       </div>
 
       <!-- Message 9 -->
       <div class="msg-bubble incoming">
-        I have sent you a tip for your time and for being so nice to talk to! Check your account.
+        I have sent you a reward payment for your time and teaching session. Check your account!
         <div class="msg-meta">14:44</div>
       </div>
 
@@ -1568,13 +1568,13 @@
 
       <!-- Message 10 -->
       <div class="msg-bubble outgoing">
-        Wow Sarah!! Thank you so much! I received TZS 67,000 in my account! God bless you and welcome to Tanzania anytime! 🙏
+        Wow Sarah!! Asante sana! I received TZS 67,000 in my account! You are a great student, welcome to Tanzania anytime! 🙏
         <div class="msg-meta">14:46 <span class="blue-tick">✓✓</span></div>
       </div>
 
       <!-- Message 11 -->
       <div class="msg-bubble incoming">
-        You are very welcome Nic45! Have a wonderful day! 👋😊
+        Kwaheri Nic45! Have a wonderful day! 👋😊
         <div class="msg-meta">14:47</div>
       </div>
     </div>
@@ -1834,20 +1834,6 @@ function generateRandomWithdrawal() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  // SCROLL REVEAL ANIMATION ENGINE
-  var reveals = document.querySelectorAll('.reveal');
-  function checkReveal() {
-    var windowHeight = window.innerHeight;
-    reveals.forEach(function(el) {
-      var elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 50) {
-        el.classList.add('is-visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
-
   // WORLD NETWORK BACKGROUND CANVAS ANIMATION
   var canvas = document.getElementById('networkCanvas');
   if (canvas) {
@@ -1938,6 +1924,7 @@ document.addEventListener('DOMContentLoaded', function () {
       '</div>';
     }
     container.innerHTML = itemsHtml;
+    bindPopups();
   }
 
   function updateAllGroups() {
@@ -1948,7 +1935,6 @@ document.addEventListener('DOMContentLoaded', function () {
     populateGroup('funList');
     populateGroup('datingList');
     populateGroup('eduList');
-    bindPopups();
   }
 
   // INITIAL & AUTO REFRESH FOREIGNERS EVERY 7 SECONDS
@@ -1965,8 +1951,8 @@ document.addEventListener('DOMContentLoaded', function () {
     dots.forEach(function(d) { d.classList.remove('active'); });
     
     currentSlide = (index + slides.length) % slides.length;
-    if(slides[currentSlide]) slides[currentSlide].classList.add('active');
-    if(dots[currentSlide]) dots[currentSlide].classList.add('active');
+    slides[currentSlide].classList.add('active');
+    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
   }
 
   setInterval(function() {
@@ -2035,7 +2021,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentActive = tickerContainer.querySelector('.ticker-card-single.active');
     if (currentActive) {
       currentActive.classList.remove('active');
-      setTimeout(function() { if(currentActive.parentNode) currentActive.parentNode.removeChild(currentActive); }, 500);
+      setTimeout(function() {
+        if (currentActive.parentNode) currentActive.parentNode.removeChild(currentActive);
+      }, 500);
     }
 
     tickerContainer.appendChild(card);
@@ -2043,62 +2031,74 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   pushNewWithdrawal();
-  setInterval(pushNewWithdrawal, 10000);
+  setInterval(pushNewWithdrawal, 5000);
 
-  // MODAL HANDLERS FOR STANDARD CHAT MODAL & RECENT CHAT MODAL
-  var chatModal = document.getElementById('chatModal');
+  // STANDARD MODAL EVENT BINDING
+  var modal = document.getElementById('chatModal');
   var closeModalBtn = document.getElementById('closeModal');
-  var recentChatModal = document.getElementById('recentChatModal');
-  var closeRecentChatModalBtn = document.getElementById('closeRecentChatModal');
-  var openRecentChatBtn = document.getElementById('openRecentChatBtn');
 
   function bindPopups() {
-    document.querySelectorAll('.open-pop').forEach(function(btn) {
-      btn.onclick = function(e) {
-        e.preventDefault();
-        var name = this.getAttribute('data-name') || 'Foreign User';
-        var price = this.getAttribute('data-price') || 'TZS 100,000';
-        var time = this.getAttribute('data-time') || '1 Session';
+    document.querySelectorAll('.open-pop').forEach(function (btn) {
+      btn.onclick = function () {
+        var name = this.getAttribute('data-name') || 'Wayne Martin';
+        var price = this.getAttribute('data-price') || 'TZS 108,000';
+        var time = this.getAttribute('data-time') || '1h 30m session';
 
         document.getElementById('modalUserTitle').innerText = name + ' wants to connect with you';
         document.getElementById('modalPrice').innerText = price;
         document.getElementById('modalTime').innerText = 'they pay you · ' + time;
         document.getElementById('modalWaitText').innerText = name + ' is waiting to connect right now!';
 
-        if(chatModal) chatModal.classList.add('active');
+        modal.classList.add('active');
       };
     });
   }
 
   if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', function() {
-      if(chatModal) chatModal.classList.remove('active');
+    closeModalBtn.addEventListener('click', function () { modal.classList.remove('active'); });
+  }
+
+  window.addEventListener('click', function (e) {
+    if (e.target === modal) modal.classList.remove('active');
+  });
+
+  // RECENT CHAT MESSENGER MODAL HANDLERS
+  var recentChatModal = document.getElementById('recentChatModal');
+  var openRecentBtn = document.getElementById('openRecentChatBtn');
+  var closeRecentBtn = document.getElementById('closeRecentChatModal');
+
+  if (openRecentBtn && recentChatModal) {
+    openRecentBtn.addEventListener('click', function() {
+      recentChatModal.classList.add('active');
+      var body = document.getElementById('messengerBody');
+      if(body) body.scrollTop = body.scrollHeight;
     });
   }
 
-  // Open Recent Chat Modal Handler
-  if (openRecentChatBtn) {
-    openRecentChatBtn.addEventListener('click', function() {
-      if(recentChatModal) {
-        recentChatModal.classList.add('active');
-        var messengerBody = document.getElementById('messengerBody');
-        if (messengerBody) {
-          messengerBody.scrollTop = messengerBody.scrollHeight;
-        }
+  if (closeRecentBtn && recentChatModal) {
+    closeRecentBtn.addEventListener('click', function() {
+      recentChatModal.classList.remove('active');
+    });
+  }
+
+  window.addEventListener('click', function (e) {
+    if (e.target === recentChatModal) recentChatModal.classList.remove('active');
+  });
+
+  // SCROLL REVEAL ENTRANCE & EXIT ANIMATION ENGINE
+  var observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      } else {
+        entry.target.classList.remove('is-visible');
       }
     });
-  }
+  }, observerOptions);
 
-  if (closeRecentChatModalBtn) {
-    closeRecentChatModalBtn.addEventListener('click', function() {
-      if(recentChatModal) recentChatModal.classList.remove('active');
-    });
-  }
-
-  // Close modals when clicking overlay background
-  window.addEventListener('click', function(e) {
-    if (e.target === chatModal) chatModal.classList.remove('active');
-    if (e.target === recentChatModal) recentChatModal.classList.remove('active');
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    revealObserver.observe(el);
   });
 
 });
