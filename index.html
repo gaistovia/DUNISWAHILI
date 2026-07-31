@@ -1086,7 +1086,7 @@
 
     <div class="hero-visual reveal">
       <div class="float-chip chip-a">💵 TSH 108,000/= Zimeingia!</div>
-      <div class="float-chip chip-b">🇨🇮 Wayne Martin is typing...</div>
+      <div class="float-chip chip-b">🇨IC Wayne Martin is typing...</div>
 
       <!-- REAL-TIME CHANGING COUNTER ON PHONE -->
       <div class="online-pill"><span class="pulse"></span><span id="liveCountNav">18,450</span> Foreigners Online</div>
@@ -1423,7 +1423,7 @@
               <img class="testi-avatar" src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=120&auto=format&fit=crop&q=80" alt="Baraka J."/>
               <div>
                 <div style="font-weight:800; font-size:16px;">Baraka Joel</div>
-                <div style="font-size:12.5px; color:var(--muted);">🇹ℤ Arusha, Tanzania</div>
+                <div style="font-size:12.5px; color:var(--muted);">🇹🇿 Arusha, Tanzania</div>
               </div>
             </div>
             <p style="font-size:15px; color:var(--muted); line-height:1.6;">&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako kwenye Mixx by Yas au M-Pesa.&quot;</p>
@@ -1834,6 +1834,20 @@ function generateRandomWithdrawal() {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  // SCROLL REVEAL ANIMATIONS
+  var reveals = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    var windowHeight = window.innerHeight;
+    reveals.forEach(function(el) {
+      var elementTop = el.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 60) {
+        el.classList.add('is-visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+
   // WORLD NETWORK BACKGROUND CANVAS ANIMATION
   var canvas = document.getElementById('networkCanvas');
   if (canvas) {
@@ -1941,6 +1955,58 @@ document.addEventListener('DOMContentLoaded', function () {
   updateAllGroups();
   setInterval(updateAllGroups, 7000);
 
+  // BIND MODAL POPUPS
+  var chatModal = document.getElementById('chatModal');
+  var closeModal = document.getElementById('closeModal');
+  var modalUserTitle = document.getElementById('modalUserTitle');
+  var modalPrice = document.getElementById('modalPrice');
+  var modalTime = document.getElementById('modalTime');
+  var modalWaitText = document.getElementById('modalWaitText');
+
+  function bindPopups() {
+    document.querySelectorAll('.open-pop').forEach(function(btn) {
+      btn.onclick = function() {
+        var name = this.getAttribute('data-name') || 'Foreign Client';
+        var price = this.getAttribute('data-price') || 'TZS 90,000';
+        var time = this.getAttribute('data-time') || '1h 30m session';
+
+        if (modalUserTitle) modalUserTitle.innerText = name + " wants to connect with you";
+        if (modalPrice) modalPrice.innerText = price;
+        if (modalTime) modalTime.innerText = "they pay you · " + time;
+        if (modalWaitText) modalWaitText.innerText = name + " is waiting to connect right now!";
+
+        if (chatModal) chatModal.classList.add('active');
+      };
+    });
+  }
+
+  if (closeModal && chatModal) {
+    closeModal.onclick = function() { chatModal.classList.remove('active'); };
+    chatModal.onclick = function(e) { if(e.target === chatModal) chatModal.classList.remove('active'); };
+  }
+
+  // RECENT CHAT MODAL HANDLERS
+  var recentChatModal = document.getElementById('recentChatModal');
+  var openRecentChatBtn = document.getElementById('openRecentChatBtn');
+  var closeRecentChatModal = document.getElementById('closeRecentChatModal');
+  var messengerBody = document.getElementById('messengerBody');
+
+  if (openRecentChatBtn && recentChatModal) {
+    openRecentChatBtn.onclick = function() {
+      recentChatModal.classList.add('active');
+      if (messengerBody) {
+        setTimeout(function() {
+          messengerBody.scrollTop = messengerBody.scrollHeight;
+        }, 100);
+      }
+    };
+  }
+
+  if (closeRecentChatModal && recentChatModal) {
+    closeRecentChatModal.onclick = function() { recentChatModal.classList.remove('active'); };
+    recentChatModal.onclick = function(e) { if(e.target === recentChatModal) recentChatModal.classList.remove('active'); };
+  }
+
   // AUTOMATIC TESTIMONIAL CAROUSEL ENGINE
   var slides = document.querySelectorAll('.testi-slide');
   var dots = document.querySelectorAll('.testi-dot');
@@ -2031,75 +2097,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   pushNewWithdrawal();
-  setInterval(pushNewWithdrawal, 5000);
-
-  // STANDARD MODAL EVENT BINDING
-  var modal = document.getElementById('chatModal');
-  var closeModalBtn = document.getElementById('closeModal');
-
-  function bindPopups() {
-    document.querySelectorAll('.open-pop').forEach(function (btn) {
-      btn.onclick = function () {
-        var name = this.getAttribute('data-name') || 'Wayne Martin';
-        var price = this.getAttribute('data-price') || 'TZS 108,000';
-        var time = this.getAttribute('data-time') || '1h 30m session';
-
-        document.getElementById('modalUserTitle').innerText = name + ' wants to connect with you';
-        document.getElementById('modalPrice').innerText = price;
-        document.getElementById('modalTime').innerText = 'they pay you · ' + time;
-        document.getElementById('modalWaitText').innerText = name + ' is waiting to connect right now!';
-
-        modal.classList.add('active');
-      };
-    });
-  }
-
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', function () { modal.classList.remove('active'); });
-  }
-
-  window.addEventListener('click', function (e) {
-    if (e.target === modal) modal.classList.remove('active');
-  });
-
-  // RECENT CHAT MESSENGER MODAL HANDLERS
-  var recentChatModal = document.getElementById('recentChatModal');
-  var openRecentBtn = document.getElementById('openRecentChatBtn');
-  var closeRecentBtn = document.getElementById('closeRecentChatModal');
-
-  if (openRecentBtn && recentChatModal) {
-    openRecentBtn.addEventListener('click', function() {
-      recentChatModal.classList.add('active');
-      var body = document.getElementById('messengerBody');
-      if(body) body.scrollTop = body.scrollHeight;
-    });
-  }
-
-  if (closeRecentBtn && recentChatModal) {
-    closeRecentBtn.addEventListener('click', function() {
-      recentChatModal.classList.remove('active');
-    });
-  }
-
-  window.addEventListener('click', function (e) {
-    if (e.target === recentChatModal) recentChatModal.classList.remove('active');
-  });
-
-  // SCROLL REVEAL ENTRANCE & EXIT ANIMATION ENGINE
-  var observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
-  var revealObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal').forEach(function(el) {
-    revealObserver.observe(el);
-  });
+  setInterval(pushNewWithdrawal, 4000);
 
 });
 </script>
