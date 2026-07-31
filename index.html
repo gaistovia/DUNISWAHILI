@@ -697,6 +697,32 @@
     .modal-bullet-list span.icon-check { color: #10B981; font-weight: bold; flex-shrink: 0; }
     .modal-actions { display: flex; flex-direction: column; gap: 10px; }
 
+    /* COUNTDOWN TIMER STYLES */
+    .timer-box-modal {
+      background: #FEF3C7;
+      border: 1px solid #FCD34D;
+      padding: 10px;
+      border-radius: 12px;
+      color: #92400E;
+      font-size: 11.5px;
+      margin-bottom: 16px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .countdown-timer {
+      display: inline-flex;
+      gap: 4px;
+      font-weight: 800;
+      color: #DC2626;
+      font-family: monospace;
+      font-size: 13px;
+      background: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid #FCA5A5;
+      margin-left: 4px;
+    }
+
     /* ===== MESSENGER REAL CHAT MODAL STYLES ===== */
     .messenger-modal-card {
       background: #FFFFFF;
@@ -1298,7 +1324,7 @@
   </div>
 </section>
 
-<!-- ENHANCED BRANDED POPUP MODAL (14,500 ACTIVATION) -->
+<!-- ENHANCED BRANDED POPUP MODAL (14,500 ACTIVATION WITH COUNTDOWN TIMER) -->
 <div class="modal-overlay" id="chatModal">
   <div class="modal-card">
     <div class="modal-header">
@@ -1328,8 +1354,10 @@
       <div><span class="icon-check">✓</span> <span><strong>Auto Translator:</strong> Huna haja ya kujua Kiingereza kwa ufasaha, mfumo utakutafsiri kila kitu.</span></div>
     </div>
 
-    <div style="background:#FEF3C7; border:1px solid #FCD34D; padding:10px; border-radius:12px; color:#92400E; font-size:11.5px; margin-bottom:16px; text-align:center; font-weight: 600;">
-      ⏳ <span id="modalWaitText">Wageni zaidi ya 18,000 wapo tayari kuchat nawe sasa hivi!</span>
+    <!-- COUNTDOWN TIMER SECTION INJECTED -->
+    <div class="timer-box-modal">
+      ⏳ <span id="modalWaitText">Muda wa ofa hii unaisha ndani ya:</span>
+      <span class="countdown-timer" id="countdownTimer">15:00</span>
     </div>
 
     <div class="modal-actions">
@@ -1601,7 +1629,7 @@
   <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
-<!-- FULL COMPLETED JAVASCRIPT -->
+<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER -->
 <script>
 window.addEventListener('load', function() {
   var preloader = document.getElementById('preloader');
@@ -1677,7 +1705,31 @@ function generateRandomWithdrawal() {
   return { name: fn + ' ' + ln, amount: amt, via: method, acc: num };
 }
 
+/* ===== COUNTDOWN TIMER ENGINE ===== */
+function startCountdownTimer(durationInSeconds) {
+  var timerDisplay = document.getElementById('countdownTimer');
+  if (!timerDisplay) return;
+
+  var timer = durationInSeconds, minutes, seconds;
+  setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    timerDisplay.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      timer = durationInSeconds; // Reset timer baada ya kuisha
+    }
+  }, 1000);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+
+  // START 15-MINUTE COUNTDOWN TIMER
+  startCountdownTimer(15 * 60);
 
   // CANVAS NETWORK ANIMATION
   var canvas = document.getElementById('networkCanvas');
@@ -1764,6 +1816,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // CLOSE MODAL EVENT HANDLER
+  var closeModalBtn = document.getElementById('closeModal');
+  if(closeModalBtn) {
+    closeModalBtn.addEventListener('click', function() {
+      document.getElementById('chatModal').classList.remove('active');
+    });
+  }
+
   // POPULATE GROUPS DYNAMICALLY
   function populateGroup(listId) {
     var container = document.getElementById(listId);
@@ -1803,6 +1863,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   updateAllGroups();
   setInterval(updateAllGroups, 8000);
+
+  // RECENT CHAT MODAL LISTENERS
+  var openRecentBtn = document.getElementById('openRecentChatBtn');
+  var recentModal = document.getElementById('recentChatModal');
+  var closeRecentBtn = document.getElementById('closeRecentChatModal');
+
+  if(openRecentBtn && recentModal) {
+    openRecentBtn.addEventListener('click', function() {
+      recentModal.classList.add('active');
+    });
+  }
+  if(closeRecentBtn && recentModal) {
+    closeRecentBtn.addEventListener('click', function() {
+      recentModal.classList.remove('active');
+    });
+  }
 
   // TESTIMONIAL CAROUSEL ENGINE
   var slides = document.querySelectorAll('.testi-slide');
@@ -1858,94 +1934,47 @@ document.addEventListener('DOMContentLoaded', function () {
   function triggerToast() {
     if(!toastEl) return;
     var data = generateRandomWithdrawal();
-    toastTxt.innerText = data.name + ' ametoa ' + data.amount;
+    if(toastTxt) toastTxt.innerText = data.name + ' ametoa ' + data.amount;
     toastEl.classList.add('show');
     setTimeout(function() {
       toastEl.classList.remove('show');
+    }, 4500);
+  }
+
+  setInterval(triggerToast, 9000);
+
+  // TICKER FEED
+  var tickerContainer = document.getElementById('tickerViewport');
+  if(tickerContainer) {
+    setInterval(function() {
+      var data = generateRandomWithdrawal();
+      var itemHtml = '<div class="ticker-card-single active">' +
+        '<span>🎉 <strong>' + data.name + '</strong> ametoa ' + data.amount + '</span>' +
+        '<span class="method">' + data.via + '</span>' +
+        '<span class="acc-num">' + data.acc + '</span>' +
+        '<span class="time-badge">Sasa Hivi</span>' +
+      '</div>';
+      tickerContainer.innerHTML = itemHtml;
     }, 4000);
   }
 
-  setInterval(triggerToast, 12000);
-
-  // LIVE WITHDRAW TICKER ENGINE
-  var tickerContainer = document.getElementById('tickerViewport');
-
-  function pushNewWithdrawal() {
-    if (!tickerContainer) return;
-
-    var data = generateRandomWithdrawal();
-    var card = document.createElement('div');
-    card.className = 'ticker-card-single';
-    card.innerHTML = '<span><strong>' + data.name + '</strong> ametoa <strong>' + data.amount + '</strong></span>' +
-      '<span class="method">' + data.via + '</span>' +
-      '<span class="acc-num">' + data.acc + '</span>' +
-      '<span class="time-badge">Just now</span>';
-
-    var currentActive = tickerContainer.querySelector('.ticker-card-single.active');
-    if (currentActive) {
-      currentActive.classList.remove('active');
-      setTimeout(function() {
-        if (currentActive.parentNode) currentActive.parentNode.removeChild(currentActive);
-      }, 500);
-    }
-
-    tickerContainer.appendChild(card);
-    setTimeout(function() { card.classList.add('active'); }, 50);
-  }
-
-  pushNewWithdrawal();
-  setInterval(pushNewWithdrawal, 4500);
-
-  // MODALS CLOSE HANDLERS
-  var closeModalBtn = document.getElementById('closeModal');
-  if (closeModalBtn) {
-    closeModalBtn.onclick = function() {
-      document.getElementById('chatModal').classList.remove('active');
-    };
-  }
-
-  var recentChatModal = document.getElementById('recentChatModal');
-  var openRecentBtn = document.getElementById('openRecentChatBtn');
-  var closeRecentBtn = document.getElementById('closeRecentChatModal');
-
-  if (openRecentBtn && recentChatModal) {
-    openRecentBtn.onclick = function() {
-      recentChatModal.classList.add('active');
-    };
-  }
-
-  if (closeRecentBtn && recentChatModal) {
-    closeRecentBtn.onclick = function() {
-      recentChatModal.classList.remove('active');
-    };
-  }
-
-  // CLOSE MODALS ON OVERLAY CLICK
-  window.onclick = function(event) {
-    var chatModal = document.getElementById('chatModal');
-    if (event.target == chatModal) {
-      chatModal.classList.remove('active');
-    }
-    if (event.target == recentChatModal) {
-      recentChatModal.classList.remove('active');
-    }
-  };
-
-  // SCROLL REVEAL ANIMATIONS ENGINE
-  var reveals = document.querySelectorAll('.reveal');
-  function checkReveal() {
-    var windowHeight = window.innerHeight;
-    reveals.forEach(function(el) {
-      var elementTop = el.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 50) {
-        el.classList.add('is-visible');
+  // REVEAL ON SCROLL
+  function revealOnScroll() {
+    var reveals = document.querySelectorAll('.reveal');
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 100;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add('is-visible');
       }
-    });
+    }
   }
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
 
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
 });
 </script>
+
 </body>
 </html>
