@@ -723,68 +723,6 @@
       margin-left: 4px;
     }
 
-    /* ===== MESSENGER REAL CHAT MODAL STYLES ===== */
-    .messenger-modal-card {
-      background: #FFFFFF;
-      border-radius: 24px;
-      max-width: 400px;
-      width: 100%;
-      height: 80vh;
-      max-height: 580px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.35);
-      position: relative;
-      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .messenger-header {
-      background: #FFFFFF;
-      padding: 12px 14px;
-      border-bottom: 1px solid #E2E8F0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 10;
-    }
-    .messenger-user-info { display: flex; align-items: center; gap: 10px; }
-    .messenger-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
-    .messenger-avatar-wrap { position: relative; }
-    .messenger-online-dot {
-      width: 9px; height: 9px; background: #10B981; border: 2px solid #FFF; border-radius: 50%;
-      position: absolute; bottom: 0; right: 0;
-    }
-    .messenger-user-name { font-size: 13.5px; font-weight: 800; color: #0F172A; display: flex; align-items: center; gap: 4px; }
-    .category-badge-friend { background: #E0E7FF; color: #4338CA; font-size: 9px; font-weight: 800; padding: 2px 6px; border-radius: 999px; text-transform: uppercase; }
-    .messenger-status { font-size: 11px; color: #64748B; }
-    .messenger-close-btn {
-      background: #F1F5F9; border: none; width: 28px; height: 28px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-size: 16px; color: #64748B; cursor: pointer;
-    }
-
-    .messenger-body {
-      flex: 1; padding: 12px; background: #F8FAFC; overflow-y: auto;
-      display: flex; flex-direction: column; gap: 10px; scroll-behavior: smooth;
-    }
-    .chat-time-divider { text-align: center; font-size: 10px; font-weight: 700; color: #94A3B8; margin: 6px 0; }
-    .msg-bubble {
-      max-width: 85%; padding: 8px 12px; border-radius: 14px; font-size: 12px; line-height: 1.4; word-wrap: break-word;
-    }
-    .msg-bubble.incoming { background: #FFFFFF; color: #0F172A; border: 1px solid #E2E8F0; align-self: flex-start; border-bottom-left-radius: 2px; }
-    .msg-bubble.outgoing { background: #2563EB; color: #FFFFFF; align-self: flex-end; border-bottom-right-radius: 2px; }
-    .msg-meta { display: flex; align-items: center; justify-content: flex-end; gap: 2px; font-size: 9px; margin-top: 2px; opacity: 0.85; }
-    .msg-bubble.outgoing .msg-meta { color: #E0E7FF; }
-    .msg-bubble.incoming .msg-meta { color: #94A3B8; }
-    .blue-tick { color: #38BDF8; font-weight: bold; }
-
-    .chat-payment-card {
-      align-self: center; width: 100%; max-width: 280px; background: linear-gradient(135deg, #059669, #10B981);
-      color: #FFF; border-radius: 16px; padding: 12px; margin: 8px 0; text-align: center;
-    }
-    .chat-payment-card .p-title { font-size: 10.5px; text-transform: uppercase; opacity: 0.9; font-weight: 700; }
-    .chat-payment-card .p-amount { font-size: 20px; font-weight: 800; font-family: var(--font-display); margin: 4px 0; }
-    .chat-payment-card .p-desc { font-size: 10.5px; background: rgba(255,255,255,0.18); padding: 4px 8px; border-radius: 8px; }
-
     /* ===== OTHER SECTIONS ===== */
     .section { padding: 60px 0; position: relative; z-index: 2; }
     .section-alt { background: rgba(248, 250, 252, 0.75); backdrop-filter: blur(12px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -938,7 +876,7 @@
 
     <div class="nav-actions">
       <a class="btn btn-call btn-sm" href="tel:+255782974138">📞 0782974138</a>
-      <a class="btn btn-secondary btn-sm" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank">📱 WhatsApp</a>
+      <a class="btn btn-secondary btn-sm" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank">📢 WhatsApp Channel</a>
       <button class="btn btn-primary btn-sm trigger-popup">🚀 Tengeneza Hela</button>
       <button aria-label="Toggle menu" class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
     </div>
@@ -957,7 +895,7 @@
       <div class="hero-cta">
         <button class="btn btn-primary trigger-popup">💰 Sajili Account Yako Sasa</button>
         <a class="btn btn-call" href="tel:+255782974138">📞 Piga: 0782 974 138</a>
-        <a class="btn btn-secondary" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank">📱 WhatsApp Group</a>
+        <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank">📢 WhatsApp Channel</a>
       </div>
 
       <div class="trust-bar">
@@ -1028,7 +966,7 @@
     <div class="section-head center reveal">
       <span class="eyebrow">💬 Live Foreigners Online</span>
       <h2>Choose a chat group. Foreigners pay for your time.</h2>
-      <p>Chagua group hapa chini. Wageni angalau 3 mpaka 4 wanatengenezwa LIVE na kubadilika mtandaoni kila muda tayari kukulipa!</p>
+      <p>Chagua group hapa chini. Wageni angalau 6 mpaka 8 wanatengenezwa LIVE na kubadilika mtandaoni kila muda tayari kukulipa!</p>
     </div>
 
     <!-- 4 GROUPS GRID -->
@@ -1040,7 +978,7 @@
           <span class="group-badge">🟢 Hiring Now</span>
           <div class="group-title">💼 Work &amp; Job Offers</div>
           <div class="group-desc">Foreigners hiring remote workers &amp; freelancers for quick tasks.</div>
-          <div class="foreigner-list" id="workList"><!-- Dynamic 3-4 Foreigners --></div>
+          <div class="foreigner-list" id="workList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
         <button class="btn btn-primary btn-block trigger-popup">Join Work Group</button>
       </div>
@@ -1051,7 +989,7 @@
           <span class="group-badge">🟢 Very Active</span>
           <div class="group-title">🎉 Fun &amp; Friendship</div>
           <div class="group-desc">Friendly foreigners who want to chat, share stories &amp; laugh together.</div>
-          <div class="foreigner-list" id="funList"><!-- Dynamic 3-4 Foreigners --></div>
+          <div class="foreigner-list" id="funList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
         <button class="btn btn-primary btn-block trigger-popup">Join Friendship Group</button>
       </div>
@@ -1062,7 +1000,7 @@
           <span class="group-badge">🟢 Online Singles</span>
           <div class="group-title">💕 Romance &amp; Dating</div>
           <div class="group-desc">Singles from abroad seeking genuine connections &amp; chats.</div>
-          <div class="foreigner-list" id="datingList"><!-- Dynamic 3-4 Foreigners --></div>
+          <div class="foreigner-list" id="datingList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
         <button class="btn btn-primary btn-block trigger-popup">Join Dating Group</button>
       </div>
@@ -1073,17 +1011,11 @@
           <span class="group-badge">🟢 Learning Swahili</span>
           <div class="group-title">📚 Language &amp; Culture</div>
           <div class="group-desc">Foreigners eager to learn Swahili &amp; discuss African cultures.</div>
-          <div class="foreigner-list" id="eduList"><!-- Dynamic 3-4 Foreigners --></div>
+          <div class="foreigner-list" id="eduList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
         <button class="btn btn-primary btn-block trigger-popup">Join Culture Group</button>
       </div>
 
-    </div>
-
-    <div style="text-align: center; margin-top: 30px;" class="reveal">
-      <button class="btn btn-primary" id="openRecentChatBtn" style="padding: 14px 24px; font-size: 15px; background: linear-gradient(135deg, #10B981, #059669); box-shadow: 0 10px 20px -5px rgba(16,185,129,0.4); border-radius: 14px;">
-        👁️ Angalia chat yako ya mwisho
-      </button>
     </div>
 
     <!-- LIVE WITHDRAW TICKER -->
@@ -1128,87 +1060,87 @@
 
       <!-- KENYA -->
       <div class="country-card reveal">
-        <span class="country-badge-wa">📱 Tuma WhatsApp</span>
+        <span class="country-badge-wa">📢 WhatsApp Channel</span>
         <div class="country-header">
           <span class="country-flag">🇰🇪</span>
           <span class="country-name">Kenya</span>
         </div>
         <div class="country-price">KES 700</div>
-        <p class="country-note">Ukishalipia ada yako ya KES 700 kupitia M-Pesa, tafadhali tuma ushahidi na taarifa zako kwenye group la WhatsApp kupata uthibitisho wa haraka.</p>
+        <p class="country-note">Ukishalipia ada yako ya KES 700 kupitia M-Pesa, tafadhali tuma ushahidi na taarifa zako kwenye channel ya WhatsApp kupata uthibitisho wa haraka.</p>
         
         <div class="mobile-money-container">
           <span class="pay-badge mpesa">M-Pesa Express</span>
         </div>
 
-        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank" style="margin-top:16px;">📱 Tuma Taarifa WhatsApp</a>
+        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- UGANDA -->
       <div class="country-card reveal">
-        <span class="country-badge-wa">📱 Tuma WhatsApp</span>
+        <span class="country-badge-wa">📢 WhatsApp Channel</span>
         <div class="country-header">
           <span class="country-flag">🇺🇬</span>
           <span class="country-name">Uganda</span>
         </div>
         <div class="country-price">UGX 23,000</div>
-        <p class="country-note">Ukishalipia ada yako ya UGX 23,000 (MTN Mobile Money / Airtel Money), tuma ushahidi kwenye WhatsApp ili akaunti yako ifunguliwe.</p>
+        <p class="country-note">Ukishalipia ada yako ya UGX 23,000 (MTN Mobile Money / Airtel Money), tuma ushahidi kwenye WhatsApp channel ili akaunti yako ifunguliwe.</p>
         
         <div class="mobile-money-container">
           <span class="pay-badge airtel">MTN / Airtel UG</span>
         </div>
 
-        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank" style="margin-top:16px;">📱 Tuma Taarifa WhatsApp</a>
+        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- RWANDA -->
       <div class="country-card reveal">
-        <span class="country-badge-wa">📱 Tuma WhatsApp</span>
+        <span class="country-badge-wa">📢 WhatsApp Channel</span>
         <div class="country-header">
           <span class="country-flag">🇷🇼</span>
           <span class="country-name">Rwanda</span>
         </div>
         <div class="country-price">RWF 8,000</div>
-        <p class="country-note">Ukishalipia ada yako ya RWF 8,000 via MTN MoMo, tuma ushahidi wa malipo kwenye group la WhatsApp kukamilisha usajili.</p>
+        <p class="country-note">Ukishalipia ada yako ya RWF 8,000 via MTN MoMo, tuma ushahidi wa malipo kwenye channel ya WhatsApp kukamilisha usajili.</p>
         
         <div class="mobile-money-container">
           <span class="pay-badge mixx">MTN MoMo RW</span>
         </div>
 
-        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank" style="margin-top:16px;">📱 Tuma Taarifa WhatsApp</a>
+        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- BURUNDI -->
       <div class="country-card reveal">
-        <span class="country-badge-wa">📱 Tuma WhatsApp</span>
+        <span class="country-badge-wa">📢 WhatsApp Channel</span>
         <div class="country-header">
           <span class="country-flag">🇧🇮</span>
           <span class="country-name">Burundi</span>
         </div>
         <div class="country-price">BIF 25,000</div>
-        <p class="country-note">Ukishalipia BIF 25,000 via Lumicash/Ecocash, tuma risiti kwenye WhatsApp group ili account yako iwe active.</p>
+        <p class="country-note">Ukishalipia BIF 25,000 via Lumicash/Ecocash, tuma risiti kwenye WhatsApp channel ili account yako iwe active.</p>
         
         <div class="mobile-money-container">
           <span class="pay-badge mpesa">Lumicash / Ecocash</span>
         </div>
 
-        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank" style="margin-top:16px;">📱 Tuma Taarifa WhatsApp</a>
+        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
       </div>
 
       <!-- MALAWI -->
       <div class="country-card reveal">
-        <span class="country-badge-wa">📱 Tuma WhatsApp</span>
+        <span class="country-badge-wa">📢 WhatsApp Channel</span>
         <div class="country-header">
           <span class="country-flag">🇲🇼</span>
           <span class="country-name">Malawi</span>
         </div>
         <div class="country-price">MWK 12,000</div>
-        <p class="country-note">Ukishalipia ada yako ya MWK 12,000, tuma ushahidi wa malipo kwenye WhatsApp ili uweze kuunganishwa.</p>
+        <p class="country-note">Ukishalipia ada yako ya MWK 12,000, tuma ushahidi wa malipo kwenye WhatsApp channel ili uweze kuunganishwa.</p>
         
         <div class="mobile-money-container">
           <span class="pay-badge airtel">Airtel Money MW</span>
         </div>
 
-        <a class="btn btn-secondary btn-block" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank" style="margin-top:16px;">📱 Tuma Taarifa WhatsApp</a>
+        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
       </div>
 
     </div>
@@ -1367,95 +1299,6 @@
   </div>
 </div>
 
-<!-- POPUP MODAL MPYA: REAL MESSENGER CHAT HISTORY -->
-<div class="modal-overlay" id="recentChatModal">
-  <div class="messenger-modal-card">
-    <div class="messenger-header">
-      <div class="messenger-user-info">
-        <div class="messenger-avatar-wrap">
-          <img class="messenger-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80" alt="Sarah Jenkins">
-          <span class="messenger-online-dot"></span>
-        </div>
-        <div>
-          <div class="messenger-user-name">
-            Sarah Jenkins 🇺🇸
-            <span class="category-badge-friend">LANGUAGE & CULTURE</span>
-          </div>
-          <div class="messenger-status">Active 2m ago · Messenger</div>
-        </div>
-      </div>
-      <button class="messenger-close-btn" id="closeRecentChatModal">&times;</button>
-    </div>
-
-    <div class="messenger-body" id="messengerBody">
-      <div class="chat-time-divider">TODAY · 14:15 PM</div>
-
-      <div class="msg-bubble outgoing">
-        Hello Sarah! Jambo! How are you doing? I saw your profile here in the Language &amp; Culture group.
-        <div class="msg-meta">14:15 <span class="blue-tick">✓✓</span></div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        Jambo Nic45! Habari yako? 😊 I'm doing great, thank you for reaching out! Are you a Swahili native speaker?
-        <div class="msg-meta">14:17</div>
-      </div>
-
-      <div class="msg-bubble outgoing">
-        Niko njema. Yes, Mimi ni mtanzania na KiSwahili ni lugha yangu, vipi nikufundishe KiSwahili?
-        <div class="msg-meta">14:20 <span class="blue-tick">✓✓</span></div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        Ndio, ninajifunza kuspeak swahili! I love East African culture and I'm practice-chatting every day. Please help me practice! 👍
-        <div class="msg-meta">14:22</div>
-      </div>
-
-      <div class="msg-bubble outgoing">
-        Karibu sana! KiSwahili chako ni nzuri sana hata ivo. Feel free to ask me anything about Kiswahili na utamaduni wetu! 😃
-        <div class="msg-meta">14:25 <span class="blue-tick">✓✓</span></div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        Asante sana Nic45! I am planning a trip to Serengeti and Zanzibar next year, so I want to know both language and places! Is Zanzibar clean and nice?
-        <div class="msg-meta">14:28</div>
-      </div>
-
-      <div class="chat-time-divider">14:32 PM</div>
-
-      <div class="msg-bubble outgoing">
-        Zanzibar ni nzuri sana! Very clean beaches, rich Swahili culture, and great food. Utapenda sana ukifika, Afu mimi ndio nitakupokea ukija unitafute.
-        <div class="msg-meta">14:33 <span class="blue-tick">✓✓</span></div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        That sounds like paradise! I learned so many new Swahili words from you today. Thank you so much for chatting with me and teaching me, Nic45!
-        <div class="msg-meta">14:40</div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        I have sent you a reward payment for your time and teaching session. Check your account!
-        <div class="msg-meta">14:44</div>
-      </div>
-
-      <div class="chat-payment-card">
-        <div class="p-title">🎉 Malipo Ya Chat Yamefanikiwa</div>
-        <div class="p-amount">TZS 67,000</div>
-        <div class="p-desc">Umepokea TZS 67,000 kutoka kwa <strong>Sarah Jenkins</strong> kwenda kwenye akaunti yako ya DuniSwahili.</div>
-      </div>
-
-      <div class="msg-bubble outgoing">
-        Wow Sarah!! Asante sana! I received TZS 67,000 in my account! You are a great student, welcome to Tanzania anytime! 🙏
-        <div class="msg-meta">14:46 <span class="blue-tick">✓✓</span></div>
-      </div>
-
-      <div class="msg-bubble incoming">
-        Kwaheri Nic45! Have a wonderful day! 👋😊
-        <div class="msg-meta">14:47</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <section class="section" id="community">
   <div class="wrap">
     <div class="section-head center reveal">
@@ -1508,8 +1351,8 @@
       </div>
       <div class="step-card reveal">
         <div class="step-num">04</div>
-        <h3>Jiunge WhatsApp Group</h3>
-        <p>Ukiisha kamilisha kujisajili na kuwa na account, jiunge na group la WhatsApp kwa updates na ushirikiano.</p>
+        <h3>Jiunge WhatsApp Channel</h3>
+        <p>Ukiisha kamilisha kujisajili na kuwa na account, jiunge na channel ya WhatsApp kwa updates na ushirikiano.</p>
       </div>
     </div>
   </div>
@@ -1572,7 +1415,7 @@
       <p>Acha kutazama fursa ikipita. Fungua account yako sasa hivi na uanze kupokea malipo yako ya kwanza leo!</p>
       <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px;">
         <a class="btn btn-call" href="tel:+255782974138">📞 Piga Simu: 0782 974 138</a>
-        <a class="btn btn-secondary" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank">💬 Jiunge WhatsApp Group</a>
+        <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank">📢 Jiunge WhatsApp Channel</a>
         <button class="btn btn-ghost trigger-popup" style="color:#fff; border-color:rgba(255,255,255,0.3);">🚀 Tengeneza Account Uanze</button>
       </div>
     </div>
@@ -1604,7 +1447,7 @@
       <div>
         <h4 style="color:#fff; font-size:14px;">Support</h4>
         <ul style="margin-top:10px;">
-          <li><a href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank">WhatsApp Group</a></li>
+          <li><a href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank">WhatsApp Channel</a></li>
           <li><a href="tel:+255782974138">Piga Simu Kawaida</a></li>
         </ul>
       </div>
@@ -1625,7 +1468,7 @@
   </div>
 </div>
 
-<a aria-label="Chat on WhatsApp" class="wa-float" href="https://chat.whatsapp.com/GwkRHy9dWttFq2ldUQ9RyD?s=cl&p=a&ilr=0" rel="noopener" target="_blank">
+<a aria-label="Join on WhatsApp Channel" class="wa-float" href="https://whatsapp.com/channel/0029VbE3xFJF1YlLvDsmT73Y" rel="noopener" target="_blank">
   <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
@@ -1636,22 +1479,26 @@ window.addEventListener('load', function() {
   if(preloader) preloader.classList.add('hidden');
 });
 
-var maleNames = ['Wayne Martin', 'David Smith', 'Robert Taylor', 'Alex Mueller', 'Mark Wilson', 'Marco Rossi', 'Lukas Weber', 'Sven Jansen', 'Lars Hansen', 'Oliver Brown', 'Daniel Evans', 'Liam Scott'];
-var femaleNames = ['Sarah Jenkins', 'Julie Dubois', 'Chloe Bennett', 'Elena Gomez', 'Emma Lindqvist', 'Sophie Clark', 'Anna Fischer', 'Laura Miller', 'Mia Wagner', 'Charlotte Roy'];
+var maleNames = ['Wayne Martin', 'David Smith', 'Robert Taylor', 'Alex Mueller', 'Mark Wilson', 'Marco Rossi', 'Lukas Weber', 'Sven Jansen', 'Lars Hansen', 'Oliver Brown', 'Daniel Evans', 'Liam Scott', 'Ethan Hunt', 'Noah Garcia', 'Lucas Martinez', 'Mason Lee'];
+var femaleNames = ['Sarah Jenkins', 'Julie Dubois', 'Chloe Bennett', 'Elena Gomez', 'Emma Lindqvist', 'Sophie Clark', 'Anna Fischer', 'Laura Miller', 'Mia Wagner', 'Charlotte Roy', 'Amelia Davies', 'Isabella Silva', 'Sophia Hoffmann', 'Olivia Taylor'];
 
 var maleAvatars = [
   'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80'
+  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80'
 ];
 
 var femaleAvatars = [
   'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
   'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80'
+  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+  'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=150&auto=format&fit=crop&q=80'
 ];
 
 var foreignFlags = ['🇨🇭', '🇬🇧', '🇺🇸', '🇩🇪', '🇨🇦', '🇫🇷', '🇮🇹', '🇦🇺', '🇪🇸', '🇳🇱', '🇸🇪', '🇳🇴'];
@@ -1787,192 +1634,163 @@ document.addEventListener('DOMContentLoaded', function () {
     animateNetwork();
   }
 
-  // NAV TOGGLE
+  // POPULATE FOREIGNERS (AT LEAST 6 TO 8 PER GROUP)
+  function renderGroupForeigners(elementId, count) {
+    var container = document.getElementById(elementId);
+    if (!container) return;
+    container.innerHTML = '';
+    for (var i = 0; i < count; i++) {
+      var f = generateRandomForeigner();
+      var itemHtml = `
+        <div class="foreigner-item trigger-popup">
+          <div class="foreigner-info">
+            <div class="foreigner-avatar-box">
+              <img src="${f.img}" alt="${f.name}">
+              <span class="flag-badge">${f.flag}</span>
+            </div>
+            <div class="foreigner-details">
+              <div class="name">${f.name}</div>
+              <div class="rate">${f.price} · ${f.time}</div>
+            </div>
+          </div>
+          <button class="chat-btn-action">Chat</button>
+        </div>
+      `;
+      container.innerHTML += itemHtml;
+    }
+  }
+
+  function refreshAllGroups() {
+    renderGroupForeigners('workList', 7);
+    renderGroupForeigners('funList', 8);
+    renderGroupForeigners('datingList', 6);
+    renderGroupForeigners('eduList', 7);
+  }
+
+  refreshAllGroups();
+
+  // DYNAMIC REFRESH OF FOREIGNERS EVERY 45 SECONDS
+  setInterval(refreshAllGroups, 45000);
+
+  // POPUP MODAL CONTROL
+  var chatModal = document.getElementById('chatModal');
+  var closeModalBtn = document.getElementById('closeModal');
+
+  document.body.addEventListener('click', function (e) {
+    if (e.target.closest('.trigger-popup')) {
+      if (chatModal) chatModal.classList.add('active');
+    }
+  });
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', function () {
+      if (chatModal) chatModal.classList.remove('active');
+    });
+  }
+
+  if (chatModal) {
+    chatModal.addEventListener('click', function (e) {
+      if (e.target === chatModal) chatModal.classList.remove('active');
+    });
+  }
+
+  // MOBILE NAV TOGGLE
   var navToggle = document.getElementById('navToggle');
   var navLinks = document.getElementById('navLinks');
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () { navLinks.classList.toggle('active'); });
-    navLinks.querySelectorAll('a').forEach(function (l) {
-      l.addEventListener('click', function () { navLinks.classList.remove('active'); });
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('active');
     });
   }
 
-  // GLOBAL POPUP EVENT LISTENER FOR ALL REGISTRATION & CHAT BUTTONS
-  function bindGlobalPopups() {
-    var triggers = document.querySelectorAll('.trigger-popup, .open-pop, .js-register');
-    triggers.forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        var name = this.getAttribute('data-name');
-        
-        if (name) {
-          document.getElementById('modalUserTitle').innerText = name + ' yupo tayari kuchat nawe!';
-        } else {
-          document.getElementById('modalUserTitle').innerText = 'Fungua Chat Yako na Wageni';
-        }
-
-        document.getElementById('chatModal').classList.add('active');
-      });
-    });
-  }
-
-  // CLOSE MODAL EVENT HANDLER
-  var closeModalBtn = document.getElementById('closeModal');
-  if(closeModalBtn) {
-    closeModalBtn.addEventListener('click', function() {
-      document.getElementById('chatModal').classList.remove('active');
-    });
-  }
-
-  // POPULATE GROUPS DYNAMICALLY
-  function populateGroup(listId) {
-    var container = document.getElementById(listId);
-    if (!container) return;
-
-    var count = getRandomInt(3, 4);
-    var itemsHtml = '';
-    for (var i = 0; i < count; i++) {
-      var person = generateRandomForeigner();
-      itemsHtml += '<div class="foreigner-item open-pop" data-name="' + person.flag + ' ' + person.name + '" data-price="' + person.price + '" data-time="' + person.time + '">' +
-        '<div class="foreigner-info">' +
-          '<div class="foreigner-avatar-box">' +
-            '<img src="' + person.img + '" alt="' + person.name + '"/>' +
-            '<span class="flag-badge">' + person.flag + '</span>' +
-          '</div>' +
-          '<div class="foreigner-details">' +
-            '<div class="name">' + person.name + '</div>' +
-            '<div class="rate">Pays: ' + person.price + '</div>' +
-          '</div>' +
-        '</div>' +
-        '<button class="chat-btn-action">Chat</button>' +
-      '</div>';
+  // VERTICAL TICKER SYSTEM
+  var tickerViewport = document.getElementById('tickerViewport');
+  if (tickerViewport) {
+    function updateTicker() {
+      var w = generateRandomWithdrawal();
+      var card = document.createElement('div');
+      card.className = 'ticker-card-single';
+      card.innerHTML = `
+        <span>🎉 <strong>${w.name}</strong> ametoa <strong>${w.amount}</strong></span>
+        <span class="method">${w.via}</span>
+        <span class="acc-num">${w.acc}</span>
+        <span class="time-badge">Papo hapo</span>
+      `;
+      tickerViewport.innerHTML = '';
+      tickerViewport.appendChild(card);
+      setTimeout(function() { card.classList.add('active'); }, 50);
     }
-    container.innerHTML = itemsHtml;
+    updateTicker();
+    setInterval(updateTicker, 6000);
   }
 
-  function updateAllGroups() {
-    usedAvatars.clear();
-    usedNames.clear();
-
-    populateGroup('workList');
-    populateGroup('funList');
-    populateGroup('datingList');
-    populateGroup('eduList');
-    bindGlobalPopups();
-  }
-
-  updateAllGroups();
-  setInterval(updateAllGroups, 8000);
-
-  // RECENT CHAT MODAL LISTENERS
-  var openRecentBtn = document.getElementById('openRecentChatBtn');
-  var recentModal = document.getElementById('recentChatModal');
-  var closeRecentBtn = document.getElementById('closeRecentChatModal');
-
-  if(openRecentBtn && recentModal) {
-    openRecentBtn.addEventListener('click', function() {
-      recentModal.classList.add('active');
-    });
-  }
-  if(closeRecentBtn && recentModal) {
-    closeRecentBtn.addEventListener('click', function() {
-      recentModal.classList.remove('active');
-    });
-  }
-
-  // TESTIMONIAL CAROUSEL ENGINE
+  // TESTIMONIAL CAROUSEL
   var slides = document.querySelectorAll('.testi-slide');
   var dots = document.querySelectorAll('.testi-dot');
   var currentSlide = 0;
 
   function showSlide(index) {
-    slides.forEach(function(s) { s.classList.remove('active'); });
-    dots.forEach(function(d) { d.classList.remove('active'); });
-    
-    currentSlide = (index + slides.length) % slides.length;
-    if(slides[currentSlide]) slides[currentSlide].classList.add('active');
-    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === index);
+    });
+    currentSlide = index;
   }
 
-  setInterval(function() {
-    showSlide(currentSlide + 1);
-  }, 5000);
-
-  dots.forEach(function(dot) {
+  dots.forEach(dot => {
     dot.addEventListener('click', function() {
-      var idx = parseInt(this.getAttribute('data-index'));
+      var idx = parseInt(this.getAttribute('data-index'), 10);
       showSlide(idx);
     });
   });
 
-  // REAL-TIME COUNTERS
-  var countHeader = 24890;
-  var countNav = 18450;
-  var liveHeaderEl = document.getElementById('liveHeaderCounter');
-  var liveNavEl = document.getElementById('liveCountNav');
-
   setInterval(function() {
-    countHeader += getRandomInt(-8, 12);
-    countNav += getRandomInt(-5, 9);
+    var next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }, 5000);
 
-    if (liveHeaderEl) liveHeaderEl.innerText = countHeader.toLocaleString();
-    if (liveNavEl) liveNavEl.innerText = countNav.toLocaleString();
-  }, 4000);
-
-  // FAQ ACCORDION HANDLER
-  document.querySelectorAll('.faq-question').forEach(function(item) {
-    item.addEventListener('click', function() {
+  // FAQ ACCORDION
+  var faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(q => {
+    q.addEventListener('click', function() {
       var parent = this.parentElement;
       parent.classList.toggle('active');
     });
   });
 
-  // TOAST PAYOUT ENGINE
-  var toastEl = document.getElementById('payoutToast');
-  var toastTxt = document.getElementById('toastText');
+  // PAYOUT TOAST NOTIFICATION
+  var toast = document.getElementById('payoutToast');
+  var toastText = document.getElementById('toastText');
 
   function triggerToast() {
-    if(!toastEl) return;
-    var data = generateRandomWithdrawal();
-    if(toastTxt) toastTxt.innerText = data.name + ' ametoa ' + data.amount;
-    toastEl.classList.add('show');
+    if (!toast || !toastText) return;
+    var w = generateRandomWithdrawal();
+    toastText.innerHTML = `<strong>${w.name}</strong> ametoa <strong>${w.amount}</strong>`;
+    toast.classList.add('show');
     setTimeout(function() {
-      toastEl.classList.remove('show');
-    }, 4500);
-  }
-
-  setInterval(triggerToast, 9000);
-
-  // TICKER FEED
-  var tickerContainer = document.getElementById('tickerViewport');
-  if(tickerContainer) {
-    setInterval(function() {
-      var data = generateRandomWithdrawal();
-      var itemHtml = '<div class="ticker-card-single active">' +
-        '<span>🎉 <strong>' + data.name + '</strong> ametoa ' + data.amount + '</span>' +
-        '<span class="method">' + data.via + '</span>' +
-        '<span class="acc-num">' + data.acc + '</span>' +
-        '<span class="time-badge">Sasa Hivi</span>' +
-      '</div>';
-      tickerContainer.innerHTML = itemHtml;
+      toast.classList.remove('show');
     }, 4000);
   }
 
-  // REVEAL ON SCROLL
-  function revealOnScroll() {
-    var reveals = document.querySelectorAll('.reveal');
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 100;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add('is-visible');
-      }
-    }
-  }
+  setTimeout(triggerToast, 3000);
+  setInterval(triggerToast, 12000);
 
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
+  // SCROLL REVEAL ANIMATIONS
+  var reveals = document.querySelectorAll('.reveal');
+  function checkReveal() {
+    var windowHeight = window.innerHeight;
+    reveals.forEach(r => {
+      var elementTop = r.getBoundingClientRect().top;
+      if (elementTop < windowHeight - 50) {
+        r.classList.add('is-visible');
+      }
+    });
+  }
+  window.addEventListener('scroll', checkReveal);
+  checkReveal();
+
 });
 </script>
 
