@@ -723,193 +723,88 @@
       margin-left: 4px;
     }
 
-    /* ===== CHAT MODAL INTERFACE ===== */
-    .chat-box-card {
-      background: #FFFFFF;
-      border-radius: 20px;
-      width: 100%;
+    /* ===== CHAT INTERFACE & LOADING STYLES ===== */
+    .live-chat-card {
       max-width: 440px;
-      height: 520px;
-      display: flex;
-      flex-direction: column;
+      width: 100%;
+      background: #FFFFFF;
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
       position: relative;
-      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      max-height: 85vh;
     }
-
-    .chat-box-header {
-      background: linear-gradient(135deg, var(--primary), var(--dark-blue));
+    .chat-card-header {
+      background: linear-gradient(135deg, var(--dark-blue), var(--primary));
+      padding: 14px 18px;
       color: #fff;
-      padding: 12px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-
-    .chat-box-header .user-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .chat-box-header .avatar-box {
-      position: relative;
-      width: 40px;
-      height: 40px;
-    }
-
-    .chat-box-header .avatar-box img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #fff;
-    }
-
-    .chat-box-header .avatar-box .flag-badge {
-      position: absolute;
-      bottom: -2px;
-      right: -2px;
-      font-size: 11px;
-      background: #fff;
-      border-radius: 50%;
-      padding: 1px;
-      line-height: 1;
-    }
-
-    .chat-box-header .user-details .name {
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .chat-box-header .user-details .status {
-      font-size: 11px;
-      opacity: 0.9;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .chat-box-header .user-details .status .dot {
-      width: 7px;
-      height: 7px;
-      background: #4ADE80;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .chat-box-close {
-      background: rgba(255,255,255,0.2);
-      border: none;
-      color: #fff;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .chat-box-body {
-      flex: 1;
+    .chat-user-info { display: flex; align-items: center; gap: 10px; }
+    .chat-user-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; }
+    .chat-user-name { font-weight: 800; font-size: 14px; }
+    .chat-user-status { font-size: 11px; opacity: 0.85; display: flex; align-items: center; gap: 4px; }
+    .chat-card-body {
       padding: 16px;
       background: #F8FAFC;
+      flex: 1;
       overflow-y: auto;
       display: flex;
       flex-direction: column;
       gap: 12px;
+      min-height: 250px;
     }
-
-    .chat-msg {
-      max-width: 80%;
-      padding: 10px 14px;
-      border-radius: 16px;
-      font-size: 13px;
-      line-height: 1.4;
-    }
-
-    .chat-msg.in {
-      background: #fff;
-      border: 1px solid var(--line);
-      align-self: flex-start;
-      border-bottom-left-radius: 2px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-      color: var(--text);
-    }
-
-    .chat-msg.out {
-      background: linear-gradient(135deg, var(--primary), #1D4ED8);
-      color: #fff;
-      align-self: flex-end;
-      border-bottom-right-radius: 2px;
-    }
-
-    .chat-box-footer {
+    .chat-input-area {
       padding: 12px;
       background: #fff;
       border-top: 1px solid var(--line);
       display: flex;
       gap: 8px;
-      align-items: center;
-      position: relative;
     }
-
-    .chat-box-footer input {
+    .chat-input {
       flex: 1;
       border: 1px solid var(--line);
       border-radius: 12px;
       padding: 10px 14px;
       font-size: 13px;
       outline: none;
-      font-family: var(--font-body);
     }
-
-    .chat-box-footer input:focus {
-      border-color: var(--primary);
-    }
-
-    .chat-box-footer button {
+    .chat-send-btn {
       background: var(--primary);
       color: #fff;
       border: none;
       padding: 10px 16px;
       border-radius: 12px;
       font-weight: 700;
-      font-size: 13px;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    /* LOADING SPINNER FOR CHAT SEND */
-    .chat-loader-overlay {
+    /* LOADING & NO-ACCOUNT OVERLAY */
+    .chat-overlay-status {
       position: absolute;
       inset: 0;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(2px);
-      display: none;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      padding: 20px;
+      text-align: center;
       z-index: 10;
     }
-
-    .chat-loader-overlay.active {
-      display: flex;
-    }
-
-    .chat-spinner {
-      width: 28px;
-      height: 28px;
-      border: 3px solid #EFF6FF;
-      border-top: 3px solid var(--primary);
+    .spinner-loader {
+      width: 44px;
+      height: 44px;
+      border: 4px solid #E2E8F0;
+      border-top: 4px solid var(--primary);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
     }
 
     /* ===== OTHER SECTIONS ===== */
@@ -1169,7 +1064,7 @@
           <div class="group-desc">Foreigners hiring remote workers &amp; freelancers for quick tasks.</div>
           <div class="foreigner-list" id="workList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
-        <button class="btn btn-primary btn-block trigger-popup">Join Work Group</button>
+        <button class="btn btn-primary btn-block join-group-btn" data-group-name="💼 Work & Job Offers Group" data-members="1,420">Join Work Group</button>
       </div>
 
       <!-- Group 2: Fun & Friendship -->
@@ -1180,7 +1075,7 @@
           <div class="group-desc">Friendly foreigners who want to chat, share stories &amp; laugh together.</div>
           <div class="foreigner-list" id="funList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
-        <button class="btn btn-primary btn-block trigger-popup">Join Friendship Group</button>
+        <button class="btn btn-primary btn-block join-group-btn" data-group-name="🎉 Fun & Friendship Group" data-members="2,890">Join Friendship Group</button>
       </div>
 
       <!-- Group 3: Romance & Dating -->
@@ -1191,7 +1086,7 @@
           <div class="group-desc">Singles from abroad seeking genuine connections &amp; chats.</div>
           <div class="foreigner-list" id="datingList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
-        <button class="btn btn-primary btn-block trigger-popup">Join Dating Group</button>
+        <button class="btn btn-primary btn-block join-group-btn" data-group-name="💕 Romance & Dating Group" data-members="3,105">Join Dating Group</button>
       </div>
 
       <!-- Group 4: Education & Language Exchange -->
@@ -1202,7 +1097,7 @@
           <div class="group-desc">Foreigners eager to learn Swahili &amp; discuss African cultures.</div>
           <div class="foreigner-list" id="eduList"><!-- Dynamic 6-8 Foreigners --></div>
         </div>
-        <button class="btn btn-primary btn-block trigger-popup">Join Culture Group</button>
+        <button class="btn btn-primary btn-block join-group-btn" data-group-name="📚 Language & Culture Group" data-members="980">Join Culture Group</button>
       </div>
 
     </div>
@@ -1445,48 +1340,12 @@
   </div>
 </section>
 
-<!-- LIVE CHAT WINDOW MODAL -->
-<div class="modal-overlay" id="liveChatModal">
-  <div class="chat-box-card">
-    <div class="chat-box-header">
-      <div class="user-info">
-        <div class="avatar-box">
-          <img id="chatUserAvatar" src="" alt="User Avatar">
-          <span class="flag-badge" id="chatUserFlag">🇩🇪</span>
-        </div>
-        <div class="user-details">
-          <div class="name" id="chatUserName">Sarah Jenkins</div>
-          <div class="status"><span class="dot"></span> Online Now</div>
-        </div>
-      </div>
-      <button class="chat-box-close" id="closeLiveChatModal">&times;</button>
-    </div>
-
-    <div class="chat-box-body" id="chatBoxBody">
-      <div class="chat-msg in" id="chatFirstMsg">
-        Habari! Nipo tayari kuchat nawe, utakuwa huru muda gani?
-      </div>
-    </div>
-
-    <div class="chat-box-footer">
-      <!-- LOADING OVERLAY -->
-      <div class="chat-loader-overlay" id="chatLoader">
-        <div class="chat-spinner"></div>
-        <span style="font-size: 11.5px; font-weight: 700; color: var(--primary);">Inahakiki akaunti yako...</span>
-      </div>
-
-      <input type="text" id="chatInput" placeholder="Andika ujumbe wako hapa..." autocomplete="off">
-      <button id="sendChatBtn">Tuma</button>
-    </div>
-  </div>
-</div>
-
 <!-- ENHANCED BRANDED POPUP MODAL (14,500 ACTIVATION WITH COUNTDOWN TIMER) -->
 <div class="modal-overlay" id="chatModal">
   <div class="modal-card">
     <div class="modal-header">
       <div class="modal-badge-brand">✨ DUNISWAHILI VIP ACTIVATION</div>
-      <h3 id="modalUserTitle">Fungua Chat Yako na Wageni</h3>
+      <h3 id="modalUserTitle">Fungua Account Yako Sasa</h3>
     </div>
 
     <div class="modal-price-card">
@@ -1520,6 +1379,46 @@
     <div class="modal-actions">
       <a class="btn btn-primary btn-block" href="https://kozenasite.site/register?ref=Nico45">🚀 Lipia TZS 14,500 Uanze Sasa</a>
       <button class="btn btn-ghost btn-block" id="closeModal" style="color:var(--muted); border-color:transparent;">Baadae</button>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE CHAT INTERFACE MODAL (FOR INDIVIDUAL FOREIGNER & GROUPS) -->
+<div class="modal-overlay" id="liveChatModal">
+  <div class="live-chat-card">
+    <div class="chat-card-header">
+      <div class="chat-user-info">
+        <img class="chat-user-avatar" id="chatHeaderAvatar" src="" alt="Avatar">
+        <div>
+          <div class="chat-user-name" id="chatHeaderName">Foreigner</div>
+          <div class="chat-user-status"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#4ADE80;display:inline-block;"></span> <span id="chatHeaderSub">Online · VIP Member</span></div>
+        </div>
+      </div>
+      <button id="closeLiveChat" style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer;">&times;</button>
+    </div>
+
+    <div class="chat-card-body" id="chatCardBody">
+      <!-- Chat Messages injected dynamically -->
+    </div>
+
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInputMessage" placeholder="Andika ujumbe wako hapa...">
+      <button class="chat-send-btn" id="chatSendBtn">Tuma</button>
+    </div>
+
+    <!-- LOADING & NO ACCOUNT OVERLAY CONTAINER -->
+    <div class="chat-overlay-status" id="chatOverlayStatus" style="display:none;">
+      <div id="chatLoadingState" style="display:none; flex-direction:column; align-items:center;">
+        <div class="spinner-loader"></div>
+        <p style="font-weight:700; color:var(--dark-blue); font-size:13px;">Inakagua Account Yako...</p>
+      </div>
+
+      <div id="chatErrorState" style="display:none; flex-direction:column; align-items:center;">
+        <div style="font-size:36px; margin-bottom:8px;">⚠️</div>
+        <h4 style="font-weight:800; color:var(--dark-blue); font-size:16px; margin-bottom:6px;">Huna Account Inayofanya Kazi!</h4>
+        <p style="font-size:12.5px; color:var(--muted); margin-bottom:16px; line-height:1.4;">Huwezi kutuma au kujibu ujumbe kwa wageni bila kuwa na Account iliyofunguliwa. Unatakiwa kukamilisha usajili kwa ada ya <strong>TZS 14,500</strong> pekee.</p>
+        <a class="btn btn-primary btn-block" href="https://kozenasite.site/register?ref=Nico45">🚀 Fungua Account Kwa TZS 14,500</a>
+      </div>
     </div>
   </div>
 </div>
@@ -1697,7 +1596,7 @@
   <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
-<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER & LIVE CHAT FEATURE -->
+<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER -->
 <script>
 window.addEventListener('load', function() {
   var preloader = document.getElementById('preloader');
@@ -1867,7 +1766,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < count; i++) {
       var f = generateRandomForeigner();
       var itemHtml = `
-        <div class="foreigner-item open-foreign-chat" data-name="${f.name}" data-img="${f.img}" data-flag="${f.flag}">
+        <div class="foreigner-item foreigner-chat-trigger" data-name="${f.name}" data-img="${f.img}" data-flag="${f.flag}" data-price="${f.price}">
           <div class="foreigner-info">
             <div class="foreigner-avatar-box">
               <img src="${f.img}" alt="${f.name}">
@@ -1897,95 +1796,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // DYNAMIC REFRESH OF FOREIGNERS EVERY 45 SECONDS
   setInterval(refreshAllGroups, 45000);
 
-  // POPUP MODAL CONTROL & LIVE CHAT SYSTEM
+  // POPUP MODAL CONTROL
   var chatModal = document.getElementById('chatModal');
   var closeModalBtn = document.getElementById('closeModal');
-  
-  var liveChatModal = document.getElementById('liveChatModal');
-  var closeLiveChatModal = document.getElementById('closeLiveChatModal');
-  var chatUserAvatar = document.getElementById('chatUserAvatar');
-  var chatUserName = document.getElementById('chatUserName');
-  var chatUserFlag = document.getElementById('chatUserFlag');
-  var chatBoxBody = document.getElementById('chatBoxBody');
-  var chatInput = document.getElementById('chatInput');
-  var sendChatBtn = document.getElementById('sendChatBtn');
-  var chatLoader = document.getElementById('chatLoader');
 
   document.body.addEventListener('click', function (e) {
-    var chatTarget = e.target.closest('.open-foreign-chat');
-    if (chatTarget) {
-      var name = chatTarget.getAttribute('data-name');
-      var img = chatTarget.getAttribute('data-img');
-      var flag = chatTarget.getAttribute('data-flag');
-
-      chatUserName.textContent = name;
-      chatUserAvatar.src = img;
-      chatUserFlag.textContent = flag;
-
-      // Reset Chat Body
-      chatBoxBody.innerHTML = `
-        <div class="chat-msg in">
-          Habari! Nipo tayari kuchat nawe, utakuwa huru muda gani?
-        </div>
-      `;
-      chatInput.value = '';
-
-      if (liveChatModal) liveChatModal.classList.add('active');
-      return;
-    }
-
     if (e.target.closest('.trigger-popup')) {
       if (chatModal) chatModal.classList.add('active');
     }
   });
-
-  // FUNCTION TO HANDLE SENDING MESSAGE AND CHECKING ACCOUNT
-  function handleSendMessage() {
-    var val = chatInput.value.trim();
-    if (!val) return;
-
-    // Add user message to chat UI
-    var userMsg = document.createElement('div');
-    userMsg.className = 'chat-msg out';
-    userMsg.textContent = val;
-    chatBoxBody.appendChild(userMsg);
-
-    chatInput.value = '';
-    chatBoxBody.scrollTop = chatBoxBody.scrollHeight;
-
-    // Show Loading Overlay
-    if (chatLoader) chatLoader.classList.add('active');
-
-    // Simulate verification delay (2.5 seconds) then restrict user & show payment modal
-    setTimeout(function() {
-      if (chatLoader) chatLoader.classList.remove('active');
-      if (liveChatModal) liveChatModal.classList.remove('active');
-      
-      // Update registration popup title
-      var modalTitle = document.getElementById('modalUserTitle');
-      if (modalTitle) modalTitle.textContent = "Huna Account! Lipia Usajili Uendelee Kuchat";
-      
-      if (chatModal) chatModal.classList.add('active');
-    }, 2500);
-  }
-
-  if (sendChatBtn) {
-    sendChatBtn.addEventListener('click', handleSendMessage);
-  }
-
-  if (chatInput) {
-    chatInput.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        handleSendMessage();
-      }
-    });
-  }
-
-  if (closeLiveChatModal) {
-    closeLiveChatModal.addEventListener('click', function() {
-      if (liveChatModal) liveChatModal.classList.remove('active');
-    });
-  }
 
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', function () {
@@ -1999,9 +1818,107 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  if (liveChatModal) {
-    liveChatModal.addEventListener('click', function (e) {
-      if (e.target === liveChatModal) liveChatModal.classList.remove('active');
+  /* ===== LIVE CHAT SIMULATION SYSTEM ===== */
+  var liveChatModal = document.getElementById('liveChatModal');
+  var closeLiveChat = document.getElementById('closeLiveChat');
+  var chatCardBody = document.getElementById('chatCardBody');
+  var chatHeaderAvatar = document.getElementById('chatHeaderAvatar');
+  var chatHeaderName = document.getElementById('chatHeaderName');
+  var chatHeaderSub = document.getElementById('chatHeaderSub');
+  var chatInputMessage = document.getElementById('chatInputMessage');
+  var chatSendBtn = document.getElementById('chatSendBtn');
+  var chatOverlayStatus = document.getElementById('chatOverlayStatus');
+  var chatLoadingState = document.getElementById('chatLoadingState');
+  var chatErrorState = document.getElementById('chatErrorState');
+
+  function openChatWindow(name, avatar, subtext, initialMsg) {
+    chatHeaderName.textContent = name;
+    chatHeaderAvatar.src = avatar;
+    chatHeaderSub.textContent = subtext;
+    chatInputMessage.value = '';
+    
+    chatOverlayStatus.style.display = 'none';
+    chatLoadingState.style.display = 'none';
+    chatErrorState.style.display = 'none';
+
+    chatCardBody.innerHTML = `
+      <div class="bubble in">
+        <strong>${name}:</strong><br>
+        ${initialMsg}
+      </div>
+    `;
+    liveChatModal.classList.add('active');
+  }
+
+  // EVENT DELEGATION FOR FOREIGNER CLICK
+  document.body.addEventListener('click', function(e) {
+    var trigger = e.target.closest('.foreigner-chat-trigger');
+    if (trigger) {
+      var name = trigger.getAttribute('data-name');
+      var img = trigger.getAttribute('data-img');
+      var flag = trigger.getAttribute('data-flag');
+      var price = trigger.getAttribute('data-price');
+      openChatWindow(name, img, flag + ' Online · Offers ' + price, "Hello! I am online now. Let's chat and share more!");
+    }
+  });
+
+  // EVENT DELEGATION FOR JOIN GROUP CLICK
+  document.body.addEventListener('click', function(e) {
+    var groupBtn = e.target.closest('.join-group-btn');
+    if (groupBtn) {
+      var groupName = groupBtn.getAttribute('data-group-name');
+      var members = groupBtn.getAttribute('data-members');
+      openChatWindow(
+        groupName, 
+        './logo.jpg', 
+        '🟢 ' + members + ' Members Active', 
+        'Karibu kwenye ' + groupName + '! Wageni wengi wapo active hapa kuchat naye. Andika ujumbe wako kuanza.'
+      );
+    }
+  });
+
+  // CLOSE CHAT MODAL
+  if (closeLiveChat) {
+    closeLiveChat.addEventListener('click', function() {
+      liveChatModal.classList.remove('active');
+    });
+  }
+
+  // TRIGGER LOADING AND ACCOUNT ALERT UPON MESSAGING
+  function handleSendMessage() {
+    var msg = chatInputMessage.value.trim();
+    if (!msg) return;
+
+    // Append user message
+    chatCardBody.innerHTML += `
+      <div class="bubble out">
+        ${msg}
+      </div>
+    `;
+    chatInputMessage.value = '';
+    chatCardBody.scrollTop = chatCardBody.scrollHeight;
+
+    // Show Loading
+    chatOverlayStatus.style.display = 'flex';
+    chatLoadingState.style.display = 'flex';
+    chatErrorState.style.display = 'none';
+
+    // Delay 2 seconds then show "No Account" Alert
+    setTimeout(function() {
+      chatLoadingState.style.display = 'none';
+      chatErrorState.style.display = 'flex';
+    }, 2000);
+  }
+
+  if (chatSendBtn) {
+    chatSendBtn.addEventListener('click', handleSendMessage);
+  }
+
+  if (chatInputMessage) {
+    chatInputMessage.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        handleSendMessage();
+      }
     });
   }
 
