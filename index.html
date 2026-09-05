@@ -723,6 +723,195 @@
       margin-left: 4px;
     }
 
+    /* ===== CHAT MODAL INTERFACE ===== */
+    .chat-box-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 440px;
+      height: 520px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      position: relative;
+      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .chat-box-header {
+      background: linear-gradient(135deg, var(--primary), var(--dark-blue));
+      color: #fff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chat-box-header .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chat-box-header .avatar-box {
+      position: relative;
+      width: 40px;
+      height: 40px;
+    }
+
+    .chat-box-header .avatar-box img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+
+    .chat-box-header .avatar-box .flag-badge {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+      font-size: 11px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 1px;
+      line-height: 1;
+    }
+
+    .chat-box-header .user-details .name {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .chat-box-header .user-details .status {
+      font-size: 11px;
+      opacity: 0.9;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .chat-box-header .user-details .status .dot {
+      width: 7px;
+      height: 7px;
+      background: #4ADE80;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .chat-box-close {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .chat-box-body {
+      flex: 1;
+      padding: 16px;
+      background: #F8FAFC;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .chat-msg {
+      max-width: 80%;
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .chat-msg.in {
+      background: #fff;
+      border: 1px solid var(--line);
+      align-self: flex-start;
+      border-bottom-left-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+      color: var(--text);
+    }
+
+    .chat-msg.out {
+      background: linear-gradient(135deg, var(--primary), #1D4ED8);
+      color: #fff;
+      align-self: flex-end;
+      border-bottom-right-radius: 2px;
+    }
+
+    .chat-box-footer {
+      padding: 12px;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      position: relative;
+    }
+
+    .chat-box-footer input {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 13px;
+      outline: none;
+      font-family: var(--font-body);
+    }
+
+    .chat-box-footer input:focus {
+      border-color: var(--primary);
+    }
+
+    .chat-box-footer button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* LOADING SPINNER FOR CHAT SEND */
+    .chat-loader-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(2px);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      z-index: 10;
+    }
+
+    .chat-loader-overlay.active {
+      display: flex;
+    }
+
+    .chat-spinner {
+      width: 28px;
+      height: 28px;
+      border: 3px solid #EFF6FF;
+      border-top: 3px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
     /* ===== OTHER SECTIONS ===== */
     .section { padding: 60px 0; position: relative; z-index: 2; }
     .section-alt { background: rgba(248, 250, 252, 0.75); backdrop-filter: blur(12px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -1256,6 +1445,42 @@
   </div>
 </section>
 
+<!-- LIVE CHAT WINDOW MODAL -->
+<div class="modal-overlay" id="liveChatModal">
+  <div class="chat-box-card">
+    <div class="chat-box-header">
+      <div class="user-info">
+        <div class="avatar-box">
+          <img id="chatUserAvatar" src="" alt="User Avatar">
+          <span class="flag-badge" id="chatUserFlag">🇩🇪</span>
+        </div>
+        <div class="user-details">
+          <div class="name" id="chatUserName">Sarah Jenkins</div>
+          <div class="status"><span class="dot"></span> Online Now</div>
+        </div>
+      </div>
+      <button class="chat-box-close" id="closeLiveChatModal">&times;</button>
+    </div>
+
+    <div class="chat-box-body" id="chatBoxBody">
+      <div class="chat-msg in" id="chatFirstMsg">
+        Habari! Nipo tayari kuchat nawe, utakuwa huru muda gani?
+      </div>
+    </div>
+
+    <div class="chat-box-footer">
+      <!-- LOADING OVERLAY -->
+      <div class="chat-loader-overlay" id="chatLoader">
+        <div class="chat-spinner"></div>
+        <span style="font-size: 11.5px; font-weight: 700; color: var(--primary);">Inahakiki akaunti yako...</span>
+      </div>
+
+      <input type="text" id="chatInput" placeholder="Andika ujumbe wako hapa..." autocomplete="off">
+      <button id="sendChatBtn">Tuma</button>
+    </div>
+  </div>
+</div>
+
 <!-- ENHANCED BRANDED POPUP MODAL (14,500 ACTIVATION WITH COUNTDOWN TIMER) -->
 <div class="modal-overlay" id="chatModal">
   <div class="modal-card">
@@ -1472,7 +1697,7 @@
   <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
 </a>
 
-<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER -->
+<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER & LIVE CHAT FEATURE -->
 <script>
 window.addEventListener('load', function() {
   var preloader = document.getElementById('preloader');
@@ -1642,7 +1867,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < count; i++) {
       var f = generateRandomForeigner();
       var itemHtml = `
-        <div class="foreigner-item trigger-popup">
+        <div class="foreigner-item open-foreign-chat" data-name="${f.name}" data-img="${f.img}" data-flag="${f.flag}">
           <div class="foreigner-info">
             <div class="foreigner-avatar-box">
               <img src="${f.img}" alt="${f.name}">
@@ -1672,15 +1897,95 @@ document.addEventListener('DOMContentLoaded', function () {
   // DYNAMIC REFRESH OF FOREIGNERS EVERY 45 SECONDS
   setInterval(refreshAllGroups, 45000);
 
-  // POPUP MODAL CONTROL
+  // POPUP MODAL CONTROL & LIVE CHAT SYSTEM
   var chatModal = document.getElementById('chatModal');
   var closeModalBtn = document.getElementById('closeModal');
+  
+  var liveChatModal = document.getElementById('liveChatModal');
+  var closeLiveChatModal = document.getElementById('closeLiveChatModal');
+  var chatUserAvatar = document.getElementById('chatUserAvatar');
+  var chatUserName = document.getElementById('chatUserName');
+  var chatUserFlag = document.getElementById('chatUserFlag');
+  var chatBoxBody = document.getElementById('chatBoxBody');
+  var chatInput = document.getElementById('chatInput');
+  var sendChatBtn = document.getElementById('sendChatBtn');
+  var chatLoader = document.getElementById('chatLoader');
 
   document.body.addEventListener('click', function (e) {
+    var chatTarget = e.target.closest('.open-foreign-chat');
+    if (chatTarget) {
+      var name = chatTarget.getAttribute('data-name');
+      var img = chatTarget.getAttribute('data-img');
+      var flag = chatTarget.getAttribute('data-flag');
+
+      chatUserName.textContent = name;
+      chatUserAvatar.src = img;
+      chatUserFlag.textContent = flag;
+
+      // Reset Chat Body
+      chatBoxBody.innerHTML = `
+        <div class="chat-msg in">
+          Habari! Nipo tayari kuchat nawe, utakuwa huru muda gani?
+        </div>
+      `;
+      chatInput.value = '';
+
+      if (liveChatModal) liveChatModal.classList.add('active');
+      return;
+    }
+
     if (e.target.closest('.trigger-popup')) {
       if (chatModal) chatModal.classList.add('active');
     }
   });
+
+  // FUNCTION TO HANDLE SENDING MESSAGE AND CHECKING ACCOUNT
+  function handleSendMessage() {
+    var val = chatInput.value.trim();
+    if (!val) return;
+
+    // Add user message to chat UI
+    var userMsg = document.createElement('div');
+    userMsg.className = 'chat-msg out';
+    userMsg.textContent = val;
+    chatBoxBody.appendChild(userMsg);
+
+    chatInput.value = '';
+    chatBoxBody.scrollTop = chatBoxBody.scrollHeight;
+
+    // Show Loading Overlay
+    if (chatLoader) chatLoader.classList.add('active');
+
+    // Simulate verification delay (2.5 seconds) then restrict user & show payment modal
+    setTimeout(function() {
+      if (chatLoader) chatLoader.classList.remove('active');
+      if (liveChatModal) liveChatModal.classList.remove('active');
+      
+      // Update registration popup title
+      var modalTitle = document.getElementById('modalUserTitle');
+      if (modalTitle) modalTitle.textContent = "Huna Account! Lipia Usajili Uendelee Kuchat";
+      
+      if (chatModal) chatModal.classList.add('active');
+    }, 2500);
+  }
+
+  if (sendChatBtn) {
+    sendChatBtn.addEventListener('click', handleSendMessage);
+  }
+
+  if (chatInput) {
+    chatInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        handleSendMessage();
+      }
+    });
+  }
+
+  if (closeLiveChatModal) {
+    closeLiveChatModal.addEventListener('click', function() {
+      if (liveChatModal) liveChatModal.classList.remove('active');
+    });
+  }
 
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', function () {
@@ -1691,6 +1996,12 @@ document.addEventListener('DOMContentLoaded', function () {
   if (chatModal) {
     chatModal.addEventListener('click', function (e) {
       if (e.target === chatModal) chatModal.classList.remove('active');
+    });
+  }
+
+  if (liveChatModal) {
+    liveChatModal.addEventListener('click', function (e) {
+      if (e.target === liveChatModal) liveChatModal.classList.remove('active');
     });
   }
 
