@@ -2,2025 +2,1580 @@
 <html lang="sw">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- === META TAGS === -->
-    <title>DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia</title>
-    <meta name="title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia">
-    <meta name="description" content="Jifunze njia za uhakika za namna ya kupata hela mtandaoni, fursa za kiuchumi, teknolojia, na biashara za kidijitali kupitia DUNISWAHILI. Pata mwongozo kamili hapa!">
-    <meta name="keywords" content="DUNISWAHILI, duniswahili, namna ya kupata hela mtandaoni, jinsi ya kupata fedha mtandaoni, fursa za mtandaoni, biashara za mtandaoni, kutengeneza fedha mtandaoni Tanzania, kazi za mtandaoni Swahili, kufanya kazi mtandaoni">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="Swahili">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & GOOGLE SEARCH METADATA -->
+    <title>DUNISWAHILI — Chati na Wageni, Lipwa Papo Hapo</title>
+    <meta name="description" content="DUNISWAHILI ni dashibodi ya kuchati, voice call na video call na wageni kwa Kiswahili na kupokea malipo mara baada ya mazungumzo kumalizika.">
+    <meta name="keywords" content="DUNISWAHILI, bongaswahili, kuchati na wageni, fursa za mtandaoni, chati ulipwe, kupata pesa mtandaoni">
     <meta name="author" content="DUNISWAHILI">
-
-    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta name="robots" content="index, follow">
+    <!-- OPEN GRAPH FOR SOCIAL MEDIA & SEARCH PREVIEWS -->
+    <meta property="og:title" content="DUNISWAHILI — Chati na Wageni, Lipwa Papo Hapo">
+    <meta property="og:description" content="DUNISWAHILI ni dashibodi ya kuchati, voice call na video call na wageni kwa Kiswahili na kupokea malipo mara baada ya mazungumzo kumalizika.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://duniswahili.com/">
-    <meta property="og:title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia">
-    <meta property="og:description" content="Pata miongozo na mbinu bora za namna ya kupata hela mtandaoni na fursa za kidijitali kupitia DUNISWAHILI.">
-    <meta property="og:image" content="https://duniswahili.com/assets/banner.jpg">
-
-    <!-- Twitter / X -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://duniswahili.com/">
-    <meta property="twitter:title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni">
-    <meta property="twitter:description" content="Jifunze njia za uhakika za kupata hela mtandaoni na fursa za kidijitali DUNISWAHILI.">
-    <meta property="twitter:image" content="https://duniswahili.com/assets/banner.jpg">
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "DUNISWAHILI",
-      "alternateName": ["Duni Swahili", "DUNISWAHILI Hela Mtandaoni"],
-      "url": "https://duniswahili.com/",
-      "description": "Jukwaa la kujifunzia namna ya kupata hela mtandaoni, teknolojia, na fursa za kidijitali.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://duniswahili.com/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+    <meta property="og:url" content="https://duniswahili.com">
+    <!-- PWA MANIFEST -->
+    <link rel="manifest" href='[data\:application/manifest+json;utf8,{"name":"DUNISWAHILI","short_name":"DUNISWAHILI","start_url":".","display":"standalone","background_color":"#0b141a","theme_color":"#0b141a","icons":[{"src":"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=192","sizes":"192x192","type":"image/png"}]}](data\:application/manifest+json;utf8,{"name":"DUNISWAHILI","short_name":"DUNISWAHILI","start_url":".","display":"standalone","background_color":"#0b141a%22,%22theme_color%22:%22#0b141a%22,%22icons%22:[{%22src%22:%22https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=192%22,%22sizes%22:%22192x192%22,%22type%22:%22image/png%22}]})'>
+    <meta name="theme-color" content="#0b141a">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b141a;
+            color: #ffffff;
+            padding-bottom: 90px;
+        }
+        /* --- HEADER & LOGO --- */
+        .header {
+            background-color: #0b141a;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #1e293b;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .svg-logo {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+        }
+        .brand-text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .brand-name {
+            font-size: 19px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+        .brand-name span.white { color: #ffffff; }
+        .brand-name span.green {
+            color: #22c55e;
+            text-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+        }
+        .brand-slogan {
+            font-size: 8px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            margin-top: 3px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .slogan-white { color: #ffffff; }
+        .slogan-green { color: #22c55e; }
+        .slogan-blue { color: #06b6d4; }
+        .slogan-line-left, .slogan-line-right {
+            height: 2px;
+            width: 10px;
+            display: inline-block;
+        }
+        .slogan-line-left { background-color: #06b6d4; }
+        .slogan-line-right { background-color: #22c55e; }
+        .brand-subtag {
+            font-size: 9px;
+            font-weight: 900;
+            color: #f59e0b;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-top: 2px;
+            text-shadow: 0 0 5px rgba(245, 158, 11, 0.5);
+        }
+        .online-badge {
+            background-color: #0f2d2e;
+            color: #22c55e;
+            border: 1px solid #22c55e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+            animation: badgeGlow 2s infinite;
+        }
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes badgeGlow {
+            0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.7); }
+            100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.3); }
+        }
+        /* --- TOP ACTION BUTTONS --- */
+        .top-actions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            padding: 16px;
+        }
+        .btn-install-app {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
+            text-decoration: none;
+        }
+        .btn-customer-care {
+            background: linear-gradient(135deg, #22c55e, #15803d);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-customer-care\:hover {
+            box-shadow: 0 0 18px rgba(34, 197, 94, 0.7);
+            transform: translateY(-1px);
+        }
+        /* --- DASHBOARD CARDS --- */
+        .balance-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            padding: 0 16px;
+            margin-bottom: 16px;
+        }
+        .bal-card {
+            border-radius: 16px;
+            padding: 12px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 125px;
+            transition: transform 0.3s ease;
+        }
+        .bal-card\:hover {
+            transform: translateY(-2px);
+        }
+        .bal-card-profit {
+            background: linear-gradient(145deg, #0f2d3d, #082f49);
+            border: 1px solid #0284c7;
+            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.25);
+        }
+        .bal-card-current {
+            background: linear-gradient(145deg, #3d2b07, #261702);
+            border: 1px solid #f59e0b;
+            box-shadow: 0 4px 18px rgba(245, 158, 11, 0.3);
+        }
+        .bal-card-withdrawn {
+            background: linear-gradient(145deg, #063d22, #022c14);
+            border: 1px solid #10b981;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+        }
+        .bal-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #cbd5e1;
+            line-height: 1.3;
+        }
+        .bal-amount {
+            font-size: 15px;
+            font-weight: 900;
+            color: white;
+            margin-top: 6px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        }
+        .bal-card-current .bal-amount {
+            color: #fde047;
+        }
+        .bal-card-withdrawn .bal-amount {
+            color: #6ee7b7;
+        }
+        .btn-toa-pesa {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #1e1b4b;
+            border: none;
+            padding: 7px;
+            border-radius: 15px;
+            font-weight: 900;
+            font-size: 11px;
+            margin-top: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+            transition: all 0.2s;
+        }
+        .btn-toa-pesa\:hover {
+            filter: brightness(1.1);
+            transform: scale(1.02);
+        }
+        .btn-fungua-account {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: 16px;
+            width: calc(100% - 32px);
+            margin: 0 16px 20px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+        }
+        .section-header {
+            padding: 0 16px 12px 16px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .section-sub {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 16px;
+        }
+        .user-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: all 0.5s ease-in-out;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .avatar-wrapper {
+            position: relative;
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+        }
+        .user-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #06b6d4;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .status-dot-card {
+            width: 14px;
+            height: 14px;
+            background-color: #22c55e;
+            border: 2px solid #0f172a;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            box-shadow: 0 0 10px #22c55e, 0 0 18px #22c55e;
+            animation: pulse 1.5s infinite;
+        }
+        .user-details h4 {
+            font-size: 16px;
+            color: #ffffff;
+            transition: opacity 0.4s ease;
+        }
+        .user-details p {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 2px;
+            transition: opacity 0.4s ease;
+        }
+        .status-online {
+            color: #22c55e;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(34, 197, 94, 0.9), 0 0 15px rgba(34, 197, 94, 0.5);
+            animation: textGlow 1.5s infinite alternate;
+        }
+        @keyframes textGlow {
+            0% { opacity: 0.8; text-shadow: 0 0 5px rgba(34, 197, 94, 0.6); }
+            100% { opacity: 1; text-shadow: 0 0 12px rgba(34, 197, 94, 1), 0 0 20px rgba(34, 197, 94, 0.8); }
+        }
+        .status-offline { color: #ef4444; font-weight: bold; }
+        .price-tag {
+            font-size: 14px;
+            font-weight: bold;
+            color: #f59e0b;
+            margin-top: 4px;
+            transition: opacity 0.4s ease;
+        }
+        .card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+        }
+        .btn-action {
+            padding: 8px;
+            border-radius: 12px;
+            border: none;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .btn-chat { background-color: #06b6d4; color: white; }
+        .btn-voice { background-color: #1e293b; color: #38bdf8; border: 1px solid #0284c7; }
+        .btn-video { background-color: #312e81; color: #c084fc; border: 1px solid #6b21a8; }
+        /* --- SEHEMU YA HUDUMA KWA WATEJA & MIAMALA --- */
+        .support-card-section {
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .support-box {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .support-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .support-sub {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: -6px;
+            margin-bottom: 4px;
+        }
+        .btn-support-pill {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        .btn-support-pill\:active { transform: scale(0.98); }
+        .btn-deep-green-channel {
+            background: linear-gradient(135deg, #047857, #065f46);
+            border: 1px solid #059669;
+            box-shadow: 0 4px 14px rgba(4, 120, 87, 0.4);
+        }
+        .btn-gradient-sms {
+            background: linear-gradient(135deg, #10b981, #06b6d4);
+        }
+        /* --- CONTAINER YA MIAMALA INAYOTEMBEA --- */
+        .tx-history-box {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 18px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+        .tx-ticker-wrapper {
+            height: 110px;
+            overflow: hidden;
+            position: relative;
+        }
+        .tx-ticker-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tx-item {
+            background-color: #1a102f;
+            border: 1px solid #3b0764;
+            border-radius: 25px;
+            padding: 12px 18px;
+            font-size: 13px;
+            color: #d8b4fe;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: slideUpFade 0.5s ease-out;
+        }
+        .tx-item-green {
+            background-color: #052e16;
+            border: 1px solid #14532d;
+            color: #4ade80;
+        }
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .tx-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .tx-dot-purple { background-color: #c084fc; box-shadow: 0 0 6px #c084fc; }
+        .tx-dot-green { background-color: #22c55e; box-shadow: 0 0 6px #22c55e; }
+        /* --- STYLES MPYA ZA RATING & MAONI --- */
+        .reviews-section-container {
+            padding: 0 16px 24px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .reviews-top-banner {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .reviews-title-box h3 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .reviews-title-box p {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.4;
+        }
+        .rating-score-badge {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 12px 16px;
+            text-align: center;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .score-number {
+            font-size: 22px;
+            font-weight: 900;
+            color: #f59e0b;
+        }
+        .score-stars {
+            color: #f59e0b;
+            font-size: 11px;
+            margin: 2px 0;
+        }
+        .score-count {
+            font-size: 10px;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+        .review-card-item {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 18px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .review-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .review-user-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .review-avatar-initial {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #052e16, #14532d);
+            border: 1px solid #22c55e;
+            color: #22c55e;
+            font-weight: 900;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .review-user-details h4 {
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .review-user-details span {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        .review-stars-row {
+            color: #f59e0b;
+            font-size: 13px;
+        }
+        .review-body-text {
+            font-size: 13px;
+            color: #cbd5e1;
+            line-height: 1.45;
+        }
+        .bottom-install-section {
+            padding: 0 16px 20px 16px;
+        }
+        .bottom-install-box {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 24px 18px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .bottom-install-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .bottom-install-sub {
+            font-size: 13px;
+            color: #94a3b8;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .btn-bottom-install {
+            background: linear-gradient(135deg, #10b981, #0284c7);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+            text-decoration: none;
+        }
+        .withdraw-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 16px;
+            right: 16px;
+            background-color: #1e293b;
+            border: 1px solid #06b6d4;
+            border-radius: 12px;
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+            z-index: 999;
+            transform: translateY(180%);
+            transition: transform 0.4s ease-in-out;
+        }
+        .withdraw-popup.show { transform: translateY(0); }
+        .popup-icon { color: #22c55e; font-size: 20px; }
+        .popup-text { font-size: 12px; color: #e2e8f0; }
+        .popup-text strong { color: #06b6d4; }
+        /* --- MODALS --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        .modal-content {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .modal-content h3 { margin-bottom: 8px; color: #06b6d4; }
+        .modal-content p { font-size: 13px; color: #94a3b8; margin-bottom: 18px; }
+        .support-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .btn-support-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+        .btn-support-sms {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+        .btn-close-modal {
+            background-color: #334155;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        .install-modal-box {
+            background-color: #0d1926;
+            border: 1px solid #1e2d3d;
+            border-radius: 24px;
+            padding: 24px 20px;
+            width: 100%;
+            max-width: 380px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            text-align: left;
+        }
+        .btn-close-x {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background-color: #172636;
+            color: #94a3b8;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .install-modal-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+            padding-right: 30px;
+            line-height: 1.35;
+        }
+        .install-steps-list {
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .install-steps-list li {
+            font-size: 13px;
+            color: #8b9db2;
+            line-height: 1.4;
+        }
+        .btn-download-apk {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 16px;
+            border-radius: 20px;
+            border: none;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            width: 100%;
+            cursor: pointer;
+        }
+        /* --- CHAT MODAL INTERFACE --- */
+        .chat-modal-box {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        .chat-header {
+            background-color: #1e293b;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #334155;
+        }
+        .chat-user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chat-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #06b6d4;
+        }
+        .chat-user-details h4 {
+            font-size: 15px;
+            color: #ffffff;
+        }
+        .chat-status-text {
+            font-size: 11px;
+            color: #22c55e;
+            font-weight: bold;
+            text-shadow: 0 0 6px rgba(34, 197, 94, 0.8);
+        }
+        .chat-status-typing {
+            font-size: 11px;
+            color: #06b6d4;
+            font-weight: bold;
+            font-style: italic;
+            animation: blink 0.8s infinite;
+        }
+        @keyframes blink { 0% { opacity: 0.3; } 50% { opacity: 1; } 100% { opacity: 0.3; } }
+        .chat-body {
+            flex: 1;
+            padding: 16px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #0b141a;
+        }
+        .chat-msg {
+            max-width: 80%;
+            padding: 10px 14px;
+            border-radius: 16px;
+            font-size: 13px;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+        .bot-msg {
+            background-color: #1e293b;
+            color: #ffffff;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        .user-msg {
+            background: linear-gradient(135deg, #06b6d4, #0891b2);
+            color: #ffffff;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+        .chat-footer {
+            padding: 12px;
+            background-color: #1e293b;
+            display: flex;
+            gap: 8px;
+            border-top: 1px solid #334155;
+        }
+        .chat-input {
+            flex: 1;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            padding: 10px 14px;
+            border-radius: 20px;
+            color: white;
+            font-size: 13px;
+            outline: none;
+        }
+        .btn-send-chat {
+            background-color: #06b6d4;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .chat-lock-overlay {
+            position: absolute;
+            top: 60px;
+            left: 0; right: 0; bottom: 0;
+            background: rgba(11, 20, 26, 0.95);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            z-index: 10;
+        }
+        .chat-lock-overlay i.lock-icon {
+            font-size: 48px;
+            color: #f59e0b;
+            margin-bottom: 12px;
+        }
+        .chat-lock-overlay h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .chat-lock-overlay p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
     
-    <link rel="icon" type="image/png" href="./logo.jpg">
-
-  <style>
-    :root {
-      --primary: #2563EB;
-      --dark-blue: #0F172A;
-      --light-blue: #3B82F6;
-      --accent: #10B981;
-      --bg: #FAFAFC;
-      --text: #0F172A;
-      --muted: #64748B;
-      --line: #E2E8F0;
-      --surface: #FFFFFF;
-      --radius: 24px;
-      --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      --shadow-glow: 0 25px 50px -12px rgba(37,99,235,0.18);
-      --shadow-card: 0 10px 30px -5px rgba(0,0,0,0.04), 0 0 1px rgba(0,0,0,0.1);
-      
-      /* Mobile Money Brand Colors Specific Requests */
-      --mpesa-deep-red: #990000;
-      --halopesa-orange: #FF6600;
-      --mixx-yellow: #FFCC00;
-      --airtel-light-red: #FF3333;
-    }
-
-    /* PREVENT ALL HORIZONTAL OVERFLOW */
-    *, *::before, *::after { 
-      box-sizing: border-box; 
-      max-width: 100vw;
-    }
-    
-    html { 
-      scroll-behavior: smooth; 
-      overflow-x: hidden;
-      width: 100%;
-    }
-    
-    body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
-    }
-
-    /* ===== TOP PHONE BANNER ===== */
-    .top-phone-bar {
-      background: var(--dark-blue);
-      color: #fff;
-      font-size: 13px;
-      padding: 8px 12px;
-      text-align: center;
-      font-weight: 700;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      word-wrap: break-word;
-    }
-    .top-phone-bar a {
-      color: #4ADE80;
-      text-decoration: underline;
-      margin-left: 6px;
-      display: inline-block;
-    }
-
-    /* ===== BACKGROUND GLOWING EFFECTS ===== */
-    .bg-blob {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(90px);
-      z-index: 0;
-      pointer-events: none;
-      opacity: 0.35;
-      animation: floatBlob 12s ease-in-out infinite alternate;
-    }
-    .blob-1 {
-      width: 300px; height: 300px;
-      background: #3B82F6;
-      top: -100px; left: -100px;
-    }
-    .blob-2 {
-      width: 350px; height: 350px;
-      background: #10B981;
-      top: 40%; right: -150px;
-      animation-delay: -4s;
-    }
-    .blob-3 {
-      width: 300px; height: 300px;
-      background: #8B5CF6;
-      bottom: 10%; left: -100px;
-      animation-delay: -8s;
-    }
-    @keyframes floatBlob {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(40px, 50px) scale(1.15); }
-    }
-
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; letter-spacing: -0.03em; word-wrap: break-word; }
-    p { margin: 0; word-wrap: break-word; }
-    ul { margin: 0; padding: 0; list-style: none; }
-    button { font-family: var(--font-body); cursor: pointer; }
-    
-    .wrap { 
-      width: 100%;
-      max-width: 1240px; 
-      margin: 0 auto; 
-      padding: 0 16px; 
-      position: relative; 
-      z-index: 2; 
-    }
-
-    .eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--primary);
-      background: rgba(37,99,235,0.08);
-      border: 1px solid rgba(37,99,235,0.2);
-      padding: 6px 14px; border-radius: 999px;
-      box-shadow: 0 4px 12px rgba(37,99,235,0.06);
-    }
-
-    /* PRELOADER WITH LOGO */
-    #preloader {
-      position: fixed; inset: 0; background: #FFFFFF; z-index: 99999;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      transition: opacity .5s ease, visibility .5s ease;
-    }
-    #preloader.hidden { opacity: 0; visibility: hidden; }
-    .preloader-logo-wrapper {
-      position: relative; width: 70px; height: 70px;
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px;
-    }
-    .preloader-spinner {
-      position: absolute; inset: 0;
-      border: 4px solid #EFF6FF; border-top: 4px solid var(--primary);
-      border-radius: 50%; animation: spin 1s cubic-bezier(0.55, 0.15, 0.45, 0.85) infinite;
-    }
-    .preloader-icon { width: 36px; height: 36px; z-index: 2; }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-    /* ===== SCROLL ANIMATIONS ===== */
-    .reveal { 
-      opacity: 0; 
-      transform: translateY(30px) scale(0.98); 
-      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
-      will-change: transform, opacity;
-    }
-    .reveal.is-visible { 
-      opacity: 1; 
-      transform: translateY(0) scale(1); 
-    }
-
-    /* ===== NAVIGATION ===== */
-    .site-nav {
-      position: sticky; top: 0; z-index: 200;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-      width: 100%;
-    }
-    .nav-inner {
-      max-width: 1240px; margin: 0 auto; padding: 12px 16px;
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      position: relative;
-    }
-    .logo {
-      display: flex; align-items: center; gap: 8px;
-      font-family: var(--font-display); font-weight: 800; font-size: 19px; color: var(--text);
-      flex-shrink: 0;
-    }
-    .logo-mark { position: relative; width: 34px; height: 34px; flex-shrink: 0; }
-    .logo-mark svg { width: 100%; height: 100%; }
-    .logo-text span { color: var(--primary); }
-
-    .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-links a {
-      font-size: 14px; font-weight: 600; color: var(--muted);
-      transition: all .2s ease; position: relative; white-space: nowrap;
-    }
-    .nav-links a:hover { color: var(--primary); }
-    .nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-
-    .nav-toggle {
-      display: none; flex-direction: column; justify-content: center; align-items: center;
-      gap: 5px; background: none; border: none; padding: 6px; cursor: pointer;
-      width: 38px; height: 38px; border-radius: 10px;
-    }
-    .nav-toggle:hover { background: #F1F5F9; }
-    .nav-toggle span { width: 20px; height: 2px; background: var(--text); border-radius: 2px; transition: all .3s ease; }
-
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      font-weight: 700; font-size: 14px;
-      padding: 12px 20px; border-radius: 14px; border: 1px solid transparent;
-      transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative; overflow: hidden; text-align: center;
-      word-break: keep-all;
-    }
-    .btn:active { transform: scale(0.97); }
-    .btn-primary {
-      background: linear-gradient(135deg, #2563EB, #1D4ED8);
-      color: #fff; box-shadow: 0 12px 25px -8px rgba(37,99,235,0.5);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 18px 35px -8px rgba(37,99,235,0.65); }
-    .btn-secondary {
-      background: #25D366; color: #fff; border-color: transparent;
-      box-shadow: 0 10px 20px -8px rgba(37,211,102,0.4);
-    }
-    .btn-secondary:hover { background: #20bd5a; transform: translateY(-2px); }
-    .btn-call {
-      background: #0F172A; color: #fff; border-color: transparent;
-      box-shadow: 0 10px 20px -8px rgba(15,23,42,0.3);
-    }
-    .btn-call:hover { background: #1E293B; transform: translateY(-2px); }
-    .btn-ghost { background: transparent; color: var(--text); border-color: var(--line); padding: 11px 20px; }
-    .btn-ghost:hover { border-color: var(--primary); color: var(--primary); background: rgba(37,99,235,0.04); }
-    .btn-sm { padding: 8px 14px; font-size: 12.5px; border-radius: 10px; }
-    .btn-block { width: 100%; display: flex; }
-
-    /* MOBILE MONEY BADGES */
-    .mobile-money-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-top: 12px;
-    }
-    .pay-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-size: 11px;
-      font-weight: 800;
-      color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .pay-badge.mpesa { background: var(--mpesa-deep-red); color: #FFF; }
-    .pay-badge.halopesa { background: var(--halopesa-orange); color: #FFF; }
-    .pay-badge.mixx { background: var(--mixx-yellow); color: #0F172A; }
-    .pay-badge.airtel { background: var(--airtel-light-red); color: #FFF; }
-
-    /* ===== HERO SECTION ===== */
-    .hero {
-      position: relative; padding: 40px 0;
-      background: transparent;
-      overflow: hidden;
-    }
-    #networkCanvas {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-    .hero-inner {
-      position: relative; z-index: 2;
-      display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 32px; align-items: center;
-    }
-    .hero-copy h1 {
-      font-size: clamp(26px, 4vw, 50px); font-weight: 800; line-height: 1.2; color: var(--text); margin-top: 12px;
-    }
-    .hero-copy h1 em {
-      font-style: normal;
-      background: linear-gradient(135deg, #2563EB, #059669);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
-    }
-    .hero-copy p.lead { margin-top: 16px; font-size: 15px; color: var(--muted); line-height: 1.6; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-
-    .hero-visual { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 0; }
-    .phone {
-      position: relative; width: 100%; max-width: 290px; height: auto; border-radius: 36px;
-      background: linear-gradient(160deg, #0F172A, #1E3A8A);
-      padding: 10px; box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.3); z-index: 3;
-      margin: 0 auto;
-    }
-    .phone-screen {
-      width: 100%; border-radius: 28px; background: #fff; overflow: hidden;
-      display: flex; flex-direction: column; min-height: 380px;
-    }
-    .phone-bar {
-      padding: 12px; display: flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, var(--primary), var(--dark-blue)); color: #fff;
-    }
-    .phone-bar .avatar {
-      width: 32px; height: 32px; border-radius: 50%;
-      background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;
-      font-size: 12px; font-weight: 700; border: 1px solid rgba(255,255,255,0.3);
-    }
-    .phone-bar .who { font-size: 12px; font-weight: 700; }
-    .phone-bar .status { font-size: 10px; opacity: 0.9; display: flex; align-items: center; gap: 4px; }
-    .phone-bar .dot { width: 6px; height: 6px; border-radius: 50%; background: #4ADE80; display: inline-block; }
-    .phone-body { flex: 1; padding: 12px; background: #F8FAFC; display: flex; flex-direction: column; gap: 10px; }
-    .bubble { max-width: 90%; padding: 10px 12px; border-radius: 14px; font-size: 11.5px; line-height: 1.4; }
-    .bubble.in { background: #fff; border: 1px solid var(--line); align-self: flex-start; border-bottom-left-radius: 2px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
-    .bubble.out { background: linear-gradient(135deg, var(--primary), #1D4ED8); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
-    .bubble.alert { background: #FEF3C7; border: 1px solid #FCD34D; color: #92400E; align-self: center; text-align: center; font-weight: 700; font-size: 10.5px; }
-
-    /* FLOATING CHIPS */
-    .float-chip {
-      position: absolute; display: flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-      border: 1px solid rgba(226, 232, 240, 0.8); border-radius: 12px;
-      padding: 8px 12px; box-shadow: 0 10px 25px -10px rgba(15,23,42,0.12);
-      font-size: 11px; font-weight: 800; z-index: 4;
-      animation: floaty 6s ease-in-out infinite;
-    }
-    .float-chip.chip-a { top: -2%; left: -4%; color: #10B981; }
-    .float-chip.chip-b { bottom: -2%; right: -4%; color: var(--primary); }
-    @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-
-    .online-pill {
-      position: absolute; top: -10px; right: 0; z-index: 4;
-      background: var(--dark-blue); color: #fff; font-size: 10.5px; font-weight: 700;
-      padding: 6px 12px; border-radius: 12px; display: flex; align-items: center; gap: 6px;
-      box-shadow: 0 10px 20px -5px rgba(15,23,42,0.3);
-      border: 1px solid rgba(255,255,255,0.15);
-    }
-    .online-pill .pulse { width: 6px; height: 6px; border-radius: 50%; background: #4ADE80; box-shadow: 0 0 0 rgba(74,222,128,0.6); animation: pulse 1.8s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(74,222,128,0.6); } 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
-
-    /* TRUST BADGES BAR */
-    .trust-bar {
-      margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line);
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-      font-size: 11.5px; font-weight: 600; color: var(--muted);
-    }
-    .trust-item { display: flex; align-items: center; gap: 4px; }
-
-    /* ===== LIVE FOREIGNERS & GROUPS ===== */
-    .foreigners-section {
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(16px);
-      color: var(--text); padding: 60px 0;
-      position: relative; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    }
-    .foreigners-header-box {
-      background: rgba(255, 255, 255, 0.95);
-      border: 1px solid var(--line); border-radius: 20px;
-      padding: 20px; margin-bottom: 32px; box-shadow: var(--shadow-card);
-    }
-    .stats-banner {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line);
-    }
-    .stat-item .val { font-size: 18px; font-weight: 800; color: var(--primary); font-family: var(--font-display); }
-    .stat-item .lbl { font-size: 12px; color: var(--muted); font-weight: 500; }
-
-    .chat-groups-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .chat-group-card {
-      background: #fff; border: 1px solid var(--line); border-radius: 20px;
-      padding: 20px; display: flex; flex-direction: column; justify-content: space-between;
-      transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
-      box-shadow: var(--shadow-card); position: relative; overflow: hidden;
-    }
-    .chat-group-card:hover {
-      transform: translateY(-4px); border-color: rgba(37,99,235,0.4);
-      box-shadow: 0 15px 30px -10px rgba(37,99,235,0.12);
-    }
-    .group-badge {
-      display: inline-flex; align-items: center; gap: 4px; font-size: 11px;
-      font-weight: 800; padding: 4px 10px; border-radius: 999px;
-      background: #EFF6FF; color: var(--primary); margin-bottom: 12px;
-    }
-    .group-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
-    .group-desc { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
-
-    .foreigner-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; min-height: 220px; }
-    .foreigner-item {
-      background: #F8FAFC; border: 1px solid var(--line); border-radius: 12px;
-      padding: 8px 12px; display: flex; align-items: center; justify-content: space-between;
-      cursor: pointer; transition: all .3s ease;
-    }
-
-    .foreigner-item:hover { background: #EFF6FF; border-color: var(--primary); }
-    .foreigner-info { display: flex; align-items: center; gap: 10px; }
-    .foreigner-avatar-box { position: relative; width: 36px; height: 36px; flex-shrink: 0; }
-    .foreigner-avatar-box img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
-    .foreigner-avatar-box .flag-badge {
-      position: absolute; bottom: -2px; right: -2px; font-size: 10px;
-      background: #fff; border-radius: 50%; padding: 1px; line-height: 1; box-shadow: 0 2px 4px rgba(0,0,0,0.12);
-    }
-    .foreigner-details .name { font-size: 12.5px; font-weight: 700; color: var(--text); }
-    .foreigner-details .rate { font-size: 10.5px; color: var(--primary); font-weight: 700; }
-
-    .chat-btn-action {
-      background: var(--primary); color: #fff; border: none; padding: 5px 10px;
-      border-radius: 8px; font-weight: 700; font-size: 11px; transition: all .2s ease;
-    }
-    .chat-btn-action:hover { background: var(--dark-blue); }
-
-    /* ===== VERTICAL TICKER ===== */
-    .withdraw-ticker-wrapper {
-      margin-top: 40px;
-      background: #FFFFFF;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 16px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-      box-shadow: var(--shadow-card);
-    }
-    .withdraw-ticker-title {
-      background: linear-gradient(135deg, #10B981, #059669);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 6px 12px;
-      border-radius: 8px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      align-self: flex-start;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-    .ticker-viewport {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      height: 40px;
-    }
-    .ticker-card-single {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12.5px;
-      font-weight: 600;
-      color: var(--text);
-      opacity: 0;
-      transform: translateY(15px);
-      transition: all .5s cubic-bezier(0.16, 1, 0.3, 1);
-      flex-wrap: wrap;
-    }
-    .ticker-card-single.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .ticker-card-single .method {
-      color: var(--accent);
-      font-weight: 800;
-      background: #ECFDF5;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      border: 1px solid #A7F3D0;
-    }
-    .ticker-card-single .acc-num {
-      color: var(--muted);
-      font-size: 11.5px;
-      font-family: monospace;
-    }
-    .ticker-card-single .time-badge {
-      margin-left: auto;
-      font-size: 10.5px;
-      color: var(--muted);
-      background: #F1F5F9;
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-
-    /* ===== PRICING BY COUNTRY ===== */
-    .country-pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
-    .country-card {
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: var(--shadow-card);
-      transition: all .3s ease;
-      position: relative;
-    }
-    .country-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--primary);
-    }
-    .country-card.tz-highlight {
-      border: 2px solid var(--primary);
-      background: linear-gradient(180deg, #FFFFFF, #EFF6FF);
-    }
-    .country-badge-auto, .country-badge-wa {
-      position: absolute;
-      top: -10px;
-      right: 12px;
-      color: #fff;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 3px 10px;
-      border-radius: 999px;
-    }
-    .country-badge-auto { background: var(--primary); box-shadow: 0 4px 10px rgba(37,99,235,0.3); }
-    .country-badge-wa { background: #25D366; box-shadow: 0 4px 10px rgba(37,211,102,0.3); }
-
-    .country-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-    .country-flag { font-size: 26px; line-height: 1; }
-    .country-name { font-size: 16px; font-weight: 800; color: var(--text); }
-    .country-price { font-size: 22px; font-weight: 800; color: var(--primary); font-family: var(--font-display); margin-bottom: 6px; }
-    .country-note { font-size: 12px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
-
-    /* ===== DYNAMIC TESTIMONIAL CAROUSEL ===== */
-    .testimonial-carousel-wrapper {
-      max-width: 650px;
-      margin: 0 auto;
-      position: relative;
-      min-height: 200px;
-    }
-    .testi-slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transform: translateX(20px);
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      pointer-events: none;
-    }
-    .testi-slide.active {
-      opacity: 1;
-      transform: translateX(0);
-      pointer-events: auto;
-    }
-    .testi-card {
-      background: rgba(255,255,255,0.98);
-      backdrop-filter: blur(10px);
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-    }
-    .testi-user { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .testi-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
-    .testi-dots { display: flex; justify-content: center; gap: 6px; margin-top: 16px; }
-    .testi-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--line); cursor: pointer; transition: all .3s ease; }
-    .testi-dot.active { background: var(--primary); width: 20px; border-radius: 8px; }
-
-    /* ===== FAQ ACCORDION ===== */
-    .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
-    .faq-question { padding: 16px 18px; font-weight: 700; font-size: 14.5px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-answer { padding: 0 18px 16px; color: var(--muted); font-size: 13.5px; display: none; }
-    .faq-item.active .faq-answer { display: block; }
-
-    /* ===== TOAST NOTIFICATIONS ===== */
-    .payout-toast {
-      position: fixed;
-      bottom: 20px;
-      left: 16px;
-      right: 16px;
-      max-width: 360px;
-      margin: 0 auto;
-      background: #FFFFFF;
-      border: 1px solid var(--accent);
-      padding: 12px 16px;
-      border-radius: 14px;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      z-index: 999;
-      transform: translateY(150%);
-      transition: transform 0.5s ease;
-    }
-    .payout-toast.show { transform: translateY(0); }
-
-    /* ===== MODERN BRANDED POPUP MODAL ENHANCED ===== */
-    .modal-overlay {
-      position: fixed; inset: 0; background: rgba(15,23,42,0.85);
-      backdrop-filter: blur(10px); z-index: 999; display: none;
-      align-items: center; justify-content: center; padding: 16px;
-    }
-    .modal-overlay.active { display: flex; }
-    .modal-card {
-      background: #FFFFFF; border: 2px solid rgba(37, 99, 235, 0.2); border-radius: 28px;
-      max-width: 440px; width: 100%; padding: 26px 22px; color: var(--text);
-      position: relative; box-shadow: 0 30px 60px -12px rgba(37,99,235,0.3);
-      animation: popupAnim .35s cubic-bezier(0.16, 1, 0.3, 1);
-      overflow: hidden;
-    }
-    @keyframes popupAnim {
-      from { opacity: 0; transform: scale(0.92) translateY(15px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .modal-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
-      background: linear-gradient(90deg, #2563EB, #10B981, #2563EB);
-    }
-    .modal-header { text-align: center; margin-bottom: 16px; }
-    .modal-badge-brand {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: rgba(37, 99, 235, 0.1); color: var(--primary);
-      padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px;
-    }
-    .modal-header h3 { font-size: 20px; font-weight: 800; color: var(--text); margin-top: 4px; line-height: 1.3; }
-    
-    .modal-price-card {
-      background: linear-gradient(135deg, #0F172A, #1E3A8A);
-      border: 1px solid rgba(255,255,255,0.1); color: #FFFFFF;
-      padding: 16px; border-radius: 20px; text-align: center;
-      margin-bottom: 16px; box-shadow: 0 10px 20px -5px rgba(15,23,42,0.4);
-      position: relative; overflow: hidden;
-    }
-    .modal-price-card::after {
-      content: ''; position: absolute; top: -50%; right: -50%; width: 100%; height: 100%;
-      background: rgba(255,255,255,0.05); transform: rotate(45deg); pointer-events: none;
-    }
-    .modal-price-val {
-      font-size: 32px; font-weight: 800; font-family: var(--font-display); color: #4ADE80;
-      line-height: 1; margin: 4px 0; letter-spacing: -0.02em;
-    }
-    .modal-price-sub { font-size: 11.5px; font-weight: 600; opacity: 0.85; text-transform: uppercase; letter-spacing: 0.05em; }
-    
-    .modal-bullet-list { display: flex; flex-direction: column; gap: 10px; font-size: 12.5px; color: var(--muted); margin-bottom: 18px; }
-    .modal-bullet-list div { display: flex; align-items: flex-start; gap: 10px; line-height: 1.4; }
-    .modal-bullet-list span.icon-check { color: #10B981; font-weight: bold; flex-shrink: 0; }
-    .modal-actions { display: flex; flex-direction: column; gap: 10px; }
-
-    /* COUNTDOWN TIMER STYLES */
-    .timer-box-modal {
-      background: #FEF3C7;
-      border: 1px solid #FCD34D;
-      padding: 10px;
-      border-radius: 12px;
-      color: #92400E;
-      font-size: 11.5px;
-      margin-bottom: 16px;
-      text-align: center;
-      font-weight: 600;
-    }
-    .countdown-timer {
-      display: inline-flex;
-      gap: 4px;
-      font-weight: 800;
-      color: #DC2626;
-      font-family: monospace;
-      font-size: 13px;
-      background: #FFFFFF;
-      padding: 2px 8px;
-      border-radius: 6px;
-      border: 1px solid #FCA5A5;
-      margin-left: 4px;
-    }
-
-    /* ===== CHAT INTERFACE & LOADING STYLES ===== */
-    .live-chat-card {
-      max-width: 440px;
-      width: 100%;
-      background: #FFFFFF;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      max-height: 85vh;
-    }
-    .chat-card-header {
-      background: linear-gradient(135deg, var(--dark-blue), var(--primary));
-      padding: 14px 18px;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .chat-user-info { display: flex; align-items: center; gap: 10px; }
-    .chat-user-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; }
-    .chat-user-name { font-weight: 800; font-size: 14px; }
-    .chat-user-status { font-size: 11px; opacity: 0.85; display: flex; align-items: center; gap: 4px; }
-    .chat-card-body {
-      padding: 16px;
-      background: #F8FAFC;
-      flex: 1;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      min-height: 250px;
-    }
-    .chat-input-area {
-      padding: 12px;
-      background: #fff;
-      border-top: 1px solid var(--line);
-      display: flex;
-      gap: 8px;
-    }
-    .chat-input {
-      flex: 1;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 14px;
-      font-size: 13px;
-      outline: none;
-    }
-    .chat-send-btn {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 12px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    /* LOADING & NO-ACCOUNT OVERLAY */
-    .chat-overlay-status {
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(6px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-      z-index: 10;
-    }
-    .spinner-loader {
-      width: 44px;
-      height: 44px;
-      border: 4px solid #E2E8F0;
-      border-top: 4px solid var(--primary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 12px;
-    }
-
-    /* ===== OTHER SECTIONS ===== */
-    .section { padding: 60px 0; position: relative; z-index: 2; }
-    .section-alt { background: rgba(248, 250, 252, 0.75); backdrop-filter: blur(12px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .section-head { max-width: 650px; margin: 0 0 36px; }
-    .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
-    .section-head h2 { font-size: clamp(22px,3vw,34px); margin-top: 10px; font-weight: 800; }
-    .section-head p { color: var(--muted); margin-top: 8px; font-size: 14.5px; }
-
-    .pulse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .pulse-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-card); transition: all .3s ease; }
-    .pulse-card:hover { transform: translateY(-4px); border-color: var(--primary); }
-    .pulse-card .icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(37,99,235,0.08); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 16px; }
-
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .step-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-card); }
-    .step-num { font-family: var(--font-display); font-weight: 800; font-size: 30px; color: var(--primary); margin-bottom: 8px; }
-
-    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .benefit-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-card); }
-
-    /* ONYO KALI CARD */
-    .warning-box {
-      background: #FFF1F2;
-      border: 2px solid #FECDD3;
-      border-radius: 20px;
-      padding: 20px;
-      margin: 32px auto 0;
-      max-width: 980px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      box-shadow: 0 10px 25px -10px rgba(225,29,72,0.1);
-    }
-    .warning-icon {
-      width: 48px;
-      height: 48px;
-      background: #FFE4E6;
-      color: #E11D48;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
-    }
-    .warning-content h3 { color: #9F1239; font-size: 15px; font-weight: 800; margin-bottom: 4px; text-transform: uppercase; }
-    .warning-content p { color: #4C0519; font-size: 12.5px; line-height: 1.5; font-weight: 500; }
-
-    .cta-section {
-      position: relative; overflow: hidden; border-radius: 24px;
-      margin: 0; padding: 48px 20px; text-align: center;
-      background: linear-gradient(135deg, #0F172A, #1E3A8A); color: #fff;
-      box-shadow: 0 20px 40px -15px rgba(15,23,42,0.4);
-    }
-
-    .site-footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 50px 0 24px; margin-top: 60px; position: relative; z-index: 2; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; }
-    .footer-bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; font-size: 12px; }
-
-    .wa-float {
-      position: fixed; bottom: 20px; right: 16px; z-index: 500;
-      width: 52px; height: 52px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 10px 25px -5px rgba(37,211,102,0.5);
-      transition: transform .3s ease;
-    }
-    .wa-float svg { width: 28px; height: 28px; }
-    .wa-float:hover { transform: scale(1.08); }
-
-    /* MOBILE BREAKPOINTS OVERRIDES */
-    @media (max-width: 960px) {
-      .nav-toggle { display: flex; }
-      .nav-links {
-        position: absolute; top: 100%; left: 0; width: 100%;
-        background: #ffffff; border-bottom: 1px solid var(--line);
-        box-shadow: 0 15px 25px rgba(0,0,0,0.08);
-        flex-direction: column; align-items: flex-start;
-        padding: 20px; gap: 14px; display: none;
-      }
-      .nav-links.active { display: flex; }
-      .nav-links a { font-size: 15px; width: 100%; padding: 4px 0; }
-
-      .hero { padding-top: 20px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
-      .hero-visual { order: -1; }
-      .warning-box { flex-direction: column; text-align: center; padding: 18px; }
-    }
-
-    @media (max-width: 640px) {
-      .nav-actions .btn-secondary { display: none; }
-      .hero-cta { flex-direction: column; width: 100%; }
-      .hero-cta .btn { width: 100%; }
-      .float-chip { display: none; }
-      .phone { max-width: 260px; }
-      .ticker-card-single { font-size: 11.5px; }
-      .payout-toast { bottom: 80px; }
-    }
-  </style>
+        /* ================= DUNISWAHILI BRAND OVERRIDES ================= */
+        :root{--ds-primary:#2563EB;--ds-dark:#0F172A;--ds-blue:#3B82F6;--ds-green:#10B981;--ds-bg:#FAFAFC;--ds-muted:#64748B;--ds-line:#E2E8F0;}
+        body{background:var(--ds-bg);color:var(--ds-dark);}
+        .header{background:rgba(255,255,255,.96);border-bottom:1px solid var(--ds-line);}
+        .brand-name .white,.brand-slogan .slogan-white{color:var(--ds-dark)!important;}
+        .brand-name .green,.slogan-green,.slogan-blue{color:var(--ds-primary)!important;text-shadow:none!important;}
+        .slogan-line-left{background:var(--ds-primary)!important}.slogan-line-right{background:var(--ds-green)!important}
+        .brand-subtag{color:var(--ds-green)!important;text-shadow:none!important}
+        .online-badge{background:#ECFDF5!important;color:var(--ds-green)!important;border-color:#A7F3D0!important;text-shadow:none!important;box-shadow:none!important}
+        .top-actions-grid,.balance-grid,.section-header,.cards-container,.support-card-section,.reviews-section-container,.bottom-install-section{max-width:1240px;margin-left:auto;margin-right:auto;}
+        .btn-install-app{background:linear-gradient(135deg,var(--ds-primary),#1D4ED8)!important;box-shadow:0 8px 20px rgba(37,99,235,.25)!important}
+        .btn-customer-care{background:linear-gradient(135deg,var(--ds-green),#059669)!important;box-shadow:0 8px 20px rgba(16,185,129,.25)!important}
+        .bal-card-profit{background:linear-gradient(145deg,#EFF6FF,#DBEAFE)!important;border-color:#93C5FD!important;box-shadow:0 8px 20px rgba(37,99,235,.12)!important}
+        .bal-card-current{background:linear-gradient(145deg,#FFFBEB,#FEF3C7)!important;border-color:#FCD34D!important;box-shadow:0 8px 20px rgba(245,158,11,.12)!important}
+        .bal-card-withdrawn{background:linear-gradient(145deg,#ECFDF5,#D1FAE5)!important;border-color:#6EE7B7!important;box-shadow:0 8px 20px rgba(16,185,129,.12)!important}
+        .bal-title{color:var(--ds-muted)!important;text-shadow:none!important}.bal-amount{color:var(--ds-dark)!important;text-shadow:none!important}.bal-card-current .bal-amount{color:#B45309!important}.bal-card-withdrawn .bal-amount{color:#047857!important}
+        .user-card{background:#fff!important;border-color:var(--ds-line)!important;box-shadow:0 10px 30px -12px rgba(15,23,42,.10)}
+        .user-avatar{border-color:var(--ds-primary)!important}.status-dot-card{border-color:#fff!important;background:var(--ds-green)!important;box-shadow:0 0 10px rgba(16,185,129,.7)!important}
+        .user-details h4{color:var(--ds-dark)!important}.user-details p{color:var(--ds-muted)!important}.status-online{color:var(--ds-green)!important;text-shadow:none!important}.status-offline{color:#EF4444!important}.price-tag{color:#D97706!important}
+        .btn-action{border-color:var(--ds-line)!important}.btn-chat{background:var(--ds-primary)!important}.btn-voice{background:#10B981!important}.btn-video{background:#0F172A!important}
+        .support-box,.tx-history-box,.review-card-item,.bottom-install-box,.install-modal-box,.modal-content{background:#fff!important;border-color:var(--ds-line)!important;color:var(--ds-dark)!important}
+        .support-title,.reviews-title-box h3,.bottom-install-title,.install-modal-title,.modal-content h3{color:var(--ds-dark)!important}.support-sub,.reviews-title-box p,.bottom-install-sub,.install-steps-list,.modal-content p{color:var(--ds-muted)!important}
+        .tx-item{color:var(--ds-dark)!important}.tx-item-green{color:var(--ds-green)!important}.tx-dot-green{background:var(--ds-green)!important}.tx-dot-purple{background:var(--ds-primary)!important}
+        .rating-score-badge{background:#EFF6FF!important;border-color:#BFDBFE!important}.score-number,.score-stars,.review-stars-row{color:#F59E0B!important}
+        .bottom-install-section{background:transparent!important}.btn-bottom-install{background:linear-gradient(135deg,var(--ds-primary),#1D4ED8)!important}
+        .chat-modal-box,.chat-window{background:#fff!important;color:var(--ds-dark)!important}
+        .chat-header{background:linear-gradient(135deg,var(--ds-dark),var(--ds-primary))!important}
+        .chat-body{background:#F8FAFC!important}.bot-msg{background:#fff!important;color:var(--ds-dark)!important;border-color:var(--ds-line)!important}.user-msg{background:var(--ds-primary)!important;color:#fff!important}
+        .btn-send-chat{background:var(--ds-primary)!important}.chat-lock-overlay{background:rgba(15,23,42,.94)!important}.chat-lock-overlay i.lock-icon{color:var(--ds-green)!important}
+        .btn-fungua-account{background:linear-gradient(135deg,var(--ds-primary),#1D4ED8)!important;box-shadow:0 8px 20px rgba(37,99,235,.25)!important}
+        .btn-download-apk{background:linear-gradient(135deg,var(--ds-green),#059669)!important}
+        @media(max-width:600px){.top-actions-grid{grid-template-columns:1fr 1fr}.balance-grid{grid-template-columns:1fr 1fr 1fr}.cards-container{padding:0 12px}.user-card{border-radius:18px}}
+</style>
 </head>
 <body>
-
-<!-- TOP CALL NUMBER HEADER BANNER -->
-<div class="top-phone-bar">
-  <span>📞 Msaada WhatsApp: </span>
-  <a href="https://wa.me/255725962119">0725962119</a>
-</div>
-
-<!-- DYNAMIC BACKGROUND ANIMATED BLOBS -->
-<div class="bg-blob blob-1"></div>
-<div class="bg-blob blob-2"></div>
-<div class="bg-blob blob-3"></div>
-
-<!-- PRELOADER WITH LOGO -->
-<div id="preloader">
-  <div class="preloader-logo-wrapper">
-    <div class="preloader-spinner"></div>
-    <svg class="preloader-icon" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity="0.25" stroke-width="2"></circle>
-      <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"></path>
-      <circle cx="16.5" cy="20" fill="#fff" r="1.7"></circle>
-      <circle cx="20.5" cy="20" fill="#fff" r="1.7"></circle>
-      <circle cx="24.5" cy="20" fill="#fff" r="1.7"></circle>
-    </svg>
-  </div>
-  <p style="margin-top:8px; font-weight:800; color:var(--primary); font-family:var(--font-display); font-size:16px; letter-spacing:0.05em;">DUNISWAHILI</p>
-</div>
-
-<!-- NAVIGATION BAR -->
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a class="logo" href="#top">
-      <span class="logo-mark">
-        <svg viewBox="0 0 40 40">
-          <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity="0.25" stroke-width="2"></circle>
-          <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"></path>
-          <circle cx="16.5" cy="20" fill="#fff" r="1.7"></circle>
-          <circle cx="20.5" cy="20" fill="#fff" r="1.7"></circle>
-          <circle cx="24.5" cy="20" fill="#fff" r="1.7"></circle>
-        </svg>
-      </span>
-      <span class="logo-text">DUNI<span>SWAHILI</span></span>
+    <!-- 1. HEADER WITH LOGO -->
+    <header class="header">
+        <div class="logo-box">
+            <svg class="svg-logo" viewBox="0 0 100 100" fill="none" xmlns="http\://www\.w3.org/2000/svg">
+                <path d="M48 26 C68 26 82 38 82 54 C82 62 78 69 72 75 L76 88 L62 82 C57 84 52 85 48 85 C28 85 14 73 14 54 C14 38 28 26 48 26 Z" stroke="#22c55e" stroke-width="7" fill="#0b141a" style="filter: drop-shadow(0 0 6px #22c55e);"/>
+                <path d="M38 10 C60 10 76 23 76 40 C76 48 72 55 65 61 L69 74 L54 68 C49 69 43 70 38 70 C16 70 4 57 4 40 C4 23 16 10 38 10 Z" stroke="#06b6d4" stroke-width="7" fill="#0b141a" style="filter: drop-shadow(0 0 8px #06b6d4);"/>
+                <circle cx="24" cy="40" r="4.5" fill="#ffffff"/>
+                <circle cx="38" cy="40" r="4.5" fill="#ffffff"/>
+                <circle cx="52" cy="40" r="4.5" fill="#ffffff"/>
+            </svg>
+            <div class="brand-text-container">
+                <div class="brand-name">
+                    <span class="white">VERINO</span><span class="green">CHAT</span>
+                </div>
+                <div class="brand-slogan">
+                    <span class="slogan-line-left"></span>
+                    <span class="slogan-white">ONGEA.</span>
+                    <span class="slogan-green">UNGANA.</span>
+                    <span class="slogan-blue">ELEWANA.</span>
+                    <span class="slogan-line-right"></span>
+                </div>
+                <div class="brand-subtag">
+                    Kiswahili Ni Fursa
+                </div>
+            </div>
+        </div>
+        <div class="online-badge">
+            <span class="online-dot"></span> <span id="onlineCounter">3490</span> online
+        </div>
+    </header>
+    <!-- 2. TOP ACTIONS -->
+    <div class="top-actions-grid">
+        <button class="btn-install-app" onclick="openInstallModal()">
+            <svg style="width: 22px; height: 22px;" viewBox="0 0 100 100" fill="none" xmlns="http\://www\.w3.org/2000/svg">
+                <path d="M48 28 C68 28 82 40 82 56 C82 64 78 71 72 77 L76 90 L62 84 C57 86 52 87 48 87 C28 87 14 75 14 56 C14 40 28 28 48 28 Z" stroke="#22c55e" stroke-width="7" fill="#0b141a"/>
+                <path d="M38 12 C60 12 76 25 76 42 C76 50 72 57 65 63 L69 76 L54 70 C49 71 43 72 38 72 C16 72 4 59 4 42 C4 25 16 12 38 12 Z" stroke="#ffffff" stroke-width="7" fill="#06b6d4"/>
+                <circle cx="24" cy="42" r="4" fill="#ffffff"/>
+                <circle cx="38" cy="42" r="4" fill="#ffffff"/>
+                <circle cx="52" cy="42" r="4" fill="#ffffff"/>
+            </svg>
+            <span>Install App</span>
+        </button>
+        <button class="btn-customer-care" onclick="openSupportModal()">
+            <i class="fa-solid fa-headset"></i> Customer Assistance
+        </button>
+    </div>
+    <!-- 3. DASHBOARD -->
+    <div class="balance-grid">
+        <div class="bal-card bal-card-profit">
+            <div class="bal-title">Mapato Yote (Net Profit)</div>
+            <div class="bal-amount">TZS 0</div>
+        </div>
+        <div class="bal-card bal-card-current">
+            <div class="bal-title">Salio la Sasa (Current Balance)</div>
+            <div class="bal-amount">TZS 0</div>
+            <a href="https://kozenasite.site/login?redirect=https://kozenasite.site/Withdraw" class="btn-toa-pesa">Toa Pesa</a>
+        </div>
+        <div class="bal-card bal-card-withdrawn">
+            <div class="bal-title">Pesa Iliyotolewa (Withdrawn)</div>
+            <div class="bal-amount">TZS 0</div>
+        </div>
+    </div>
+    <!-- 4. FUNGUA ACCOUNT BUTTON -->
+    <a href="https://kozenasite.site/register?ref=Nico45" target="_blank" class="btn-fungua-account">
+        Fungua Account Hapa
     </a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#top">Mwanzo</a></li>
-      <li><a href="#foreigners">💬 Live Foreigners</a></li>
-      <li><a href="#pricing">💳 Ada kwa Nchi</a></li>
-      <li><a href="#testimonials">⭐ Ushuhuda</a></li>
-      <li><a href="#faq">❓ Maswali</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <a class="btn btn-call btn-sm" href="https://wa.me/255725962119"> WhatsApp 📞 0725962119</a>
-      <a class="btn btn-secondary btn-sm" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank">📢 WhatsApp Channel</a>
-      <button class="btn btn-primary btn-sm trigger-popup">🚀 Tengeneza Hela</button>
-      <button aria-label="Toggle menu" class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <!-- 5. KICHWA CHA SEHEMU YA WAZUNGU -->
+    <div class="section-header">
+        <div class="section-title">Wageni</div>
+        <div class="section-sub">Waliopo mtandaoni hujibu chati na malipo hutolewa. Wasiokuwepo hawajibu.</div>
     </div>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <canvas id="networkCanvas"></canvas>
-
-  <div class="wrap hero-inner">
-    <div class="hero-copy reveal">
-      <span class="eyebrow">🔥 DUNISWAHILI CHAT PORTAL 2026</span>
-      <h1>Acha Kupoteza Bando Bure! <em>Chat na Wageni &amp; Utengeneze Kipato Kila Saa.</em></h1>
-      <p class="lead">Wageni kutoka nchi mbalimbali wapo tayari kukulipa kwa ajili ya muda wako! Sajili account yako uanze kupokea malipo kwenye M-Pesa, Mixx by Yas au Bank.</p>
-
-      <div class="hero-cta">
-        <button class="btn btn-primary trigger-popup">💰 Sajili Account Yako Sasa</button>
-        <a class="btn btn-call" href="tel:+255782974138">📞 Piga: 0782 974 138</a>
-        <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank">📢 WhatsApp Channel</a>
-      </div>
-
-      <div class="trust-bar">
-        <div class="trust-item">🔒 SSL Encrypted</div>
-        <div class="trust-item">⚡ Instant Payouts</div>
-        <div class="trust-item">✅ Verified Clients</div>
-      </div>
-    </div>
-
-    <div class="hero-visual reveal">
-      <div class="float-chip chip-a">💵 TSH 108,000/= Zimeingia!</div>
-      <div class="float-chip chip-b">🇨🇮 Wayne Martin is typing...</div>
-
-      <div class="online-pill"><span class="pulse"></span><span id="liveCountNav">18,450</span> Foreigners Online</div>
-
-      <div class="phone">
-        <div class="phone-screen">
-          <div class="phone-bar">
-            <span class="avatar">DS</span>
-            <div>
-              <div class="who">DuniSwahili Live Chat</div>
-              <div class="status"><span class="dot"></span> Live Payments Active</div>
+    <!-- 6. CARDS CONTAINER -->
+    <div class="cards-container" id="cardsContainer"></div>
+    <!-- 7. HUDUMA KWA WATEJA NA MIAMALA YA HIVI KARIBUNI -->
+    <div class="support-card-section">
+        <div class="support-box">
+            <div class="support-title">Huduma kwa Wateja</div>
+            <div class="support-sub">Una swali au changamoto? Wasiliana nasi moja kwa moja.</div>
+            <a href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank" class="btn-support-pill btn-deep-green-channel">
+                <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Channel ya WhatsApp
+            </a>
+            <a href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI%20Inafanyaje%20Kazi" class="btn-support-pill btn-gradient-sms">
+                <i class="fa-solid fa-comment-sms" style="font-size: 20px;"></i> Tuma SMS: 0725962119
+            </a>
+        </div>
+        <div class="tx-history-box">
+            <div class="support-title" style="margin-bottom: 4px;">Miamala ya Hivi Karibuni</div>
+            <div class="tx-ticker-wrapper">
+                <div class="tx-ticker-container" id="txTickerContainer"></div>
             </div>
-          </div>
-          <div class="phone-body">
-            <div class="bubble in">Hivi kweli naweza kuchat na wageni na nikapewa hela? 🤔</div>
-            <div class="bubble out">Nimechat ndani ya nusu saa tu na nimelipwa 30,000! 🔥 ngoja nikutumie ujumbe hapo</div>
-            <div class="bubble alert">🎉 <strong>DFGHY87QEP</strong> Imethibitishwa umepokea TZS 30,000 kwenye Account Yako!</div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</header>
-
-<!-- SECTION: LIVE FOREIGNERS ONLINE & GROUPS -->
-<section class="foreigners-section" id="foreigners">
-  <div class="wrap">
-
-    <div class="foreigners-header-box reveal">
-      <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
-        <div>
-          <span style="color:var(--primary); font-weight:800; font-size:12px; text-transform:uppercase;">💬 Chat Network</span>
-          <h2 style="font-size:24px; font-weight:800; margin-top:2px; color:var(--text);">📍 Global Chatters Active</h2>
-        </div>
-
-        <div style="background:#EFF6FF; border:1px solid #BFDBFE; padding:8px 14px; border-radius:12px; color:var(--primary); font-weight:800; font-size:12px; display:flex; align-items:center; gap:6px;">
-          <span class="pulse" style="width:6px;height:6px;border-radius:50%;background:var(--primary);display:inline-block;"></span> <span id="liveHeaderCounter">24,890</span> Active Now
-        </div>
-      </div>
-
-      <div class="stats-banner">
-        <div class="stat-item">
-          <span class="val">TSh 20,769 – 93,462</span>
-          <span class="lbl">Typical Chatters Earn Daily</span>
-        </div>
-        <div class="stat-item">
-          <span class="val">Up to TSh 1,038,462+</span>
-          <span class="lbl">Monthly Earnings Potential</span>
-        </div>
-        <div class="stat-item">
-          <span class="val">⏰ Activate Once</span>
-          <span class="lbl">Earn Forever (No Monthly Fees)</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-head center reveal">
-      <span class="eyebrow">💬 Live Foreigners Online</span>
-      <h2>Choose a chat group. Foreigners pay for your time.</h2>
-      <p>Chagua group hapa chini. Wageni angalau 6 mpaka 8 wanatengenezwa LIVE na kubadilika mtandaoni kila muda tayari kukulipa!</p>
-    </div>
-
-    <!-- 4 GROUPS GRID -->
-    <div class="chat-groups-grid">
-
-      <!-- Group 1: Work & Jobs -->
-      <div class="chat-group-card reveal">
-        <div>
-          <span class="group-badge">🟢 Hiring Now</span>
-          <div class="group-title">💼 Work &amp; Job Offers</div>
-          <div class="group-desc">Foreigners hiring remote workers &amp; freelancers for quick tasks.</div>
-          <div class="foreigner-list" id="workList"><!-- Dynamic 6-8 Foreigners --></div>
-        </div>
-        <button class="btn btn-primary btn-block join-group-btn" data-group-name="💼 Work & Job Offers Group" data-members="1,420">Join Work Group</button>
-      </div>
-
-      <!-- Group 2: Fun & Friendship -->
-      <div class="chat-group-card reveal">
-        <div>
-          <span class="group-badge">🟢 Very Active</span>
-          <div class="group-title">🎉 Fun &amp; Friendship</div>
-          <div class="group-desc">Friendly foreigners who want to chat, share stories &amp; laugh together.</div>
-          <div class="foreigner-list" id="funList"><!-- Dynamic 6-8 Foreigners --></div>
-        </div>
-        <button class="btn btn-primary btn-block join-group-btn" data-group-name="🎉 Fun & Friendship Group" data-members="2,890">Join Friendship Group</button>
-      </div>
-
-      <!-- Group 3: Romance & Dating -->
-      <div class="chat-group-card reveal">
-        <div>
-          <span class="group-badge">🟢 Online Singles</span>
-          <div class="group-title">💕 Romance &amp; Dating</div>
-          <div class="group-desc">Singles from abroad seeking genuine connections &amp; chats.</div>
-          <div class="foreigner-list" id="datingList"><!-- Dynamic 6-8 Foreigners --></div>
-        </div>
-        <button class="btn btn-primary btn-block join-group-btn" data-group-name="💕 Romance & Dating Group" data-members="3,105">Join Dating Group</button>
-      </div>
-
-      <!-- Group 4: Education & Language Exchange -->
-      <div class="chat-group-card reveal">
-        <div>
-          <span class="group-badge">🟢 Learning Swahili</span>
-          <div class="group-title">📚 Language &amp; Culture</div>
-          <div class="group-desc">Foreigners eager to learn Swahili &amp; discuss African cultures.</div>
-          <div class="foreigner-list" id="eduList"><!-- Dynamic 6-8 Foreigners --></div>
-        </div>
-        <button class="btn btn-primary btn-block join-group-btn" data-group-name="📚 Language & Culture Group" data-members="980">Join Culture Group</button>
-      </div>
-
-    </div>
-
-    <!-- LIVE WITHDRAW TICKER -->
-    <div class="withdraw-ticker-wrapper reveal">
-      <div class="withdraw-ticker-title">⚡ Live Withdrawal Feed</div>
-      <div class="ticker-viewport" id="tickerViewport"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- SECTION: BEI NA ADA KWA KILA NCHI (PRICING BY COUNTRY) -->
-<section class="section" id="pricing">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">💳 ACTIVATION YA KILA NCHI</span>
-      <h2>Bei ya Usajili kwa Kila Nchi</h2>
-      <p>Chagua nchi yako kuona gharama halisi za ku-activate account yako mara moja pekee bila makato ya kila mwezi.</p>
-    </div>
-
-    <div class="country-pricing-grid">
-
-      <!-- TANZANIA -->
-      <div class="country-card tz-highlight reveal">
-        <span class="country-badge-auto">⚡ Automatic Payment</span>
-        <div class="country-header">
-          <span class="country-flag">🇹🇿</span>
-          <span class="country-name">Tanzania</span>
-        </div>
-        <div class="country-price">TZS 14,500</div>
-        <p class="country-note">Watanzania wanaweza kulipia moja kwa moja (Normal Automatic) kupitia M-Pesa, Mixx by Yas, au Airtel Money kupitia Menyu ya malipo kwenye simu yako.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge mpesa">M-Pesa</span>
-          <span class="pay-badge halopesa">HaloPesa</span>
-          <span class="pay-badge mixx">Mixx by Yas</span>
-          <span class="pay-badge airtel">Airtel Money</span>
-        </div>
-        
-        <button class="btn btn-primary btn-block trigger-popup" style="margin-top:16px;">Lipia Automatic Sasa</button>
-      </div>
-
-      <!-- KENYA -->
-      <div class="country-card reveal">
-        <span class="country-badge-wa">📢 WhatsApp Channel</span>
-        <div class="country-header">
-          <span class="country-flag">🇰🇪</span>
-          <span class="country-name">Kenya</span>
-        </div>
-        <div class="country-price">KES 700</div>
-        <p class="country-note">Ukishalipia ada yako ya KES 700 kupitia M-Pesa, tafadhali tuma ushahidi na taarifa zako kwenye channel ya WhatsApp kupata uthibitisho wa haraka.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge mpesa">M-Pesa Express</span>
-        </div>
-
-        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
-      </div>
-
-      <!-- UGANDA -->
-      <div class="country-card reveal">
-        <span class="country-badge-wa">📢 WhatsApp Channel</span>
-        <div class="country-header">
-          <span class="country-flag">🇺🇬</span>
-          <span class="country-name">Uganda</span>
-        </div>
-        <div class="country-price">UGX 23,000</div>
-        <p class="country-note">Ukishalipia ada yako ya UGX 23,000 (MTN Mobile Money / Airtel Money), tuma ushahidi kwenye WhatsApp channel ili akaunti yako ifunguliwe.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge airtel">MTN / Airtel UG</span>
-        </div>
-
-        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
-      </div>
-
-      <!-- RWANDA -->
-      <div class="country-card reveal">
-        <span class="country-badge-wa">📢 WhatsApp Channel</span>
-        <div class="country-header">
-          <span class="country-flag">🇷🇼</span>
-          <span class="country-name">Rwanda</span>
-        </div>
-        <div class="country-price">RWF 8,000</div>
-        <p class="country-note">Ukishalipia ada yako ya RWF 8,000 via MTN MoMo, tuma ushahidi wa malipo kwenye channel ya WhatsApp kukamilisha usajili.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge mixx">MTN MoMo RW</span>
-        </div>
-
-        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
-      </div>
-
-      <!-- BURUNDI -->
-      <div class="country-card reveal">
-        <span class="country-badge-wa">📢 WhatsApp Channel</span>
-        <div class="country-header">
-          <span class="country-flag">🇧🇮</span>
-          <span class="country-name">Burundi</span>
-        </div>
-        <div class="country-price">BIF 25,000</div>
-        <p class="country-note">Ukishalipia BIF 25,000 via Lumicash/Ecocash, tuma risiti kwenye WhatsApp channel ili account yako iwe active.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge mpesa">Lumicash / Ecocash</span>
-        </div>
-
-        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
-      </div>
-
-      <!-- MALAWI -->
-      <div class="country-card reveal">
-        <span class="country-badge-wa">📢 WhatsApp Channel</span>
-        <div class="country-header">
-          <span class="country-flag">🇲🇼</span>
-          <span class="country-name">Malawi</span>
-        </div>
-        <div class="country-price">MWK 12,000</div>
-        <p class="country-note">Ukishalipia ada yako ya MWK 12,000, tuma ushahidi wa malipo kwenye WhatsApp channel ili uweze kuunganishwa.</p>
-        
-        <div class="mobile-money-container">
-          <span class="pay-badge airtel">Airtel Money MW</span>
-        </div>
-
-        <a class="btn btn-secondary btn-block" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank" style="margin-top:16px;">📢 Tuma Taarifa WhatsApp</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section section-alt" id="testimonials">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">⭐ USHUHUDA NI KILA SIKU</span>
-      <h2>Watu Wanasemaje Kuhusu DuniSwahili?</h2>
-      <p>Ushuhuda unachange moja baada ya nyingine hapa chini kutoka kwa wanachama wa Afrika Mashariki.</p>
-    </div>
-
-    <div class="testimonial-carousel-wrapper reveal">
-      
-      <!-- Slide 1 -->
-      <div class="testi-slide active">
-        <div class="testi-card">
-          <div>
-            <div class="testi-user">
-              <img class="testi-avatar" src="https://images.unsplash.com/photo-1613876215075-276fd62c89a4?q=80&w=1374&auto=format&fit=crop" alt="Amina K."/>
-              <div>
-                <div style="font-weight:800; font-size:15px;">Amina Khamis</div>
-                <div style="font-size:12px; color:var(--muted);">🇹🇿 Dar es Salaam, Tanzania</div>
-              </div>
+    <!-- 8. SEHEMU MPYA YA RATING NA MAONI YA WATUMIAJI -->
+    <div class="reviews-section-container">
+        <div class="reviews-top-banner">
+            <div class="reviews-title-box">
+                <h3>Rating na Maoni ya Watumiaji</h3>
+                <p>Maoni kutoka kwa watumiaji wa DUNISWAHILI</p>
             </div>
-            <p style="font-size:14px; color:var(--muted); line-height:1.6;">&quot;Mwanzo nilifikiri ni utani lakini nilipotoa TZS 65,000 yangu ya kwanza kwenda M-Pesa ndio nikaamini. Mfumo huu unasaidia sana kupata hela ya matumizi ya kila siku!&quot;</p>
-          </div>
-          <div style="color:#F59E0B; margin-top:12px; font-size:16px;">★★★★★</div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="testi-slide">
-        <div class="testi-card">
-          <div>
-            <div class="testi-user">
-              <img class="testi-avatar" src="https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=120&auto=format&fit=crop&q=80" alt="Brian O."/>
-              <div>
-                <div style="font-weight:800; font-size:15px;">Brian Otieno</div>
-                <div style="font-size:12px; color:var(--muted);">🇰🇪 Nairobi, Kenya</div>
-              </div>
+            <div class="rating-score-badge">
+                <div class="score-number">4.7</div>
+                <div class="score-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="score-count">1308+ maoni</div>
             </div>
-            <p style="font-size:14px; color:var(--muted); line-height:1.6;">&quot;Aero-level system! I paid KES 700 for activation, and within 2 days I withdrew over KES 4,500 via M-Pesa. Kuchat na wageni hapa ni legit na instant payout.&quot;</p>
-          </div>
-          <div style="color:#F59E0B; margin-top:12px; font-size:16px;">★★★★★</div>
         </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="testi-slide">
-        <div class="testi-card">
-          <div>
-            <div class="testi-user">
-              <img class="testi-avatar" src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?w=120&auto=format&fit=crop&q=80" alt="Grace N."/>
-              <div>
-                <div style="font-weight:800; font-size:15px;">Grace Namubiru</div>
-                <div style="font-size:12px; color:var(--muted);">🇺🇬 Kampala, Uganda</div>
-              </div>
+        <!-- Review 1 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial">A</div>
+                    <div class="review-user-details">
+                        <h4>Amina Hassan</h4>
+                        <span>Dar es Salaam</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
             </div>
-            <p style="font-size:14px; color:var(--muted); line-height:1.6;">&quot;Webale nnyo DuniSwahili! Webale nnyo platform eno. I talk to language learners in the culture group and get paid directly to my Mobile Money without delays.&quot;</p>
-          </div>
-          <div style="color:#F59E0B; margin-top:12px; font-size:16px;">★★★★★</div>
+            <p class="review-body-text">Nimechati dakika 30 nikalipwa TZS 50,000 bila usumbufu. Site ni ya uhakika kabisa.</p>
         </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="testi-slide">
-        <div class="testi-card">
-          <div>
-            <div class="testi-user">
-              <img class="testi-avatar" src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?w=120&auto=format&fit=crop&q=80" alt="Jean P."/>
-              <div>
-                <div style="font-weight:800; font-size:15px;">Jean-Luc Mugisha</div>
-                <div style="font-size:12px; color:var(--muted);">🇷🇼 Kigali, Rwanda</div>
-              </div>
+        <!-- Review 2 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial" style="background: linear-gradient(135deg, #0f2d3d, #082f49); border-color: #0284c7; color: #0284c7;">J</div>
+                    <div class="review-user-details">
+                        <h4>Joseph Mwakalinga</h4>
+                        <span>Mbeya</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
             </div>
-            <p style="font-size:14px; color:var(--muted); line-height:1.6;">&quot;Ururubuga ni rwiza cyane! Murakoze cyane DuniSwahili. Joining the Work group allowed me to earn extra income chatting with foreigners looking for remote helpers.&quot;</p>
-          </div>
-          <div style="color:#F59E0B; margin-top:12px; font-size:16px;">★★★★★</div>
+            <p class="review-body-text">Mwanzoni nilikuwa na shaka, lakini malipo yalikuja haraka. Naipendekeza kwa kila mtu.</p>
         </div>
-      </div>
-
-      <!-- Slide 5 -->
-      <div class="testi-slide">
-        <div class="testi-card">
-          <div>
-            <div class="testi-user">
-              <img class="testi-avatar" src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=120&auto=format&fit=crop&q=80" alt="Baraka J."/>
-              <div>
-                <div style="font-weight:800; font-size:15px;">Baraka Joel</div>
-                <div style="font-size:12px; color:var(--muted);">🇹ℤ Arusha, Tanzania</div>
-              </div>
+        <!-- Review 3 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial" style="background: linear-gradient(135deg, #3d2b07, #261702); border-color: #f59e0b; color: #f59e0b;">N</div>
+                    <div class="review-user-details">
+                        <h4>Neema Kimaro</h4>
+                        <span>Arusha</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
             </div>
-            <p style="font-size:14px; color:var(--muted); line-height:1.6;">&quot;Mtandao upo huru mno. Hakuna bosi wa kukusimamia, unajiamulia masaa yako mwenyewe ya kuchat na kuchukua pesa yako kwenye Mixx by Yas au M-Pesa.&quot;</p>
-          </div>
-          <div style="color:#F59E0B; margin-top:12px; font-size:16px;">★★★★★</div>
+            <p class="review-body-text">Wageni wanaongea vizuri na wanajibu kwa heshima. Huduma kwa wateja ni wepesi kujibu.</p>
         </div>
-      </div>
-
-    </div>
-
-    <div class="testi-dots" id="testiDots">
-      <span class="testi-dot active" data-index="0"></span>
-      <span class="testi-dot" data-index="1"></span>
-      <span class="testi-dot" data-index="2"></span>
-      <span class="testi-dot" data-index="3"></span>
-      <span class="testi-dot" data-index="4"></span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ENHANCED BRANDED POPUP MODAL (14,500 ACTIVATION WITH COUNTDOWN TIMER) -->
-<div class="modal-overlay" id="chatModal">
-  <div class="modal-card">
-    <div class="modal-header">
-      <div class="modal-badge-brand">✨ DUNISWAHILI VIP ACTIVATION</div>
-      <h3 id="modalUserTitle">Fungua Account Yako Sasa</h3>
-    </div>
-
-    <div class="modal-price-card">
-      <div class="modal-price-sub">Gharama ya Usajili / Activation</div>
-      <div class="modal-price-val">TZS 14,500</div>
-      <div class="modal-price-sub">Ada ya Mara Moja Tu · Hakuna Makato ya Mwezi</div>
-    </div>
-
-    <div style="text-align: center; margin-bottom: 16px;">
-      <div style="font-size: 11px; font-weight: 800; color: var(--muted); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.05em;">Mitandao Inayokubaliwa Papo Hapo</div>
-      <div class="mobile-money-container">
-        <span class="pay-badge mpesa">M-Pesa</span>
-        <span class="pay-badge halopesa">HaloPesa</span>
-        <span class="pay-badge mixx">Mixx by Yas</span>
-        <span class="pay-badge airtel">Airtel Money</span>
-      </div>
-    </div>
-
-    <div class="modal-bullet-list">
-      <div><span class="icon-check">✓</span> <span><strong>Chat na Wageni Papo Hapo:</strong> Lipwa kati ya TZS 30,000 hadi 108,000 kwa kila session!</span></div>
-      <div><span class="icon-check">✓</span> <span><strong>Instant Withdrawal:</strong> Pesa zako zinaenda moja kwa moja kwenye Simu au Bank.</span></div>
-      <div><span class="icon-check">✓</span> <span><strong>Auto Translator:</strong> Huna haja ya kujua Kiingereza kwa ufasaha, mfumo utakutafsiri kila kitu.</span></div>
-    </div>
-
-    <!-- COUNTDOWN TIMER SECTION INJECTED -->
-    <div class="timer-box-modal">
-      ⏳ <span id="modalWaitText">Muda wa ofa hii unaisha ndani ya:</span>
-      <span class="countdown-timer" id="countdownTimer">15:00</span>
-    </div>
-
-    <div class="modal-actions">
-      <a class="btn btn-primary btn-block" href="https://kozenasite.site/register?ref=Nico45">🚀 Lipia TZS 14,500 Uanze Sasa</a>
-      <button class="btn btn-ghost btn-block" id="closeModal" style="color:var(--muted); border-color:transparent;">Baadae</button>
-    </div>
-  </div>
-</div>
-
-<!-- LIVE CHAT INTERFACE MODAL (FOR INDIVIDUAL FOREIGNER & GROUPS) -->
-<div class="modal-overlay" id="liveChatModal">
-  <div class="live-chat-card">
-    <div class="chat-card-header">
-      <div class="chat-user-info">
-        <img class="chat-user-avatar" id="chatHeaderAvatar" src="" alt="Avatar">
-        <div>
-          <div class="chat-user-name" id="chatHeaderName">Foreigner</div>
-          <div class="chat-user-status"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:#4ADE80;display:inline-block;"></span> <span id="chatHeaderSub">Online · VIP Member</span></div>
+        <!-- Review 4 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial">B</div>
+                    <div class="review-user-details">
+                        <h4>Baraka Msigwa</h4>
+                        <span>Dodoma</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="review-body-text">DUNISWAHILI imenisaidia kupata kipato cha ziada kila siku nikiwa nyumbani. Asante sana.</p>
         </div>
-      </div>
-      <button id="closeLiveChat" style="background:none; border:none; color:#fff; font-size:22px; cursor:pointer;">&times;</button>
+        <!-- Review 5 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial" style="background: linear-gradient(135deg, #0f2d3d, #082f49); border-color: #0284c7; color: #0284c7;">S</div>
+                    <div class="review-user-details">
+                        <h4>Sarah Mollel</h4>
+                        <span>Moshi</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+            <p class="review-body-text">Nilitoa pesa yangu ikaingia M-Pesa ndani ya dakika chache. Ni halali na ya kuaminika.</p>
+        </div>
+        <!-- Review 6 -->
+        <div class="review-card-item">
+            <div class="review-card-header">
+                <div class="review-user-info">
+                    <div class="review-avatar-initial" style="background: linear-gradient(135deg, #3d2b07, #261702); border-color: #f59e0b; color: #f59e0b;">E</div>
+                    <div class="review-user-details">
+                        <h4>Emmanuel Chuwa</h4>
+                        <span>Mwanza</span>
+                    </div>
+                </div>
+                <div class="review-stars-row">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+            <p class="review-body-text">Mfumo ni rahisi kutumia hata kwenye simu ndogo.</p>
+        </div>
     </div>
-
-    <div class="chat-card-body" id="chatCardBody">
-      <!-- Chat Messages injected dynamically -->
+    <!-- 9. SEHEMU YA CHINI: INSTALL APP -->
+    <div class="bottom-install-section">
+        <div class="bottom-install-box">
+            <div class="bottom-install-title">Weka DUNISWAHILI kwenye simu yako</div>
+            <div class="bottom-install-sub">Gusa hapa chini ili app ijiweke kwenye home screen — kuingia kwa haraka muda wowote.</div>
+            <button class="btn-bottom-install" onclick="openInstallModal()">
+                <svg style="width: 24px; height: 24px;" viewBox="0 0 100 100" fill="none" xmlns="http\://www\.w3.org/2000/svg">
+                    <path d="M48 28 C68 28 82 40 82 56 C82 64 78 71 72 77 L76 90 L62 84 C57 86 52 87 48 87 C28 87 14 75 14 56 C14 40 28 28 48 28 Z" stroke="#ffffff" stroke-width="7" fill="none"/>
+                    <path d="M38 12 C60 12 76 25 76 42 C76 50 72 57 65 63 L69 76 L54 70 C49 71 43 72 38 72 C16 72 4 59 4 42 C4 25 16 12 38 12 Z" stroke="#ffffff" stroke-width="7" fill="none"/>
+                    <circle cx="24" cy="42" r="4" fill="#ffffff"/>
+                    <circle cx="38" cy="42" r="4" fill="#ffffff"/>
+                    <circle cx="52" cy="42" r="4" fill="#ffffff"/>
+                </svg>
+                <span>Install App</span>
+            </button>
+        </div>
     </div>
-
-    <div class="chat-input-area">
-      <input type="text" class="chat-input" id="chatInputMessage" placeholder="Andika ujumbe wako hapa...">
-      <button class="chat-send-btn" id="chatSendBtn">Tuma</button>
+    <!-- 10. LIVE WITHDRAWAL POPUP -->
+    <div class="withdraw-popup" id="withdrawPopup">
+        <i class="fa-solid fa-circle-check popup-icon"></i>
+        <div class="popup-text" id="popupContent">
+            <strong>John M.</strong> ametoka kutoa <strong>TZS 150,000</strong> hivi punde!
+        </div>
     </div>
-
-    <!-- LOADING & NO ACCOUNT OVERLAY CONTAINER -->
-    <div class="chat-overlay-status" id="chatOverlayStatus" style="display:none;">
-      <div id="chatLoadingState" style="display:none; flex-direction:column; align-items:center;">
-        <div class="spinner-loader"></div>
-        <p style="font-weight:700; color:var(--dark-blue); font-size:13px;">Inakagua Account Yako...</p>
-      </div>
-
-      <div id="chatErrorState" style="display:none; flex-direction:column; align-items:center;">
-        <div style="font-size:36px; margin-bottom:8px;">⚠️</div>
-        <h4 style="font-weight:800; color:var(--dark-blue); font-size:16px; margin-bottom:6px;">Huna Account Inayofanya Kazi!</h4>
-        <p style="font-size:12.5px; color:var(--muted); margin-bottom:16px; line-height:1.4;">Huwezi kutuma au kujibu ujumbe kwa wageni bila kuwa na Account iliyofunguliwa. Unatakiwa kukamilisha usajili kwa ada ya <strong>TZS 14,500</strong> pekee.</p>
-        <a class="btn btn-primary btn-block" href="https://kozenasite.site/register?ref=Nico45">🚀 Fungua Account Kwa TZS 14,500</a>
-      </div>
+    <!-- 11. CHAT MODAL -->
+    <div class="modal" id="chatModal">
+        <div class="chat-modal-box">
+            <div class="chat-header">
+                <div class="chat-user-info">
+                    <img id="chatAvatar" src="" class="chat-avatar">
+                    <div class="chat-user-details">
+                        <h4 id="chatName">User</h4>
+                        <div id="chatStatus" class="chat-status-text">Online</div>
+                    </div>
+                </div>
+                <button class="btn-close-x" onclick="closeChatModal()" style="position\:static; width:28px; height:28px;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody"></div>
+            <div class="chat-footer" id="chatFooter">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Andika ujumbe wako hapa..." onkeypress="handleKeyPress(event)">
+                <button class="btn-send-chat" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+            <!-- CHAT LOCK OVERLAY -->
+            <div class="chat-lock-overlay" id="chatLockOverlay" style="display\:none;">
+                <i class="fa-solid fa-fire lock-icon" style="color: #22c55e; text-shadow: 0 0 15px rgba(34, 197, 94, 0.8);"></i>
+                <h3 style="color: #22c55e; font-size: 20px; font-weight: 900; margin-bottom: 8px;">🎉 Mgeni Anataka Kuendelea Nawe!</h3>
+                <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5; margin-bottom: 20px;">
+                    Amependezwa sana na mazungumzo yenu na anasubiri muendelee ili akutumie malipo yako ya papo hapo! Usipoteze fursa hii. Kamilisha akaunti yako sasa kwa TZS 14,500 pekee ili uanze kulipwa fedha halisi moja kwa moja kupitia simu yako.
+                </p>
+                <a href="https://kozenasite.site/register?ref=Nico45" target="_blank" class="btn-fungua-account" style="width:100%; margin:0; background: linear-gradient(135deg, #22c55e, #16a34a); box-shadow: 0 4px 20px rgba(34, 197, 94, 0.5); font-size: 15px; text-transform: uppercase;">
+                    🚀 Fungua Akaunti & Anza Kulipwa Sasa
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<section class="section" id="community">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">KWANINI DUNISWAHILI?</span>
-      <h2>Kwanini Uendelee Kulia Hali Ngumu Wakati Una Simu?</h2>
-      <p>Kila siku unatumia bando kwenye mtandao bila kuingiza pesa. DuniSwahili inakupa fursa ya kulipwa kwa muda wako wa kuchat na wageni!</p>
+    <!-- 12. POPUP YA INSTALL APP -->
+    <div class="modal" id="installModal">
+        <div class="install-modal-box">
+            <button class="btn-close-x" onclick="closeInstallModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="install-modal-title">Weka DUNISWAHILI kwenye Home Screen</div>
+            <ol class="install-steps-list">
+                <li>Gusa kitufe cha <strong>"INSTALL NOW"</strong> hapa chini ili kuanza.</li>
+                <li>Ikitokea window kwenye browser thibitisha <strong>"Install"</strong> au <strong>"Add"</strong>.</li>
+                <li>App itawekwa mara moja kwenye screen ya simu yako!</li>
+            </ol>
+            <button class="btn-download-apk" onclick="executeAppInstall()">
+                <i class="fa-solid fa-download"></i> INSTALL NOW (Pakua Moja kwa Moja)
+            </button>
+        </div>
     </div>
-    <div class="pulse-grid">
-      <div class="pulse-card reveal">
-        <div class="icon">💰</div>
-        <h3>Chat &amp; Tengeneza Pesa</h3>
-        <p>Pata malipo yanayoweza kutolewa kwenda M-Pesa au Mixx by Yas kwa kila saa unayochat na wageni waliopo mtandaoni.</p>
-      </div>
-      <div class="pulse-card reveal">
-        <div class="icon">🌐</div>
-        <h3>Mtandao wa Kimataifa</h3>
-        <p>Kutana na wageni wa kweli kutoka Switzerland, USA, UK, Germany na zaidi waliopo tayari kukulipa.</p>
-      </div>
-      <div class="pulse-card reveal">
-        <div class="icon">📱</div>
-        <h3>Rahisi Kushiriki</h3>
-        <p>Hutaji kompyuta wala uzoefu. Unachohitaji ni simu yako tu kuanza kujiingizia kipato.</p>
-      </div>
+    <!-- 13. MODAL: CUSTOMER ASSISTANCE -->
+    <div class="modal" id="supportModal">
+        <div class="modal-content">
+            <h3>Customer Assistance</h3>
+            <p>Kama unahitaji msaada au una maswali, chagua njia mojawapo hapa chini kuwasiliana nasi:</p>
+            <div class="support-options">
+                <a href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank" class="btn-support-whatsapp" style="background: linear-gradient(135deg, #075e54, #128c7e);">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> WhatsApp Channel
+                </a>
+                <a href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI%20Inafanyaje%20Kazi" class="btn-support-sms">
+                    <i class="fa-solid fa-comment-sms" style="font-size: 20px;"></i> Tuma SMS za Kawaida
+                </a>
+            </div>
+            <button class="btn-close-modal" onclick="closeSupportModal()">Funga</button>
+        </div>
     </div>
-  </div>
-</section>
-
-<!-- HATUA RAHISI 4 SECTION -->
-<section class="section section-alt" id="how-it-works">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">HATUA RAHISI 4</span>
-      <h2>Jinsi Ya Kuanza Kupata Hela Leo</h2>
-    </div>
-    <div class="steps">
-      <div class="step-card reveal">
-        <div class="step-num">01</div>
-        <h3>Sajili Account Yako</h3>
-        <p>Tengeneza account yako bure kabisa kwenye DUNISWAHILI ili ufungue mfumo na uweze kupokea pesa.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">02</div>
-        <h3>Chagua Mgeni &amp; Chat</h3>
-        <p>Chagua mgeni yeyote aliyepo mtandaoni kwenye list yetu, anza kuchat naye na kutumia muda wako.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">03</div>
-        <h3>Pata Malipo / Pesa</h3>
-        <p>Pokea malipo yako moja kwa moja na utoe kwenda M-Pesa, Mixx by Yas, Airtel Money au Bank.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">04</div>
-        <h3>Jiunge WhatsApp Channel</h3>
-        <p>Ukiisha kamilisha kujisajili na kuwa na account, jiunge na channel ya WhatsApp kwa updates na ushirikiano.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="benefits">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">FAIDA ZAKO</span>
-      <h2>Kila Kitu Unachohitaji Ili Ufanikiwe</h2>
-    </div>
-    <div class="benefits">
-      <div class="benefit-card reveal"><h3>⚡ Malipo ya Haraka</h3><p>Omba kutoa pesa yako muda wowote na uipokee kwenye M-Pesa au Mixx by Yas.</p></div>
-      <div class="benefit-card reveal"><h3>🎓 Msaada wa Lugha</h3><p>Mfumo wetu unakusaidia kutafsiri maneno kwa urahisi kabisa.</p></div>
-      <div class="benefit-card reveal"><h3>🤝 Wageni wa Kweli</h3><p>Wageni wote wamethibitishwa na kuweka amana zao tayari kukulipa.</p></div>
-      <div class="benefit-card reveal"><h3>🔒 Usalama 100%</h3><p>Salio lak na data zako zipo salama muda wote.</p></div>
-    </div>
-
-    <!-- ONYO KALI CARD -->
-    <div class="warning-box reveal">
-      <div class="warning-icon">🚫</div>
-      <div class="warning-content">
-        <h3>ONYO KALI NA MASHARTI YA USALAMA!</h3>
-        <p>Mazungumzo (Chatting) yote ndani ya mtandao huu ni ya siri kubwa. **NI MARUFUKU KABISA** kupiga picha, kuchukua Screenshot, au kumtumia mtu mwingine yeyote mazungumzo au picha za wageni wetu. Yeyote atakayebainika kukiuka sheria hii, account yake itafungiwa msimamo (Permanent Ban) na salio lake lote litataifishwa mara moja!</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section class="section section-alt" id="faq">
-  <div class="wrap">
-    <div class="section-head center reveal">
-      <span class="eyebrow">❓ MASWALI YANAYOULIZWA MARA KWA MARA</span>
-      <h2>Je, Unaswali Lolote? Tunayo Majibu.</h2>
-    </div>
-
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <div class="faq-question">1. Je, nitatoleaje pesa zangu nikishalipwa? <span>+</span></div>
-        <div class="faq-answer">Unaweza kutoa pesa zako muda wowote kupitia M-Pesa, Mixx by Yas, Airtel Money au Bank. Pesa inaingia papo hapo bila kuchelewa.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">2. Je, kuna ada ya kila mwezi? <span>+</span></div>
-        <div class="faq-answer">Hapana! Unalipia ada ya activation mara moja pekee na unatumia mfumo bure milele.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">3. Nisipojua Kiingereza vizuri nitachat vipi? <span>+</span></div>
-        <div class="faq-answer">Mfumo wetu una sehemu ya auto-translation inayokusaidia kutafsiri ujumbe wa mgeni kwa Kiswahili na kutafsiri majibu yako kwenda Kiingereza.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="cta-section reveal">
-      <h2>Unasubiri Nini? Wageni Wapo Online Sasa Hivi!</h2>
-      <p>Acha kutazama fursa ikipita. Fungua account yako sasa hivi na uanze kupokea malipo yako ya kwanza leo!</p>
-      <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:24px;">
-        <a class="btn btn-call" href="https://wa.me/255725962119">WhatsApp 0725962119</a>
-        <a class="btn btn-secondary" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank">📢 Jiunge WhatsApp Channel</a>
-        <button class="btn btn-ghost trigger-popup" style="color:#fff; border-color:rgba(255,255,255,0.3);">🚀 Tengeneza Account Uanze</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="#top" style="color:#fff;">DUNISWAHILI</a>
-        <p style="font-size:13px; margin-top:10px; line-height:1.6;">Platform ya kuunganisha waafrika na wageni wa kimataifa kwa ajili ya kuchat na kulipwa.</p>
-      </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px;">Ukurasa</h4>
-        <ul style="margin-top:10px;">
-          <li><a href="#top">Mwanzo</a></li>
-          <li><a href="#foreigners">Live Foreigners</a></li>
-          <li><a href="#pricing">Ada kwa Nchi</a></li>
-          <li><strong>Mawasiliano:</strong> <a href="https://wa.me/255725962119" style="color:#4ADE80;">WhatsApp 0725962119</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px;">Usajili</h4>
-        <ul style="margin-top:10px;">
-          <li><button class="trigger-popup" style="background:none; border:none; color:inherit; padding:0; font:inherit; cursor:pointer;">Tengeneza Account</button></li>
-        </ul>
-      </div>
-      <div>
-        <h4 style="color:#fff; font-size:14px;">Support</h4>
-        <ul style="margin-top:10px;">
-          <li><a href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank">WhatsApp Channel</a></li>
-          <li><a href="https://wa.me/255725962119">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 DUNISWAHILI.SITE — Haki Zote Zimehifadhiwa. | Admin: <a href="https://wa.me/255725962119" style="color:#4ADE80; font-weight:bold;">0725962119</a></span>
-      <span>Verified Gateway Security</span>
-    </div>
-  </div>
-</footer>
-
-<!-- TOAST PAYOUT NOTIFICATION -->
-<div class="payout-toast" id="payoutToast">
-  <div style="background:#10B981; color:#fff; border-radius:50%; width:32px; height:32px; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">✓</div>
-  <div>
-    <div id="toastText" style="font-weight:700; font-size:12px;">Grace M. ametoa TZS 80,000</div>
-    <div style="font-size:10.5px; color:var(--muted);">Papo hapo kupitia M-Pesa</div>
-  </div>
-</div>
-
-<a aria-label="Join on WhatsApp Channel" class="wa-float" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" rel="noopener" target="_blank">
-  <svg fill="#ffffff" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2C13.5 27.7 14.7 28 16 28c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.2 0-2.4-.3-3.5-.9l-.3-.2-4.6 1.2 1.2-4.5-.2-.3C7.5 18 6.9 16.5 6.9 15c0-5 4.1-9.1 9.1-9.1s9.1 4.1 9.1 9.1-4.1 9.1-9.1 9.1zm5-6.8c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3z"/></svg>
-</a>
-
-<!-- FULL COMPLETED JAVASCRIPT WITH COUNTDOWN TIMER -->
-<script>
-window.addEventListener('load', function() {
-  var preloader = document.getElementById('preloader');
-  if(preloader) preloader.classList.add('hidden');
-});
-
-var maleNames = ['Wayne Martin', 'David Smith', 'Robert Taylor', 'Alex Mueller', 'Mark Wilson', 'Marco Rossi', 'Lukas Weber', 'Sven Jansen', 'Lars Hansen', 'Oliver Brown', 'Daniel Evans', 'Liam Scott', 'Ethan Hunt', 'Noah Garcia', 'Lucas Martinez', 'Mason Lee'];
-var femaleNames = ['Sarah Jenkins', 'Julie Dubois', 'Chloe Bennett', 'Elena Gomez', 'Emma Lindqvist', 'Sophie Clark', 'Anna Fischer', 'Laura Miller', 'Mia Wagner', 'Charlotte Roy', 'Amelia Davies', 'Isabella Silva', 'Sophia Hoffmann', 'Olivia Taylor'];
-
-var maleAvatars = [
-  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80'
-];
-
-var femaleAvatars = [
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
-  'https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=150&auto=format&fit=crop&q=80'
-];
-
-var foreignFlags = ['🇨🇭', '🇬🇧', '🇺🇸', '🇩🇪', '🇨🇦', '🇫🇷', '🇮🇹', '🇦🇺', '🇪🇸', '🇳🇱', '🇸🇪', '🇳🇴'];
-
-function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; }
-
-var usedAvatars = new Set();
-var usedNames = new Set();
-
-function generateRandomForeigner() {
-  var isMale = Math.random() > 0.5;
-  var namePool = isMale ? maleNames : femaleNames;
-  var avatarPool = isMale ? maleAvatars : femaleAvatars;
-
-  var availNames = namePool.filter(n => !usedNames.has(n));
-  var availAvatars = avatarPool.filter(a => !usedAvatars.has(a));
-
-  if (availNames.length === 0) {
-    namePool.forEach(n => usedNames.delete(n));
-    availNames = namePool;
-  }
-  if (availAvatars.length === 0) {
-    avatarPool.forEach(a => usedAvatars.delete(a));
-    availAvatars = avatarPool;
-  }
-
-  var name = availNames[Math.floor(Math.random() * availNames.length)];
-  var img = availAvatars[Math.floor(Math.random() * availAvatars.length)];
-  var flag = foreignFlags[Math.floor(Math.random() * foreignFlags.length)];
-
-  usedNames.add(name);
-  usedAvatars.add(img);
-
-  var price = 'TZS ' + (getRandomInt(6, 16) * 10000).toLocaleString();
-  var time = getRandomInt(1, 2) + 'h ' + (getRandomInt(0, 3) * 15) + 'm session';
-
-  return { name: name, flag: flag, img: img, price: price, time: time };
-}
-
-var firstNames = ['Amani', 'Neema', 'Juma', 'Grace', 'Baraka', 'Doreen', 'Kelvin', 'Rashid', 'Vanessa', 'Goodluck', 'Agnes', 'Innocent', 'Aisha', 'Frank', 'Hassan', 'Fatuma', 'Gift', 'Faraja'];
-var lastInitial = ['M.', 'S.', 'K.', 'P.', 'R.', 'T.', 'L.', 'H.', 'B.', 'J.', 'A.', 'C.'];
-var amounts = ['TZS 35,000', 'TZS 50,000', 'TZS 65,000', 'TZS 80,000', 'TZS 95,000', 'TZS 120,000', 'TZS 150,000', 'TZS 180,000', 'TZS 210,000'];
-var paymentMethods = ['Airtel Money', 'M-Pesa', 'Mixx by Yas', 'HaloPesa', 'CRDB Bank', 'NMB Bank'];
-
-function generateRandomWithdrawal() {
-  var fn = firstNames[Math.floor(Math.random() * firstNames.length)];
-  var ln = lastInitial[Math.floor(Math.random() * lastInitial.length)];
-  var amt = amounts[Math.floor(Math.random() * amounts.length)];
-  var method = paymentMethods[Math.floor(Math.random() * paymentMethods.length)];
-  var num = '*******' + getRandomInt(100, 999);
-  return { name: fn + ' ' + ln, amount: amt, via: method, acc: num };
-}
-
-/* ===== COUNTDOWN TIMER ENGINE ===== */
-function startCountdownTimer(durationInSeconds) {
-  var timerDisplay = document.getElementById('countdownTimer');
-  if (!timerDisplay) return;
-
-  var timer = durationInSeconds, minutes, seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
-
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
-
-    timerDisplay.textContent = minutes + ":" + seconds;
-
-    if (--timer < 0) {
-      timer = durationInSeconds; // Reset timer baada ya kuisha
-    }
-  }, 1000);
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-
-  // START 15-MINUTE COUNTDOWN TIMER
-  startCountdownTimer(15 * 60);
-
-  // CANVAS NETWORK ANIMATION
-  var canvas = document.getElementById('networkCanvas');
-  if (canvas) {
-    var ctx = canvas.getContext('2d');
-    var width = canvas.width = window.innerWidth;
-    var height = canvas.height = canvas.offsetHeight || 500;
-
-    window.addEventListener('resize', function() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = canvas.offsetHeight || 500;
-    });
-
-    var nodes = [];
-    for (var i = 0; i < 35; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.8,
-        vy: (Math.random() - 0.5) * 0.8,
-        r: Math.random() * 2.5 + 1
-      });
-    }
-
-    function animateNetwork() {
-      ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = 'rgba(37, 99, 235, 0.4)';
-      ctx.strokeStyle = 'rgba(37, 99, 235, 0.12)';
-
-      for (var a = 0; a < nodes.length; a++) {
-        var nodeA = nodes[a];
-        nodeA.x += nodeA.vx;
-        nodeA.y += nodeA.vy;
-
-        if (nodeA.x < 0 || nodeA.x > width) nodeA.vx *= -1;
-        if (nodeA.y < 0 || nodeA.y > height) nodeA.vy *= -1;
-
-        ctx.beginPath();
-        ctx.arc(nodeA.x, nodeA.y, nodeA.r, 0, Math.PI * 2);
-        ctx.fill();
-
-        for (var b = a + 1; b < nodes.length; b++) {
-          var nodeB = nodes[b];
-          var dist = Math.hypot(nodeA.x - nodeB.x, nodeA.y - nodeB.y);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(nodeA.x, nodeA.y);
-            ctx.lineTo(nodeB.x, nodeB.y);
-            ctx.stroke();
-          }
+    <!-- JAVASCRIPT SYSTEM -->
+    <script>
+        const registerURL = "https://kozenasite.site/register?ref=Nico45";
+        const loginURL = "https://kozenasite.site/login?redirect=https://kozenasite.site/Withdraw";
+        function openSupportModal() {
+            document.getElementById('supportModal').style.display = 'flex';
         }
-      }
-      requestAnimationFrame(animateNetwork);
-    }
-    animateNetwork();
-  }
-
-  // POPULATE FOREIGNERS (AT LEAST 6 TO 8 PER GROUP)
-  function renderGroupForeigners(elementId, count) {
-    var container = document.getElementById(elementId);
-    if (!container) return;
-    container.innerHTML = '';
-    for (var i = 0; i < count; i++) {
-      var f = generateRandomForeigner();
-      var itemHtml = `
-        <div class="foreigner-item foreigner-chat-trigger" data-name="${f.name}" data-img="${f.img}" data-flag="${f.flag}" data-price="${f.price}">
-          <div class="foreigner-info">
-            <div class="foreigner-avatar-box">
-              <img src="${f.img}" alt="${f.name}">
-              <span class="flag-badge">${f.flag}</span>
-            </div>
-            <div class="foreigner-details">
-              <div class="name">${f.name}</div>
-              <div class="rate">${f.price} · ${f.time}</div>
-            </div>
-          </div>
-          <button class="chat-btn-action">Chat</button>
-        </div>
-      `;
-      container.innerHTML += itemHtml;
-    }
-  }
-
-  function refreshAllGroups() {
-    renderGroupForeigners('workList', 7);
-    renderGroupForeigners('funList', 8);
-    renderGroupForeigners('datingList', 6);
-    renderGroupForeigners('eduList', 7);
-  }
-
-  refreshAllGroups();
-
-  // DYNAMIC REFRESH OF FOREIGNERS EVERY 45 SECONDS
-  setInterval(refreshAllGroups, 45000);
-
-  // POPUP MODAL CONTROL
-  var chatModal = document.getElementById('chatModal');
-  var closeModalBtn = document.getElementById('closeModal');
-
-  document.body.addEventListener('click', function (e) {
-    if (e.target.closest('.trigger-popup')) {
-      if (chatModal) chatModal.classList.add('active');
-    }
-  });
-
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener('click', function () {
-      if (chatModal) chatModal.classList.remove('active');
-    });
-  }
-
-  if (chatModal) {
-    chatModal.addEventListener('click', function (e) {
-      if (e.target === chatModal) chatModal.classList.remove('active');
-    });
-  }
-
-  /* ===== LIVE CHAT SIMULATION SYSTEM ===== */
-  var liveChatModal = document.getElementById('liveChatModal');
-  var closeLiveChat = document.getElementById('closeLiveChat');
-  var chatCardBody = document.getElementById('chatCardBody');
-  var chatHeaderAvatar = document.getElementById('chatHeaderAvatar');
-  var chatHeaderName = document.getElementById('chatHeaderName');
-  var chatHeaderSub = document.getElementById('chatHeaderSub');
-  var chatInputMessage = document.getElementById('chatInputMessage');
-  var chatSendBtn = document.getElementById('chatSendBtn');
-  var chatOverlayStatus = document.getElementById('chatOverlayStatus');
-  var chatLoadingState = document.getElementById('chatLoadingState');
-  var chatErrorState = document.getElementById('chatErrorState');
-
-  function openChatWindow(name, avatar, subtext, initialMsg) {
-    chatHeaderName.textContent = name;
-    chatHeaderAvatar.src = avatar;
-    chatHeaderSub.textContent = subtext;
-    chatInputMessage.value = '';
-    
-    chatOverlayStatus.style.display = 'none';
-    chatLoadingState.style.display = 'none';
-    chatErrorState.style.display = 'none';
-
-    chatCardBody.innerHTML = `
-      <div class="bubble in">
-        <strong>${name}:</strong><br>
-        ${initialMsg}
-      </div>
-    `;
-    liveChatModal.classList.add('active');
-  }
-
-  // EVENT DELEGATION FOR FOREIGNER CLICK
-  document.body.addEventListener('click', function(e) {
-    var trigger = e.target.closest('.foreigner-chat-trigger');
-    if (trigger) {
-      var name = trigger.getAttribute('data-name');
-      var img = trigger.getAttribute('data-img');
-      var flag = trigger.getAttribute('data-flag');
-      var price = trigger.getAttribute('data-price');
-      openChatWindow(name, img, flag + ' Online · Offers ' + price, "Hello! I am online now. Let's chat and share more!");
-    }
-  });
-
-  // EVENT DELEGATION FOR JOIN GROUP CLICK
-  document.body.addEventListener('click', function(e) {
-    var groupBtn = e.target.closest('.join-group-btn');
-    if (groupBtn) {
-      var groupName = groupBtn.getAttribute('data-group-name');
-      var members = groupBtn.getAttribute('data-members');
-      openChatWindow(
-        groupName, 
-        './logo.jpg', 
-        '🟢 ' + members + ' Members Active', 
-        'Karibu kwenye ' + groupName + '! Wageni wengi wapo active hapa kuchat naye. Andika ujumbe wako kuanza.'
-      );
-    }
-  });
-
-  // CLOSE CHAT MODAL
-  if (closeLiveChat) {
-    closeLiveChat.addEventListener('click', function() {
-      liveChatModal.classList.remove('active');
-    });
-  }
-
-  // TRIGGER LOADING AND ACCOUNT ALERT UPON MESSAGING
-  function handleSendMessage() {
-    var msg = chatInputMessage.value.trim();
-    if (!msg) return;
-
-    // Append user message
-    chatCardBody.innerHTML += `
-      <div class="bubble out">
-        ${msg}
-      </div>
-    `;
-    chatInputMessage.value = '';
-    chatCardBody.scrollTop = chatCardBody.scrollHeight;
-
-    // Show Loading
-    chatOverlayStatus.style.display = 'flex';
-    chatLoadingState.style.display = 'flex';
-    chatErrorState.style.display = 'none';
-
-    // Delay 2 seconds then show "No Account" Alert
-    setTimeout(function() {
-      chatLoadingState.style.display = 'none';
-      chatErrorState.style.display = 'flex';
-    }, 2000);
-  }
-
-  if (chatSendBtn) {
-    chatSendBtn.addEventListener('click', handleSendMessage);
-  }
-
-  if (chatInputMessage) {
-    chatInputMessage.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        handleSendMessage();
-      }
-    });
-  }
-
-  // MOBILE NAV TOGGLE
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-  if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
-    });
-  }
-
-  // VERTICAL TICKER SYSTEM
-  var tickerViewport = document.getElementById('tickerViewport');
-  if (tickerViewport) {
-    function updateTicker() {
-      var w = generateRandomWithdrawal();
-      var card = document.createElement('div');
-      card.className = 'ticker-card-single';
-      card.innerHTML = `
-        <span>🎉 <strong>${w.name}</strong> ametoa <strong>${w.amount}</strong></span>
-        <span class="method">${w.via}</span>
-        <span class="acc-num">${w.acc}</span>
-        <span class="time-badge">Papo hapo</span>
-      `;
-      tickerViewport.innerHTML = '';
-      tickerViewport.appendChild(card);
-      setTimeout(function() { card.classList.add('active'); }, 50);
-    }
-    updateTicker();
-    setInterval(updateTicker, 6000);
-  }
-
-  // TESTIMONIAL CAROUSEL
-  var slides = document.querySelectorAll('.testi-slide');
-  var dots = document.querySelectorAll('.testi-dot');
-  var currentSlide = 0;
-
-  function showSlide(index) {
-    slides.forEach((s, i) => {
-      s.classList.toggle('active', i === index);
-    });
-    dots.forEach((d, i) => {
-      d.classList.toggle('active', i === index);
-    });
-    currentSlide = index;
-  }
-
-  dots.forEach(dot => {
-    dot.addEventListener('click', function() {
-      var idx = parseInt(this.getAttribute('data-index'), 10);
-      showSlide(idx);
-    });
-  });
-
-  setInterval(function() {
-    var next = (currentSlide + 1) % slides.length;
-    showSlide(next);
-  }, 5000);
-
-  // FAQ ACCORDION
-  var faqQuestions = document.querySelectorAll('.faq-question');
-  faqQuestions.forEach(q => {
-    q.addEventListener('click', function() {
-      var parent = this.parentElement;
-      parent.classList.toggle('active');
-    });
-  });
-
-  // PAYOUT TOAST NOTIFICATION
-  var toast = document.getElementById('payoutToast');
-  var toastText = document.getElementById('toastText');
-
-  function triggerToast() {
-    if (!toast || !toastText) return;
-    var w = generateRandomWithdrawal();
-    toastText.innerHTML = `<strong>${w.name}</strong> ametoa <strong>${w.amount}</strong>`;
-    toast.classList.add('show');
-    setTimeout(function() {
-      toast.classList.remove('show');
-    }, 4000);
-  }
-
-  setTimeout(triggerToast, 3000);
-  setInterval(triggerToast, 12000);
-
-  // SCROLL REVEAL ANIMATIONS
-  var reveals = document.querySelectorAll('.reveal');
-  function checkReveal() {
-    var windowHeight = window.innerHeight;
-    reveals.forEach(r => {
-      var elementTop = r.getBoundingClientRect().top;
-      if (elementTop < windowHeight - 50) {
-        r.classList.add('is-visible');
-      }
-    });
-  }
-  window.addEventListener('scroll', checkReveal);
-  checkReveal();
-
-});
-</script>
-
+        function closeSupportModal() {
+            document.getElementById('supportModal').style.display = 'none';
+        }
+        function playSmsNotificationSound() {
+            try {
+                const AudioContext = window\.AudioContext || window\.webkitAudioContext;
+                if (!AudioContext) return;
+                const audioCtx = new AudioContext();
+                const now = audioCtx.currentTime;
+                const osc1 = audioCtx.createOscillator();
+                const gain1 = audioCtx.createGain();
+                osc1.type = 'sine';
+                osc1.frequency.setValueAtTime(1046.50, now);
+                gain1.gain.setValueAtTime(0.15, now);
+                gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                osc1.connect(gain1);
+                gain1.connect(audioCtx.destination);
+                osc1.start(now);
+                osc1.stop(now + 0.3);
+            } catch (e) {
+                console.log("Audio feature restricted.");
+            }
+        }
+        let deferredPrompt = null;
+        window\.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+        });
+        function openInstallModal() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    deferredPrompt = null;
+                });
+            } else {
+                document.getElementById('installModal').style.display = 'flex';
+            }
+        }
+        function executeAppInstall() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    deferredPrompt = null;
+                    closeInstallModal();
+                });
+            } else {
+                window\.location.href = registerURL;
+            }
+        }
+        function closeInstallModal() {
+            document.getElementById('installModal').style.display = 'none';
+        }
+        const masterProfilePool = [
+            { name:"Wayne", age:29, flag:"🇬🇧", country:"England", photo:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300" },
+            { name:"Sarah", age:27, flag:"🇺🇸", country:"USA", photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" },
+            { name:"Alex", age:31, flag:"🇩🇪", country:"Germany", photo:"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300" },
+            { name:"Sophie", age:25, flag:"🇫🇷", country:"France", photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300" },
+            { name:"Marco", age:34, flag:"🇮🇹", country:"Italy", photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300" },
+            { name:"Emma", age:24, flag:"🇨🇦", country:"Canada", photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300" },
+            { name:"Lukas", age:30, flag:"🇨🇭", country:"Switzerland", photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300" },
+            { name:"Chloe", age:26, flag:"🇬🇧", country:"United Kingdom", photo:"https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=300" },
+            { name:"David", age:33, flag:"🇦🇺", country:"Australia", photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300" },
+            { name:"Elena", age:28, flag:"🇪🇸", country:"Spain", photo:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" },
+            { name:"Daniel", age:29, flag:"🇳🇱", country:"Netherlands", photo:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300" },
+            { name:"Anna", age:32, flag:"🇸🇪", country:"Sweden", photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300" },
+            { name:"Oliver", age:26, flag:"🇮🇪", country:"Ireland", photo:"https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=300" },
+            { name:"Julie", age:30, flag:"🇧🇪", country:"Belgium", photo:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300" },
+            { name:"Michael", age:35, flag:"🇺🇸", country:"USA", photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300" },
+            { name:"Laura", age:27, flag:"🇩🇰", country:"Denmark", photo:"https://images.unsplash.com/photo-1544717305-2782549b5136?w=300" },
+            { name:"Sven", age:32, flag:"🇳🇴", country:"Norway", photo:"https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=300" },
+            { name:"Mia", age:23, flag:"🇦🇹", country:"Austria", photo:"https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300" }
+        ];
+        const pricesList = [
+            { time: "Saa moja", price: "TZS 120,000" },
+            { time: "Dakika 30", price: "TZS 50,000" },
+            { time: "Dakika 45", price: "TZS 80,000" },
+            { time: "Saa moja", price: "TZS 150,000" },
+            { time: "Dakika 30", price: "TZS 65,000" },
+            { time: "Saa moja", price: "TZS 90,000" },
+            { time: "Dakika 40", price: "TZS 75,000" },
+            { time: "Saa moja", price: "TZS 110,000" }
+        ];
+        let cardsData = [];
+        const cardsContainer = document.getElementById('cardsContainer');
+        function initCards() {
+            cardsData = [];
+            let shuffledPool = [...masterProfilePool].sort(() => 0.5 - Math.random());
+            for (let i = 0; i < 30; i++) {
+                const profile = shuffledPool[i];
+                const randomPrice = pricesList[Math.floor(Math.random() * pricesList.length)];
+                cardsData.push({
+                    id: i,
+                    name: profile.name,
+                    age: profile.age,
+                    flag: profile.flag,
+                    country: profile.country,
+                    photo: profile.photo,
+                    price: randomPrice.price,
+                    time: randomPrice.time,
+                    status: (i % 5 === 2) ? 'Offline' : 'Online'
+                });
+            }
+            renderAllCards();
+        }
+        function renderAllCards() {
+            cardsContainer.innerHTML = '';
+            cardsData.forEach((u) => {
+                const card = document.createElement('div');
+                card.className = 'user-card';
+                const isOnline = u.status === 'Online';
+                const statusClass = isOnline ? 'status-online' : 'status-offline';
+                card.innerHTML = `
+                    <div class="user-info">
+                        <div class="avatar-wrapper">
+                            <img src="${u.photo}" alt="${u.name}" class="user-avatar" id="avatar-${u.id}">
+                            ${isOnline ? '<div class="status-dot-card"></div>' : ''}
+                        </div>
+                        <div class="user-details">
+                            <h4 id="name-${u.id}">${u.flag} ${u.name}, ${u.age}</h4>
+                            <p id="details-${u.id}">${u.country} • <span class="${statusClass}">${u.status}</span></p>
+                            <div class="price-tag" id="price-${u.id}">${u.time} — ${u.price}</div>
+                        </div>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="startChat(${u.id})" class="btn-action btn-chat"><i class="fa-solid fa-comment"></i> Chat</button>
+                        <a href="${registerURL}" target="_blank" class="btn-action btn-voice"><i class="fa-solid fa-phone"></i> Voice Call</a>
+                        <a href="${registerURL}" target="_blank" class="btn-action btn-video"><i class="fa-solid fa-video"></i> Video Call</a>
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
+            });
+        }
+        initCards();
+        setInterval(() => {
+            let numberOfCardsToUpdate = 6;
+            let activePhotos = cardsData.map(c => c.photo);
+            let availablePool = masterProfilePool.filter(p => !activePhotos.includes(p.photo));
+            if (availablePool.length < numberOfCardsToUpdate) {
+                availablePool = [...masterProfilePool];
+            }
+            for (let i = 0; i < numberOfCardsToUpdate; i++) {
+                let randomIndex = Math.floor(Math.random() * cardsData.length);
+                let targetCard = cardsData[randomIndex];
+                let newProfileIndex = Math.floor(Math.random() * availablePool.length);
+                let newProfile = availablePool.splice(newProfileIndex, 1)[0];
+                if (!newProfile) {
+                    newProfile = masterProfilePool[Math.floor(Math.random() * masterProfilePool.length)];
+                }
+                let newPrice = pricesList[Math.floor(Math.random() * pricesList.length)];
+                targetCard.name = newProfile.name;
+                targetCard.age = newProfile.age;
+                targetCard.flag = newProfile.flag;
+                targetCard.country = newProfile.country;
+                targetCard.photo = newProfile.photo;
+                targetCard.price = newPrice.price;
+                targetCard.time = newPrice.time;
+                const avatarEl = document.getElementById(`avatar-${targetCard.id}`);
+                const nameEl = document.getElementById(`name-${targetCard.id}`);
+                const detailsEl = document.getElementById(`details-${targetCard.id}`);
+                const priceEl = document.getElementById(`price-${targetCard.id}`);
+                if (avatarEl && nameEl && detailsEl && priceEl) {
+                    avatarEl.style.opacity = '0';
+                    nameEl.style.opacity = '0';
+                    detailsEl.style.opacity = '0';
+                    priceEl.style.opacity = '0';
+                    setTimeout(() => {
+                        avatarEl.src = targetCard.photo;
+                        nameEl.innerHTML = `${targetCard.flag} ${targetCard.name}, ${targetCard.age}`;
+                        detailsEl.innerHTML = `${targetCard.country} • <span class="${targetCard.status === 'Online' ? 'status-online' : 'status-offline'}">${targetCard.status}</span>`;
+                        priceEl.textContent = `${targetCard.time} — ${targetCard.price}`;
+                        avatarEl.style.opacity = '1';
+                        nameEl.style.opacity = '1';
+                        detailsEl.style.opacity = '1';
+                        priceEl.style.opacity = '1';
+                    }, 300);
+                }
+            }
+        }, 5000);
+        const liveTxPool = [
+            { text: "Mix by Yas • Dakika 1 iliyopita", type: "purple" },
+            { text: "Juma M. ametoka kutoa TZS 150,000 kupitia M-Pesa • Dakika 2 zilizopita", type: "green" },
+            { text: "Amina S. ametoka kutoa TZS 180,000 kupitia Mix by Yas • Hivi punde", type: "green" },
+            { text: "Airtel Money • Dakika 3 zilizopita", type: "purple" },
+            { text: "Kelvin P. ametoka kutoa TZS 250,000 kupitia Mix by Yas • Dakika 4 zilizopita", type: "green" }
+        ];
+        let currentTxIndex = 0;
+        const txTickerContainer = document.getElementById('txTickerContainer');
+        function initTxTicker() {
+            txTickerContainer.innerHTML = '';
+            for (let i = 0; i < 3; i++) {
+                addTxItem((currentTxIndex + i) % liveTxPool.length);
+            }
+            currentTxIndex = (currentTxIndex + 2) % liveTxPool.length;
+        }
+        function addTxItem(index) {
+            const itemData = liveTxPool[index];
+            const div = document.createElement('div');
+            div.className = `tx-item ${itemData.type === 'green' ? 'tx-item-green' : ''}`;
+            div.innerHTML = `
+                <span class="tx-dot ${itemData.type === 'green' ? 'tx-dot-green' : 'tx-dot-purple'}"></span>
+                <span>${itemData.text}</span>
+            `;
+            txTickerContainer.appendChild(div);
+        }
+        function cycleTransactions() {
+            currentTxIndex = (currentTxIndex + 1) % liveTxPool.length;
+            addTxItem(currentTxIndex);
+            const firstChild = txTickerContainer.firstElementChild;
+            if (firstChild) {
+                firstChild.style.transition = 'margin-top 0.6s ease, opacity 0.6s ease';
+                firstChild.style.marginTop = '-50px';
+                firstChild.style.opacity = '0';
+                setTimeout(() => {
+                    if (firstChild && firstChild.parentNode) {
+                        txTickerContainer.removeChild(firstChild);
+                    }
+                }, 600);
+            }
+        }
+        initTxTicker();
+        setInterval(cycleTransactions, 3000);
+        let activeUser = null;
+        let chatStep = 0;
+        const scriptConversation = [
+            "Habari rafiki mzima",
+            "Mimi penda Kujua KISWAHILI vizuri ya Tanzania 🇹🇿 😁Nijuze",
+            "Nifunje tamaduni Zenu Na Mbuga Za wanyama"
+        ];
+        function startChat(userId) {
+            activeUser = cardsData.find(u => u.id === userId);
+            chatStep = 0;
+            document.getElementById('chatAvatar').src = activeUser.photo;
+            document.getElementById('chatName').textContent = activeUser.name;
+            document.getElementById('chatBody').innerHTML = '';
+            document.getElementById('chatLockOverlay').style.display = 'none';
+            document.getElementById('chatFooter').style.display = 'flex';
+            const chatInput = document.getElementById('chatInput');
+            chatInput.disabled = false;
+            chatInput.value = '';
+            document.getElementById('chatModal').style.display = 'flex';
+            setTimeout(() => chatInput.focus(), 100);
+            triggerBotTyping(scriptConversation[0], 2000);
+        }
+        function closeChatModal() {
+            document.getElementById('chatModal').style.display = 'none';
+        }
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') { sendMessage(); }
+        }
+        function appendMessage(text, sender) {
+            const chatBody = document.getElementById('chatBody');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-msg ${sender === 'user' ? 'user-msg' : 'bot-msg'}`;
+            msgDiv.textContent = text;
+            chatBody.appendChild(msgDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        function triggerBotTyping(text, delay) {
+            const chatStatus = document.getElementById('chatStatus');
+            chatStatus.className = 'chat-status-typing';
+            chatStatus.textContent = 'anandika...';
+            setTimeout(() => {
+                chatStatus.className = 'chat-status-text';
+                chatStatus.textContent = 'Online';
+                appendMessage(text, 'bot');
+                playSmsNotificationSound();
+            }, delay);
+        }
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const userMsgText = input.value.trim();
+            if (!userMsgText) return;
+            if (chatStep >= 2) {
+                appendMessage(userMsgText, 'user');
+                input.value = '';
+                lockChatSystem();
+                return;
+            }
+            appendMessage(userMsgText, 'user');
+            input.value = '';
+            chatStep++;
+            if (chatStep === 1) {
+                triggerBotTyping(scriptConversation[1], 2500);
+            } else if (chatStep === 2) {
+                triggerBotTyping(scriptConversation[2], 2500);
+                setTimeout(() => { lockChatSystem(); }, 4000);
+            }
+        }
+        function lockChatSystem() {
+            document.getElementById('chatFooter').style.display = 'none';
+            document.getElementById('chatLockOverlay').style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
