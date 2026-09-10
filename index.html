@@ -3,582 +3,4159 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <title>DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia</title>
+
 <meta name="title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia">
 <meta name="description" content="Jifunze njia za uhakika za namna ya kupata hela mtandaoni, fursa za kiuchumi, teknolojia, na biashara za kidijitali kupitia DUNISWAHILI.">
 <meta name="keywords" content="DUNISWAHILI, namna ya kupata hela mtandaoni, kuchat na wageni, fursa za mtandaoni">
 <meta name="robots" content="index, follow">
 <meta name="language" content="Swahili">
 <meta name="author" content="DUNISWAHILI">
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://duniswahili.com/">
 <meta property="og:title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni">
 <meta property="og:description" content="Pata miongozo na mbinu bora za namna ya kupata hela mtandaoni na fursa za kidijitali kupitia DUNISWAHILI.">
 <meta property="og:image" content="https://duniswahili.com/assets/banner.jpg">
+
 <link rel="icon" type="image/png" href="./logo.jpg">
 
 <style>
+
+/* =========================================================
+   DUNISWAHILI V2
+   BLUE + RED BRAND SYSTEM
+========================================================= */
+
 :root{
-  --primary:#2563EB;--primary2:#3B82F6;--dark:#0F172A;--dark2:#172554;
-  --accent:#10B981;--bg:#FAFAFC;--surface:#fff;--muted:#64748B;
-  --line:#E2E8F0;--gold:#F59E0B;--danger:#EF4444;
+  --primary:#2563EB;
+  --primary2:#1D4ED8;
+  --primary3:#3B82F6;
+
+  --red:#DC2626;
+  --red2:#EF4444;
+  --red-dark:#B91C1C;
+
+  --dark:#0B1220;
+  --dark2:#111827;
+  --dark3:#172554;
+
+  --bg:#F8FAFC;
+  --surface:#FFFFFF;
+  --muted:#64748B;
+  --line:#E2E8F0;
+
+  --success:#16A34A;
+  --gold:#F59E0B;
+
   --shadow:0 12px 30px rgba(15,23,42,.08);
+  --blue-shadow:0 9px 24px rgba(37,99,235,.22);
+  --red-shadow:0 9px 24px rgba(220,38,38,.18);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{background:var(--bg);color:var(--dark);font-family:Inter,Segoe UI,Tahoma,sans-serif;line-height:1.5;padding-bottom:84px;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button,input{font:inherit}
-button{cursor:pointer}
-img{max-width:100%;display:block}
-.container{width:100%;max-width:760px;margin:auto;padding:0 16px}
-.hidden{display:none!important}
 
-/* PRELOADER */
-#preloader{position:fixed;inset:0;background:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column;transition:.4s}
-#preloader.hide{opacity:0;visibility:hidden}
-.loader-logo{width:64px;height:64px;animation:spin 1.2s linear infinite}
-.loader-name{font-size:17px;font-weight:900;color:var(--primary);margin-top:10px;letter-spacing:.8px}
-@keyframes spin{to{transform:rotate(360deg)}}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-/* HEADER — VERINOCHAT STRUCTURE, DUNISWAHILI BRAND */
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  background:var(--bg);
+  color:var(--dark);
+  font-family:Inter,Segoe UI,Tahoma,sans-serif;
+  line-height:1.5;
+  padding-bottom:84px;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:100%;
+  max-width:760px;
+  margin:auto;
+  padding:0 16px;
+}
+
+.hidden{
+  display:none!important;
+}
+
+
+/* =========================================================
+   PRELOADER
+========================================================= */
+
+#preloader{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  transition:.45s ease;
+}
+
+#preloader.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+.loader-logo{
+  width:64px;
+  height:64px;
+  animation:spin 1.2s linear infinite;
+}
+
+.loader-name{
+  font-size:17px;
+  font-weight:900;
+  color:var(--primary);
+  margin-top:10px;
+  letter-spacing:.8px;
+}
+
+.loader-name span{
+  color:var(--red);
+}
+
+@keyframes spin{
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
 .header{
-  position:sticky;top:0;z-index:500;background:var(--dark);color:#fff;
-  border-bottom:1px solid #1e293b;padding:11px 16px;
-  display:flex;align-items:center;justify-content:space-between;gap:10px
+  position:sticky;
+  top:0;
+  z-index:500;
+
+  background:
+    linear-gradient(
+      110deg,
+      #071326 0%,
+      #0B1730 55%,
+      #160C18 100%
+    );
+
+  color:#fff;
+
+  border-bottom:1px solid rgba(255,255,255,.09);
+
+  padding:10px 16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
 }
-.logo-box{display:flex;align-items:center;gap:9px;min-width:0}
-.svg-logo{width:42px;height:42px;flex:none}
-.brand-name{font-size:19px;font-weight:900;line-height:1;letter-spacing:-.5px}
-.brand-name .white{color:#fff}.brand-name .blue{color:#60A5FA}
-.brand-slogan{font-size:8px;font-weight:800;letter-spacing:1px;margin-top:4px;color:#cbd5e1}
-.brand-subtag{font-size:8px;font-weight:900;color:#4ADE80;text-transform:uppercase;letter-spacing:.8px;margin-top:2px}
+
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  min-width:0;
+}
+
+.svg-logo{
+  width:42px;
+  height:42px;
+  flex:none;
+}
+
+.brand-name{
+  font-size:19px;
+  font-weight:900;
+  line-height:1;
+  letter-spacing:-.5px;
+}
+
+.brand-name .white{
+  color:#fff;
+}
+
+.brand-name .blue{
+  color:#60A5FA;
+}
+
+.brand-name .red{
+  color:#F87171;
+}
+
+.brand-slogan{
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-top:4px;
+  color:#CBD5E1;
+}
+
+.brand-subtag{
+  font-size:8px;
+  font-weight:900;
+  color:#F87171;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  margin-top:2px;
+}
+
+
+/* HEADER RIGHT */
+
+.header-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:5px;
+  flex:none;
+}
+
+.tanzania-date{
+  font-size:9px;
+  font-weight:900;
+  color:#DBEAFE;
+
+  background:rgba(37,99,235,.18);
+  border:1px solid rgba(96,165,250,.35);
+
+  padding:5px 8px;
+  border-radius:9px;
+
+  white-space:nowrap;
+}
+
 .online-badge{
-  flex:none;background:#0b3025;color:#4ADE80;border:1px solid #10B981;
-  padding:6px 10px;border-radius:20px;font-size:10px;font-weight:800;
-  display:flex;align-items:center;gap:5px;box-shadow:0 0 12px rgba(16,185,129,.2)
-}
-.online-dot{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 10px #4ADE80;animation:pulse 1.5s infinite}
-@keyframes pulse{50%{opacity:.35;transform:scale(.8)}}
+  background:rgba(220,38,38,.12);
+  color:#FCA5A5;
 
-/* TOP ACTIONS */
-.top-actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 16px 10px}
+  border:1px solid rgba(239,68,68,.5);
+
+  padding:5px 9px;
+  border-radius:20px;
+
+  font-size:9px;
+  font-weight:800;
+
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.online-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#EF4444;
+  box-shadow:0 0 10px rgba(239,68,68,.8);
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  50%{
+    opacity:.35;
+    transform:scale(.8);
+  }
+}
+
+
+/* =========================================================
+   TOP ACTIONS
+========================================================= */
+
+.top-actions-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:14px 0 10px;
+}
+
 .top-action{
-  border:0;border-radius:15px;padding:11px 10px;color:#fff;font-weight:800;font-size:12px;
-  display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 6px 16px rgba(0,0,0,.12);
-  transition:.2s
+  border:0;
+  border-radius:15px;
+  padding:11px 10px;
+  color:#fff;
+  font-weight:800;
+  font-size:12px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+
+  transition:.2s;
 }
-.top-action:hover{transform:translateY(-2px)}
-.install{background:linear-gradient(135deg,#2563EB,#1D4ED8)}
-.support{background:linear-gradient(135deg,#10B981,#047857)}
 
-/* DASHBOARD */
-.balance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 16px;margin:0 0 12px}
-.bal-card{border-radius:16px;padding:12px 9px;min-height:122px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
-.bal-card:hover{transform:translateY(-2px)}
-.profit{background:linear-gradient(145deg,#123b63,#0b2742);border:1px solid #3B82F6;box-shadow:0 5px 16px rgba(37,99,235,.2)}
-.current{background:linear-gradient(145deg,#3d2b07,#261702);border:1px solid #F59E0B;box-shadow:0 5px 16px rgba(245,158,11,.18)}
-.withdrawn{background:linear-gradient(145deg,#063d22,#022c14);border:1px solid #10B981;box-shadow:0 5px 16px rgba(16,185,129,.18)}
-.bal-title{font-size:9.5px;font-weight:800;color:#CBD5E1;line-height:1.25}
-.bal-amount{font-size:15px;font-weight:900;color:#fff;margin-top:6px}
-.current .bal-amount{color:#FDE047}.withdrawn .bal-amount{color:#6EE7B7}
-.withdraw-btn{background:linear-gradient(135deg,#F59E0B,#D97706);color:#1e1b4b;border:0;border-radius:14px;padding:7px 5px;font-size:10px;font-weight:900;text-align:center;margin-top:7px}
+.top-action:hover{
+  transform:translateY(-2px);
+}
 
-/* MAIN CTA */
+.install{
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);
+}
+
+.support{
+  background:linear-gradient(135deg,#DC2626,#B91C1C);
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.balance-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+
+  padding:0;
+  margin:0 0 12px;
+}
+
+.bal-card{
+  border-radius:16px;
+  padding:12px 9px;
+  min-height:122px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  transition:.25s;
+}
+
+.bal-card:hover{
+  transform:translateY(-2px);
+}
+
+.profit{
+  background:linear-gradient(145deg,#123B63,#0B2742);
+  border:1px solid #3B82F6;
+  box-shadow:0 5px 16px rgba(37,99,235,.2);
+}
+
+.current{
+  background:linear-gradient(145deg,#54151B,#2A0B0E);
+  border:1px solid #EF4444;
+  box-shadow:0 5px 16px rgba(220,38,38,.18);
+}
+
+.withdrawn{
+  background:linear-gradient(145deg,#172554,#0F172A);
+  border:1px solid #60A5FA;
+  box-shadow:0 5px 16px rgba(37,99,235,.18);
+}
+
+.bal-title{
+  font-size:9.5px;
+  font-weight:800;
+  color:#CBD5E1;
+  line-height:1.25;
+}
+
+.bal-amount{
+  font-size:15px;
+  font-weight:900;
+  color:#fff;
+  margin-top:6px;
+}
+
+.current .bal-amount{
+  color:#FCA5A5;
+}
+
+.withdrawn .bal-amount{
+  color:#93C5FD;
+}
+
+.withdraw-btn{
+  background:linear-gradient(135deg,#EF4444,#B91C1C);
+  color:#fff;
+
+  border:0;
+  border-radius:14px;
+
+  padding:7px 5px;
+
+  font-size:10px;
+  font-weight:900;
+  text-align:center;
+
+  margin-top:7px;
+}
+
+
+/* =========================================================
+   MAIN CTA
+========================================================= */
+
 .account-btn{
-  display:flex;align-items:center;justify-content:center;width:calc(100% - 32px);margin:0 16px 16px;
-  background:linear-gradient(135deg,var(--primary),#1D4ED8);color:#fff;padding:15px;border-radius:18px;
-  font-size:15px;font-weight:900;box-shadow:0 9px 22px rgba(37,99,235,.28)
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  width:100%;
+
+  margin:0 0 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary2)
+    );
+
+  color:#fff;
+
+  padding:15px;
+
+  border-radius:18px;
+
+  font-size:15px;
+  font-weight:900;
+
+  box-shadow:var(--blue-shadow);
+
+  transition:.2s;
 }
 
-/* SECTION HEADER */
-.section-header{padding:4px 16px 12px}
-.section-title{font-size:21px;font-weight:900}
-.section-sub{font-size:11.5px;color:var(--muted);margin-top:3px}
+.account-btn:hover{
+  transform:translateY(-2px);
+}
 
-/* USERS — VERINOCHAT LAYOUT */
-.cards-container{display:flex;flex-direction:column;gap:11px;padding:0 16px}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-header{
+  padding:4px 0 12px;
+}
+
+.section-title{
+  font-size:21px;
+  font-weight:900;
+}
+
+.section-sub{
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+
+/* =========================================================
+   USERS
+========================================================= */
+
+.cards-container{
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
 .user-card{
-  background:#fff;border:1px solid var(--line);border-radius:20px;padding:13px;
-  display:flex;flex-direction:column;gap:11px;box-shadow:var(--shadow);transition:.25s
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:20px;
+
+  padding:13px;
+
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+
+  box-shadow:var(--shadow);
+
+  transition:.25s;
 }
-.user-card:hover{border-color:rgba(37,99,235,.45);transform:translateY(-2px)}
-.user-info{display:flex;align-items:center;gap:12px}
-.avatar-wrapper{position:relative;width:66px;height:66px;flex:none}
-.user-avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid var(--primary)}
-.status-dot{position:absolute;right:1px;bottom:1px;width:14px;height:14px;border-radius:50%;background:#22C55E;border:2px solid #fff;box-shadow:0 0 9px #22C55E}
-.user-details{min-width:0}
-.user-details h4{font-size:16px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.user-details p{font-size:11.5px;color:var(--muted);margin-top:2px}
-.status-online{color:#16A34A;font-weight:900}.status-offline{color:#EF4444;font-weight:900}
-.price-tag{font-size:12px;color:#D97706;font-weight:900;margin-top:4px}
-.card-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}
-.btn-action{border:0;border-radius:12px;padding:9px 5px;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:5px;transition:.2s}
-.btn-action:hover{transform:translateY(-1px)}
-.btn-chat{background:var(--primary);color:#fff}.btn-voice{background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE}.btn-video{background:#ECFDF5;color:#047857;border:1px solid #A7F3D0}
 
-/* SUPPORT + TRANSACTIONS */
-.support-section{padding:16px}
-.support-box,.tx-box,.reviews-box,.info-card{
-  background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)
+.user-card:hover{
+  border-color:rgba(37,99,235,.45);
+  transform:translateY(-2px);
 }
-.support-title{font-size:17px;font-weight:900}.support-sub{font-size:12px;color:var(--muted);margin-top:3px}
-.support-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}
-.support-pill{border:0;border-radius:13px;padding:11px 8px;color:#fff;font-size:11px;font-weight:900;text-align:center}
-.wa{background:linear-gradient(135deg,#128C7E,#075E54)}.sms{background:linear-gradient(135deg,#2563EB,#1D4ED8)}
-.tx-box{margin-top:12px}
-.tx-list{margin-top:10px;overflow:hidden}
-.tx-item{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #F1F5F9;font-size:11px;color:var(--muted)}
-.tx-item:last-child{border-bottom:0}.tx-dot{width:7px;height:7px;border-radius:50%;background:#8B5CF6;flex:none}.tx-dot.green{background:#10B981;box-shadow:0 0 7px rgba(16,185,129,.45)}
-.tx-item strong{color:var(--dark)}
 
-/* REVIEWS */
-.reviews-section{padding:0 16px 16px}
-.reviews-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.reviews-title h3{font-size:17px}.reviews-title p{font-size:11px;color:var(--muted);margin-top:3px}
-.rating{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:8px 10px;text-align:center;flex:none}
-.rating .score{font-size:20px;font-weight:900;color:var(--primary)}.rating .stars{color:#F59E0B;font-size:10px}.rating small{font-size:9px;color:var(--muted)}
-.review-card{margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
-.review-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.review-user{display:flex;align-items:center;gap:9px}
-.review-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,#EFF6FF,#DBEAFE);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:900}
-.review-name{font-size:12px;font-weight:900}.review-location{font-size:10px;color:var(--muted)}
-.review-stars{color:#F59E0B;font-size:10px}.review-text{font-size:11.5px;color:var(--muted);margin-top:8px;line-height:1.55}
+.user-info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
 
-/* INSTALL / INFO */
-.bottom-install{padding:0 16px 16px}
-.install-box{background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#fff;border-radius:20px;padding:20px;text-align:center}
-.install-title{font-size:17px;font-weight:900}.install-sub{font-size:11px;color:#CBD5E1;margin-top:5px}
-.install-btn{margin-top:13px;background:var(--primary2);color:#fff;border:0;border-radius:14px;padding:11px 18px;font-weight:900;font-size:12px}
-.info-section{padding:0 16px 16px}
-.info-card{margin-bottom:12px}.info-card h3{font-size:16px}.info-card p{font-size:12px;color:var(--muted);margin-top:5px}
-.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:12px}
-.mini-info{background:#F8FAFC;border:1px solid var(--line);border-radius:14px;padding:12px}
-.mini-info strong{font-size:13px}.mini-info p{font-size:10.5px;margin-top:3px}
+.avatar-wrapper{
+  position:relative;
+  width:66px;
+  height:66px;
+  flex:none;
+}
 
-/* PRICING */
-.pricing-section{padding:0 16px 16px}
-.pricing-title{text-align:center;margin-bottom:12px}.eyebrow{font-size:10px;color:var(--primary);font-weight:900;text-transform:uppercase}.pricing-title h2{font-size:21px;margin-top:3px}.pricing-title p{font-size:11.5px;color:var(--muted)}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.price-card{background:#fff;border:1px solid var(--line);border-radius:17px;padding:14px;position:relative;box-shadow:var(--shadow)}
-.price-card.highlight{border:2px solid var(--primary);background:linear-gradient(180deg,#fff,#EFF6FF)}
-.country{font-size:13px;font-weight:900}.amount{font-size:18px;font-weight:900;color:var(--primary);margin-top:3px}.note{font-size:10.5px;color:var(--muted);margin-top:4px;line-height:1.45}
-.badges{display:flex;gap:4px;flex-wrap:wrap;margin-top:8px}.badge{font-size:8px;font-weight:900;padding:4px 6px;border-radius:6px;color:#fff}.mpesa{background:#990000}.halo{background:#FF6600}.mixx{background:#FFCC00;color:#111}.airtel{background:#FF3333}
-.price-action{display:block;margin-top:10px;background:var(--primary);color:#fff;text-align:center;padding:8px;border-radius:10px;font-size:10px;font-weight:900}
+.user-avatar{
+  width:100%;
+  height:100%;
 
-/* FAQ */
-.faq-section{padding:0 16px 16px}.faq-item{background:#fff;border:1px solid var(--line);border-radius:13px;margin-bottom:8px;overflow:hidden}.faq-q{padding:12px;font-size:12px;font-weight:900;display:flex;justify-content:space-between;cursor:pointer}.faq-a{display:none;padding:0 12px 12px;font-size:11px;color:var(--muted);line-height:1.55}.faq-item.active .faq-a{display:block}
+  border-radius:50%;
 
-/* CTA + FOOTER */
-.final-cta{margin:0 16px 16px;padding:22px 16px;border-radius:20px;background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#fff;text-align:center}
-.final-cta h2{font-size:20px}.final-cta p{font-size:11.5px;color:#CBD5E1;margin-top:5px}.final-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:13px}
-.final-actions a,.final-actions button{border:0;border-radius:12px;padding:10px;font-size:10.5px;font-weight:900;text-align:center}.final-wa{background:#25D366;color:#fff}.final-register{background:var(--primary);color:#fff}
-footer{background:#0B1220;color:#CBD5E1;padding:28px 16px 18px}
-.footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:760px;margin:auto}.footer-col h4{color:#fff;font-size:12px}.footer-col p,.footer-col a{font-size:10.5px;color:#94A3B8}.footer-col a{display:block;margin-top:6px}.footer-bottom{max-width:760px;margin:20px auto 0;padding-top:14px;border-top:1px solid #1E293B;font-size:9.5px;color:#64748B;display:flex;justify-content:space-between;gap:10px}
+  object-fit:cover;
 
-/* MODALS */
-.modal{position:fixed;inset:0;background:rgba(2,6,23,.82);backdrop-filter:blur(8px);z-index:3000;display:none;align-items:center;justify-content:center;padding:16px}
-.modal.active{display:flex}
-.modal-card{width:100%;max-width:440px;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.35)}
-.modal-head{background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
-.modal-head h3{font-size:15px}.close{border:0;background:transparent;color:#fff;font-size:22px}
-.modal-body{padding:17px}
-.activation{background:linear-gradient(135deg,#0F172A,#1E3A8A);color:#fff;border-radius:17px;padding:16px;text-align:center}.activation small{font-size:9px;opacity:.8}.activation strong{display:block;font-size:28px;color:#4ADE80;margin:4px 0}
-.modal-list{margin:14px 0;display:grid;gap:9px}.modal-list div{font-size:11.5px;color:var(--muted)}.modal-list b{color:var(--dark)}
-.modal-btn{display:block;width:100%;border:0;border-radius:13px;padding:12px;text-align:center;background:var(--primary);color:#fff;font-weight:900;font-size:12px}
-.modal-btn.secondary{background:#F1F5F9;color:var(--dark);margin-top:7px}
+  border:2px solid var(--primary);
+}
 
-/* CHAT */
-.chat-modal-card{width:100%;max-width:440px;height:min(650px,90vh);background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;position:relative}
-.chat-head{background:linear-gradient(135deg,var(--dark),var(--primary));color:#fff;padding:13px 15px;display:flex;align-items:center;justify-content:space-between}
-.chat-person{display:flex;align-items:center;gap:9px}.chat-avatar{width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #fff}.chat-name{font-size:13px;font-weight:900}.chat-status{font-size:10px;color:#86EFAC}
-.chat-body{flex:1;overflow:auto;background:#F8FAFC;padding:14px;display:flex;flex-direction:column;gap:9px}
-.msg{max-width:80%;padding:9px 11px;border-radius:13px;font-size:11.5px;line-height:1.45}.msg.bot{background:#fff;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:3px}.msg.user{background:var(--primary);color:#fff;align-self:flex-end;border-bottom-right-radius:3px}
-.chat-footer{display:flex;gap:7px;padding:10px;border-top:1px solid var(--line)}.chat-input{flex:1;border:1px solid var(--line);border-radius:12px;padding:10px;outline:none;font-size:12px}.send{width:42px;border:0;border-radius:12px;background:var(--primary);color:#fff}
-.chat-lock{position:absolute;inset:57px 0 0;background:rgba(11,18,32,.96);color:#fff;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px;z-index:5}.chat-lock.active{display:flex}.chat-lock .lock{font-size:40px;color:#4ADE80}.chat-lock h3{font-size:18px;color:#4ADE80;margin:8px 0}.chat-lock p{font-size:11.5px;color:#CBD5E1;line-height:1.55;margin-bottom:14px}
+.status-dot{
+  position:absolute;
 
-/* TOAST */
-.toast{position:fixed;left:50%;bottom:18px;transform:translate(-50%,150%);background:#fff;border:1px solid #10B981;border-radius:14px;padding:11px 14px;display:flex;gap:9px;align-items:center;box-shadow:0 15px 35px rgba(0,0,0,.18);z-index:2500;transition:.45s;width:min(360px,calc(100% - 32px))}.toast.show{transform:translate(-50%,0)}.toast-icon{width:29px;height:29px;border-radius:50%;background:#10B981;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;flex:none}.toast b{font-size:11px}.toast small{font-size:9px;color:var(--muted)}
+  right:1px;
+  bottom:1px;
 
-/* MOBILE / DESKTOP */
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+
+  background:#16A34A;
+
+  border:2px solid #fff;
+
+  box-shadow:0 0 9px #16A34A;
+}
+
+.user-details{
+  min-width:0;
+}
+
+.user-details h4{
+  font-size:16px;
+  font-weight:900;
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.user-details p{
+  font-size:11.5px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.status-online{
+  color:#16A34A;
+  font-weight:900;
+}
+
+.status-offline{
+  color:var(--red);
+  font-weight:900;
+}
+
+.price-tag{
+  font-size:12px;
+  color:var(--red-dark);
+  font-weight:900;
+  margin-top:4px;
+}
+
+.card-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:7px;
+}
+
+.btn-action{
+  border:0;
+
+  border-radius:12px;
+
+  padding:9px 5px;
+
+  font-size:11px;
+  font-weight:900;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+
+  transition:.2s;
+}
+
+.btn-action:hover{
+  transform:translateY(-1px);
+}
+
+.btn-chat{
+  background:var(--primary);
+  color:#fff;
+}
+
+.btn-voice{
+  background:#EFF6FF;
+  color:#1D4ED8;
+  border:1px solid #BFDBFE;
+}
+
+.btn-video{
+  background:#FEF2F2;
+  color:#B91C1C;
+  border:1px solid #FECACA;
+}
+
+
+/* =========================================================
+   SUPPORT
+========================================================= */
+
+.support-section{
+  padding:16px 0;
+}
+
+.support-box,
+.tx-box,
+.reviews-box,
+.info-card{
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:20px;
+
+  padding:16px;
+
+  box-shadow:var(--shadow);
+}
+
+.support-title{
+  font-size:17px;
+  font-weight:900;
+}
+
+.support-sub{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+.support-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:13px;
+}
+
+.support-pill{
+  border:0;
+
+  border-radius:13px;
+
+  padding:11px 8px;
+
+  color:#fff;
+
+  font-size:11px;
+  font-weight:900;
+
+  text-align:center;
+}
+
+.wa{
+  background:linear-gradient(135deg,#128C7E,#075E54);
+}
+
+.sms{
+  background:linear-gradient(135deg,#2563EB,#1D4ED8);
+}
+
+.tx-box{
+  margin-top:12px;
+}
+
+.tx-list{
+  margin-top:10px;
+  overflow:hidden;
+}
+
+.tx-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  padding:9px 0;
+
+  border-bottom:1px solid #F1F5F9;
+
+  font-size:11px;
+
+  color:var(--muted);
+}
+
+.tx-item:last-child{
+  border-bottom:0;
+}
+
+.tx-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+
+  background:var(--primary);
+
+  flex:none;
+}
+
+.tx-dot.red{
+  background:var(--red);
+  box-shadow:0 0 7px rgba(220,38,38,.4);
+}
+
+.tx-item strong{
+  color:var(--dark);
+}
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews-section{
+  padding:0 0 16px;
+}
+
+.reviews-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.reviews-title h3{
+  font-size:17px;
+}
+
+.reviews-title p{
+  font-size:11px;
+  color:var(--muted);
+  margin-top:3px;
+}
+
+.rating{
+  background:#EFF6FF;
+  border:1px solid #BFDBFE;
+  border-radius:14px;
+
+  padding:8px 10px;
+
+  text-align:center;
+  flex:none;
+}
+
+.rating .score{
+  font-size:20px;
+  font-weight:900;
+  color:var(--primary);
+}
+
+.rating .stars{
+  color:var(--gold);
+  font-size:10px;
+}
+
+.rating small{
+  font-size:9px;
+  color:var(--muted);
+}
+
+.review-card{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+}
+
+.review-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.review-user{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.review-avatar{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  background:linear-gradient(135deg,#EFF6FF,#DBEAFE);
+
+  color:var(--primary);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-weight:900;
+}
+
+.review-name{
+  font-size:12px;
+  font-weight:900;
+}
+
+.review-location{
+  font-size:10px;
+  color:var(--muted);
+}
+
+.review-stars{
+  color:var(--gold);
+  font-size:10px;
+}
+
+.review-text{
+  font-size:11.5px;
+  color:var(--muted);
+
+  margin-top:8px;
+
+  line-height:1.55;
+}
+
+
+/* =========================================================
+   INSTALL
+========================================================= */
+
+.bottom-install{
+  padding:0 0 16px;
+}
+
+.install-box{
+  background:
+    linear-gradient(
+      135deg,
+      #0F172A,
+      #1E3A8A,
+      #7F1D1D
+    );
+
+  color:#fff;
+
+  border-radius:20px;
+
+  padding:20px;
+
+  text-align:center;
+}
+
+.install-title{
+  font-size:17px;
+  font-weight:900;
+}
+
+.install-sub{
+  font-size:11px;
+  color:#CBD5E1;
+  margin-top:5px;
+}
+
+.install-btn{
+  margin-top:13px;
+
+  background:var(--red);
+
+  color:#fff;
+
+  border:0;
+
+  border-radius:14px;
+
+  padding:11px 18px;
+
+  font-weight:900;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.info-section{
+  padding:0 0 16px;
+}
+
+.info-card{
+  margin-bottom:12px;
+}
+
+.info-card h3{
+  font-size:16px;
+}
+
+.info-card p{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:5px;
+}
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:9px;
+  margin-top:12px;
+}
+
+.mini-info{
+  background:#F8FAFC;
+
+  border:1px solid var(--line);
+
+  border-radius:14px;
+
+  padding:12px;
+}
+
+.mini-info strong{
+  font-size:13px;
+}
+
+.mini-info p{
+  font-size:10.5px;
+  margin-top:3px;
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing-section{
+  padding:0 0 16px;
+}
+
+.pricing-title{
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.eyebrow{
+  font-size:10px;
+
+  color:var(--primary);
+
+  font-weight:900;
+
+  text-transform:uppercase;
+}
+
+.pricing-title h2{
+  font-size:21px;
+  margin-top:3px;
+}
+
+.pricing-title p{
+  font-size:11.5px;
+  color:var(--muted);
+}
+
+.pricing-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.price-card{
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:17px;
+
+  padding:14px;
+
+  position:relative;
+
+  box-shadow:var(--shadow);
+}
+
+.price-card.highlight{
+  border:2px solid var(--primary);
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff,
+      #EFF6FF
+    );
+}
+
+.country{
+  font-size:13px;
+  font-weight:900;
+}
+
+.amount{
+  font-size:18px;
+  font-weight:900;
+  color:var(--primary);
+  margin-top:3px;
+}
+
+.note{
+  font-size:10.5px;
+  color:var(--muted);
+  margin-top:4px;
+  line-height:1.45;
+}
+
+.badges{
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+  margin-top:8px;
+}
+
+.badge{
+  font-size:8px;
+  font-weight:900;
+  padding:4px 6px;
+  border-radius:6px;
+  color:#fff;
+}
+
+.mpesa{
+  background:#990000;
+}
+
+.halo{
+  background:#FF6600;
+}
+
+.mixx{
+  background:#CC0000;
+}
+
+.airtel{
+  background:#E60000;
+}
+
+.price-action{
+  display:block;
+
+  margin-top:10px;
+
+  background:var(--primary);
+
+  color:#fff;
+
+  text-align:center;
+
+  padding:8px;
+
+  border-radius:10px;
+
+  font-size:10px;
+  font-weight:900;
+}
+
+.price-action:hover{
+  background:var(--red);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section{
+  padding:0 0 16px;
+}
+
+.faq-item{
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:13px;
+
+  margin-bottom:8px;
+
+  overflow:hidden;
+}
+
+.faq-q{
+  padding:12px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  cursor:pointer;
+}
+
+.faq-a{
+  display:none;
+
+  padding:0 12px 12px;
+
+  font-size:11px;
+
+  color:var(--muted);
+
+  line-height:1.55;
+}
+
+.faq-item.active .faq-a{
+  display:block;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+  margin:0 0 16px;
+
+  padding:22px 16px;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0F172A,
+      #1E3A8A,
+      #7F1D1D
+    );
+
+  color:#fff;
+
+  text-align:center;
+}
+
+.final-cta h2{
+  font-size:20px;
+}
+
+.final-cta p{
+  font-size:11.5px;
+  color:#CBD5E1;
+  margin-top:5px;
+}
+
+.final-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:13px;
+}
+
+.final-actions a,
+.final-actions button{
+  border:0;
+
+  border-radius:12px;
+
+  padding:10px;
+
+  font-size:10.5px;
+
+  font-weight:900;
+
+  text-align:center;
+}
+
+.final-wa{
+  background:#25D366;
+  color:#fff;
+}
+
+.final-register{
+  background:var(--red);
+  color:#fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  background:#080E1A;
+
+  color:#CBD5E1;
+
+  padding:28px 16px 18px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+
+  max-width:760px;
+
+  margin:auto;
+}
+
+.footer-col h4{
+  color:#fff;
+  font-size:12px;
+}
+
+.footer-col p,
+.footer-col a{
+  font-size:10.5px;
+  color:#94A3B8;
+}
+
+.footer-col a{
+  display:block;
+  margin-top:6px;
+}
+
+.footer-col a:hover{
+  color:#60A5FA;
+}
+
+.footer-bottom{
+  max-width:760px;
+
+  margin:20px auto 0;
+
+  padding-top:14px;
+
+  border-top:1px solid #1E293B;
+
+  font-size:9.5px;
+
+  color:#64748B;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:10px;
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+.modal{
+  position:fixed;
+
+  inset:0;
+
+  background:rgba(2,6,23,.82);
+
+  backdrop-filter:blur(8px);
+
+  z-index:3000;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:16px;
+}
+
+.modal.active{
+  display:flex;
+}
+
+.modal-card{
+  width:100%;
+
+  max-width:440px;
+
+  background:#fff;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  box-shadow:0 30px 70px rgba(0,0,0,.35);
+}
+
+.modal-head{
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark),
+      var(--primary),
+      var(--red-dark)
+    );
+
+  color:#fff;
+
+  padding:14px 16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.modal-head h3{
+  font-size:15px;
+}
+
+.close{
+  border:0;
+
+  background:transparent;
+
+  color:#fff;
+
+  font-size:22px;
+}
+
+.modal-body{
+  padding:17px;
+}
+
+.activation{
+  background:
+    linear-gradient(
+      135deg,
+      #0F172A,
+      #1E3A8A
+    );
+
+  color:#fff;
+
+  border-radius:17px;
+
+  padding:16px;
+
+  text-align:center;
+}
+
+.activation small{
+  font-size:9px;
+  opacity:.8;
+}
+
+.activation strong{
+  display:block;
+
+  font-size:28px;
+
+  color:#93C5FD;
+
+  margin:4px 0;
+}
+
+.modal-list{
+  margin:14px 0;
+
+  display:grid;
+
+  gap:9px;
+}
+
+.modal-list div{
+  font-size:11.5px;
+  color:var(--muted);
+}
+
+.modal-list b{
+  color:var(--dark);
+}
+
+.modal-btn{
+  display:block;
+
+  width:100%;
+
+  border:0;
+
+  border-radius:13px;
+
+  padding:12px;
+
+  text-align:center;
+
+  background:var(--primary);
+
+  color:#fff;
+
+  font-weight:900;
+
+  font-size:12px;
+}
+
+.modal-btn:hover{
+  background:var(--red);
+}
+
+.modal-btn.secondary{
+  background:#F1F5F9;
+
+  color:var(--dark);
+
+  margin-top:7px;
+}
+
+
+/* =========================================================
+   CHAT
+========================================================= */
+
+.chat-modal-card{
+  width:100%;
+
+  max-width:440px;
+
+  height:min(650px,90vh);
+
+  background:#fff;
+
+  border-radius:22px;
+
+  overflow:hidden;
+
+  display:flex;
+
+  flex-direction:column;
+
+  position:relative;
+}
+
+.chat-head{
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark),
+      var(--primary),
+      var(--red-dark)
+    );
+
+  color:#fff;
+
+  padding:13px 15px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.chat-person{
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+
+.chat-avatar{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid #fff;
+}
+
+.chat-name{
+  font-size:13px;
+  font-weight:900;
+}
+
+.chat-status{
+  font-size:10px;
+  color:#93C5FD;
+}
+
+.chat-body{
+  flex:1;
+
+  overflow:auto;
+
+  background:#F8FAFC;
+
+  padding:14px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:9px;
+}
+
+.msg{
+  max-width:80%;
+
+  padding:9px 11px;
+
+  border-radius:13px;
+
+  font-size:11.5px;
+
+  line-height:1.45;
+}
+
+.msg.bot{
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  align-self:flex-start;
+
+  border-bottom-left-radius:3px;
+}
+
+.msg.user{
+  background:var(--primary);
+
+  color:#fff;
+
+  align-self:flex-end;
+
+  border-bottom-right-radius:3px;
+}
+
+.chat-footer{
+  display:flex;
+
+  gap:7px;
+
+  padding:10px;
+
+  border-top:1px solid var(--line);
+}
+
+.chat-input{
+  flex:1;
+
+  border:1px solid var(--line);
+
+  border-radius:12px;
+
+  padding:10px;
+
+  outline:none;
+
+  font-size:12px;
+}
+
+.chat-input:focus{
+  border-color:var(--primary);
+}
+
+.send{
+  width:42px;
+
+  border:0;
+
+  border-radius:12px;
+
+  background:var(--red);
+
+  color:#fff;
+}
+
+.chat-lock{
+  position:absolute;
+
+  inset:57px 0 0;
+
+  background:rgba(11,18,32,.96);
+
+  color:#fff;
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  flex-direction:column;
+
+  text-align:center;
+
+  padding:24px;
+
+  z-index:5;
+}
+
+.chat-lock.active{
+  display:flex;
+}
+
+.chat-lock .lock{
+  font-size:40px;
+  color:#F87171;
+}
+
+.chat-lock h3{
+  font-size:18px;
+  color:#FCA5A5;
+  margin:8px 0;
+}
+
+.chat-lock p{
+  font-size:11.5px;
+
+  color:#CBD5E1;
+
+  line-height:1.55;
+
+  margin-bottom:14px;
+}
+
+
+/* =========================================================
+   TOAST
+========================================================= */
+
+.toast{
+  position:fixed;
+
+  left:50%;
+
+  bottom:18px;
+
+  transform:translate(-50%,150%);
+
+  background:#fff;
+
+  border:1px solid #BFDBFE;
+
+  border-radius:14px;
+
+  padding:11px 14px;
+
+  display:flex;
+
+  gap:9px;
+
+  align-items:center;
+
+  box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+  z-index:2500;
+
+  transition:.45s;
+
+  width:min(360px,calc(100% - 32px));
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+.toast-icon{
+  width:29px;
+  height:29px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-weight:900;
+
+  flex:none;
+}
+
+.toast b{
+  font-size:11px;
+}
+
+.toast small{
+  font-size:9px;
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
 @media(max-width:480px){
-  .balance-grid{gap:6px}.bal-card{min-height:116px;padding:10px 7px}.bal-amount{font-size:13px}
-  .pricing-grid{grid-template-columns:1fr}
+
+  .header{
+    padding:9px 12px;
+  }
+
+  .svg-logo{
+    width:38px;
+    height:38px;
+  }
+
+  .brand-name{
+    font-size:17px;
+  }
+
+  .brand-slogan{
+    font-size:7px;
+  }
+
+  .brand-subtag{
+    font-size:7px;
+  }
+
+  .tanzania-date{
+    font-size:8px;
+    padding:4px 6px;
+  }
+
+  .online-badge{
+    font-size:8px;
+    padding:4px 7px;
+  }
+
+  .balance-grid{
+    gap:6px;
+  }
+
+  .bal-card{
+    min-height:116px;
+    padding:10px 7px;
+  }
+
+  .bal-amount{
+    font-size:13px;
+  }
+
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
+
 }
+
 @media(min-width:761px){
-  body{padding-bottom:0}.container{max-width:900px}.cards-container{display:grid;grid-template-columns:1fr 1fr}.user-card{height:100%}
-  .pricing-grid{grid-template-columns:repeat(3,1fr)}
+
+  body{
+    padding-bottom:0;
+  }
+
+  .container{
+    max-width:900px;
+  }
+
+  .cards-container{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+  }
+
+  .user-card{
+    height:100%;
+  }
+
+  .pricing-grid{
+    grid-template-columns:repeat(3,1fr);
+  }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- ======================================================
+     PRELOADER
+====================================================== -->
+
 <div id="preloader">
+
   <svg class="loader-logo" viewBox="0 0 40 40">
-    <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity=".2" stroke-width="2"/>
-    <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"/>
-    <circle cx="16.5" cy="20" fill="#fff" r="1.7"/><circle cx="20.5" cy="20" fill="#fff" r="1.7"/><circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
+
+    <circle
+      cx="20"
+      cy="20"
+      fill="none"
+      r="17"
+      stroke="#2563EB"
+      stroke-opacity=".2"
+      stroke-width="2"
+    />
+
+    <path
+      d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z"
+      fill="#2563EB"
+    />
+
+    <circle cx="16.5" cy="20" fill="#fff" r="1.7"/>
+    <circle cx="20.5" cy="20" fill="#fff" r="1.7"/>
+    <circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
+
   </svg>
-  <div class="loader-name">DUNISWAHILI</div>
+
+  <div class="loader-name">
+    DUNI<span>SWAHILI</span>
+  </div>
+
 </div>
 
+
+<!-- ======================================================
+     HEADER
+====================================================== -->
+
 <header class="header" id="top">
+
   <a class="logo-box" href="#top">
+
     <svg class="svg-logo" viewBox="0 0 40 40">
-      <circle cx="20" cy="20" fill="none" r="17" stroke="#2563EB" stroke-opacity=".3" stroke-width="2"/>
-      <path d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z" fill="#2563EB"/>
-      <circle cx="16.5" cy="20" fill="#fff" r="1.7"/><circle cx="20.5" cy="20" fill="#fff" r="1.7"/><circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
+
+      <circle
+        cx="20"
+        cy="20"
+        fill="none"
+        r="17"
+        stroke="#2563EB"
+        stroke-opacity=".3"
+        stroke-width="2"
+      />
+
+      <path
+        d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z"
+        fill="#2563EB"
+      />
+
+      <circle cx="16.5" cy="20" fill="#fff" r="1.7"/>
+      <circle cx="20.5" cy="20" fill="#fff" r="1.7"/>
+      <circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
+
     </svg>
+
     <div>
-      <div class="brand-name"><span class="white">DUNI</span><span class="blue">SWAHILI</span></div>
-      <div class="brand-slogan">ONGEA. UNGANA. ELEWANA.</div>
-      <div class="brand-subtag">Kiswahili Ni Fursa</div>
+
+      <div class="brand-name">
+        <span class="white">DUNI</span><span class="blue">SWAHI</span><span class="red">LI</span>
+      </div>
+
+      <div class="brand-slogan">
+        ONGEA. UNGANA. ELEWANA.
+      </div>
+
+      <div class="brand-subtag">
+        Kiswahili Ni Fursa
+      </div>
+
     </div>
+
   </a>
-  <div class="online-badge"><span class="online-dot"></span><span id="onlineCounter">18,450</span> online</div>
+
+
+  <div class="header-right">
+
+    <div class="tanzania-date" id="tanzaniaDate">
+      🇹🇿 Tanzania • Inapakia...
+    </div>
+
+    <div class="online-badge">
+
+      <span class="online-dot"></span>
+
+      <span id="onlineCounter">18,450</span>
+
+      online
+
+    </div>
+
+  </div>
+
 </header>
+
+
 
 <main class="container">
 
-  <div class="top-actions-grid">
-    <button class="top-action install" onclick="openInstallModal()">📲 Install App</button>
-    <button class="top-action support" onclick="openSupportModal()">🎧 Customer Assistance</button>
+
+<!-- ======================================================
+     TOP ACTIONS
+====================================================== -->
+
+<div class="top-actions-grid">
+
+  <button
+    class="top-action install"
+    onclick="openInstallModal()"
+  >
+    📲 Install App
+  </button>
+
+  <button
+    class="top-action support"
+    onclick="openSupportModal()"
+  >
+    🎧 Customer Assistance
+  </button>
+
+</div>
+
+
+
+<!-- ======================================================
+     DASHBOARD
+====================================================== -->
+
+<div class="balance-grid">
+
+  <div class="bal-card profit">
+
+    <div>
+
+      <div class="bal-title">
+        Mapato Yote<br>
+        (Net Profit)
+      </div>
+
+      <div class="bal-amount">
+        TZS 0
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="balance-grid">
-    <div class="bal-card profit">
-      <div><div class="bal-title">Mapato Yote<br>(Net Profit)</div><div class="bal-amount">TZS 0</div></div>
+
+  <div class="bal-card current">
+
+    <div>
+
+      <div class="bal-title">
+        Salio la Sasa<br>
+        (Current Balance)
+      </div>
+
+      <div class="bal-amount">
+        TZS 0
+      </div>
+
     </div>
-    <div class="bal-card current">
-      <div><div class="bal-title">Salio la Sasa<br>(Current Balance)</div><div class="bal-amount">TZS 0</div></div>
-      <a class="withdraw-btn" href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw">Toa Pesa</a>
-    </div>
-    <div class="bal-card withdrawn">
-      <div><div class="bal-title">Pesa Iliyotolewa<br>(Withdrawn)</div><div class="bal-amount">TZS 0</div></div>
-    </div>
+
+    <a
+      class="withdraw-btn"
+      href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw"
+    >
+      Toa Pesa
+    </a>
+
   </div>
 
-  <a class="account-btn" href="https://moxeraagencies.com/register?ref=Code45" target="_blank">🚀 Fungua Account kwa 16,000 Hapa</a>
 
-  <section id="foreigners">
-    <div class="section-header">
-      <div class="section-title">Wazungu</div>
-      <div class="section-sub">Waliopo mtandaoni hujibu chati na malipo hutolewa. Wasiokuwepo hawajibu.</div>
-    </div>
-    <div class="cards-container" id="cardsContainer"></div>
-  </section>
+  <div class="bal-card withdrawn">
 
-  <section class="support-section">
-    <div class="support-box">
-      <div class="support-title">Huduma kwa Wateja</div>
-      <div class="support-sub">Una swali au changamoto? Wasiliana nasi moja kwa moja.</div>
-      <div class="support-actions">
-        <a class="support-pill wa" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank" rel="noopener">💬 WhatsApp Channel</a>
-        <a class="support-pill sms" href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI">✉️ Tuma SMS</a>
+    <div>
+
+      <div class="bal-title">
+        Pesa Iliyotolewa<br>
+        (Withdrawn)
       </div>
-    </div>
 
-    <div class="tx-box">
-      <div class="support-title">Miamala ya Hivi Karibuni</div>
-      <div class="tx-list" id="txList"></div>
-    </div>
-  </section>
-
-  <section class="reviews-section" id="testimonials">
-    <div class="reviews-box">
-      <div class="reviews-top">
-        <div class="reviews-title"><h3>Rating na Maoni ya Watumiaji</h3><p>Maoni kutoka kwa wanachama wa DUNISWAHILI</p></div>
-        <div class="rating"><div class="score">4.7</div><div class="stars">★★★★★</div><small>1308+ maoni</small></div>
+      <div class="bal-amount">
+        TZS 0
       </div>
-      <div id="reviews"></div>
-    </div>
-  </section>
 
-  <section class="bottom-install">
-    <div class="install-box">
-      <div class="install-title">Weka DUNISWAHILI kwenye simu yako</div>
-      <div class="install-sub">Gusa hapa ili app iwe rahisi kufunguka muda wowote.</div>
-      <button class="install-btn" onclick="openInstallModal()">📲 Install App</button>
     </div>
-  </section>
 
-  <section class="info-section" id="community">
-    <div class="info-card">
-      <div class="eyebrow">KWANINI DUNISWAHILI?</div>
-      <h3>Kwanini Uendelee Kulia Hali Ngumu Wakati Una Simu?</h3>
-      <p>Kila siku unatumia bando kwenye mtandao bila kuingiza pesa. DuniSwahili inakupa fursa ya kulipwa kwa muda wako wa kuchat na wageni!</p>
-      <div class="info-grid">
-        <div class="mini-info"><strong>💰 Chat & Tengeneza Pesa</strong><p>Pata malipo kwa muda wako wa kuchat na wageni.</p></div>
-        <div class="mini-info"><strong>🌐 Mtandao wa Kimataifa</strong><p>Kutana na wageni kutoka nchi mbalimbali.</p></div>
-        <div class="mini-info"><strong>📱 Rahisi Kushiriki</strong><p>Unachohitaji ni simu yako na internet.</p></div>
-        <div class="mini-info"><strong>🔒 Usalama</strong><p>Data na salio lako linalindwa.</p></div>
+  </div>
+
+</div>
+
+
+
+<!-- ======================================================
+     ACCOUNT CTA
+====================================================== -->
+
+<a
+  class="account-btn"
+  href="https://moxeraagencies.com/register?ref=Code45"
+  target="_blank"
+  rel="noopener"
+>
+  🚀 Fungua Account kwa 16,000 Hapa
+</a>
+
+
+
+<!-- ======================================================
+     FOREIGNERS
+====================================================== -->
+
+<section id="foreigners">
+
+  <div class="section-header">
+
+    <div class="section-title">
+      Wazungu
+    </div>
+
+    <div class="section-sub">
+      Waliopo mtandaoni hujibu chati. Wasiokuwepo hawajibu.
+    </div>
+
+  </div>
+
+  <div
+    class="cards-container"
+    id="cardsContainer"
+  ></div>
+
+</section>
+
+
+
+<!-- ======================================================
+     SUPPORT
+====================================================== -->
+
+<section class="support-section">
+
+  <div class="support-box">
+
+    <div class="support-title">
+      Huduma kwa Wateja
+    </div>
+
+    <div class="support-sub">
+      Una swali au changamoto? Wasiliana nasi moja kwa moja.
+    </div>
+
+    <div class="support-actions">
+
+      <a
+        class="support-pill wa"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 WhatsApp Channel
+      </a>
+
+      <a
+        class="support-pill sms"
+        href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI"
+      >
+        ✉️ Tuma SMS
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="tx-box">
+
+    <div class="support-title">
+      Miamala ya Hivi Karibuni
+    </div>
+
+    <div class="tx-list" id="txList"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     REVIEWS
+====================================================== -->
+
+<section
+  class="reviews-section"
+  id="testimonials"
+>
+
+  <div class="reviews-box">
+
+    <div class="reviews-top">
+
+      <div class="reviews-title">
+
+        <h3>
+          Rating na Maoni ya Watumiaji
+        </h3>
+
+        <p>
+          Maoni kutoka kwa wanachama wa DUNISWAHILI
+        </p>
+
       </div>
-    </div>
-  </section>
 
-  <section class="pricing-section" id="pricing">
-    <div class="pricing-title">
-      <div class="eyebrow">💳 ACTIVATION YA KILA NCHI</div>
-      <h2>Bei ya Usajili kwa Kila Nchi</h2>
-      <p>Chagua nchi yako kuona gharama ya ku-activate account yako mara moja.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card highlight"><div class="country">🇹🇿 Tanzania</div><div class="amount">TZS 16,000</div><div class="note">Automatic kupitia M-Pesa, HaloPesa, Mixx by Yas au Airtel Money.</div><div class="badges"><span class="badge mpesa">M-Pesa</span><span class="badge halo">HaloPesa</span><span class="badge mixx">Mixx</span><span class="badge airtel">Airtel</span></div><button class="price-action trigger-popup">Lipia Automatic Sasa</button></div>
-      <div class="price-card"><div class="country">🇰🇪 Kenya</div><div class="amount">KES 700</div><div class="note">Lipia kupitia M-Pesa kisha tuma taarifa WhatsApp.</div><a class="price-action" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">Tuma Taarifa WhatsApp</a></div>
-      <div class="price-card"><div class="country">🇺🇬 Uganda</div><div class="amount">UGX 23,000</div><div class="note">MTN Mobile Money / Airtel Money, kisha tuma ushahidi.</div><a class="price-action" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">Tuma Taarifa WhatsApp</a></div>
-      <div class="price-card"><div class="country">🇷🇼 Rwanda</div><div class="amount">RWF 8,000</div><div class="note">Lipia kupitia MTN MoMo na tuma risiti WhatsApp.</div><a class="price-action" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">Tuma Taarifa WhatsApp</a></div>
-      <div class="price-card"><div class="country">🇧🇮 Burundi</div><div class="amount">BIF 25,000</div><div class="note">Lumicash/Ecocash kisha tuma uthibitisho.</div><a class="price-action" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">Tuma Taarifa WhatsApp</a></div>
-      <div class="price-card"><div class="country">🇲🇼 Malawi</div><div class="amount">MWK 12,000</div><div class="note">Lipia kisha tuma ushahidi wa malipo WhatsApp.</div><a class="price-action" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">Tuma Taarifa WhatsApp</a></div>
-    </div>
-  </section>
 
-  <section class="faq-section" id="faq">
-    <div class="pricing-title"><div class="eyebrow">❓ MASWALI</div><h2>Maswali Yanayoulizwa Mara kwa Mara</h2></div>
-    <div class="faq-item"><div class="faq-q">1. Je, nitatoaje pesa? <span>+</span></div><div class="faq-a">Unaweza kutoa pesa kupitia M-Pesa, Mixx by Yas, Airtel Money au Bank kulingana na mfumo wa account yako.</div></div>
-    <div class="faq-item"><div class="faq-q">2. Je, kuna ada ya kila mwezi? <span>+</span></div><div class="faq-a">Hapana. Ada ya activation ni ya mara moja kwa mujibu wa taarifa zilizopo kwenye ukurasa huu.</div></div>
-    <div class="faq-item"><div class="faq-q">3. Nisipojua Kiingereza vizuri? <span>+</span></div><div class="faq-a">Mfumo unaeleza kuwa auto-translation inasaidia kutafsiri ujumbe kati ya Kiswahili na Kiingereza.</div></div>
-  </section>
+      <div class="rating">
 
-  <section class="final-cta" id="contact">
-    <h2>Wageni Wapo Online Sasa Hivi!</h2>
-    <p>Acha kutazama fursa ikipita. Fungua account yako na uanze kutumia mfumo.</p>
-    <div class="final-actions">
-      <a class="final-wa" href="https://wa.me/255725962119">WhatsApp 0725962119</a>
-      <button class="final-register trigger-popup">🚀 Fungua Account</button>
+        <div class="score">
+          4.7
+        </div>
+
+        <div class="stars">
+          ★★★★★
+        </div>
+
+        <small>
+          1308+ maoni
+        </small>
+
+      </div>
+
     </div>
-  </section>
+
+    <div id="reviews"></div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     INSTALL
+====================================================== -->
+
+<section class="bottom-install">
+
+  <div class="install-box">
+
+    <div class="install-title">
+      Weka DUNISWAHILI kwenye simu yako
+    </div>
+
+    <div class="install-sub">
+      Gusa hapa ili app iwe rahisi kufunguka muda wowote.
+    </div>
+
+    <button
+      class="install-btn"
+      onclick="openInstallModal()"
+    >
+      📲 Install App
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     INFO
+====================================================== -->
+
+<section
+  class="info-section"
+  id="community"
+>
+
+  <div class="info-card">
+
+    <div class="eyebrow">
+      KWANINI DUNISWAHILI?
+    </div>
+
+    <h3>
+      Kwanini Uendelee Kulia Hali Ngumu Wakati Una Simu?
+    </h3>
+
+    <p>
+      Kila siku unatumia bando kwenye mtandao bila kuingiza pesa.
+      DuniSwahili inakupa fursa ya kutumia muda wako wa kuchat
+      na wageni kupitia mfumo.
+    </p>
+
+
+    <div class="info-grid">
+
+      <div class="mini-info">
+
+        <strong>
+          💰 Chat &amp; Tengeneza Pesa
+        </strong>
+
+        <p>
+          Pata malipo kulingana na mfumo na masharti ya huduma.
+        </p>
+
+      </div>
+
+
+      <div class="mini-info">
+
+        <strong>
+          🌐 Mtandao wa Kimataifa
+        </strong>
+
+        <p>
+          Kutana na wageni kutoka nchi mbalimbali.
+        </p>
+
+      </div>
+
+
+      <div class="mini-info">
+
+        <strong>
+          📱 Rahisi Kushiriki
+        </strong>
+
+        <p>
+          Unachohitaji ni simu yako na internet.
+        </p>
+
+      </div>
+
+
+      <div class="mini-info">
+
+        <strong>
+          🔒 Usalama
+        </strong>
+
+        <p>
+          Data na taarifa zako zinalindwa kwa mujibu wa mfumo.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     PRICING
+====================================================== -->
+
+<section
+  class="pricing-section"
+  id="pricing"
+>
+
+  <div class="pricing-title">
+
+    <div class="eyebrow">
+      💳 ACTIVATION YA KILA NCHI
+    </div>
+
+    <h2>
+      Bei ya Usajili kwa Kila Nchi
+    </h2>
+
+    <p>
+      Chagua nchi yako kuona gharama ya ku-activate account yako.
+    </p>
+
+  </div>
+
+
+  <div class="pricing-grid">
+
+
+    <div class="price-card highlight">
+
+      <div class="country">
+        🇹🇿 Tanzania
+      </div>
+
+      <div class="amount">
+        TZS 16,000
+      </div>
+
+      <div class="note">
+        Automatic kupitia M-Pesa, HaloPesa,
+        Mixx by Yas au Airtel Money.
+      </div>
+
+      <div class="badges">
+
+        <span class="badge mpesa">
+          M-Pesa
+        </span>
+
+        <span class="badge halo">
+          HaloPesa
+        </span>
+
+        <span class="badge mixx">
+          Mixx
+        </span>
+
+        <span class="badge airtel">
+          Airtel
+        </span>
+
+      </div>
+
+      <button
+        class="price-action trigger-popup"
+      >
+        Lipia Automatic Sasa
+      </button>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <div class="country">
+        🇰🇪 Kenya
+      </div>
+
+      <div class="amount">
+        KES 700
+      </div>
+
+      <div class="note">
+        Lipia kupitia M-Pesa kisha tuma taarifa WhatsApp.
+      </div>
+
+      <a
+        class="price-action"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        Tuma Taarifa WhatsApp
+      </a>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <div class="country">
+        🇺🇬 Uganda
+      </div>
+
+      <div class="amount">
+        UGX 23,000
+      </div>
+
+      <div class="note">
+        MTN Mobile Money / Airtel Money,
+        kisha tuma ushahidi.
+      </div>
+
+      <a
+        class="price-action"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        Tuma Taarifa WhatsApp
+      </a>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <div class="country">
+        🇷🇼 Rwanda
+      </div>
+
+      <div class="amount">
+        RWF 8,000
+      </div>
+
+      <div class="note">
+        Lipia kupitia MTN MoMo na tuma risiti WhatsApp.
+      </div>
+
+      <a
+        class="price-action"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        Tuma Taarifa WhatsApp
+      </a>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <div class="country">
+        🇧🇮 Burundi
+      </div>
+
+      <div class="amount">
+        BIF 25,000
+      </div>
+
+      <div class="note">
+        Lumicash/Ecocash kisha tuma uthibitisho.
+      </div>
+
+      <a
+        class="price-action"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        Tuma Taarifa WhatsApp
+      </a>
+
+    </div>
+
+
+    <div class="price-card">
+
+      <div class="country">
+        🇲🇼 Malawi
+      </div>
+
+      <div class="amount">
+        MWK 12,000
+      </div>
+
+      <div class="note">
+        Lipia kisha tuma ushahidi wa malipo WhatsApp.
+      </div>
+
+      <a
+        class="price-action"
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        Tuma Taarifa WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FAQ
+====================================================== -->
+
+<section
+  class="faq-section"
+  id="faq"
+>
+
+  <div class="pricing-title">
+
+    <div class="eyebrow">
+      ❓ MASWALI
+    </div>
+
+    <h2>
+      Maswali Yanayoulizwa Mara kwa Mara
+    </h2>
+
+  </div>
+
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      1. Je, nitatoaje pesa?
+      <span>+</span>
+    </div>
+
+    <div class="faq-a">
+      Unaweza kutoa pesa kupitia njia za malipo
+      zinazopatikana kwenye mfumo wa account yako,
+      kulingana na masharti ya huduma.
+    </div>
+
+  </div>
+
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      2. Je, kuna ada ya kila mwezi?
+      <span>+</span>
+    </div>
+
+    <div class="faq-a">
+      Taarifa za ada zinaonyeshwa kwenye ukurasa huu
+      na zinaweza kubadilika kulingana na masharti
+      ya huduma.
+    </div>
+
+  </div>
+
+
+  <div class="faq-item">
+
+    <div class="faq-q">
+      3. Nisipojua Kiingereza vizuri?
+      <span>+</span>
+    </div>
+
+    <div class="faq-a">
+      Mfumo unaweza kusaidia mawasiliano kati ya
+      Kiswahili na Kiingereza kupitia translation
+      pale huduma hiyo inapopatikana.
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ======================================================
+     FINAL CTA
+====================================================== -->
+
+<section
+  class="final-cta"
+  id="contact"
+>
+
+  <h2>
+    Wageni Wapo Online Sasa Hivi!
+  </h2>
+
+  <p>
+    Fungua account yako na uanze kutumia mfumo.
+  </p>
+
+  <div class="final-actions">
+
+    <a
+      class="final-wa"
+      href="https://wa.me/255725962119"
+    >
+      WhatsApp 0725962119
+    </a>
+
+    <button
+      class="final-register trigger-popup"
+    >
+      🚀 Fungua Account
+    </button>
+
+  </div>
+
+</section>
+
 
 </main>
 
+
+
+<!-- ======================================================
+     FOOTER
+====================================================== -->
+
 <footer>
+
   <div class="footer-grid">
-    <div class="footer-col"><h4>DUNISWAHILI</h4><p style="margin-top:6px">Platform ya kuunganisha waafrika na wageni wa kimataifa kwa ajili ya kuchat na kulipwa.</p></div>
-    <div class="footer-col"><h4>Ukurasa</h4><a href="#top">Mwanzo</a><a href="#foreigners">Wazungu</a><a href="#pricing">Ada kwa Nchi</a><a href="#faq">Maswali</a></div>
-    <div class="footer-col"><h4>Mawasiliano</h4><a href="https://wa.me/255725962119">WhatsApp 0725962119</a><a href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">WhatsApp Channel</a></div>
-    <div class="footer-col"><h4>Usajili</h4><a href="https://moxeraagencies.com/register?ref=Code45" target="_blank">Fungua Account</a><a href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw">Toa Pesa</a></div>
+
+    <div class="footer-col">
+
+      <h4>
+        DUNISWAHILI
+      </h4>
+
+      <p style="margin-top:6px">
+        Platform ya kuunganisha Waafrika na wageni
+        wa kimataifa kwa ajili ya mawasiliano
+        na huduma za kidijitali.
+      </p>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>
+        Ukurasa
+      </h4>
+
+      <a href="#top">
+        Mwanzo
+      </a>
+
+      <a href="#foreigners">
+        Wazungu
+      </a>
+
+      <a href="#pricing">
+        Ada kwa Nchi
+      </a>
+
+      <a href="#faq">
+        Maswali
+      </a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>
+        Mawasiliano
+      </h4>
+
+      <a href="https://wa.me/255725962119">
+        WhatsApp 0725962119
+      </a>
+
+      <a
+        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp Channel
+      </a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>
+        Usajili
+      </h4>
+
+      <a
+        href="https://moxeraagencies.com/register?ref=Code45"
+        target="_blank"
+        rel="noopener"
+      >
+        Fungua Account
+      </a>
+
+      <a
+        href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw"
+      >
+        Toa Pesa
+      </a>
+
+    </div>
+
   </div>
-  <div class="footer-bottom"><span>© 2026 DUNISWAHILI.SITE — Haki Zote Zimehifadhiwa.</span><span>Verified Gateway Security</span></div>
+
+
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 DUNISWAHILI.SITE — Haki Zote Zimehifadhiwa.
+    </span>
+
+    <span>
+      Tanzania 🇹🇿
+    </span>
+
+  </div>
+
 </footer>
 
-<!-- ACTIVATION MODAL -->
-<div class="modal" id="activationModal">
+
+
+<!-- ======================================================
+     ACTIVATION MODAL
+====================================================== -->
+
+<div
+  class="modal"
+  id="activationModal"
+>
+
   <div class="modal-card">
-    <div class="modal-head"><h3>✨ DUNISWAHILI VIP ACTIVATION</h3><button class="close" onclick="closeModal('activationModal')">&times;</button></div>
+
+    <div class="modal-head">
+
+      <h3>
+        ✨ DUNISWAHILI VIP ACTIVATION
+      </h3>
+
+      <button
+        class="close"
+        onclick="closeModal('activationModal')"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
     <div class="modal-body">
-      <div class="activation"><small>Gharama ya Usajili / Activation</small><strong>TZS 16,000</strong><small>Ada ya mara moja · Hakuna makato ya mwezi</small></div>
-      <div class="modal-list">
-        <div>✓ <b>Chat na Wageni:</b> Lipwa kwa sessions zako.</div>
-        <div>✓ <b>Instant Withdrawal:</b> Tumia njia za malipo zinazopatikana.</div>
-        <div>✓ <b>Auto Translator:</b> Saidia mawasiliano kati ya Kiswahili na Kiingereza.</div>
+
+      <div class="activation">
+
+        <small>
+          Gharama ya Usajili / Activation
+        </small>
+
+        <strong>
+          TZS 16,000
+        </strong>
+
+        <small>
+          Ada ya mara moja · Hakuna makato ya mwezi
+        </small>
+
       </div>
-      <a class="modal-btn" href="https://moxeraagencies.com/register?ref=Code45" target="_blank">🚀 Lipia TZS 16,000 Uanze Sasa</a>
-      <button class="modal-btn secondary" onclick="closeModal('activationModal')">Baadae</button>
+
+
+      <div class="modal-list">
+
+        <div>
+          ✓ <b>Chat na Wageni:</b>
+          Lipwa kulingana na mfumo wa huduma.
+        </div>
+
+        <div>
+          ✓ <b>Withdrawal:</b>
+          Tumia njia za malipo zinazopatikana.
+        </div>
+
+        <div>
+          ✓ <b>Auto Translator:</b>
+          Saidia mawasiliano kati ya Kiswahili
+          na Kiingereza pale inapopatikana.
+        </div>
+
+      </div>
+
+
+      <a
+        class="modal-btn"
+        href="https://moxeraagencies.com/register?ref=Code45"
+        target="_blank"
+        rel="noopener"
+      >
+        🚀 Lipia TZS 16,000 Uanze Sasa
+      </a>
+
+
+      <button
+        class="modal-btn secondary"
+        onclick="closeModal('activationModal')"
+      >
+        Baadae
+      </button>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- CHAT MODAL -->
-<div class="modal" id="chatModal">
+
+
+<!-- ======================================================
+     CHAT MODAL
+====================================================== -->
+
+<div
+  class="modal"
+  id="chatModal"
+>
+
   <div class="chat-modal-card">
+
     <div class="chat-head">
-      <div class="chat-person"><img id="chatAvatar" class="chat-avatar" src="" alt=""><div><div id="chatName" class="chat-name">Foreigner</div><div id="chatStatus" class="chat-status">Online</div></div></div>
-      <button class="close" onclick="closeChatModal()">&times;</button>
+
+      <div class="chat-person">
+
+        <img
+          id="chatAvatar"
+          class="chat-avatar"
+          src=""
+          alt=""
+        >
+
+        <div>
+
+          <div
+            id="chatName"
+            class="chat-name"
+          >
+            Foreigner
+          </div>
+
+          <div
+            id="chatStatus"
+            class="chat-status"
+          >
+            Online
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="close"
+        onclick="closeChatModal()"
+      >
+        &times;
+      </button>
+
     </div>
-    <div class="chat-body" id="chatBody"></div>
-    <div class="chat-footer" id="chatFooter"><input id="chatInput" class="chat-input" placeholder="Andika ujumbe wako hapa..."><button class="send" onclick="sendMessage()">➤</button></div>
-    <div class="chat-lock" id="chatLock">
-      <div class="lock">🔥</div>
-      <h3>🎉 Mgeni Anataka Kuendelea Nawe!</h3>
-      <p>Amependezwa na mazungumzo yenu na anasubiri muendelee. Kamilisha account yako kwa TZS 16,000 ili kuendelea na mfumo.</p>
-      <a class="modal-btn" href="https://moxeraagencies.com/register?ref=Code45" target="_blank">🚀 Fungua Akaunti & Anza</a>
+
+
+    <div
+      class="chat-body"
+      id="chatBody"
+    ></div>
+
+
+    <div
+      class="chat-footer"
+      id="chatFooter"
+    >
+
+      <input
+        id="chatInput"
+        class="chat-input"
+        placeholder="Andika ujumbe wako hapa..."
+      >
+
+      <button
+        class="send"
+        onclick="sendMessage()"
+      >
+        ➤
+      </button>
+
     </div>
+
+
+    <div
+      class="chat-lock"
+      id="chatLock"
+    >
+
+      <div class="lock">
+        🔥
+      </div>
+
+      <h3>
+        🎉 Mgeni Anataka Kuendelea Nawe!
+      </h3>
+
+      <p>
+        Amependezwa na mazungumzo yenu.
+        Kamilisha account yako kwa TZS 16,000
+        ili kuendelea na mfumo.
+      </p>
+
+      <a
+        class="modal-btn"
+        href="https://moxeraagencies.com/register?ref=Code45"
+        target="_blank"
+        rel="noopener"
+      >
+        🚀 Fungua Akaunti &amp; Anza
+      </a>
+
+    </div>
+
   </div>
+
 </div>
 
-<!-- INSTALL MODAL -->
-<div class="modal" id="installModal">
-  <div class="modal-card"><div class="modal-head"><h3>📲 Weka DUNISWAHILI kwenye Home Screen</h3><button class="close" onclick="closeModal('installModal')">&times;</button></div><div class="modal-body"><div class="modal-list"><div>1. Gusa <b>INSTALL NOW</b> hapa chini.</div><div>2. Browser ikikuuliza thibitisha <b>Install</b> au <b>Add</b>.</div><div>3. App itaonekana kwenye home screen.</div></div><button class="modal-btn" onclick="executeInstall()">INSTALL NOW</button></div></div>
+
+
+<!-- ======================================================
+     INSTALL MODAL
+====================================================== -->
+
+<div
+  class="modal"
+  id="installModal"
+>
+
+  <div class="modal-card">
+
+    <div class="modal-head">
+
+      <h3>
+        📲 Weka DUNISWAHILI kwenye Home Screen
+      </h3>
+
+      <button
+        class="close"
+        onclick="closeModal('installModal')"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
+    <div class="modal-body">
+
+      <div class="modal-list">
+
+        <div>
+          1. Gusa <b>INSTALL NOW</b> hapa chini.
+        </div>
+
+        <div>
+          2. Browser ikikuuliza thibitisha
+          <b>Install</b> au <b>Add</b>.
+        </div>
+
+        <div>
+          3. App itaonekana kwenye home screen.
+        </div>
+
+      </div>
+
+
+      <button
+        class="modal-btn"
+        onclick="executeInstall()"
+      >
+        INSTALL NOW
+      </button>
+
+    </div>
+
+  </div>
+
 </div>
 
-<!-- SUPPORT MODAL -->
-<div class="modal" id="supportModal">
-  <div class="modal-card"><div class="modal-head"><h3>Customer Assistance</h3><button class="close" onclick="closeModal('supportModal')">&times;</button></div><div class="modal-body"><p style="font-size:12px;color:var(--muted)">Kama unahitaji msaada au una swali, chagua njia mojawapo hapa chini.</p><div class="modal-list"><a class="modal-btn" href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank">💬 WhatsApp Channel</a><a class="modal-btn" style="margin-top:7px;background:#EFF6FF;color:#1D4ED8" href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI">✉️ Tuma SMS</a></div><button class="modal-btn secondary" onclick="closeModal('supportModal')">Funga</button></div></div>
+
+
+<!-- ======================================================
+     SUPPORT MODAL
+====================================================== -->
+
+<div
+  class="modal"
+  id="supportModal"
+>
+
+  <div class="modal-card">
+
+    <div class="modal-head">
+
+      <h3>
+        Customer Assistance
+      </h3>
+
+      <button
+        class="close"
+        onclick="closeModal('supportModal')"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
+    <div class="modal-body">
+
+      <p
+        style="font-size:12px;color:var(--muted)"
+      >
+        Kama unahitaji msaada au una swali,
+        chagua njia mojawapo hapa chini.
+      </p>
+
+
+      <div class="modal-list">
+
+        <a
+          class="modal-btn"
+          href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
+          target="_blank"
+          rel="noopener"
+        >
+          💬 WhatsApp Channel
+        </a>
+
+
+        <a
+          class="modal-btn"
+          style="margin-top:7px;background:#EFF6FF;color:#1D4ED8"
+          href="sms:0725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI"
+        >
+          ✉️ Tuma SMS
+        </a>
+
+      </div>
+
+
+      <button
+        class="modal-btn secondary"
+        onclick="closeModal('supportModal')"
+      >
+        Funga
+      </button>
+
+    </div>
+
+  </div>
+
 </div>
 
-<div class="toast" id="toast"><div class="toast-icon">✓</div><div><b id="toastText">Grace M. ametoa TZS 80,000</b><br><small>Papo hapo kupitia M-Pesa</small></div></div>
+
+
+<!-- ======================================================
+     TOAST
+====================================================== -->
+
+<div
+  class="toast"
+  id="toast"
+>
+
+  <div class="toast-icon">
+    ✓
+  </div>
+
+  <div>
+
+    <b id="toastText">
+      Taarifa mpya imeingia
+    </b>
+
+    <br>
+
+    <small>
+      DUNISWAHILI notification
+    </small>
+
+  </div>
+
+</div>
+
+
 
 <script>
-const registerURL="https://moxeraagencies.com/register?ref=Code45";
-const loginURL="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw";
+
+/* =========================================================
+   URLS
+========================================================= */
+
+const registerURL =
+"https://moxeraagencies.com/register?ref=Code45";
+
+const loginURL =
+"https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw";
+
+
+/* =========================================================
+   TANZANIA DATE
+========================================================= */
+
+function updateTanzaniaDate(){
+
+  const dateElement =
+    document.getElementById("tanzaniaDate");
+
+  const now =
+    new Date();
+
+  const formatter =
+    new Intl.DateTimeFormat(
+      "sw-TZ",
+      {
+        timeZone:"Africa/Dar_es_Salaam",
+        day:"2-digit",
+        month:"short",
+        year:"numeric"
+      }
+    );
+
+  const timeFormatter =
+    new Intl.DateTimeFormat(
+      "sw-TZ",
+      {
+        timeZone:"Africa/Dar_es_Salaam",
+        hour:"2-digit",
+        minute:"2-digit",
+        hour12:false
+      }
+    );
+
+  dateElement.textContent =
+    "🇹🇿 Tanzania • " +
+    formatter.format(now) +
+    " • " +
+    timeFormatter.format(now);
+
+}
+
+updateTanzaniaDate();
+
+setInterval(
+  updateTanzaniaDate,
+  30000
+);
+
+
+/* =========================================================
+   PROFILES
+========================================================= */
 
 const profiles=[
-{name:"Wayne Martin",age:31,flag:"🇨🇭",country:"Switzerland",photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"},
-{name:"David Smith",age:34,flag:"🇬🇧",country:"United Kingdom",photo:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80"},
-{name:"Robert Taylor",age:29,flag:"🇺🇸",country:"United States",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"},
-{name:"Alex Mueller",age:32,flag:"🇩🇪",country:"Germany",photo:"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&auto=format&fit=crop&q=80"},
-{name:"Mark Wilson",age:36,flag:"🇨🇦",country:"Canada",photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"},
-{name:"Marco Rossi",age:30,flag:"🇮🇹",country:"Italy",photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"},
-{name:"Lukas Weber",age:28,flag:"🇩🇪",country:"Germany",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"},
-{name:"Sven Jansen",age:33,flag:"🇳🇱",country:"Netherlands",photo:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80"},
-{name:"Lars Hansen",age:35,flag:"🇳🇴",country:"Norway",photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"},
-{name:"Oliver Brown",age:27,flag:"🇬🇧",country:"England",photo:"https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300&auto=format&fit=crop&q=80"},
-{name:"Daniel Evans",age:30,flag:"🇦🇺",country:"Australia",photo:"https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=300&auto=format&fit=crop&q=80"},
-{name:"Liam Scott",age:32,flag:"🇮🇪",country:"Ireland",photo:"https://images.unsplash.com/photo-1544717305-2782549b5136?w=300&auto=format&fit=crop&q=80"},
-{name:"Ethan Hunt",age:29,flag:"🇺🇸",country:"United States",photo:"https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=300&auto=format&fit=crop&q=80"},
-{name:"Noah Garcia",age:31,flag:"🇪🇸",country:"Spain",photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"},
-{name:"Lucas Martinez",age:28,flag:"🇫🇷",country:"France",photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"},
-{name:"Mason Lee",age:34,flag:"🇨🇭",country:"Switzerland",photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"},
-{name:"Sarah Jenkins",age:27,flag:"🇬🇧",country:"United Kingdom",photo:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"},
-{name:"Julie Dubois",age:29,flag:"🇫🇷",country:"France",photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"},
-{name:"Chloe Bennett",age:26,flag:"🇨🇦",country:"Canada",photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"},
-{name:"Elena Gomez",age:28,flag:"🇪🇸",country:"Spain",photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"},
-{name:"Emma Lindqvist",age:25,flag:"🇸🇪",country:"Sweden",photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"},
-{name:"Sophie Clark",age:30,flag:"🇬🇧",country:"England",photo:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300&auto=format&fit=crop&q=80"},
-{name:"Anna Fischer",age:31,flag:"🇩🇪",country:"Germany",photo:"https://images.unsplash.com/photo-1529626455594-ff0802cfb7e?w=300&auto=format&fit=crop&q=80"},
-{name:"Laura Miller",age:29,flag:"🇺🇸",country:"United States",photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"},
-{name:"Mia Wagner",age:27,flag:"🇩🇪",country:"Germany",photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"},
-{name:"Charlotte Roy",age:24,flag:"🇫🇷",country:"France",photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"},
-{name:"Amelia Davies",age:26,flag:"🇬🇧",country:"England",photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"}
+
+{
+ name:"Wayne Martin",
+ age:31,
+ flag:"🇨🇭",
+ country:"Switzerland",
+ photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"David Smith",
+ age:34,
+ flag:"🇬🇧",
+ country:"United Kingdom",
+ photo:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Robert Taylor",
+ age:29,
+ flag:"🇺🇸",
+ country:"United States",
+ photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Alex Mueller",
+ age:32,
+ flag:"🇩🇪",
+ country:"Germany",
+ photo:"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Mark Wilson",
+ age:36,
+ flag:"🇨🇦",
+ country:"Canada",
+ photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Marco Rossi",
+ age:30,
+ flag:"🇮🇹",
+ country:"Italy",
+ photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Lukas Weber",
+ age:28,
+ flag:"🇩🇪",
+ country:"Germany",
+ photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Sven Jansen",
+ age:33,
+ flag:"🇳🇱",
+ country:"Netherlands",
+ photo:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Lars Hansen",
+ age:35,
+ flag:"🇳🇴",
+ country:"Norway",
+ photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Oliver Brown",
+ age:27,
+ flag:"🇬🇧",
+ country:"England",
+ photo:"https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Daniel Evans",
+ age:30,
+ flag:"🇦🇺",
+ country:"Australia",
+ photo:"https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Liam Scott",
+ age:32,
+ flag:"🇮🇪",
+ country:"Ireland",
+ photo:"https://images.unsplash.com/photo-1544717305-2782549b5136?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Ethan Hunt",
+ age:29,
+ flag:"🇺🇸",
+ country:"United States",
+ photo:"https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Noah Garcia",
+ age:31,
+ flag:"🇪🇸",
+ country:"Spain",
+ photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Lucas Martinez",
+ age:28,
+ flag:"🇫🇷",
+ country:"France",
+ photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Mason Lee",
+ age:34,
+ flag:"🇨🇭",
+ country:"Switzerland",
+ photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Sarah Jenkins",
+ age:27,
+ flag:"🇬🇧",
+ country:"United Kingdom",
+ photo:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Julie Dubois",
+ age:29,
+ flag:"🇫🇷",
+ country:"France",
+ photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Chloe Bennett",
+ age:26,
+ flag:"🇨🇦",
+ country:"Canada",
+ photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Elena Gomez",
+ age:28,
+ flag:"🇪🇸",
+ country:"Spain",
+ photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Emma Lindqvist",
+ age:25,
+ flag:"🇸🇪",
+ country:"Sweden",
+ photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Sophie Clark",
+ age:30,
+ flag:"🇬🇧",
+ country:"England",
+ photo:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Anna Fischer",
+ age:31,
+ flag:"🇩🇪",
+ country:"Germany",
+ photo:"https://images.unsplash.com/photo-1529626455594-ff0802cfb7e?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Laura Miller",
+ age:29,
+ flag:"🇺🇸",
+ country:"United States",
+ photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Mia Wagner",
+ age:27,
+ flag:"🇩🇪",
+ country:"Germany",
+ photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Charlotte Roy",
+ age:24,
+ flag:"🇫🇷",
+ country:"France",
+ photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"
+},
+
+{
+ name:"Amelia Davies",
+ age:26,
+ flag:"🇬🇧",
+ country:"England",
+ photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"
+}
+
 ];
+
+
+/* =========================================================
+   PRICES
+========================================================= */
 
 const prices=[
-["Saa moja","TZS 120,000"],["Dakika 30","TZS 50,000"],["Dakika 45","TZS 80,000"],
-["Saa moja","TZS 150,000"],["Dakika 30","TZS 65,000"],["Saa moja","TZS 90,000"],
-["Dakika 40","TZS 75,000"],["Saa moja","TZS 110,000"]
+
+["Saa moja","TZS 120,000"],
+["Dakika 30","TZS 50,000"],
+["Dakika 45","TZS 80,000"],
+["Saa moja","TZS 150,000"],
+["Dakika 30","TZS 65,000"],
+["Saa moja","TZS 90,000"],
+["Dakika 40","TZS 75,000"],
+["Saa moja","TZS 110,000"]
+
 ];
 
-let cardsData=[],activeUser=null,chatStep=0,deferredPrompt=null;
 
-function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
-function renderCards(){
-  const box=document.getElementById("cardsContainer"); box.innerHTML="";
-  cardsData=shuffle(profiles).slice(0,16).map((p,i)=>{
-    const pr=prices[Math.floor(Math.random()*prices.length)];
-    return {...p,id:i,price:pr[1],time:pr[0],status:i%5===2?"Offline":"Online"};
-  });
-  cardsData.forEach(u=>{
-    const c=document.createElement("div");c.className="user-card";
-    c.innerHTML=`
-      <div class="user-info">
-        <div class="avatar-wrapper">
-          <img class="user-avatar" src="${u.photo}" alt="${u.name}">
-          ${u.status==="Online"?'<span class="status-dot"></span>':""}
-        </div>
-        <div class="user-details">
-          <h4>${u.flag} ${u.name}, ${u.age}</h4>
-          <p>${u.country} • <span class="${u.status==="Online"?"status-online":"status-offline"}">${u.status}</span></p>
-          <div class="price-tag">${u.time} — ${u.price}</div>
-        </div>
-      </div>
-      <div class="card-actions">
-        <button class="btn-action btn-chat" onclick="startChat(${u.id})">💬 Chat</button>
-        <a class="btn-action btn-voice" href="${registerURL}" target="_blank">📞 Voice</a>
-        <a class="btn-action btn-video" href="${registerURL}" target="_blank">🎥 Video</a>
-      </div>`;
-    box.appendChild(c);
-  });
+let cardsData=[];
+let activeUser=null;
+let chatStep=0;
+let deferredPrompt=null;
+
+
+/* =========================================================
+   SHUFFLE
+========================================================= */
+
+function shuffle(a){
+
+  return [...a]
+    .sort(
+      () => Math.random() - .5
+    );
+
 }
+
+
+/* =========================================================
+   RENDER USERS
+========================================================= */
+
+function renderCards(){
+
+  const box =
+    document.getElementById("cardsContainer");
+
+  box.innerHTML="";
+
+
+  cardsData =
+    shuffle(profiles)
+    .slice(0,16)
+    .map((p,i)=>{
+
+      const pr =
+        prices[
+          Math.floor(
+            Math.random()*prices.length
+          )
+        ];
+
+      return {
+        ...p,
+        id:i,
+        price:pr[1],
+        time:pr[0],
+        status:i%5===2
+          ?"Offline"
+          :"Online"
+      };
+
+    });
+
+
+  cardsData.forEach(u=>{
+
+    const c =
+      document.createElement("div");
+
+    c.className="user-card";
+
+
+    c.innerHTML=`
+
+      <div class="user-info">
+
+        <div class="avatar-wrapper">
+
+          <img
+            class="user-avatar"
+            src="${u.photo}"
+            alt="${u.name}"
+            loading="lazy"
+          >
+
+          ${
+            u.status==="Online"
+            ?'<span class="status-dot"></span>'
+            :""
+          }
+
+        </div>
+
+
+        <div class="user-details">
+
+          <h4>
+            ${u.flag} ${u.name}, ${u.age}
+          </h4>
+
+          <p>
+            ${u.country} •
+            <span
+              class="${
+                u.status==="Online"
+                ?"status-online"
+                :"status-offline"
+              }"
+            >
+              ${u.status}
+            </span>
+          </p>
+
+          <div class="price-tag">
+            ${u.time} — ${u.price}
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="card-actions">
+
+        <button
+          class="btn-action btn-chat"
+          onclick="startChat(${u.id})"
+        >
+          💬 Chat
+        </button>
+
+        <a
+          class="btn-action btn-voice"
+          href="${registerURL}"
+          target="_blank"
+          rel="noopener"
+        >
+          📞 Voice
+        </a>
+
+        <a
+          class="btn-action btn-video"
+          href="${registerURL}"
+          target="_blank"
+          rel="noopener"
+        >
+          🎥 Video
+        </a>
+
+      </div>
+
+    `;
+
+    box.appendChild(c);
+
+  });
+
+}
+
+
+/* =========================================================
+   TRANSACTIONS
+========================================================= */
 
 const txPool=[
-"Juma M. ametoka kutoa TZS 150,000 kupitia M-Pesa • Dakika 2 zilizopita",
-"Amina S. ametoka kutoa TZS 180,000 kupitia Mixx by Yas • Hivi punde",
-"Kelvin P. ametoka kutoa TZS 250,000 kupitia Mixx by Yas • Dakika 4 zilizopita",
-"Grace M. ametoka kutoa TZS 80,000 kupitia Airtel Money • Dakika 5 zilizopita",
-"Baraka J. ametoka kutoa TZS 65,000 kupitia M-Pesa • Dakika 6 zilizopita"
+
+"Demo: TZS 150,000 • M-Pesa • Dakika 2 zilizopita",
+
+"Demo: TZS 180,000 • Mixx by Yas • Hivi punde",
+
+"Demo: TZS 250,000 • Mixx by Yas • Dakika 4 zilizopita",
+
+"Demo: TZS 80,000 • Airtel Money • Dakika 5 zilizopita",
+
+"Demo: TZS 65,000 • M-Pesa • Dakika 6 zilizopita"
+
 ];
+
+
 function renderTx(){
-  const box=document.getElementById("txList");box.innerHTML="";
-  shuffle(txPool).slice(0,3).forEach((t,i)=>{
-    const d=document.createElement("div");d.className="tx-item";
-    d.innerHTML=`<span class="tx-dot ${i===0?"green":""}"></span><span>${t}</span>`;
-    box.appendChild(d);
-  });
+
+  const box =
+    document.getElementById("txList");
+
+  box.innerHTML="";
+
+
+  shuffle(txPool)
+    .slice(0,3)
+    .forEach((t,i)=>{
+
+      const d =
+        document.createElement("div");
+
+      d.className="tx-item";
+
+
+      d.innerHTML=`
+
+        <span
+          class="tx-dot ${
+            i===0 ? "red" : ""
+          }"
+        ></span>
+
+        <span>${t}</span>
+
+      `;
+
+      box.appendChild(d);
+
+    });
+
 }
+
+
+/* =========================================================
+   REVIEWS
+========================================================= */
 
 const reviews=[
-["A","Amina Hassan","Dar es Salaam","Nimechati dakika 30 nikalipwa TZS 50,000 bila usumbufu. Site ni rahisi kutumia."],
-["J","Joseph Mwakalinga","Mbeya","Mwanzoni nilikuwa na shaka, lakini mfumo unaeleweka na ni rahisi kutumia."],
-["N","Neema Kimaro","Arusha","Wazungu wanaongea vizuri na wanajibu kwa heshima. Huduma kwa wateja ni wepesi kujibu."],
-["B","Baraka Msigwa","Dodoma","DUNISWAHILI imenisaidia kupata kipato cha ziada kila siku nikiwa nyumbani."],
-["S","Sarah Mollel","Moshi","Nilitoa pesa yangu ikaingia M-Pesa ndani ya muda mfupi. Mfumo ni rahisi kutumia."]
+
+[
+"A",
+"Amina Hassan",
+"Dar es Salaam",
+"Nimechati dakika 30 na nimefurahia mfumo. Site ni rahisi kutumia."
+],
+
+[
+"J",
+"Joseph Mwakalinga",
+"Mbeya",
+"Mfumo unaeleweka na interface ni rahisi kutumia."
+],
+
+[
+"N",
+"Neema Kimaro",
+"Arusha",
+"Ni rahisi kuona wageni na kuanza mazungumzo."
+],
+
+[
+"B",
+"Baraka Msigwa",
+"Dodoma",
+"Platform ina interface nzuri na ni rahisi kutumia kwenye simu."
+],
+
+[
+"S",
+"Sarah Mollel",
+"Moshi",
+"Muonekano ni mzuri na navigation ni rahisi."
+
+]
+
 ];
+
+
 function renderReviews(){
-  document.getElementById("reviews").innerHTML=reviews.map(r=>`
-    <div class="review-card">
-      <div class="review-head"><div class="review-user"><div class="review-avatar">${r[0]}</div><div><div class="review-name">${r[1]}</div><div class="review-location">${r[2]}</div></div></div><div class="review-stars">★★★★★</div></div>
-      <div class="review-text">"${r[3]}"</div>
-    </div>`).join("");
+
+  document.getElementById("reviews").innerHTML=
+
+    reviews.map(r=>`
+
+      <div class="review-card">
+
+        <div class="review-head">
+
+          <div class="review-user">
+
+            <div class="review-avatar">
+              ${r[0]}
+            </div>
+
+            <div>
+
+              <div class="review-name">
+                ${r[1]}
+              </div>
+
+              <div class="review-location">
+                ${r[2]}
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="review-stars">
+            ★★★★★
+          </div>
+
+        </div>
+
+        <div class="review-text">
+          "${r[3]}"
+        </div>
+
+      </div>
+
+    `).join("");
+
 }
 
-function openModal(id){document.getElementById(id).classList.add("active")}
-function closeModal(id){document.getElementById(id).classList.remove("active")}
-function openInstallModal(){openModal("installModal")}
-function openSupportModal(){openModal("supportModal")}
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+function openModal(id){
+
+  document
+    .getElementById(id)
+    .classList.add("active");
+
+}
+
+
+function closeModal(id){
+
+  document
+    .getElementById(id)
+    .classList.remove("active");
+
+}
+
+
+function openInstallModal(){
+
+  openModal("installModal");
+
+}
+
+
+function openSupportModal(){
+
+  openModal("supportModal");
+
+}
+
+
+/* =========================================================
+   INSTALL
+========================================================= */
+
 function executeInstall(){
-  if(deferredPrompt){deferredPrompt.prompt();deferredPrompt.userChoice.finally(()=>deferredPrompt=null)}
-  else location.href=registerURL;
-}
-window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e});
 
-document.addEventListener("click",e=>{
-  if(e.target.closest(".trigger-popup"))openModal("activationModal");
-  const faq=e.target.closest(".faq-q");if(faq)faq.parentElement.classList.toggle("active");
-  if(e.target.classList.contains("modal"))e.target.classList.remove("active");
-});
+  if(deferredPrompt){
+
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.finally(
+      ()=>{
+        deferredPrompt=null;
+      }
+    );
+
+  }else{
+
+    location.href=registerURL;
+
+  }
+
+}
+
+
+window.addEventListener(
+  "beforeinstallprompt",
+  e=>{
+
+    e.preventDefault();
+
+    deferredPrompt=e;
+
+  }
+);
+
+
+/* =========================================================
+   GLOBAL CLICK
+========================================================= */
+
+document.addEventListener(
+  "click",
+  e=>{
+
+    if(
+      e.target.closest(".trigger-popup")
+    ){
+
+      openModal("activationModal");
+
+    }
+
+
+    const faq =
+      e.target.closest(".faq-q");
+
+    if(faq){
+
+      faq.parentElement
+        .classList
+        .toggle("active");
+
+    }
+
+
+    if(
+      e.target.classList.contains("modal")
+    ){
+
+      e.target.classList.remove("active");
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   CHAT
+========================================================= */
 
 function startChat(id){
-  activeUser=cardsData.find(x=>x.id===id);chatStep=0;
-  document.getElementById("chatAvatar").src=activeUser.photo;
-  document.getElementById("chatName").textContent=activeUser.name;
-  document.getElementById("chatStatus").textContent=activeUser.status==="Online"?"Online":"Offline";
-  document.getElementById("chatBody").innerHTML="";
-  document.getElementById("chatLock").classList.remove("active");
-  document.getElementById("chatFooter").style.display="flex";
-  document.getElementById("chatInput").disabled=false;
-  document.getElementById("chatModal").classList.add("active");
-  setTimeout(()=>botReply("Habari rafiki mzima 👋",1800),500);
+
+  activeUser =
+    cardsData.find(
+      x=>x.id===id
+    );
+
+  chatStep=0;
+
+
+  document
+    .getElementById("chatAvatar")
+    .src=activeUser.photo;
+
+
+  document
+    .getElementById("chatName")
+    .textContent=activeUser.name;
+
+
+  document
+    .getElementById("chatStatus")
+    .textContent=
+      activeUser.status==="Online"
+      ?"Online"
+      :"Offline";
+
+
+  document
+    .getElementById("chatBody")
+    .innerHTML="";
+
+
+  document
+    .getElementById("chatLock")
+    .classList
+    .remove("active");
+
+
+  document
+    .getElementById("chatFooter")
+    .style.display="flex";
+
+
+  document
+    .getElementById("chatInput")
+    .disabled=false;
+
+
+  document
+    .getElementById("chatModal")
+    .classList
+    .add("active");
+
+
+  setTimeout(
+    ()=>{
+      botReply(
+        "Habari rafiki mzima 👋",
+        1800
+      );
+    },
+    500
+  );
+
 }
-function closeChatModal(){document.getElementById("chatModal").classList.remove("active")}
+
+
+function closeChatModal(){
+
+  document
+    .getElementById("chatModal")
+    .classList
+    .remove("active");
+
+}
+
+
 function appendMessage(text,type){
-  const d=document.createElement("div");d.className="msg "+type;d.textContent=text;
-  document.getElementById("chatBody").appendChild(d);
-  document.getElementById("chatBody").scrollTop=document.getElementById("chatBody").scrollHeight;
+
+  const d =
+    document.createElement("div");
+
+  d.className=
+    "msg "+type;
+
+  d.textContent=text;
+
+
+  document
+    .getElementById("chatBody")
+    .appendChild(d);
+
+
+  const body =
+    document.getElementById("chatBody");
+
+  body.scrollTop=
+    body.scrollHeight;
+
 }
+
+
 function botReply(text,delay){
-  const s=document.getElementById("chatStatus");s.textContent="anandika...";
-  setTimeout(()=>{s.textContent="Online";appendMessage(text,"bot")},delay);
+
+  const s =
+    document.getElementById("chatStatus");
+
+  s.textContent="anandika...";
+
+
+  setTimeout(()=>{
+
+    s.textContent="Online";
+
+    appendMessage(
+      text,
+      "bot"
+    );
+
+  },delay);
+
 }
+
+
 function sendMessage(){
-  const input=document.getElementById("chatInput"),text=input.value.trim();if(!text)return;
-  appendMessage(text,"user");input.value="";chatStep++;
-  if(chatStep===1)botReply("Mimi napenda kujua KISWAHILI vizuri ya Tanzania 🇹🇿 😁 Nijuze.",2200);
-  else if(chatStep===2){botReply("Nifunje tamaduni zenu na mbuga za wanyama 🌍",2200);setTimeout(lockChat,4000)}
-  else lockChat();
+
+  const input =
+    document.getElementById("chatInput");
+
+  const text =
+    input.value.trim();
+
+
+  if(!text)return;
+
+
+  appendMessage(
+    text,
+    "user"
+  );
+
+
+  input.value="";
+
+  chatStep++;
+
+
+  if(chatStep===1){
+
+    botReply(
+      "Mimi napenda kujua KISWAHILI vizuri ya Tanzania 🇹🇿 😁 Nijuze.",
+      2200
+    );
+
+  }
+
+  else if(chatStep===2){
+
+    botReply(
+      "Ningependa kujifunza tamaduni zenu na mbuga za wanyama 🌍",
+      2200
+    );
+
+    setTimeout(
+      lockChat,
+      4000
+    );
+
+  }
+
+  else{
+
+    lockChat();
+
+  }
+
 }
+
+
 function lockChat(){
-  document.getElementById("chatFooter").style.display="none";
-  document.getElementById("chatLock").classList.add("active");
+
+  document
+    .getElementById("chatFooter")
+    .style.display="none";
+
+
+  document
+    .getElementById("chatLock")
+    .classList
+    .add("active");
+
 }
-document.getElementById("chatInput").addEventListener("keypress",e=>{if(e.key==="Enter")sendMessage()});
+
+
+document
+  .getElementById("chatInput")
+  .addEventListener(
+    "keypress",
+    e=>{
+
+      if(e.key==="Enter"){
+        sendMessage();
+      }
+
+    }
+  );
+
+
+/* =========================================================
+   ONLINE COUNTER
+========================================================= */
 
 function updateOnline(){
-  const n=18450+Math.floor(Math.random()*950);
-  document.getElementById("onlineCounter").textContent=n.toLocaleString();
+
+  const n =
+    18450 +
+    Math.floor(
+      Math.random()*950
+    );
+
+
+  document
+    .getElementById("onlineCounter")
+    .textContent=
+      n.toLocaleString();
+
 }
+
+
+/* =========================================================
+   DEMO NOTIFICATION
+========================================================= */
+
 function showToast(){
-  const names=["Grace M.","Amina S.","Baraka J.","Neema K.","Kelvin P.","Juma M."];
-  const amounts=["TZS 50,000","TZS 65,000","TZS 80,000","TZS 95,000","TZS 120,000"];
-  document.getElementById("toastText").textContent=`${names[Math.floor(Math.random()*names.length)]} ametoa ${amounts[Math.floor(Math.random()*amounts.length)]}`;
-  const t=document.getElementById("toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),4000);
+
+  const messages=[
+
+    "Karibu DUNISWAHILI 👋",
+
+    "Wageni wapya wameonekana online 🌍",
+
+    "Chat mpya iko tayari kuanzishwa 💬",
+
+    "Taarifa mpya ya mfumo imeingia 🔔"
+
+  ];
+
+
+  document
+    .getElementById("toastText")
+    .textContent=
+      messages[
+        Math.floor(
+          Math.random()*messages.length
+        )
+      ];
+
+
+  const t =
+    document.getElementById("toast");
+
+
+  t.classList.add("show");
+
+
+  setTimeout(
+    ()=>{
+      t.classList.remove("show");
+    },
+    4000
+  );
+
 }
-window.addEventListener("load",()=>{
-  setTimeout(()=>document.getElementById("preloader").classList.add("hide"),500);
-  renderCards();renderTx();renderReviews();updateOnline();
-  setInterval(updateOnline,7000);
-  setInterval(renderTx,5000);
-  setInterval(()=>{renderCards()},45000);
-  setTimeout(showToast,3500);setInterval(showToast,12000);
-});
+
+
+/* =========================================================
+   PAGE LOAD
+========================================================= */
+
+window.addEventListener(
+  "load",
+  ()=>{
+
+    setTimeout(
+      ()=>{
+        document
+          .getElementById("preloader")
+          .classList
+          .add("hide");
+      },
+      500
+    );
+
+
+    renderCards();
+
+    renderTx();
+
+    renderReviews();
+
+    updateOnline();
+
+    updateTanzaniaDate();
+
+
+    setInterval(
+      updateOnline,
+      7000
+    );
+
+
+    setInterval(
+      renderTx,
+      5000
+    );
+
+
+    setInterval(
+      renderCards,
+      45000
+    );
+
+
+    setTimeout(
+      showToast,
+      3500
+    );
+
+
+    setInterval(
+      showToast,
+      12000
+    );
+
+  }
+);
+
 </script>
+
 </body>
 </html>
