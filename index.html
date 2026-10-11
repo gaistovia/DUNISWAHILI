@@ -1,4168 +1,1427 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia</title>
-
-<meta name="title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia">
-<meta name="description" content="Jifunze njia za uhakika za namna ya kupata hela mtandaoni, fursa za kiuchumi, teknolojia, na biashara za kidijitali kupitia DUNISWAHILI.">
-<meta name="keywords" content="DUNISWAHILI, namna ya kupata hela mtandaoni, kuchat na wageni, fursa za mtandaoni">
-<meta name="robots" content="index, follow">
-<meta name="language" content="Swahili">
-<meta name="author" content="DUNISWAHILI">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://duniswahili.com/">
-<meta property="og:title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni">
-<meta property="og:description" content="Pata miongozo na mbinu bora za namna ya kupata hela mtandaoni na fursa za kidijitali kupitia DUNISWAHILI.">
-<meta property="og:image" content="https://duniswahili.com/assets/banner.jpg">
-
-<link rel="icon" type="image/png" href="./logo.jpg">
-
-<style>
-
-/* =========================================================
-   DUNISWAHILI V2
-   BLUE + RED BRAND SYSTEM
-========================================================= */
-
-:root{
-  --primary:#2563EB;
-  --primary2:#1D4ED8;
-  --primary3:#3B82F6;
-
-  --red:#DC2626;
-  --red2:#EF4444;
-  --red-dark:#B91C1C;
-
-  --dark:#0B1220;
-  --dark2:#111827;
-  --dark3:#172554;
-
-  --bg:#F8FAFC;
-  --surface:#FFFFFF;
-  --muted:#64748B;
-  --line:#E2E8F0;
-
-  --success:#16A34A;
-  --gold:#F59E0B;
-
-  --shadow:0 12px 30px rgba(15,23,42,.08);
-  --blue-shadow:0 9px 24px rgba(37,99,235,.22);
-  --red-shadow:0 9px 24px rgba(220,38,38,.18);
-}
-
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{
-  scroll-behavior:smooth;
-  overflow-x:hidden;
-}
-
-body{
-  background:var(--bg);
-  color:var(--dark);
-  font-family:Inter,Segoe UI,Tahoma,sans-serif;
-  line-height:1.5;
-  padding-bottom:84px;
-  overflow-x:hidden;
-}
-
-a{
-  text-decoration:none;
-  color:inherit;
-}
-
-button,
-input{
-  font:inherit;
-}
-
-button{
-  cursor:pointer;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:100%;
-  max-width:760px;
-  margin:auto;
-  padding:0 16px;
-}
-
-.hidden{
-  display:none!important;
-}
-
-
-/* =========================================================
-   PRELOADER
-========================================================= */
-
-#preloader{
-  position:fixed;
-  inset:0;
-  background:#fff;
-  z-index:99999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  transition:.45s ease;
-}
-
-#preloader.hide{
-  opacity:0;
-  visibility:hidden;
-}
-
-.loader-logo{
-  width:64px;
-  height:64px;
-  animation:spin 1.2s linear infinite;
-}
-
-.loader-name{
-  font-size:17px;
-  font-weight:900;
-  color:var(--primary);
-  margin-top:10px;
-  letter-spacing:.8px;
-}
-
-.loader-name span{
-  color:var(--red);
-}
-
-@keyframes spin{
-  to{
-    transform:rotate(360deg);
-  }
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.header{
-  position:sticky;
-  top:0;
-  z-index:500;
-
-  background:
-    linear-gradient(
-      110deg,
-      #071326 0%,
-      #0B1730 55%,
-      #160C18 100%
-    );
-
-  color:#fff;
-
-  border-bottom:1px solid rgba(255,255,255,.09);
-
-  padding:10px 16px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-
-  box-shadow:0 6px 20px rgba(0,0,0,.12);
-}
-
-.logo-box{
-  display:flex;
-  align-items:center;
-  gap:9px;
-  min-width:0;
-}
-
-.svg-logo{
-  width:42px;
-  height:42px;
-  flex:none;
-}
-
-.brand-name{
-  font-size:19px;
-  font-weight:900;
-  line-height:1;
-  letter-spacing:-.5px;
-}
-
-.brand-name .white{
-  color:#fff;
-}
-
-.brand-name .blue{
-  color:#60A5FA;
-}
-
-.brand-name .red{
-  color:#F87171;
-}
-
-.brand-slogan{
-  font-size:8px;
-  font-weight:800;
-  letter-spacing:1px;
-  margin-top:4px;
-  color:#CBD5E1;
-}
-
-.brand-subtag{
-  font-size:8px;
-  font-weight:900;
-  color:#F87171;
-  text-transform:uppercase;
-  letter-spacing:.8px;
-  margin-top:2px;
-}
-
-
-/* HEADER RIGHT */
-
-.header-right{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  gap:5px;
-  flex:none;
-}
-
-.tanzania-date{
-  font-size:9px;
-  font-weight:900;
-  color:#DBEAFE;
-
-  background:rgba(37,99,235,.18);
-  border:1px solid rgba(96,165,250,.35);
-
-  padding:5px 8px;
-  border-radius:9px;
-
-  white-space:nowrap;
-}
-
-.online-badge{
-  background:rgba(220,38,38,.12);
-  color:#FCA5A5;
-
-  border:1px solid rgba(239,68,68,.5);
-
-  padding:5px 9px;
-  border-radius:20px;
-
-  font-size:9px;
-  font-weight:800;
-
-  display:flex;
-  align-items:center;
-  gap:5px;
-}
-
-.online-dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#EF4444;
-  box-shadow:0 0 10px rgba(239,68,68,.8);
-  animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-  50%{
-    opacity:.35;
-    transform:scale(.8);
-  }
-}
-
-
-/* =========================================================
-   TOP ACTIONS
-========================================================= */
-
-.top-actions-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  padding:14px 0 10px;
-}
-
-.top-action{
-  border:0;
-  border-radius:15px;
-  padding:11px 10px;
-  color:#fff;
-  font-weight:800;
-  font-size:12px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
-
-  box-shadow:0 6px 16px rgba(0,0,0,.12);
-
-  transition:.2s;
-}
-
-.top-action:hover{
-  transform:translateY(-2px);
-}
-
-.install{
-  background:linear-gradient(135deg,#2563EB,#1D4ED8);
-}
-
-.support{
-  background:linear-gradient(135deg,#DC2626,#B91C1C);
-}
-
-
-/* =========================================================
-   DASHBOARD
-========================================================= */
-
-.balance-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-
-  padding:0;
-  margin:0 0 12px;
-}
-
-.bal-card{
-  border-radius:16px;
-  padding:12px 9px;
-  min-height:122px;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-
-  transition:.25s;
-}
-
-.bal-card:hover{
-  transform:translateY(-2px);
-}
-
-.profit{
-  background:linear-gradient(145deg,#123B63,#0B2742);
-  border:1px solid #3B82F6;
-  box-shadow:0 5px 16px rgba(37,99,235,.2);
-}
-
-.current{
-  background:linear-gradient(145deg,#54151B,#2A0B0E);
-  border:1px solid #EF4444;
-  box-shadow:0 5px 16px rgba(220,38,38,.18);
-}
-
-.withdrawn{
-  background:linear-gradient(145deg,#172554,#0F172A);
-  border:1px solid #60A5FA;
-  box-shadow:0 5px 16px rgba(37,99,235,.18);
-}
-
-.bal-title{
-  font-size:9.5px;
-  font-weight:800;
-  color:#CBD5E1;
-  line-height:1.25;
-}
-
-.bal-amount{
-  font-size:15px;
-  font-weight:900;
-  color:#fff;
-  margin-top:6px;
-}
-
-.current .bal-amount{
-  color:#FCA5A5;
-}
-
-.withdrawn .bal-amount{
-  color:#93C5FD;
-}
-
-.withdraw-btn{
-  background:linear-gradient(135deg,#EF4444,#B91C1C);
-  color:#fff;
-
-  border:0;
-  border-radius:14px;
-
-  padding:7px 5px;
-
-  font-size:10px;
-  font-weight:900;
-  text-align:center;
-
-  margin-top:7px;
-}
-
-
-/* =========================================================
-   MAIN CTA
-========================================================= */
-
-.account-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  width:100%;
-
-  margin:0 0 16px;
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--primary),
-      var(--primary2)
-    );
-
-  color:#fff;
-
-  padding:15px;
-
-  border-radius:18px;
-
-  font-size:15px;
-  font-weight:900;
-
-  box-shadow:var(--blue-shadow);
-
-  transition:.2s;
-}
-
-.account-btn:hover{
-  transform:translateY(-2px);
-}
-
-
-/* =========================================================
-   SECTION HEADER
-========================================================= */
-
-.section-header{
-  padding:4px 0 12px;
-}
-
-.section-title{
-  font-size:21px;
-  font-weight:900;
-}
-
-.section-sub{
-  font-size:11.5px;
-  color:var(--muted);
-  margin-top:3px;
-}
-
-
-/* =========================================================
-   USERS
-========================================================= */
-
-.cards-container{
-  display:flex;
-  flex-direction:column;
-  gap:11px;
-}
-
-.user-card{
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:20px;
-
-  padding:13px;
-
-  display:flex;
-  flex-direction:column;
-  gap:11px;
-
-  box-shadow:var(--shadow);
-
-  transition:.25s;
-}
-
-.user-card:hover{
-  border-color:rgba(37,99,235,.45);
-  transform:translateY(-2px);
-}
-
-.user-info{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.avatar-wrapper{
-  position:relative;
-  width:66px;
-  height:66px;
-  flex:none;
-}
-
-.user-avatar{
-  width:100%;
-  height:100%;
-
-  border-radius:50%;
-
-  object-fit:cover;
-
-  border:2px solid var(--primary);
-}
-
-.status-dot{
-  position:absolute;
-
-  right:1px;
-  bottom:1px;
-
-  width:14px;
-  height:14px;
-
-  border-radius:50%;
-
-  background:#16A34A;
-
-  border:2px solid #fff;
-
-  box-shadow:0 0 9px #16A34A;
-}
-
-.user-details{
-  min-width:0;
-}
-
-.user-details h4{
-  font-size:16px;
-  font-weight:900;
-
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-
-.user-details p{
-  font-size:11.5px;
-  color:var(--muted);
-  margin-top:2px;
-}
-
-.status-online{
-  color:#16A34A;
-  font-weight:900;
-}
-
-.status-offline{
-  color:var(--red);
-  font-weight:900;
-}
-
-.price-tag{
-  font-size:12px;
-  color:var(--red-dark);
-  font-weight:900;
-  margin-top:4px;
-}
-
-.card-actions{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:7px;
-}
-
-.btn-action{
-  border:0;
-
-  border-radius:12px;
-
-  padding:9px 5px;
-
-  font-size:11px;
-  font-weight:900;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-
-  transition:.2s;
-}
-
-.btn-action:hover{
-  transform:translateY(-1px);
-}
-
-.btn-chat{
-  background:var(--primary);
-  color:#fff;
-}
-
-.btn-voice{
-  background:#EFF6FF;
-  color:#1D4ED8;
-  border:1px solid #BFDBFE;
-}
-
-.btn-video{
-  background:#FEF2F2;
-  color:#B91C1C;
-  border:1px solid #FECACA;
-}
-
-
-/* =========================================================
-   SUPPORT
-========================================================= */
-
-.support-section{
-  padding:16px 0;
-}
-
-.support-box,
-.tx-box,
-.reviews-box,
-.info-card{
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:20px;
-
-  padding:16px;
-
-  box-shadow:var(--shadow);
-}
-
-.support-title{
-  font-size:17px;
-  font-weight:900;
-}
-
-.support-sub{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:3px;
-}
-
-.support-actions{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin-top:13px;
-}
-
-.support-pill{
-  border:0;
-
-  border-radius:13px;
-
-  padding:11px 8px;
-
-  color:#fff;
-
-  font-size:11px;
-  font-weight:900;
-
-  text-align:center;
-}
-
-.wa{
-  background:linear-gradient(135deg,#128C7E,#075E54);
-}
-
-.sms{
-  background:linear-gradient(135deg,#2563EB,#1D4ED8);
-}
-
-.tx-box{
-  margin-top:12px;
-}
-
-.tx-list{
-  margin-top:10px;
-  overflow:hidden;
-}
-
-.tx-item{
-  display:flex;
-  align-items:center;
-  gap:8px;
-
-  padding:9px 0;
-
-  border-bottom:1px solid #F1F5F9;
-
-  font-size:11px;
-
-  color:var(--muted);
-}
-
-.tx-item:last-child{
-  border-bottom:0;
-}
-
-.tx-dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-
-  background:var(--primary);
-
-  flex:none;
-}
-
-.tx-dot.red{
-  background:var(--red);
-  box-shadow:0 0 7px rgba(220,38,38,.4);
-}
-
-.tx-item strong{
-  color:var(--dark);
-}
-
-
-/* =========================================================
-   REVIEWS
-========================================================= */
-
-.reviews-section{
-  padding:0 0 16px;
-}
-
-.reviews-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:10px;
-}
-
-.reviews-title h3{
-  font-size:17px;
-}
-
-.reviews-title p{
-  font-size:11px;
-  color:var(--muted);
-  margin-top:3px;
-}
-
-.rating{
-  background:#EFF6FF;
-  border:1px solid #BFDBFE;
-  border-radius:14px;
-
-  padding:8px 10px;
-
-  text-align:center;
-  flex:none;
-}
-
-.rating .score{
-  font-size:20px;
-  font-weight:900;
-  color:var(--primary);
-}
-
-.rating .stars{
-  color:var(--gold);
-  font-size:10px;
-}
-
-.rating small{
-  font-size:9px;
-  color:var(--muted);
-}
-
-.review-card{
-  margin-top:12px;
-  padding-top:12px;
-  border-top:1px solid var(--line);
-}
-
-.review-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:8px;
-}
-
-.review-user{
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-
-.review-avatar{
-  width:38px;
-  height:38px;
-
-  border-radius:50%;
-
-  background:linear-gradient(135deg,#EFF6FF,#DBEAFE);
-
-  color:var(--primary);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  font-weight:900;
-}
-
-.review-name{
-  font-size:12px;
-  font-weight:900;
-}
-
-.review-location{
-  font-size:10px;
-  color:var(--muted);
-}
-
-.review-stars{
-  color:var(--gold);
-  font-size:10px;
-}
-
-.review-text{
-  font-size:11.5px;
-  color:var(--muted);
-
-  margin-top:8px;
-
-  line-height:1.55;
-}
-
-
-/* =========================================================
-   INSTALL
-========================================================= */
-
-.bottom-install{
-  padding:0 0 16px;
-}
-
-.install-box{
-  background:
-    linear-gradient(
-      135deg,
-      #0F172A,
-      #1E3A8A,
-      #7F1D1D
-    );
-
-  color:#fff;
-
-  border-radius:20px;
-
-  padding:20px;
-
-  text-align:center;
-}
-
-.install-title{
-  font-size:17px;
-  font-weight:900;
-}
-
-.install-sub{
-  font-size:11px;
-  color:#CBD5E1;
-  margin-top:5px;
-}
-
-.install-btn{
-  margin-top:13px;
-
-  background:var(--red);
-
-  color:#fff;
-
-  border:0;
-
-  border-radius:14px;
-
-  padding:11px 18px;
-
-  font-weight:900;
-
-  font-size:12px;
-}
-
-
-/* =========================================================
-   INFO
-========================================================= */
-
-.info-section{
-  padding:0 0 16px;
-}
-
-.info-card{
-  margin-bottom:12px;
-}
-
-.info-card h3{
-  font-size:16px;
-}
-
-.info-card p{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:5px;
-}
-
-.info-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:9px;
-  margin-top:12px;
-}
-
-.mini-info{
-  background:#F8FAFC;
-
-  border:1px solid var(--line);
-
-  border-radius:14px;
-
-  padding:12px;
-}
-
-.mini-info strong{
-  font-size:13px;
-}
-
-.mini-info p{
-  font-size:10.5px;
-  margin-top:3px;
-}
-
-
-/* =========================================================
-   PRICING
-========================================================= */
-
-.pricing-section{
-  padding:0 0 16px;
-}
-
-.pricing-title{
-  text-align:center;
-  margin-bottom:12px;
-}
-
-.eyebrow{
-  font-size:10px;
-
-  color:var(--primary);
-
-  font-weight:900;
-
-  text-transform:uppercase;
-}
-
-.pricing-title h2{
-  font-size:21px;
-  margin-top:3px;
-}
-
-.pricing-title p{
-  font-size:11.5px;
-  color:var(--muted);
-}
-
-.pricing-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.price-card{
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:17px;
-
-  padding:14px;
-
-  position:relative;
-
-  box-shadow:var(--shadow);
-}
-
-.price-card.highlight{
-  border:2px solid var(--primary);
-
-  background:
-    linear-gradient(
-      180deg,
-      #fff,
-      #EFF6FF
-    );
-}
-
-.country{
-  font-size:13px;
-  font-weight:900;
-}
-
-.amount{
-  font-size:18px;
-  font-weight:900;
-  color:var(--primary);
-  margin-top:3px;
-}
-
-.note{
-  font-size:10.5px;
-  color:var(--muted);
-  margin-top:4px;
-  line-height:1.45;
-}
-
-.badges{
-  display:flex;
-  gap:4px;
-  flex-wrap:wrap;
-  margin-top:8px;
-}
-
-.badge{
-  font-size:8px;
-  font-weight:900;
-  padding:4px 6px;
-  border-radius:6px;
-  color:#fff;
-}
-
-.mpesa{
-  background:#990000;
-}
-
-.halo{
-  background:#FF6600;
-}
-
-.mixx{
-  background:#CC0000;
-}
-
-.airtel{
-  background:#E60000;
-}
-
-.price-action{
-  display:block;
-
-  margin-top:10px;
-
-  background:var(--primary);
-
-  color:#fff;
-
-  text-align:center;
-
-  padding:8px;
-
-  border-radius:10px;
-
-  font-size:10px;
-  font-weight:900;
-}
-
-.price-action:hover{
-  background:var(--red);
-}
-
-
-/* =========================================================
-   FAQ
-========================================================= */
-
-.faq-section{
-  padding:0 0 16px;
-}
-
-.faq-item{
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:13px;
-
-  margin-bottom:8px;
-
-  overflow:hidden;
-}
-
-.faq-q{
-  padding:12px;
-
-  font-size:12px;
-
-  font-weight:900;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  cursor:pointer;
-}
-
-.faq-a{
-  display:none;
-
-  padding:0 12px 12px;
-
-  font-size:11px;
-
-  color:var(--muted);
-
-  line-height:1.55;
-}
-
-.faq-item.active .faq-a{
-  display:block;
-}
-
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.final-cta{
-  margin:0 0 16px;
-
-  padding:22px 16px;
-
-  border-radius:20px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #0F172A,
-      #1E3A8A,
-      #7F1D1D
-    );
-
-  color:#fff;
-
-  text-align:center;
-}
-
-.final-cta h2{
-  font-size:20px;
-}
-
-.final-cta p{
-  font-size:11.5px;
-  color:#CBD5E1;
-  margin-top:5px;
-}
-
-.final-actions{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin-top:13px;
-}
-
-.final-actions a,
-.final-actions button{
-  border:0;
-
-  border-radius:12px;
-
-  padding:10px;
-
-  font-size:10.5px;
-
-  font-weight:900;
-
-  text-align:center;
-}
-
-.final-wa{
-  background:#25D366;
-  color:#fff;
-}
-
-.final-register{
-  background:var(--red);
-  color:#fff;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-  background:#080E1A;
-
-  color:#CBD5E1;
-
-  padding:28px 16px 18px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px;
-
-  max-width:760px;
-
-  margin:auto;
-}
-
-.footer-col h4{
-  color:#fff;
-  font-size:12px;
-}
-
-.footer-col p,
-.footer-col a{
-  font-size:10.5px;
-  color:#94A3B8;
-}
-
-.footer-col a{
-  display:block;
-  margin-top:6px;
-}
-
-.footer-col a:hover{
-  color:#60A5FA;
-}
-
-.footer-bottom{
-  max-width:760px;
-
-  margin:20px auto 0;
-
-  padding-top:14px;
-
-  border-top:1px solid #1E293B;
-
-  font-size:9.5px;
-
-  color:#64748B;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  gap:10px;
-}
-
-
-/* =========================================================
-   MODALS
-========================================================= */
-
-.modal{
-  position:fixed;
-
-  inset:0;
-
-  background:rgba(2,6,23,.82);
-
-  backdrop-filter:blur(8px);
-
-  z-index:3000;
-
-  display:none;
-
-  align-items:center;
-
-  justify-content:center;
-
-  padding:16px;
-}
-
-.modal.active{
-  display:flex;
-}
-
-.modal-card{
-  width:100%;
-
-  max-width:440px;
-
-  background:#fff;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  box-shadow:0 30px 70px rgba(0,0,0,.35);
-}
-
-.modal-head{
-  background:
-    linear-gradient(
-      135deg,
-      var(--dark),
-      var(--primary),
-      var(--red-dark)
-    );
-
-  color:#fff;
-
-  padding:14px 16px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-}
-
-.modal-head h3{
-  font-size:15px;
-}
-
-.close{
-  border:0;
-
-  background:transparent;
-
-  color:#fff;
-
-  font-size:22px;
-}
-
-.modal-body{
-  padding:17px;
-}
-
-.activation{
-  background:
-    linear-gradient(
-      135deg,
-      #0F172A,
-      #1E3A8A
-    );
-
-  color:#fff;
-
-  border-radius:17px;
-
-  padding:16px;
-
-  text-align:center;
-}
-
-.activation small{
-  font-size:9px;
-  opacity:.8;
-}
-
-.activation strong{
-  display:block;
-
-  font-size:28px;
-
-  color:#93C5FD;
-
-  margin:4px 0;
-}
-
-.modal-list{
-  margin:14px 0;
-
-  display:grid;
-
-  gap:9px;
-}
-
-.modal-list div{
-  font-size:11.5px;
-  color:var(--muted);
-}
-
-.modal-list b{
-  color:var(--dark);
-}
-
-.modal-btn{
-  display:block;
-
-  width:100%;
-
-  border:0;
-
-  border-radius:13px;
-
-  padding:12px;
-
-  text-align:center;
-
-  background:var(--primary);
-
-  color:#fff;
-
-  font-weight:900;
-
-  font-size:12px;
-}
-
-.modal-btn:hover{
-  background:var(--red);
-}
-
-.modal-btn.secondary{
-  background:#F1F5F9;
-
-  color:var(--dark);
-
-  margin-top:7px;
-}
-
-
-/* =========================================================
-   CHAT
-========================================================= */
-
-.chat-modal-card{
-  width:100%;
-
-  max-width:440px;
-
-  height:min(650px,90vh);
-
-  background:#fff;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  display:flex;
-
-  flex-direction:column;
-
-  position:relative;
-}
-
-.chat-head{
-  background:
-    linear-gradient(
-      135deg,
-      var(--dark),
-      var(--primary),
-      var(--red-dark)
-    );
-
-  color:#fff;
-
-  padding:13px 15px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-}
-
-.chat-person{
-  display:flex;
-  align-items:center;
-  gap:9px;
-}
-
-.chat-avatar{
-  width:38px;
-  height:38px;
-
-  border-radius:50%;
-
-  object-fit:cover;
-
-  border:2px solid #fff;
-}
-
-.chat-name{
-  font-size:13px;
-  font-weight:900;
-}
-
-.chat-status{
-  font-size:10px;
-  color:#93C5FD;
-}
-
-.chat-body{
-  flex:1;
-
-  overflow:auto;
-
-  background:#F8FAFC;
-
-  padding:14px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:9px;
-}
-
-.msg{
-  max-width:80%;
-
-  padding:9px 11px;
-
-  border-radius:13px;
-
-  font-size:11.5px;
-
-  line-height:1.45;
-}
-
-.msg.bot{
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  align-self:flex-start;
-
-  border-bottom-left-radius:3px;
-}
-
-.msg.user{
-  background:var(--primary);
-
-  color:#fff;
-
-  align-self:flex-end;
-
-  border-bottom-right-radius:3px;
-}
-
-.chat-footer{
-  display:flex;
-
-  gap:7px;
-
-  padding:10px;
-
-  border-top:1px solid var(--line);
-}
-
-.chat-input{
-  flex:1;
-
-  border:1px solid var(--line);
-
-  border-radius:12px;
-
-  padding:10px;
-
-  outline:none;
-
-  font-size:12px;
-}
-
-.chat-input:focus{
-  border-color:var(--primary);
-}
-
-.send{
-  width:42px;
-
-  border:0;
-
-  border-radius:12px;
-
-  background:var(--red);
-
-  color:#fff;
-}
-
-.chat-lock{
-  position:absolute;
-
-  inset:57px 0 0;
-
-  background:rgba(11,18,32,.96);
-
-  color:#fff;
-
-  display:none;
-
-  align-items:center;
-
-  justify-content:center;
-
-  flex-direction:column;
-
-  text-align:center;
-
-  padding:24px;
-
-  z-index:5;
-}
-
-.chat-lock.active{
-  display:flex;
-}
-
-.chat-lock .lock{
-  font-size:40px;
-  color:#F87171;
-}
-
-.chat-lock h3{
-  font-size:18px;
-  color:#FCA5A5;
-  margin:8px 0;
-}
-
-.chat-lock p{
-  font-size:11.5px;
-
-  color:#CBD5E1;
-
-  line-height:1.55;
-
-  margin-bottom:14px;
-}
-
-
-/* =========================================================
-   TOAST
-========================================================= */
-
-.toast{
-  position:fixed;
-
-  left:50%;
-
-  bottom:18px;
-
-  transform:translate(-50%,150%);
-
-  background:#fff;
-
-  border:1px solid #BFDBFE;
-
-  border-radius:14px;
-
-  padding:11px 14px;
-
-  display:flex;
-
-  gap:9px;
-
-  align-items:center;
-
-  box-shadow:0 15px 35px rgba(0,0,0,.18);
-
-  z-index:2500;
-
-  transition:.45s;
-
-  width:min(360px,calc(100% - 32px));
-}
-
-.toast.show{
-  transform:translate(-50%,0);
-}
-
-.toast-icon{
-  width:29px;
-  height:29px;
-
-  border-radius:50%;
-
-  background:var(--primary);
-
-  color:#fff;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-weight:900;
-
-  flex:none;
-}
-
-.toast b{
-  font-size:11px;
-}
-
-.toast small{
-  font-size:9px;
-  color:var(--muted);
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media(max-width:480px){
-
-  .header{
-    padding:9px 12px;
-  }
-
-  .svg-logo{
-    width:38px;
-    height:38px;
-  }
-
-  .brand-name{
-    font-size:17px;
-  }
-
-  .brand-slogan{
-    font-size:7px;
-  }
-
-  .brand-subtag{
-    font-size:7px;
-  }
-
-  .tanzania-date{
-    font-size:8px;
-    padding:4px 6px;
-  }
-
-  .online-badge{
-    font-size:8px;
-    padding:4px 7px;
-  }
-
-  .balance-grid{
-    gap:6px;
-  }
-
-  .bal-card{
-    min-height:116px;
-    padding:10px 7px;
-  }
-
-  .bal-amount{
-    font-size:13px;
-  }
-
-  .pricing-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-@media(min-width:761px){
-
-  body{
-    padding-bottom:0;
-  }
-
-  .container{
-    max-width:900px;
-  }
-
-  .cards-container{
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-  }
-
-  .user-card{
-    height:100%;
-  }
-
-  .pricing-grid{
-    grid-template-columns:repeat(3,1fr);
-  }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DUNISWAHILI | Namna ya Kupata Hela Mtandaoni na Elimu ya Teknolojia</title>
+    <meta name="description" content="Jifunze njia za namna ya kupata hela mtandaoni, fursa za kidijitali na kuchat na wageni kupitia DUNISWAHILI.">
+    <meta name="author" content="DUNISWAHILI">
+    <meta property="og:title" content="DUNISWAHILI | Namna ya Kupata Hela Mtandaoni">
+    <meta property="og:description" content="Pata fursa za kidijitali na tumia muda wako wa kuchat na wageni kupitia DUNISWAHILI.">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            padding-bottom: 90px;
+            color: #0f172a;
+        }
+
+        /* --- TOP HEADER BAR --- */
+        .top-header {
+            background-color: #ffffff;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .brand-logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .brand-logo-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-title {
+            font-weight: 800;
+            font-size: 20px;
+            color: #0284c7;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- TOP ACTION BUTTONS (INSTALL APP & HUDUMA) --- */
+        .top-actions-container {
+            max-width: 500px;
+            margin: 12px auto 8px auto;
+            padding: 0 12px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-pill-btn {
+            flex: 1;
+            padding: 12px 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .action-pill-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-install {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            border: none;
+        }
+
+        .btn-support {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            border: none;
+        }
+
+        /* --- ONLINE COUNTER BAR --- */
+        .online-count-bar {
+            max-width: 500px;
+            margin: 0 auto 10px auto;
+            padding: 0 12px;
+        }
+
+        .online-badge-box {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 25px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #334155;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .online-green-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+            animation: pulseDot 1.5s infinite;
+        }
+
+        @keyframes pulseDot {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 12px #22c55e; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+
+        /* --- THREE STATS CARDS --- */
+        .stats-grid-container {
+            max-width: 500px;
+            margin: 0 auto 10px auto;
+            padding: 0 12px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 14px 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .stat-card.green-bg {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            border: none;
+            cursor: default; 
+        }
+
+        .stat-card.blue-bg {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .stat-card.white-bg {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            cursor: pointer;
+        }
+
+        .stat-title {
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            opacity: 0.9;
+        }
+
+        .stat-value {
+            font-size: 13px;
+            font-weight: 900;
+        }
+
+        .stat-action-mini-btn {
+            background-color: #ffffff;
+            color: #059669;
+            border: none;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 9px;
+            font-weight: 900;
+            margin-top: 6px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* --- REGISTER ACCOUNT BUTTON --- */
+        .register-full-btn-container {
+            max-width: 500px;
+            margin: 0 auto 12px auto;
+            padding: 0 12px;
+        }
+
+        .register-full-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #0ea5e9, #2563eb, #6366f1);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: 13px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* --- WITHDRAW METHODS BADGES BOX --- */
+        .withdraw-methods-box {
+            max-width: 500px;
+            margin: 0 auto 15px auto;
+            padding: 0 12px;
+        }
+
+        .withdraw-methods-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .wm-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .wm-badges-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .wm-badge {
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- SECTION HEADING --- */
+        .section-heading-box {
+            max-width: 500px;
+            margin: 0 auto 10px auto;
+            padding: 0 12px;
+        }
+
+        .section-heading-box h3 {
+            font-size: 15px;
+            font-weight: 900;
+            color: #0f172a;
+            line-height: 1.3;
+        }
+
+        /* --- CARDS CONTAINER FOR PROFILES (GLOWING ONLINE EFFECT) --- */
+        .container {
+            padding: 0 12px;
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 2px solid #38bdf8;
+            border-radius: 20px;
+            padding: 16px;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.35), 0 4px 15px rgba(0,0,0,0.04);
+            position: relative;
+            animation: glowCardBorder 2.5s infinite ease-in-out;
+        }
+
+        @keyframes glowCardBorder {
+            0% { box-shadow: 0 0 8px rgba(56, 189, 248, 0.3), 0 4px 15px rgba(0,0,0,0.04); border-color: #38bdf8; }
+            50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.7), 0 4px 20px rgba(0,0,0,0.06); border-color: #0284c7; }
+            100% { box-shadow: 0 0 8px rgba(56, 189, 248, 0.3), 0 4px 15px rgba(0,0,0,0.04); border-color: #38bdf8; }
+        }
+
+        .card-top-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #38bdf8;
+        }
+
+        .user-meta h4 {
+            font-size: 15px;
+            color: #0f172a;
+            font-weight: 800;
+            margin-bottom: 1px;
+        }
+
+        .user-meta p {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .card-middle-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .time-pay-badge {
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 800;
+            color: #0284c7;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-tag {
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-tag.online {
+            color: #16a34a;
+            background: #dcfce7;
+            padding: 3px 8px;
+            border-radius: 8px;
+        }
+
+        .card-footer-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 12px;
+        }
+
+        .btn-chat {
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 14px;
+            font-weight: 800;
+            font-size: 12px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(14, 165, 233, 0.3);
+            text-transform: uppercase;
+        }
+
+        .topic-wants-text {
+            font-size: 11px;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        /* --- PAGINATION --- */
+        .pagination-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .page-btn {
+            background-color: #64748b;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .page-indicator {
+            background-color: #ffffff;
+            color: #0f172a;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 900;
+            font-size: 13px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* --- TESTIMONIES SECTION (30+ USHUHUDA) --- */
+        .testimonies-section {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 0 12px;
+        }
+
+        .testimonies-card-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+
+        .testimonies-title {
+            font-size: 14px;
+            font-weight: 900;
+            color: #0f172a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .testimonies-scroll {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+
+        .testimony-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #22c55e;
+            border-radius: 12px;
+            padding: 10px 12px;
+            font-size: 11px;
+            color: #334155;
+        }
+
+        .testimony-item b {
+            color: #0284c7;
+        }
+
+        /* --- FLOATING CUSTOMER ASSISTANCE BUTTON --- */
+        .floating-assist {
+            position: fixed;
+            bottom: 25px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            cursor: pointer;
+            z-index: 1000;
+            animation: floatUpDown 2.5s ease-in-out infinite;
+        }
+
+        .customer-assist-pill {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+            margin-bottom: -8px;
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .customer-assist-whatsapp-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            border: 2px solid #25d366;
+        }
+
+        .customer-assist-whatsapp-icon i {
+            color: #25d366;
+            font-size: 26px;
+        }
+
+        @keyframes floatUpDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* --- MODALS & OVERLAYS --- */
+        .custom-modal-overlay, .success-modal-overlay, .lock-modal-overlay, .support-modal-overlay, .menu-modal-overlay, .how-it-works-modal-overlay, .history-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .custom-modal-overlay.active, .success-modal-overlay.active, .lock-modal-overlay.active, .support-modal-overlay.active, .menu-modal-overlay.active, .how-it-works-modal-overlay.active, .history-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .custom-modal-card, .success-modal-card, .lock-modal-card, .support-modal-card, .menu-modal-card, .how-it-works-modal-card, .history-modal-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 380px;
+            border-radius: 24px;
+            padding: 24px 20px;
+            position: relative;
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .custom-modal-overlay.active .custom-modal-card,
+        .success-modal-overlay.active .success-modal-card,
+        .lock-modal-overlay.active .lock-modal-card,
+        .support-modal-overlay.active .support-modal-card,
+        .menu-modal-overlay.active .menu-modal-card,
+        .how-it-works-modal-overlay.active .how-it-works-modal-card,
+        .history-modal-overlay.active .history-modal-card {
+            transform: scale(1);
+        }
+
+        .custom-close-x {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: transparent;
+            border: none;
+            font-size: 18px;
+            color: #64748b;
+            cursor: pointer;
+        }
+
+        /* MENU DRAWER STYLES */
+        .menu-item-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 14px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 800;
+            font-size: 13px;
+            margin-bottom: 8px;
+            transition: background 0.2s;
+        }
+        .menu-item-link:hover {
+            background: #f1f5f9;
+        }
+
+        /* WITHDRAW FORM STYLES */
+        .withdraw-heading { font-size: 18px; font-weight: 900; color: #0f172a; margin-bottom: 2px; }
+        .withdraw-subheading { font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 14px; }
+        .withdraw-wallet-box {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 16px; padding: 16px; color: white;
+            display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;
+        }
+        .w-wallet-label { font-size: 12px; font-weight: 700; color: #94a3b8; }
+        .w-wallet-amount { font-size: 14px; font-weight: 900; color: #ffffff; }
+        .form-group-w { margin-bottom: 12px; }
+        .form-label-w { font-size: 11px; font-weight: 800; color: #334155; margin-bottom: 4px; display: block; text-transform: uppercase; }
+        .form-input-w, .form-select-w {
+            width: 100%; padding: 10px 12px; border: 1.5px solid #cbd5e1; border-radius: 12px;
+            font-size: 13px; outline: none; background-color: #f8fafc; color: #0f172a; font-weight: 700;
+        }
+        .min-withdraw-hint {
+            font-size: 10px;
+            color: #0284c7;
+            font-weight: 800;
+            margin-top: 4px;
+            display: block;
+        }
+        .withdraw-summary-box {
+            background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px;
+            padding: 10px 12px; margin-bottom: 14px; display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #475569; font-weight: 700;
+        }
+        .w-sum-row { display: flex; justify-content: space-between; }
+        .w-sum-row.net { border-top: 1px solid #e2e8f0; padding-top: 6px; font-weight: 900; color: #0f172a; font-size: 13px; }
+        .initiate-w-btn {
+            background: linear-gradient(135deg, #0ea5e9, #2563eb); color: white; border: none; width: 100%;
+            padding: 12px; border-radius: 14px; font-weight: 900; font-size: 13px; cursor: pointer; text-transform: uppercase;
+        }
+
+        /* LIVE CHAT OVERLAY */
+        .live-chat-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #ffffff; z-index: 2500; display: none; flex-direction: column;
+        }
+        .live-chat-overlay.active { display: flex; }
+        .live-chat-header {
+            background: linear-gradient(135deg, #090d16, #111827); padding: 12px 16px;
+            display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #334155;
+        }
+        .chat-back-icon-btn {
+            background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer;
+        }
+
+        /* --- KIBOX KINACHONG'AA CHA SALIO NDANI YA CHAT --- */
+        .glowing-chat-balance-box {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #0f172a);
+            border: 2px solid #38bdf8;
+            border-radius: 14px;
+            padding: 6px 14px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.6), inset 0 0 8px rgba(56, 189, 248, 0.3);
+            animation: glowPulseCard 2s infinite ease-in-out;
+            cursor: pointer;
+        }
+
+        @keyframes glowPulseCard {
+            0% { box-shadow: 0 0 8px rgba(56, 189, 248, 0.4), inset 0 0 5px rgba(56, 189, 248, 0.2); border-color: #38bdf8; }
+            50% { box-shadow: 0 0 20px rgba(56, 189, 248, 0.9), inset 0 0 12px rgba(56, 189, 248, 0.6); border-color: #7dd3fc; transform: scale(1.02); }
+            100% { box-shadow: 0 0 8px rgba(56, 189, 248, 0.4), inset 0 0 5px rgba(56, 189, 248, 0.2); border-color: #38bdf8; }
+        }
+
+        .gc-title {
+            font-size: 7px;
+            font-weight: 900;
+            color: #93c5fd;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .gc-amount {
+            font-size: 11px;
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .live-chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+        .chat-info-banner { background: #f1f5f9; color: #0f172a; padding: 12px; border-radius: 12px; font-size: 12px; text-align: center; font-weight: 700; }
+        .chat-msg { max-width: 82%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 1.5; }
+        .chat-msg.foreign { background-color: #f1f5f9; color: #0f172a; align-self: flex-start; font-weight: 600; }
+        .chat-msg.user { background: #0f172a; color: #ffffff; align-self: flex-end; font-weight: 800; }
+        .live-chat-input-bar { padding: 12px; display: flex; gap: 10px; border-top: 1px solid #e2e8f0; background: #fff; }
+        .live-chat-input { flex: 1; padding: 12px; border: 1.5px solid #cbd5e1; border-radius: 25px; outline: none; font-size: 14px; }
+        .live-chat-send-btn { background: #0f172a; color: white; border: none; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; }
+    </style>
 </head>
-
-
 <body>
 
-
-<!-- ======================================================
-     PRELOADER
-====================================================== -->
-
-<div id="preloader">
-
-  <svg class="loader-logo" viewBox="0 0 40 40">
-
-    <circle
-      cx="20"
-      cy="20"
-      fill="none"
-      r="17"
-      stroke="#2563EB"
-      stroke-opacity=".2"
-      stroke-width="2"
-    />
-
-    <path
-      d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z"
-      fill="#2563EB"
-    />
-
-    <circle cx="16.5" cy="20" fill="#fff" r="1.7"/>
-    <circle cx="20.5" cy="20" fill="#fff" r="1.7"/>
-    <circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
-
-  </svg>
-
-  <div class="loader-name">
-    DUNI<span>SWAHILI</span>
-  </div>
-
-</div>
-
-
-<!-- ======================================================
-     HEADER
-====================================================== -->
-
-<header class="header" id="top">
-
-  <a class="logo-box" href="#top">
-
-    <svg class="svg-logo" viewBox="0 0 40 40">
-
-      <circle
-        cx="20"
-        cy="20"
-        fill="none"
-        r="17"
-        stroke="#2563EB"
-        stroke-opacity=".3"
-        stroke-width="2"
-      />
-
-      <path
-        d="M8 20a12 12 0 1 1 5 9.8L8 31l1.6-4.6A11.9 11.9 0 0 1 8 20Z"
-        fill="#2563EB"
-      />
-
-      <circle cx="16.5" cy="20" fill="#fff" r="1.7"/>
-      <circle cx="20.5" cy="20" fill="#fff" r="1.7"/>
-      <circle cx="24.5" cy="20" fill="#fff" r="1.7"/>
-
-    </svg>
-
-    <div>
-
-      <div class="brand-name">
-        <span class="white">DUNI</span><span class="blue">SWAHI</span><span class="red">LI</span>
-      </div>
-
-      <div class="brand-slogan">
-        ONGEA. UNGANA. ELEWANA.
-      </div>
-
-      <div class="brand-subtag">
-        Kiswahili Ni Fursa
-      </div>
-
-    </div>
-
-  </a>
-
-
-  <div class="header-right">
-
-    <div class="tanzania-date" id="tanzaniaDate">
-      🇹🇿 Tanzania • Inapakia...
-    </div>
-
-    <div class="online-badge">
-
-      <span class="online-dot"></span>
-
-      <span id="onlineCounter">18,450</span>
-
-      online
-
-    </div>
-
-  </div>
-
-</header>
-
-
-
-<main class="container">
-
-
-<!-- ======================================================
-     TOP ACTIONS
-====================================================== -->
-
-<div class="top-actions-grid">
-
-  <button
-    class="top-action install"
-    onclick="openInstallModal()"
-  >
-    📲 Install App
-  </button>
-
-  <button
-    class="top-action support"
-    onclick="openSupportModal()"
-  >
-    🎧 Customer Assistance
-  </button>
-
-</div>
-
-
-
-<!-- ======================================================
-     DASHBOARD
-====================================================== -->
-
-<div class="balance-grid">
-
-  <div class="bal-card profit">
-
-    <div>
-
-      <div class="bal-title">
-        Mapato Yote<br>
-        (Net Profit)
-      </div>
-
-      <div class="bal-amount">
-        TZS 0
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="bal-card current">
-
-    <div>
-
-      <div class="bal-title">
-        Salio la Sasa<br>
-        (Current Balance)
-      </div>
-
-      <div class="bal-amount">
-        TZS 0
-      </div>
-
-    </div>
-
-    <a
-      class="withdraw-btn"
-      href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw"
-    >
-      Toa Pesa
-    </a>
-
-  </div>
-
-
-  <div class="bal-card withdrawn">
-
-    <div>
-
-      <div class="bal-title">
-        Pesa Iliyotolewa<br>
-        (Withdrawn)
-      </div>
-
-      <div class="bal-amount">
-        TZS 0
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<!-- ======================================================
-     ACCOUNT CTA
-====================================================== -->
-
-<a
-  class="account-btn"
-  href="https://moxeraagencies.com/register?ref=Code45"
-  target="_blank"
-  rel="noopener"
->
-  🚀 Fungua Account kwa 16,000 Hapa
-</a>
-
-
-
-<!-- ======================================================
-     FOREIGNERS
-====================================================== -->
-
-<section id="foreigners">
-
-  <div class="section-header">
-
-    <div class="section-title">
-      Wazungu
-    </div>
-
-    <div class="section-sub">
-      Waliopo mtandaoni hujibu chati. Wasiokuwepo hawajibu.
-    </div>
-
-  </div>
-
-  <div
-    class="cards-container"
-    id="cardsContainer"
-  ></div>
-
-</section>
-
-
-
-<!-- ======================================================
-     SUPPORT
-====================================================== -->
-
-<section class="support-section">
-
-  <div class="support-box">
-
-    <div class="support-title">
-      Huduma kwa Wateja
-    </div>
-
-    <div class="support-sub">
-      Una swali au changamoto? Wasiliana nasi moja kwa moja.
-    </div>
-
-    <div class="support-actions">
-
-      <a
-        class="support-pill wa"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        💬 WhatsApp Channel
-      </a>
-
-      <a
-        class="support-pill sms"
-        href="https://wa.me/255725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI"
-      >
-        ✉️ Tuma Ujumbe WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="tx-box">
-
-    <div class="support-title">
-      Taarifa za Hivi Karibuni
-    </div>
-
-    <div class="tx-list" id="txList"></div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     REVIEWS
-====================================================== -->
-
-<section
-  class="reviews-section"
-  id="testimonials"
->
-
-  <div class="reviews-box">
-
-    <div class="reviews-top">
-
-      <div class="reviews-title">
-
-        <h3>
-          Rating na Maoni ya Watumiaji
-        </h3>
-
-        <p>
-          Maoni kutoka kwa wanachama wa DUNISWAHILI
-        </p>
-
-      </div>
-
-
-      <div class="rating">
-
-        <div class="score">
-          4.7
+    <!-- TOP HEADER -->
+    <header class="top-header">
+        <div class="brand-logo-area">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" class="brand-logo-img">
+            <h1 class="brand-title">DUNISWAHILI</h1>
         </div>
-
-        <div class="stars">
-          ★★★★★
+        <div style="font-size: 18px; color: #0284c7; cursor: pointer;" onclick="openMenuModal()">
+            <i class="fa-solid fa-bars"></i>
         </div>
-
-        <small>
-          1308+ maoni
-        </small>
-
-      </div>
-
-    </div>
-
-    <div id="reviews"></div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     INSTALL
-====================================================== -->
-
-<section class="bottom-install">
-
-  <div class="install-box">
-
-    <div class="install-title">
-      Weka DUNISWAHILI kwenye simu yako
-    </div>
-
-    <div class="install-sub">
-      Gusa hapa ili app iwe rahisi kufunguka muda wowote.
-    </div>
-
-    <button
-      class="install-btn"
-      onclick="openInstallModal()"
-    >
-      📲 Install App
-    </button>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     INFO
-====================================================== -->
-
-<section
-  class="info-section"
-  id="community"
->
-
-  <div class="info-card">
-
-    <div class="eyebrow">
-      KWANINI DUNISWAHILI?
-    </div>
-
-    <h3>
-      Kwanini Uendelee Kulia Hali Ngumu Wakati Una Simu?
-    </h3>
-
-    <p>
-      Kila siku unatumia bando kwenye mtandao bila kuingiza pesa.
-      DuniSwahili inakupa fursa ya kutumia muda wako wa kuchat
-      na wageni kupitia mfumo.
-    </p>
-
-
-    <div class="info-grid">
-
-      <div class="mini-info">
-
-        <strong>
-          💰 Chat &amp; Tengeneza Pesa
-        </strong>
-
-        <p>
-          Pata malipo kulingana na mfumo na masharti ya huduma.
-        </p>
-
-      </div>
-
-
-      <div class="mini-info">
-
-        <strong>
-          🌐 Mtandao wa Kimataifa
-        </strong>
-
-        <p>
-          Kutana na wageni kutoka nchi mbalimbali.
-        </p>
-
-      </div>
-
-
-      <div class="mini-info">
-
-        <strong>
-          📱 Rahisi Kushiriki
-        </strong>
-
-        <p>
-          Unachohitaji ni simu yako na internet.
-        </p>
-
-      </div>
-
-
-      <div class="mini-info">
-
-        <strong>
-          🔒 Usalama
-        </strong>
-
-        <p>
-          Data na taarifa zako zinalindwa kwa mujibu wa mfumo.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     PRICING
-====================================================== -->
-
-<section
-  class="pricing-section"
-  id="pricing"
->
-
-  <div class="pricing-title">
-
-    <div class="eyebrow">
-      💳 ACTIVATION YA KILA NCHI
-    </div>
-
-    <h2>
-      Bei ya Usajili kwa Kila Nchi
-    </h2>
-
-    <p>
-      Chagua nchi yako kuona gharama ya ku-activate account yako.
-    </p>
-
-  </div>
-
-
-  <div class="pricing-grid">
-
-
-    <div class="price-card highlight">
-
-      <div class="country">
-        🇹🇿 Tanzania
-      </div>
-
-      <div class="amount">
-        TZS 16,000
-      </div>
-
-      <div class="note">
-        Automatic kupitia M-Pesa, HaloPesa,
-        Mixx by Yas au Airtel Money.
-      </div>
-
-      <div class="badges">
-
-        <span class="badge mpesa">
-          M-Pesa
-        </span>
-
-        <span class="badge halo">
-          HaloPesa
-        </span>
-
-        <span class="badge mixx">
-          Mixx
-        </span>
-
-        <span class="badge airtel">
-          Airtel
-        </span>
-
-      </div>
-
-      <button
-        class="price-action trigger-popup"
-      >
-        Lipia Automatic Sasa
-      </button>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="country">
-        🇰🇪 Kenya
-      </div>
-
-      <div class="amount">
-        KES 700
-      </div>
-
-      <div class="note">
-        Lipia kupitia M-Pesa kisha tuma taarifa WhatsApp.
-      </div>
-
-      <a
-        class="price-action"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        Tuma Taarifa WhatsApp
-      </a>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="country">
-        🇺🇬 Uganda
-      </div>
-
-      <div class="amount">
-        UGX 23,000
-      </div>
-
-      <div class="note">
-        MTN Mobile Money / Airtel Money,
-        kisha tuma ushahidi.
-      </div>
-
-      <a
-        class="price-action"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        Tuma Taarifa WhatsApp
-      </a>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="country">
-        🇷🇼 Rwanda
-      </div>
-
-      <div class="amount">
-        RWF 8,000
-      </div>
-
-      <div class="note">
-        Lipia kupitia MTN MoMo na tuma risiti WhatsApp.
-      </div>
-
-      <a
-        class="price-action"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        Tuma Taarifa WhatsApp
-      </a>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="country">
-        🇧🇮 Burundi
-      </div>
-
-      <div class="amount">
-        BIF 25,000
-      </div>
-
-      <div class="note">
-        Lumicash/Ecocash kisha tuma uthibitisho.
-      </div>
-
-      <a
-        class="price-action"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        Tuma Taarifa WhatsApp
-      </a>
-
-    </div>
-
-
-    <div class="price-card">
-
-      <div class="country">
-        🇲🇼 Malawi
-      </div>
-
-      <div class="amount">
-        MWK 12,000
-      </div>
-
-      <div class="note">
-        Lipia kisha tuma ushahidi wa malipo WhatsApp.
-      </div>
-
-      <a
-        class="price-action"
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        Tuma Taarifa WhatsApp
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     FAQ
-====================================================== -->
-
-<section
-  class="faq-section"
-  id="faq"
->
-
-  <div class="pricing-title">
-
-    <div class="eyebrow">
-      ❓ MASWALI
-    </div>
-
-    <h2>
-      Maswali Yanayoulizwa Mara kwa Mara
-    </h2>
-
-  </div>
-
-
-  <div class="faq-item">
-
-    <div class="faq-q">
-      1. Je, nitatoaje pesa?
-      <span>+</span>
-    </div>
-
-    <div class="faq-a">
-      Unaweza kutoa pesa kupitia njia za malipo
-      zinazopatikana kwenye mfumo wa account yako,
-      kulingana na masharti ya huduma.
-    </div>
-
-  </div>
-
-
-  <div class="faq-item">
-
-    <div class="faq-q">
-      2. Je, kuna ada ya kila mwezi?
-      <span>+</span>
-    </div>
-
-    <div class="faq-a">
-      Taarifa za ada zinaonyeshwa kwenye ukurasa huu
-      na zinaweza kubadilika kulingana na masharti
-      ya huduma.
-    </div>
-
-  </div>
-
-
-  <div class="faq-item">
-
-    <div class="faq-q">
-      3. Nisipojua Kiingereza vizuri?
-      <span>+</span>
-    </div>
-
-    <div class="faq-a">
-      Mfumo unaweza kusaidia mawasiliano kati ya
-      Kiswahili na Kiingereza kupitia translation
-      pale huduma hiyo inapopatikana.
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- ======================================================
-     FINAL CTA
-====================================================== -->
-
-<section
-  class="final-cta"
-  id="contact"
->
-
-  <h2>
-    Wageni Wapo Online Sasa Hivi!
-  </h2>
-
-  <p>
-    Fungua account yako na uanze kutumia mfumo.
-  </p>
-
-  <div class="final-actions">
-
-    <a
-      class="final-wa"
-      href="https://wa.me/255725962119"
-    >
-      WhatsApp 0725962119
-    </a>
-
-    <button
-      class="final-register trigger-popup"
-    >
-      🚀 Fungua Account
-    </button>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- ======================================================
-     FOOTER
-====================================================== -->
-
-<footer>
-
-  <div class="footer-grid">
-
-    <div class="footer-col">
-
-      <h4>
-        DUNISWAHILI
-      </h4>
-
-      <p style="margin-top:6px">
-        Platform ya kuunganisha Waafrika na wageni
-        wa kimataifa kwa ajili ya mawasiliano
-        na huduma za kidijitali.
-      </p>
-
-    </div>
-
-
-    <div class="footer-col">
-
-      <h4>
-        Ukurasa
-      </h4>
-
-      <a href="#top">
-        Mwanzo
-      </a>
-
-      <a href="#foreigners">
-        Wazungu
-      </a>
-
-      <a href="#pricing">
-        Ada kwa Nchi
-      </a>
-
-      <a href="#faq">
-        Maswali
-      </a>
-
-    </div>
-
-
-    <div class="footer-col">
-
-      <h4>
-        Mawasiliano
-      </h4>
-
-      <a href="https://wa.me/255725962119">
-        WhatsApp 0725962119
-      </a>
-
-      <a
-        href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-        target="_blank"
-        rel="noopener"
-      >
-        WhatsApp Channel
-      </a>
-
-    </div>
-
-
-    <div class="footer-col">
-
-      <h4>
-        Usajili
-      </h4>
-
-      <a
-        href="https://moxeraagencies.com/register?ref=Code45"
-        target="_blank"
-        rel="noopener"
-      >
-        Fungua Account
-      </a>
-
-      <a
-        href="https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw"
-      >
-        Toa Pesa
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="footer-bottom">
-
-    <span>
-      © 2026 DUNISWAHILI.SITE — Haki Zote Zimehifadhiwa.
-    </span>
-
-    <span>
-      Tanzania 🇹🇿
-    </span>
-
-  </div>
-
-</footer>
-
-
-
-<!-- ======================================================
-     ACTIVATION MODAL
-====================================================== -->
-
-<div
-  class="modal"
-  id="activationModal"
->
-
-  <div class="modal-card">
-
-    <div class="modal-head">
-
-      <h3>
-        ✨ DUNISWAHILI VIP ACTIVATION
-      </h3>
-
-      <button
-        class="close"
-        onclick="closeModal('activationModal')"
-      >
-        &times;
-      </button>
-
-    </div>
-
-
-    <div class="modal-body">
-
-      <div class="activation">
-
-        <small>
-          Gharama ya Usajili / Activation
-        </small>
-
-        <strong>
-          TZS 16,000
-        </strong>
-
-        <small>
-          Ada ya mara moja · Hakuna makato ya mwezi
-        </small>
-
-      </div>
-
-
-      <div class="modal-list">
-
-        <div>
-          ✓ <b>Chat na Wageni:</b>
-          Lipwa kulingana na mfumo wa huduma.
-        </div>
-
-        <div>
-          ✓ <b>Withdrawal:</b>
-          Tumia njia za malipo zinazopatikana.
-        </div>
-
-        <div>
-          ✓ <b>Auto Translator:</b>
-          Saidia mawasiliano kati ya Kiswahili
-          na Kiingereza pale inapopatikana.
-        </div>
-
-      </div>
-
-
-      <a
-        class="modal-btn"
-        href="https://moxeraagencies.com/register?ref=Code45"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 Lipia TZS 16,000 Uanze Sasa
-      </a>
-
-
-      <button
-        class="modal-btn secondary"
-        onclick="closeModal('activationModal')"
-      >
-        Baadae
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<!-- ======================================================
-     CHAT MODAL
-====================================================== -->
-
-<div
-  class="modal"
-  id="chatModal"
->
-
-  <div class="chat-modal-card">
-
-    <div class="chat-head">
-
-      <div class="chat-person">
-
-        <img
-          id="chatAvatar"
-          class="chat-avatar"
-          src=""
-          alt=""
-        >
-
-        <div>
-
-          <div
-            id="chatName"
-            class="chat-name"
-          >
-            Foreigner
-          </div>
-
-          <div
-            id="chatStatus"
-            class="chat-status"
-          >
-            Online
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <button
-        class="close"
-        onclick="closeChatModal()"
-      >
-        &times;
-      </button>
-
-    </div>
-
-
-    <div
-      class="chat-body"
-      id="chatBody"
-    ></div>
-
-
-    <div
-      class="chat-footer"
-      id="chatFooter"
-    >
-
-      <input
-        id="chatInput"
-        class="chat-input"
-        placeholder="Andika ujumbe wako hapa..."
-      >
-
-      <button
-        class="send"
-        onclick="sendMessage()"
-      >
-        ➤
-      </button>
-
-    </div>
-
-
-    <div
-      class="chat-lock"
-      id="chatLock"
-    >
-
-      <div class="lock">
-        🔥
-      </div>
-
-      <h3>
-        🎉 Mgeni Anataka Kuendelea Nawe!
-      </h3>
-
-      <p>
-        Amependezwa na mazungumzo yenu.
-        Kamilisha account yako kwa TZS 16,000
-        ili kuendelea na mfumo.
-      </p>
-
-      <a
-        class="modal-btn"
-        href="https://moxeraagencies.com/register?ref=Code45"
-        target="_blank"
-        rel="noopener"
-      >
-        🚀 Fungua Akaunti &amp; Anza
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<!-- ======================================================
-     INSTALL MODAL
-====================================================== -->
-
-<div
-  class="modal"
-  id="installModal"
->
-
-  <div class="modal-card">
-
-    <div class="modal-head">
-
-      <h3>
-        📲 Weka DUNISWAHILI kwenye Home Screen
-      </h3>
-
-      <button
-        class="close"
-        onclick="closeModal('installModal')"
-      >
-        &times;
-      </button>
-
-    </div>
-
-
-    <div class="modal-body">
-
-      <div class="modal-list">
-
-        <div>
-          1. Gusa <b>INSTALL NOW</b> hapa chini.
-        </div>
-
-        <div>
-          2. Browser ikikuuliza thibitisha
-          <b>Install</b> au <b>Add</b>.
-        </div>
-
-        <div>
-          3. App itaonekana kwenye home screen.
-        </div>
-
-      </div>
-
-
-      <button
-        class="modal-btn"
-        onclick="executeInstall()"
-      >
-        INSTALL NOW
-      </button>
-
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<!-- ======================================================
-     SUPPORT MODAL
-====================================================== -->
-
-<div
-  class="modal"
-  id="supportModal"
->
-
-  <div class="modal-card">
-
-    <div class="modal-head">
-
-      <h3>
-        Customer Assistance
-      </h3>
-
-      <button
-        class="close"
-        onclick="closeModal('supportModal')"
-      >
-        &times;
-      </button>
-
-    </div>
-
-
-    <div class="modal-body">
-
-      <p
-        style="font-size:12px;color:var(--muted)"
-      >
-        Kama unahitaji msaada au una swali,
-        chagua njia mojawapo hapa chini.
-      </p>
-
-
-      <div class="modal-list">
-
-        <a
-          class="modal-btn"
-          href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r"
-          target="_blank"
-          rel="noopener"
-        >
-          💬 WhatsApp Channel
+    </header>
+
+    <!-- INSTALL APP & HUDUMA KWA WATEJA BUTTONS -->
+    <div class="top-actions-container">
+        <a href="https://moxeraagencies.com/register?ref=Code45" target="_blank" class="action-pill-btn btn-install">
+            <i class="fa-solid fa-cloud-arrow-down"></i> Install App
         </a>
-
-
-        <a
-          class="modal-btn"
-          style="margin-top:7px;background:#EFF6FF;color:#1D4ED8"
-          href="https://wa.me/255725962119?body=Hellow%20Nina%20Swali%20Kuhusu%20DUNISWAHILI"
-        >
-          ✉️ Tuma WhatsApp
-        </a>
-
-      </div>
-
-
-      <button
-        class="modal-btn secondary"
-        onclick="closeModal('supportModal')"
-      >
-        Funga
-      </button>
-
+        <button class="action-pill-btn btn-support" onclick="openSupportModal()">
+            <i class="fa-solid fa-headset"></i> Huduma kwa Wateja
+        </button>
     </div>
 
-  </div>
-
-</div>
-
-
-
-<!-- ======================================================
-     TOAST
-====================================================== -->
-
-<div
-  class="toast"
-  id="toast"
->
-
-  <div class="toast-icon">
-    ✓
-  </div>
-
-  <div>
-
-    <b id="toastText">
-      Taarifa ya shughuli imeingia
-    </b>
-
-    <br>
-
-    <small>
-      DUNISWAHILI • Shughuli mpya
-    </small>
-
-  </div>
-
-</div>
-
-
-<script>
-
-/* =========================================================
-   URLS
-========================================================= */
-
-const registerURL =
-"https://moxeraagencies.com/register?ref=Code45";
-
-const loginURL =
-"https://moxeraagencies.com/login?redirect=https://moxeraagencies.com/Withdraw";
-
-
-/* =========================================================
-   TANZANIA DATE
-========================================================= */
-
-function updateTanzaniaDate(){
-
-  const dateElement =
-    document.getElementById("tanzaniaDate");
-
-  const now =
-    new Date();
-
-  const formatter =
-    new Intl.DateTimeFormat(
-      "sw-TZ",
-      {
-        timeZone:"Africa/Dar_es_Salaam",
-        day:"2-digit",
-        month:"short",
-        year:"numeric"
-      }
-    );
-
-  const timeFormatter =
-    new Intl.DateTimeFormat(
-      "sw-TZ",
-      {
-        timeZone:"Africa/Dar_es_Salaam",
-        hour:"2-digit",
-        minute:"2-digit",
-        hour12:false
-      }
-    );
-
-  dateElement.textContent =
-    "🇹🇿 Tanzania • " +
-    formatter.format(now) +
-    " • " +
-    timeFormatter.format(now);
-
-}
-
-updateTanzaniaDate();
-
-setInterval(
-  updateTanzaniaDate,
-  30000
-);
-
-
-/* =========================================================
-   PROFILES
-========================================================= */
-
-const profiles=[
-
-{
- name:"Wayne Martin",
- age:31,
- flag:"🇨🇭",
- country:"Switzerland",
- photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"David Smith",
- age:34,
- flag:"🇬🇧",
- country:"United Kingdom",
- photo:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Robert Taylor",
- age:29,
- flag:"🇺🇸",
- country:"United States",
- photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Alex Mueller",
- age:32,
- flag:"🇩🇪",
- country:"Germany",
- photo:"https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Mark Wilson",
- age:36,
- flag:"🇨🇦",
- country:"Canada",
- photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Marco Rossi",
- age:30,
- flag:"🇮🇹",
- country:"Italy",
- photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Lukas Weber",
- age:28,
- flag:"🇩🇪",
- country:"Germany",
- photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Sven Jansen",
- age:33,
- flag:"🇳🇱",
- country:"Netherlands",
- photo:"https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Lars Hansen",
- age:35,
- flag:"🇳🇴",
- country:"Norway",
- photo:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Oliver Brown",
- age:27,
- flag:"🇬🇧",
- country:"England",
- photo:"https://images.unsplash.com/photo-1521119989659-a83eee488004?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Daniel Evans",
- age:30,
- flag:"🇦🇺",
- country:"Australia",
- photo:"https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Liam Scott",
- age:32,
- flag:"🇮🇪",
- country:"Ireland",
- photo:"https://images.unsplash.com/photo-1544717305-2782549b5136?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Ethan Hunt",
- age:29,
- flag:"🇺🇸",
- country:"United States",
- photo:"https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Noah Garcia",
- age:31,
- flag:"🇪🇸",
- country:"Spain",
- photo:"https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Lucas Martinez",
- age:28,
- flag:"🇫🇷",
- country:"France",
- photo:"https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Mason Lee",
- age:34,
- flag:"🇨🇭",
- country:"Switzerland",
- photo:"https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Sarah Jenkins",
- age:27,
- flag:"🇬🇧",
- country:"United Kingdom",
- photo:"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Julie Dubois",
- age:29,
- flag:"🇫🇷",
- country:"France",
- photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Chloe Bennett",
- age:26,
- flag:"🇨🇦",
- country:"Canada",
- photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Elena Gomez",
- age:28,
- flag:"🇪🇸",
- country:"Spain",
- photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Emma Lindqvist",
- age:25,
- flag:"🇸🇪",
- country:"Sweden",
- photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Sophie Clark",
- age:30,
- flag:"🇬🇧",
- country:"England",
- photo:"https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Anna Fischer",
- age:31,
- flag:"🇩🇪",
- country:"Germany",
- photo:"https://images.unsplash.com/photo-1529626455594-ff0802cfb7e?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Laura Miller",
- age:29,
- flag:"🇺🇸",
- country:"United States",
- photo:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Mia Wagner",
- age:27,
- flag:"🇩🇪",
- country:"Germany",
- photo:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Charlotte Roy",
- age:24,
- flag:"🇫🇷",
- country:"France",
- photo:"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=300&auto=format&fit=crop&q=80"
-},
-
-{
- name:"Amelia Davies",
- age:26,
- flag:"🇬🇧",
- country:"England",
- photo:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop&q=80"
-}
-
-];
-
-
-/* =========================================================
-   PRICES
-========================================================= */
-
-const prices=[
-
-["Saa moja","TZS 120,000"],
-["Dakika 30","TZS 50,000"],
-["Dakika 45","TZS 80,000"],
-["Saa moja","TZS 150,000"],
-["Dakika 30","TZS 65,000"],
-["Saa moja","TZS 90,000"],
-["Dakika 40","TZS 75,000"],
-["Saa moja","TZS 110,000"]
-
-];
-
-
-let cardsData=[];
-let activeUser=null;
-let chatStep=0;
-let deferredPrompt=null;
-
-
-/* =========================================================
-   SHUFFLE
-========================================================= */
-
-function shuffle(a){
-
-  return [...a]
-    .sort(
-      () => Math.random() - .5
-    );
-
-}
-
-
-/* =========================================================
-   RENDER USERS
-========================================================= */
-
-function renderCards(){
-
-  const box =
-    document.getElementById("cardsContainer");
-
-  box.innerHTML="";
-
-
-  cardsData =
-    shuffle(profiles)
-    .slice(0,16)
-    .map((p,i)=>{
-
-      const pr =
-        prices[
-          Math.floor(
-            Math.random()*prices.length
-          )
+    <!-- ONLINE COUNTER BAR -->
+    <div class="online-count-bar">
+        <div class="online-badge-box">
+            <span class="online-green-dot"></span>
+            <span>Wazungu <span id="liveForeignerCount">3,490</span> wapo mtandaoni</span>
+        </div>
+    </div>
+
+    <!-- THREE STATS CARDS -->
+    <div class="stats-grid-container">
+        <div class="stat-card green-bg">
+            <div class="stat-title"><i class="fa-solid fa-wallet"></i> Salio la Sasa</div>
+            <div class="stat-value" id="headerBalanceAmount">TZS 0</div>
+            <div style="font-size: 9px; font-weight: 700; opacity: 0.9; margin-top: 4px;">Salio Lako</div>
+        </div>
+        
+        <div class="stat-card blue-bg" onclick="openWithdrawModal()">
+            <div class="stat-title"><i class="fa-solid fa-sack-dollar"></i> Withdraw</div>
+            <div class="stat-value">Toa Pesa</div>
+            <button class="stat-action-mini-btn" style="color: #2563eb;">BONYEZA</button>
+        </div>
+
+        <div class="stat-card white-bg" onclick="openHistoryModal()" title="Bonyeza kuona historia ya miamala">
+            <div class="stat-title" style="color: #64748b;"><i class="fa-solid fa-receipt"></i> Pesa Zilizotolewa</div>
+            <div class="stat-value" id="statWithdrawnTotal">TZS 0</div>
+            <button class="stat-action-mini-btn" style="color: #0284c7; background: #e0f2fe;">Tazama Risiti</button>
+        </div>
+    </div>
+
+    <!-- FUNGUA ACCOUNT HAPA BUTTON (REFERRAL LINK) -->
+    <div class="register-full-btn-container">
+        <a href="https://moxeraagencies.com/register?ref=Code45" target="_blank" class="register-full-btn">
+            Fungua Account kwa 16,000 Hapa
+        </a>
+    </div>
+
+    <!-- WITHDRAW METHODS BADGES -->
+    <div class="withdraw-methods-box">
+        <div class="withdraw-methods-card">
+            <div class="wm-title">
+                <i class="fa-solid fa-bolt" style="color: #0ea5e9;"></i> Njia Rahisi za kutoa pesa (Withdraw) zako Automatically
+            </div>
+            <div class="wm-badges-grid">
+                <span class="wm-badge"><i class="fa-solid fa-mobile-screen" style="color: #dc2626;"></i> Mpesa</span>
+                <span class="wm-badge"><i class="fa-solid fa-mobile-screen" style="color: #2563eb;"></i> Mixx by Yas</span>
+                <span class="wm-badge"><i class="fa-solid fa-mobile-screen" style="color: #ea580c;"></i> Halopesa</span>
+                <span class="wm-badge"><i class="fa-solid fa-mobile-screen" style="color: #dc2626;"></i> Airtel Money</span>
+                <span class="wm-badge"><i class="fa-solid fa-building-columns" style="color: #1e293b;"></i> NMB</span>
+                <span class="wm-badge"><i class="fa-solid fa-building-columns" style="color: #0284c7;"></i> CRDB</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION HEADING -->
+    <div class="section-heading-box">
+        <h3>Wazungu wanaotaka kujifunza Kiswahili</h3>
+    </div>
+
+    <!-- MAIN CARDS CONTAINER -->
+    <div class="container" id="cardsContainer"></div>
+
+    <!-- PAGINATION BAR -->
+    <div class="pagination-bar" id="paginationBar">
+        <button class="page-btn" id="prevBtn" onclick="changePage(-1)"><i class="fa-solid fa-arrow-left"></i> Iliyopita</button>
+        <div class="page-indicator" id="pageIndicator">Peji 1 / 5</div>
+        <button class="page-btn" id="nextBtn" onclick="changePage(1)">Peji Ijayo <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- TESTIMONIES SECTION (30+ USHUHUDA) -->
+    <div class="testimonies-section">
+        <div class="testimonies-card-box">
+            <div class="testimonies-title">
+                <i class="fa-solid fa-comments" style="color: #22c55e;"></i> Ushuhuda wa Watumiaji (30+)
+            </div>
+            <div class="testimonies-scroll" id="testimoniesScrollContainer"></div>
+        </div>
+    </div>
+
+    <!-- FLOATING CUSTOMER ASSISTANCE BUTTON -->
+    <div class="floating-assist" onclick="openSupportModal()">
+        <div class="customer-assist-pill">
+            <i class="fa-solid fa-headset"></i> Huduma kwa Wateja
+        </div>
+        <div class="customer-assist-whatsapp-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+    </div>
+
+    <!-- MENU DRAWER MODAL -->
+    <div class="menu-modal-overlay" id="menuModal">
+        <div class="menu-modal-card">
+            <button class="custom-close-x" onclick="closeMenuModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 16px; font-weight: 900; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-bars" style="color: #0284c7;"></i> Menyu Kuu
+            </div>
+            
+            <a href="#" onclick="closeMenuModal(); window.scrollTo({top:0, behavior:'smooth'}); return false;" class="menu-item-link">
+                <i class="fa-solid fa-house" style="color: #0284c7; width: 20px;"></i> Home
+            </a>
+
+            <a href="#" onclick="closeMenuModal(); openHowItWorksModal(); return false;" class="menu-item-link">
+                <i class="fa-solid fa-circle-question" style="color: #2563eb; width: 20px;"></i> Jinsi Inavyofanya Kazi
+            </a>
+
+            <a href="#" onclick="closeMenuModal(); openSupportModal(); return false;" class="menu-item-link">
+                <i class="fa-solid fa-headset" style="color: #22c55e; width: 20px;"></i> Huduma kwa Wateja
+            </a>
+
+            <a href="https://moxeraagencies.com/register?ref=Code45" target="_blank" class="menu-item-link" onclick="closeMenuModal()">
+                <i class="fa-solid fa-user-plus" style="color: #6366f1; width: 20px;"></i> Jisajili Hapa (Register)
+            </a>
+        </div>
+    </div>
+
+    <!-- HOW IT WORKS MODAL -->
+    <div class="how-it-works-modal-overlay" id="howItWorksModal">
+        <div class="how-it-works-modal-card">
+            <button class="custom-close-x" onclick="closeHowItWorksModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 18px; font-weight: 900; color: #0f172a; margin-bottom: 6px;">Jinsi Inavyofanya Kazi</div>
+            <div style="font-size: 11px; color: #64748b; margin-bottom: 14px; font-weight: 600;">Jifunze jinsi ya kutengeneza pesa kupitia DUNISWAHILI</div>
+            
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 12px; color: #334155; line-height: 1.5; text-align: left; max-height: 350px; overflow-y: auto;">
+                <div style="background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <b>1. Chagua Mzungu / Wageni:</b> Kwenye ukurasa wa mwanzo, chagua mgeni yeyote yupo online anayetaka kufundishwa Kiswahili kulingana na mada yake.
+                </div>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <b>2. Anzisha Mazungumzo (Start Chat):</b> Mgeni atakuuliza maswali taratibu na salio litaongezeka kidogo kidogo kwa kila ujumbe.
+                </div>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <b>3. Jaza Salio Kamili:</b> Unapomaliza kujibu maswali yote hadi mwisho, kiasi kamili cha kadi hutimia kwenye akaunti yako.
+                </div>
+                <div style="background: #f8fafc; padding: 10px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <b>4. Toa Pesa (Withdraw):</b> Ukiwa na kiasi cha kuanzia TZS 5,000 na kuendelea, unaweza kubonyeza kitufe cha Toa Pesa kutoa pesa zako kwenda kwenye namba yako ya simu!
+                </div>
+            </div>
+
+            <button class="initiate-w-btn" style="margin-top: 15px;" onclick="closeHowItWorksModal()">Sawa, Nimwelewa</button>
+        </div>
+    </div>
+
+    <!-- LIVE CHAT OVERLAY -->
+    <div class="live-chat-overlay" id="liveChatOverlay">
+        <div class="live-chat-header">
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <button class="chat-back-icon-btn" onclick="closeLiveChat()"><i class="fa-solid fa-arrow-left"></i></button>
+                <div>
+                    <div style="font-size: 13px; font-weight: 800; color: #fff;" id="chatHeaderName">DUNISWAHILI</div>
+                    <div style="font-size: 10px; color: #34d399;" id="chatHeaderStatus">online</div>
+                </div>
+            </div>
+
+            <div class="glowing-chat-balance-box" onclick="openWithdrawModal()">
+                <div class="gc-title"><i class="fa-solid fa-wallet"></i> Salio Lako</div>
+                <div class="gc-amount" id="chatHeaderBalanceAmount">TZS 0</div>
+            </div>
+        </div>
+        <div class="live-chat-messages" id="chatMessagesContainer"></div>
+        <div class="live-chat-input-bar">
+            <input type="text" class="live-chat-input" id="userMessageInput" placeholder="Andika ujumbe wako..." onkeypress="handleKeyPress(event)">
+            <button class="live-chat-send-btn" onclick="sendUserMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- WITHDRAW MODAL -->
+    <div class="custom-modal-overlay" id="withdrawModal">
+        <div class="custom-modal-card">
+            <button class="custom-close-x" onclick="closeWithdrawModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="withdraw-heading">Toa Pesa</div>
+            <div class="withdraw-subheading">Toa pesa kupitia mfumo wa DUNISWAHILI</div>
+            <div class="withdraw-wallet-box">
+                <div class="w-wallet-label">Salio la Akaunti</div>
+                <div class="w-wallet-amount" id="modalBalanceDisplay">0.00 TZS</div>
+            </div>
+            <div class="form-group-w">
+                <label class="form-label-w">Namba ya Simu</label>
+                <input type="text" id="withdrawPhoneInput" class="form-input-w" value="255725962119">
+            </div>
+            <div class="form-group-w">
+                <label class="form-label-w">Kiasi cha Kutoa</label>
+                <input type="number" class="form-input-w" id="withdrawInputAmount" placeholder="Weka kiasi..." oninput="calculateFee(this)">
+                <span class="min-withdraw-hint">mini 5,000 T shillings</span>
+            </div>
+            <div class="withdraw-summary-box">
+                <div class="w-sum-row"><span>Kiasi:</span><span id="sumWithdrawAmt">0.00 TZS</span></div>
+                <div class="w-sum-row"><span>Makato:</span><span id="sumFeeAmt">0.00 TZS</span></div>
+                <div class="w-sum-row net"><span>Pesa Utakayoipokea:</span><span id="sumNetPayout">0.00 TZS</span></div>
+            </div>
+            <button class="initiate-w-btn" onclick="submitWithdrawal()">Toa Pesa Sasa</button>
+        </div>
+    </div>
+
+    <!-- LOCK MODAL (SUCCESS / RECEIPT) -->
+    <div class="lock-modal-overlay" id="lockModal">
+        <div class="lock-modal-card" style="text-align: center;">
+            <button class="custom-close-x" onclick="closeLockModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 36px; color: #059669; margin-bottom: 4px;"><i class="fa-solid fa-receipt"></i></div>
+            <div style="font-size: 16px; font-weight: 900; color: #0f172a; margin-bottom: 4px;">Withdrawal Receipt</div>
+            <div style="font-size: 11px; color: #64748b; margin-bottom: 12px;">Pesa yako imetumwa kwenye simu yako kwa mafanikio</div>
+            
+            <div style="background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 12px; margin-bottom: 14px; text-align: left; font-size: 12px; color: #334155; display: flex; flex-direction: column; gap: 6px;" id="receiptDetails"></div>
+
+            <button class="initiate-w-btn" onclick="closeLockModal()">DONE</button>
+        </div>
+    </div>
+
+    <!-- HISTORY / ALL RECEIPTS MODAL -->
+    <div class="history-modal-overlay" id="historyModal">
+        <div class="history-modal-card">
+            <button class="custom-close-x" onclick="closeHistoryModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 16px; font-weight: 900; color: #0f172a; margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-receipt" style="color: #0284c7;"></i> Historia ya Risiti Zilizotolewa
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-bottom: 12px;">Orodha ya miamala yako yote ya kutoa pesa</div>
+            
+            <div style="max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; padding-right: 4px;" id="historyReceiptsContainer"></div>
+
+            <button class="initiate-w-btn" style="margin-top: 15px;" onclick="closeHistoryModal()">Funga</button>
+        </div>
+    </div>
+
+    <!-- CHAT FINISH MODAL -->
+    <div class="lock-modal-overlay" id="chatFinishModal">
+        <div class="lock-modal-card" style="text-align: center;">
+            <button class="custom-close-x" onclick="closeChatFinishModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 45px; margin-bottom: 8px;">🎉</div>
+            <div style="font-size: 16px; font-weight: 900; color: #059669; margin-bottom: 8px;" id="chatFinishTitle">Umepata kiasi kadhaa!</div>
+            <div id="chatFinishAmountDisplay" style="font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 12px;">TZS 0</div>
+            <div style="font-size: 12px; color: #475569; line-height: 1.5; margin-bottom: 16px;">Karibu sana. Endelea kutengeneza pesa zaidi na zaidi kupitia hii site yetu.</div>
+            <button class="initiate-w-btn" onclick="closeChatFinishModal()">Sawa, Asante</button>
+        </div>
+    </div>
+
+    <!-- SUPPORT MODAL -->
+    <div class="support-modal-overlay" id="supportModal">
+        <div class="support-modal-card" style="text-align: center;">
+            <button class="custom-close-x" onclick="closeSupportModal()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size: 32px; color: #22c55e; margin-bottom: 10px;"><i class="fa-solid fa-headset"></i></div>
+            <div style="font-size: 16px; font-weight: 900; margin-bottom: 4px;">Huduma kwa Wateja</div>
+            <div style="font-size: 11px; color: #64748b; margin-bottom: 15px;">Chagua njia ya kupata msaada hapa chini:</div>
+            
+            <a href="https://whatsapp.com/channel/0029Vb8SZkn60eBXUpXloF2r" target="_blank" style="display: flex; align-items: center; gap: 10px; background: #25d366; color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; margin-bottom: 10px; font-size: 13px;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 18px;"></i> Jiunge na Channel ya WhatsApp
+            </a>
+
+            <a href="sms:255725962119?body=Habari,%20Naomba%20Msaada%20Kwenye%20DUNISWAHILI" style="display: flex; align-items: center; gap: 10px; background: #0284c7; color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 13px;">
+                <i class="fa-solid fa-comment-sms" style="font-size: 18px;"></i> Tuma SMS ya Kawaida (255725962119)
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let userTotalBalance = 0;
+        let totalWithdrawnAmount = 0;
+        let withdrawalHistory = [];
+
+        function updateBalanceDisplay() {
+            let formattedShort = "TZS " + userTotalBalance.toLocaleString('en-US');
+            let formattedWithdrawn = "TZS " + totalWithdrawnAmount.toLocaleString('en-US');
+            
+            document.getElementById('headerBalanceAmount').textContent = formattedShort;
+            document.getElementById('statWithdrawnTotal').textContent = formattedWithdrawn;
+            document.getElementById('chatHeaderBalanceAmount').textContent = formattedShort;
+            
+            if(document.getElementById('modalBalanceDisplay')) {
+                document.getElementById('modalBalanceDisplay').textContent = userTotalBalance.toLocaleString('en-US') + ".00 TZS";
+            }
+        }
+
+        const profileImagesPool = [
+            "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150",
+            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+            "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+            "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+            "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150",
+            "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150",
+            "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?w=150",
+            "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+            "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=150"
         ];
 
-      return {
-        ...p,
-        id:i,
-        price:pr[1],
-        time:pr[0],
-        status:i%5===2
-          ?"Offline"
-          :"Online"
-      };
-
-    });
-
-
-  cardsData.forEach(u=>{
-
-    const c =
-      document.createElement("div");
-
-    c.className="user-card";
-
-
-    c.innerHTML=`
-
-      <div class="user-info">
-
-        <div class="avatar-wrapper">
-
-          <img
-            class="user-avatar"
-            src="${u.photo}"
-            alt="${u.name}"
-            loading="lazy"
-          >
-
-          ${
-            u.status==="Online"
-            ?'<span class="status-dot"></span>'
-            :""
-          }
-
-        </div>
-
-
-        <div class="user-details">
-
-          <h4>
-            ${u.flag} ${u.name}, ${u.age}
-          </h4>
-
-          <p>
-            ${u.country} •
-            <span
-              class="${
-                u.status==="Online"
-                ?"status-online"
-                :"status-offline"
-              }"
-            >
-              ${u.status}
-            </span>
-          </p>
-
-          <div class="price-tag">
-            ${u.time} — ${u.price}
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="card-actions">
-
-        <button
-          class="btn-action btn-chat"
-          onclick="startChat(${u.id})"
-        >
-          💬 Chat
-        </button>
-
-        <a
-          class="btn-action btn-voice"
-          href="${registerURL}"
-          target="_blank"
-          rel="noopener"
-        >
-          📞 Voice
-        </a>
-
-        <a
-          class="btn-action btn-video"
-          href="${registerURL}"
-          target="_blank"
-          rel="noopener"
-        >
-          🎥 Video
-        </a>
-
-      </div>
-
-    `;
-
-    box.appendChild(c);
-
-  });
-
-}
-
-
-/* =========================================================
-   TRANSACTIONS
-========================================================= */
-
-const txPool=[
-
-  "John M. • *787 ametoa TSh 56,000/= • Hivi punde",
-
-  "Asha K. • *788 amejiunga na DUNISWAHILI • Dakika 1 iliyopita",
-
-  "Michael P. • *787 ametoa TSh 42,000/= • Dakika 2 zilizopita",
-
-  "Neema S. • *788 amejiunga na DUNISWAHILI • Dakika 3 zilizopita",
-
-  "David R. • *787 ametoa TSh 75,000/= • Dakika 4 zilizopita",
-
-  "Zawadi J. • *788 amejiunga na DUNISWAHILI • Dakika 5 zilizopita",
-
-  "Peter L. • *787 ametoa TSh 38,000/= • Dakika 6 zilizopita",
-
-  "Mary A. • *788 amejiunga na DUNISWAHILI • Dakika 7 zilizopita"
-
-];
-
-
-function renderTx(){
-
-  const box =
-    document.getElementById("txList");
-
-  box.innerHTML="";
-
-
-  shuffle(txPool)
-    .slice(0,3)
-    .forEach((t,i)=>{
-
-      const d =
-        document.createElement("div");
-
-      d.className="tx-item";
-
-
-      d.innerHTML=`
-
-        <span
-          class="tx-dot ${
-            i===0 ? "red" : ""
-          }"
-        ></span>
-
-        <span>${t}</span>
-
-      `;
-
-      box.appendChild(d);
-
-    });
-}
-/* =========================================================
-   REVIEWS
-========================================================= */
-
-const reviews=[
-
-[
-"A",
-"Amina Hassan",
-"Dar es Salaam",
-"Nimechati dakika 30 na nimefurahia mfumo. Site ni rahisi kutumia."
-],
-
-[
-"J",
-"Joseph Mwakalinga",
-"Mbeya",
-"Mfumo unaeleweka na interface ni rahisi kutumia."
-],
-
-[
-"N",
-"Neema Kimaro",
-"Arusha",
-"Ni rahisi kuona wageni na kuanza mazungumzo."
-],
-
-[
-"B",
-"Baraka Msigwa",
-"Dodoma",
-"Platform ina interface nzuri na ni rahisi kutumia kwenye simu."
-],
-
-[
-"S",
-"Sarah Mollel",
-"Moshi",
-"Muonekano ni mzuri na navigation ni rahisi."
-
-]
-
-];
-
-
-function renderReviews(){
-
-  document.getElementById("reviews").innerHTML=
-
-    reviews.map(r=>`
-
-      <div class="review-card">
-
-        <div class="review-head">
-
-          <div class="review-user">
-
-            <div class="review-avatar">
-              ${r[0]}
-            </div>
-
-            <div>
-
-              <div class="review-name">
-                ${r[1]}
-              </div>
-
-              <div class="review-location">
-                ${r[2]}
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="review-stars">
-            ★★★★★
-          </div>
-
-        </div>
-
-        <div class="review-text">
-          "${r[3]}"
-        </div>
-
-      </div>
-
-    `).join("");
-
-}
-
-
-/* =========================================================
-   MODALS
-========================================================= */
-
-function openModal(id){
-
-  document
-    .getElementById(id)
-    .classList.add("active");
-
-}
-
-
-function closeModal(id){
-
-  document
-    .getElementById(id)
-    .classList.remove("active");
-
-}
-
-
-function openInstallModal(){
-
-  openModal("installModal");
-
-}
-
-
-function openSupportModal(){
-
-  openModal("supportModal");
-
-}
-
-
-/* =========================================================
-   INSTALL
-========================================================= */
-
-function executeInstall(){
-
-  if(deferredPrompt){
-
-    deferredPrompt.prompt();
-
-    deferredPrompt.userChoice.finally(
-      ()=>{
-        deferredPrompt=null;
-      }
-    );
-
-  }else{
-
-    location.href=registerURL;
-
-  }
-
-}
-
-
-window.addEventListener(
-  "beforeinstallprompt",
-  e=>{
-
-    e.preventDefault();
-
-    deferredPrompt=e;
-
-  }
-);
-
-
-/* =========================================================
-   GLOBAL CLICK
-========================================================= */
-
-document.addEventListener(
-  "click",
-  e=>{
-
-    if(
-      e.target.closest(".trigger-popup")
-    ){
-
-      openModal("activationModal");
-
-    }
-
-
-    const faq =
-      e.target.closest(".faq-q");
-
-    if(faq){
-
-      faq.parentElement
-        .classList
-        .toggle("active");
-
-    }
-
-
-    if(
-      e.target.classList.contains("modal")
-    ){
-
-      e.target.classList.remove("active");
-
-    }
-
-  }
-);
-
-
-/* =========================================================
-   CHAT
-========================================================= */
-
-function startChat(id){
-
-  activeUser =
-    cardsData.find(
-      x=>x.id===id
-    );
-
-  chatStep=0;
-
-
-  document
-    .getElementById("chatAvatar")
-    .src=activeUser.photo;
-
-
-  document
-    .getElementById("chatName")
-    .textContent=activeUser.name;
-
-
-  document
-    .getElementById("chatStatus")
-    .textContent=
-      activeUser.status==="Online"
-      ?"Online"
-      :"Offline";
-
-
-  document
-    .getElementById("chatBody")
-    .innerHTML="";
-
-
-  document
-    .getElementById("chatLock")
-    .classList
-    .remove("active");
-
-
-  document
-    .getElementById("chatFooter")
-    .style.display="flex";
-
-
-  document
-    .getElementById("chatInput")
-    .disabled=false;
-
-
-  document
-    .getElementById("chatModal")
-    .classList
-    .add("active");
-
-
-  setTimeout(
-    ()=>{
-      botReply(
-        "Habari rafiki mzima 👋",
-        1800
-      );
-    },
-    500
-  );
-
-}
-
-
-function closeChatModal(){
-
-  document
-    .getElementById("chatModal")
-    .classList
-    .remove("active");
-
-}
-
-
-function appendMessage(text,type){
-
-  const d =
-    document.createElement("div");
-
-  d.className=
-    "msg "+type;
-
-  d.textContent=text;
-
-
-  document
-    .getElementById("chatBody")
-    .appendChild(d);
-
-
-  const body =
-    document.getElementById("chatBody");
-
-  body.scrollTop=
-    body.scrollHeight;
-
-}
-
-
-function botReply(text,delay){
-
-  const s =
-    document.getElementById("chatStatus");
-
-  s.textContent="anandika...";
-
-
-  setTimeout(()=>{
-
-    s.textContent="Online";
-
-    appendMessage(
-      text,
-      "bot"
-    );
-
-  },delay);
-
-}
-
-
-function sendMessage(){
-
-  const input =
-    document.getElementById("chatInput");
-
-  const text =
-    input.value.trim();
-
-
-  if(!text)return;
-
-
-  appendMessage(
-    text,
-    "user"
-  );
-
-
-  input.value="";
-
-  chatStep++;
-
-
-  if(chatStep===1){
-
-    botReply(
-      "Mimi napenda kujua KISWAHILI vizuri ya Tanzania 🇹🇿 😁 Nijuze.",
-      2200
-    );
-
-  }
-
-  else if(chatStep===2){
-
-    botReply(
-      "Ningependa kujifunza tamaduni zenu na mbuga za wanyama 🌍",
-      2200
-    );
-
-    setTimeout(
-      lockChat,
-      4000
-    );
-
-  }
-
-  else{
-
-    lockChat();
-
-  }
-
-}
-
-
-function lockChat(){
-
-  document
-    .getElementById("chatFooter")
-    .style.display="none";
-
-
-  document
-    .getElementById("chatLock")
-    .classList
-    .add("active");
-
-}
-
-
-document
-  .getElementById("chatInput")
-  .addEventListener(
-    "keypress",
-    e=>{
-
-      if(e.key==="Enter"){
-        sendMessage();
-      }
-
-    }
-  );
-
-
-/* =========================================================
-   ONLINE COUNTER
-========================================================= */
-
-function updateOnline(){
-
-  const n =
-    18450 +
-    Math.floor(
-      Math.random()*950
-    );
-
-
-  document
-    .getElementById("onlineCounter")
-    .textContent=
-      n.toLocaleString();
-
-}
-
-
-/* =========================================================
-   NOTIFICATION
-========================================================= */
-
-function showToast(){
-
-  const messages=[
-
-    "John M. • *787 ametoa TSh 56,000/=",
-
-    "Asha K. • *788 amejiunga na DUNISWAHILI",
-
-    "Michael P. • *787 ametoa TSh 42,000/=",
-
-    "Neema S. • *788 amejiunga na DUNISWAHILI",
-
-    "David R. • *787 ametoa TSh 75,000/=",
-
-    "Zawadi J. • *788 amejiunga na DUNISWAHILI",
-
-    "Peter L. • *787 ametoa TSh 38,000/=",
-
-    "Mary A. • *788 amejiunga na DUNISWAHILI"
-
-  ];
-
-  document
-    .getElementById("toastText")
-    .textContent=
-      messages[
-        Math.floor(
-          Math.random()*messages.length
-        )
-      ];
-
-
-  const t =
-    document.getElementById("toast");
-
-
-  t.classList.add("show");
-
-
-  setTimeout(
-    ()=>{
-      t.classList.remove("show");
-    },
-    4000
-  );
-
-}
-/* =========================================================
-   PAGE LOAD
-========================================================= */
-
-window.addEventListener(
-  "load",
-  ()=>{
-
-    setTimeout(
-      ()=>{
-        document
-          .getElementById("preloader")
-          .classList
-          .add("hide");
-      },
-      500
-    );
-
-
-    renderCards();
-
-    renderTx();
-
-    renderReviews();
-
-    updateOnline();
-
-    updateTanzaniaDate();
-
-
-    setInterval(
-      updateOnline,
-      7000
-    );
-
-
-    setInterval(
-      renderTx,
-      5000
-    );
-
-
-    setInterval(
-      renderCards,
-      45000
-    );
-
-
-    setTimeout(
-      showToast,
-      3500
-    );
-
-
-    setInterval(
-      showToast,
-      12000
-    );
-
-  }
-);
-
-</script>
-
+        const professionsList = ["Mwalimu", "Mtaalamu wa Kilimo", "Mtafiti wa Utamaduni", "Mjasiriamali", "Mwanahistoria", "Mpiga Picha", "Mwanafunzi wa Chuo"];
+        const namesPool = ["Emma Johnson, 28", "Lucas Müller, 34", "Sophie Martin, 26", "Daniel Brown, 31", "Anna Kowalski, 29", "James Wilson, 37", "Laura Rossi, 24", "Michael Smith, 30", "Clara Dupont, 27", "David Miller, 33"];
+        
+        const uniqueTopicsData = [
+            {
+                topic: "Stori za Kulima na Maisha ya Kijijini",
+                greeting: "Habari! Nasikia kulima kwa jembe la mkono kuna mbinu zake nzuri. Unawezaje kulima vizuri bila kuchoka mapema? 🌱",
+                questions: [
+                    "Je, mnapenda kulima mazao gani ya chakula wakati wa msimu wa mvua? 🌽",
+                    "Kazi ya shambani inachukua saa ngapi kwa siku kabla hamjarudi nyumbani kupumzika? ☀️",
+                    "Mnafikiri msimu huu mavuno yatakuwa mazuri ukilinganisha na mwaka jana? 🌾",
+                    "Je, mnapata changamoto gani kuu kutoka kwa wadudu waharibifu mashambani? 🐛",
+                    "Ni njia gani za kiasili mnazotumia kulinda rutuba ya udongo wenu? 🌍",
+                    "Je, mnapata nafasi ya kupumzika wakati wa mchana jua likiwa kali? 🌴",
+                    "Unaweza kunielezea jinsi mnavyohifadhi mavuno yenu baada ya kuvuna? 🛖",
+                    "Kijijini kwenu mna ushirikiano gani wa kipekee wakati wa msimu wa kupanda? 🤝",
+                    "Je, kuna vyakula maalum vinavyopikwa shambani wakati wa kazi ngumu? 🍲",
+                    "Asante sana kwa maelezo mazuri ya kilimo. Ni jambo gani linakupendeza zaidi kijijini? ✨"
+                ]
+            },
+            {
+                topic: "Kuchota Maji Kisimani na Stori za Kijiji",
+                greeting: "Hello! Napenda kujua uzoefu wa kuchota maji kwenye visima vya asili au mito midogo ya vijijini. 💧",
+                questions: [
+                    "Je, mnatembea umbali gani kufika kisimani kubeba madumu au mitungi kichwani? 🏺",
+                    "Wakati wa kuchota maji, mnapata fursa gani ya kukutana na kupiga stori na majirani? 🗣️",
+                    "Wakati wa kiangazi, visima hivi hukauka au huwa na maji ya kutosha muda wote? ☀️",
+                    "Una ushauri gani kwa vijana wanaokimbia shughuli hizi ngumu za vijijini? 🚶‍♂️",
+                    "Je, maji ya kisimani yanachemshwa kabla ya kutumika majumbani mwenu? 🔥",
+                    "Watoto wanapenda kucheza pembezoni mwa mito au visima wakati wa jioni? 🧒",
+                    "Kuna mila yoyote au heshima inayowekwa kwenye vyanzo hivi vya maji? 🌿",
+                    "Usafiri wa kubeba maji unabadilikaje kipindi cha mvua kubwa? 🌧️",
+                    "Nini mtazamo wako kuhusu upatikanaji wa maji safi ya bomba vijijini? 🚰",
+                    "Nakushukuru sana kwa kunipa mwanga kuhusu maisha ya maji kijijini! 🌟"
+                ]
+            },
+            {
+                topic: "Kuokota Matunda Porini na Mimea ya Asili",
+                greeting: "Mambo vipi! Ninasikia kuna matunda matamu sana ya porini yanayopatikana misituni. Unayajuaje yaliyo salama? 🌳",
+                questions: [
+                    "Matunda hayo ya asili ya porini huwa na ladha gani yakianza kuiva? 🍓",
+                    "Je, watoto huko hupenda kwenda kuyaokota wakati wa kuchunga mifugo? 🐐",
+                    "Kuna miti ya porini ambayo matunda yake hutibu magonjwa fulani? 🍃",
+                    "Unakumbuka tunda gani la porini ambalo lilikuwa pendwa zaidi utotoni mwako? 🎒",
+                    "Je, misitu hii inalindwa vizuri na jamii isikatwe ovyo? 🪵",
+                    "Wakati wa kiangazi, miti ya porini inamudu kuhimili ukame kwa mtindo gani? 🌵",
+                    "Wanyama wa porini wanasaidiaaje kusambaza mbegu za matunda hayo? 🐒",
+                    "Kuna tunda lolote ambalo ni sumu na linatakiwa lisiweze kuliwa kabisa? ⚠️",
+                    "Unaweza kushauri nchi za nje kuleta miti hii ya porini kwenye bustani zao? 🌺",
+                    "Mazungumzo yetu kuhusu misitu yamekuwa mazuri sana! Asante. 🌲"
+                ]
+            },
+            {
+                topic: "Stori za Visiwani na Tamaduni za Pwani",
+                greeting: "Hi! Ningependa kusikia stori kuhusu maisha ya visiwani na tamaduni za watu wa pwani. 🌴",
+                questions: [
+                    "Usafiri wa boti na mashua kwenda visiwa vya jirani unakuwaje wakati wa upepo mkali? ⛵",
+                    "Vyakula gani vya nazi na samaki safi vinavyopendwa zaidi huko visiwani? 🥥",
+                    "Maisha ya ufukweni yanatoa burudani gani wakati wa jioni watu wakipunga upepo? 🌊",
+                    "Lugha ya Kiswahili ya Pwani ina maneno gani ya kipekee ambayo ni matamu kusikiliza? 🎶",
+                    "Je, watalii hupenda sana kutembelea maeneo haya ya kihistoria? 🏛️",
+                    "Mila za uvuvi wa jadi zinaendeshwaje na wazee wa pwani? 🎣",
+                    "Nyumba za kiasili za pwani zinajengwa kwa kutumia vifaa gani vya kudumu? 🛖",
+                    "Muziki wa taarab na ngoma za pwani zinaleta hamasa gani kwenye sherehe? 💃",
+                    "Hali ya hewa ya baharini inabadilikaje wakati wa msimu wa pepo za kusi? 🌬️",
+                    "Hakika nimejifunza mengi kuhusu maisha ya pwani na visiwani. Nakushukuru! 🐬"
+                ]
+            },
+            {
+                topic: "Tamaduni za Asili na Mavazi ya Kitamaduni",
+                greeting: "Mambo! Napenda kujifunza kuhusu mila, desturi, na mavazi ya asili ya jamii za Kitanzania. 👘",
+                questions: [
+                    "Sherehe za jadi au ngoma za asili huchezwa wakati gani maalum wa mwaka? 💃",
+                    "Kila jamii ina lugha yake au lafudhi ya kipekee. Unaongea lugha gani ya asili? 🗣️",
+                    "Mavazi ya jadi yanatengenezwa kwa ngozi au vitambaa vya aina gani? 🧵",
+                    "Wazee hutoaje mafunzo kwa vijana kupitia hadithi na vitendawili? 🦉",
+                    "Urithi huu wa kitamaduni unarithishwaje kwa vizazi vipya? 👶",
+                    "Sanaa za kuchonga vinyago zina maana gani ya kihistoria? 🗿",
+                    "Kuna mila zinazohusiana na kuheshimu asili na miti mikubwa? 🌳",
+                    "Sherehe za jando na akida zina mafunzo gani ya kujenga jamii? 🛡️",
+                    "Lugha za asili zinapoteza nguvu au bado zinalindwa kwa nguvu zote? 📖",
+                    "Asante kwa kunifungua macho kuhusu tamaduni zetu tajiri! 🌍"
+                ]
+            }
+        ];
+
+        let allUsers = [];
+        const customRandomPays = [31400, 36800, 44200, 53700, 59100, 39600, 47500, 52300, 61200, 33900, 28500, 41200, 56300, 35000, 49800];
+
+        for(let i = 0; i < 150; i++) {
+            let nameFull = namesPool[i % namesPool.length] + " #" + (i+1);
+            let prof = professionsList[i % professionsList.length];
+            let payVal = customRandomPays[i % customRandomPays.length];
+            let timeStr = (i % 2 === 0) ? "Dakika " + ((i % 3 + 1) * 10) : "Saa 1";
+            let status = "ONLINE";
+            let topicObj = uniqueTopicsData[i % uniqueTopicsData.length];
+
+            allUsers.push({
+                id: i,
+                name: nameFull,
+                profession: prof,
+                time: timeStr,
+                payNum: payVal,
+                payStr: payVal.toLocaleString('en-US'),
+                status: status,
+                img: profileImagesPool[i % profileImagesPool.length],
+                topic: topicObj.topic,
+                greeting: topicObj.greeting,
+                questions: topicObj.questions
+            });
+        }
+
+        let currentPage = 1;
+        const perPage = 30;
+        const totalPages = 5;
+
+        function renderPage(page) {
+            let container = document.getElementById('cardsContainer');
+            let start = (page - 1) * perPage;
+            let pagePool = allUsers.slice(start, start + perPage);
+
+            let html = "";
+            pagePool.forEach(u => {
+                html += `
+                    <div class="card">
+                        <div class="card-top-row">
+                            <img src="${u.img}" class="profile-img">
+                            <div class="user-meta" style="flex:1;">
+                                <h4>${u.name}</h4>
+                                <p>${u.profession}</p>
+                            </div>
+                        </div>
+                        <div class="topic-wants-text"><i class="fa-solid fa-book-open" style="color:#0284c7;"></i> Anataka: ${u.topic}</div>
+                        <div class="card-middle-row">
+                            <div class="time-pay-badge"><i class="fa-regular fa-clock"></i> ${u.time} - TZS ${u.payStr}</div>
+                            <div class="status-tag online"><span class="online-green-dot" style="display:inline-block; margin-right:4px;"></span> ONLINE</div>
+                        </div>
+                        <div class="card-footer-row">
+                            <button class="btn-chat" onclick="startLiveChat(${u.id})">
+                                <i class="fa-solid fa-comment-dots"></i> Start Chat
+                            </button>
+                            <div style="font-weight: 900; color: #dc2626; font-size: 13px;">TZS ${u.payStr}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        renderPage(1);
+
+        function changePage(dir) {
+            currentPage += dir;
+            if(currentPage < 1) currentPage = totalPages;
+            if(currentPage > totalPages) currentPage = 1;
+            renderPage(currentPage);
+            document.getElementById('pageIndicator').textContent = `Peji ${currentPage} / ${totalPages}`;
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+
+        const testNames = ["Juma Ally", "Aisha Mohamed", "Baraka Mwakalebela", "Grace Massawe", "Rashid Juma", "Neema Kimaro", "Hassan Omary", "Erick Mrema", "Zainabu Kassim", "Emmanuel Petro", "Fatma Kheri", "Godfrey Lyimo", "Lilian Joseph", "Salum Kichwabucha", "Khadija Mbwana", "Paulo Joseph", "Mariamu Said", "John Mhando", "Rehema Kassim", "Bakari Chande", "Sophia Mwakyusa", "Kelvin John", "Hawa Rashid", "Dismas Magesa", "Agnes Peter", "Yusuph Ally", "Tumaini Mwakatobe", "Hamisi Juma", "Mwanahamisi Omary", "Frank Mrema", "Doreen Charles", "Alex Nchimbi"];
+
+        function renderTestimonies() {
+            let container = document.getElementById('testimoniesScrollContainer');
+            let html = "";
+            testNames.forEach((name, index) => {
+                let amounts = ["TZS 31,400", "TZS 44,200", "TZS 59,100", "TZS 47,500", "TZS 36,800"];
+                let randAmt = amounts[index % amounts.length];
+                html += `
+                    <div class="testimony-item">
+                        <i class="fa-solid fa-circle-check" style="color: #22c55e;"></i> <b>${name}</b>: "Nimepokea malipo yangu ya ${randAmt} kupitia DUNISWAHILI. Mfumo ni wa kuaminika sana!"
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+        renderTestimonies();
+
+        let chatState = { userId: null, questionIndex: 0, targetPay: 0, amountPerStep: 0, isFinished: false };
+
+        function getRandomDelay() {
+            return Math.floor(Math.random() * (9000 - 5000 + 1)) + 5000;
+        }
+
+        function startLiveChat(id) {
+            let u = allUsers.find(item => item.id === id);
+            if(!u) return;
+            chatState.userId = id;
+            chatState.questionIndex = 0;
+            chatState.targetPay = u.payNum;
+            chatState.amountPerStep = Math.round(u.payNum / (u.questions.length * 2));
+            chatState.isFinished = false;
+
+            document.getElementById('chatHeaderName').textContent = u.name;
+            const statusEl = document.getElementById('chatHeaderStatus');
+            statusEl.textContent = "typing...";
+            statusEl.style.color = "#fbbf24";
+
+            let container = document.getElementById('chatMessagesContainer');
+            container.innerHTML = `<div class="chat-info-banner">💬 Umeanza mazungumzo na ${u.name}. Mada: ${u.topic}</div>`;
+            document.getElementById('liveChatOverlay').classList.add('active');
+
+            let initialDelay = getRandomDelay();
+            setTimeout(() => {
+                statusEl.textContent = "online";
+                statusEl.style.color = "#34d399";
+
+                let m = document.createElement('div');
+                m.className = 'chat-msg foreign';
+                m.textContent = u.greeting;
+                container.appendChild(m);
+                container.scrollTop = container.scrollHeight;
+            }, initialDelay);
+        }
+
+        function closeLiveChat() { document.getElementById('liveChatOverlay').classList.remove('active'); }
+
+        function handleKeyPress(e) { if(e.key === 'Enter') sendUserMessage(); }
+
+        function sendUserMessage() {
+            if (chatState.isFinished) return;
+
+            let input = document.getElementById('userMessageInput');
+            let val = input.value.trim();
+            if(!val) return;
+
+            let container = document.getElementById('chatMessagesContainer');
+            let userDiv = document.createElement('div');
+            userDiv.className = 'chat-msg user';
+            userDiv.textContent = val;
+            container.appendChild(userDiv);
+            input.value = "";
+            container.scrollTop = container.scrollHeight;
+
+            userTotalBalance += chatState.amountPerStep;
+            updateBalanceDisplay();
+
+            let activeU = allUsers.find(item => item.id === chatState.userId);
+            const statusEl = document.getElementById('chatHeaderStatus');
+
+            let replyDelay = getRandomDelay();
+
+            if (chatState.questionIndex >= activeU.questions.length) {
+                chatState.isFinished = true;
+
+                let remainingDiff = chatState.targetPay - userTotalBalance;
+                if(remainingDiff > 0) {
+                    userTotalBalance += remainingDiff;
+                    updateBalanceDisplay();
+                }
+
+                setTimeout(() => {
+                    statusEl.textContent = "typing...";
+                    statusEl.style.color = "#fbbf24";
+
+                    setTimeout(() => {
+                        statusEl.textContent = "online";
+                        statusEl.style.color = "#34d399";
+
+                        let fMsg = document.createElement('div');
+                        fMsg.className = 'chat-msg foreign';
+                        fMsg.textContent = "Asante sana kwa mazungumzo yako mazuri. Tumefikia kikomo cha maswali na malipo yako yametimia kikamilifu kwenye akaunti yako. Nakutakia kila la kheri!";
+                        container.appendChild(fMsg);
+                        container.scrollTop = container.scrollHeight;
+
+                        document.getElementById('chatFinishAmountDisplay').textContent = "TZS " + chatState.targetPay.toLocaleString('en-US');
+                        document.getElementById('chatFinishTitle').textContent = `Umepata kiasi cha shilingi ${chatState.targetPay.toLocaleString('en-US')}!`;
+
+                        setTimeout(() => {
+                            openChatFinishModal();
+                            closeLiveChat();
+                        }, 2500);
+                    }, replyDelay);
+                }, 1000);
+            } else {
+                setTimeout(() => {
+                    statusEl.textContent = "typing...";
+                    statusEl.style.color = "#fbbf24";
+
+                    setTimeout(() => {
+                        statusEl.textContent = "online";
+                        statusEl.style.color = "#34d399";
+
+                        let nextQ = activeU.questions[chatState.questionIndex];
+                        chatState.questionIndex++;
+
+                        let fMsg = document.createElement('div');
+                        fMsg.className = 'chat-msg foreign';
+                        fMsg.textContent = nextQ;
+                        container.appendChild(fMsg);
+                        container.scrollTop = container.scrollHeight;
+                    }, replyDelay);
+                }, 1000);
+            }
+        }
+
+        function getFee(val) {
+            let fee = 0;
+            if (val >= 5000 && val <= 9999) fee = 300;
+            else if (val >= 10000 && val <= 19999) fee = 1000;
+            else if (val >= 20000 && val <= 49999) fee = 2000;
+            else if (val >= 50000 && val <= 99999) fee = 3000;
+            else if (val >= 100000 && val <= 150000) fee = 3500;
+            else if (val > 150000 && val <= 200000) fee = 4000;
+            else if (val >= 300000) fee = 5000;
+            return fee;
+        }
+
+        function calculateFee(input) {
+            let val = parseFloat(input.value) || 0;
+            let fee = getFee(val);
+
+            document.getElementById('sumWithdrawAmt').textContent = val.toLocaleString() + " TZS";
+            document.getElementById('sumFeeAmt').textContent = fee.toLocaleString() + " TZS";
+            document.getElementById('sumNetPayout').textContent = val.toLocaleString() + " TZS";
+        }
+
+        function submitWithdrawal() {
+            let amtInput = document.getElementById('withdrawInputAmount');
+            let amt = parseFloat(amtInput.value) || 0;
+            if(amt < 5000) {
+                alert("Kiwango cha chini cha kutoa ni TZS 5,000!");
+                return;
+            }
+
+            let fee = getFee(amt);
+            let totalDeduction = amt + fee;
+
+            if(totalDeduction > userTotalBalance) {
+                alert("Salio lako halitoshi kulipia kiasi hiki pamoja na makato yake!");
+                return;
+            }
+            
+            let phoneNum = document.getElementById('withdrawPhoneInput').value;
+            let timeNow = new Date().toLocaleTimeString();
+
+            let receiptHTML = `
+                <div><b>Namba ya Simu:</b> ${phoneNum}</div>
+                <div><b>Amount Received:</b> TZS ${amt.toLocaleString()}</div>
+                <div><b>Transaction Fee:</b> TZS ${fee.toLocaleString()}</div>
+                <div><b>Total Deducted from Balance:</b> TZS ${totalDeduction.toLocaleString()}</div>
+                <div><b>Status:</b> <span style="color:#059669; font-weight:800;">SUCCESSFUL</span></div>
+            `;
+            document.getElementById('receiptDetails').innerHTML = receiptHTML;
+
+            withdrawalHistory.unshift({
+                phone: phoneNum,
+                amount: amt,
+                fee: fee,
+                total: totalDeduction,
+                time: timeNow
+            });
+            updateHistoryModalContent();
+
+            userTotalBalance -= totalDeduction;
+            totalWithdrawnAmount += totalDeduction;
+            updateBalanceDisplay();
+            
+            amtInput.value = "";
+            document.getElementById('sumWithdrawAmt').textContent = "0.00 TZS";
+            document.getElementById('sumFeeAmt').textContent = "0.00 TZS";
+            document.getElementById('sumNetPayout').textContent = "0.00 TZS";
+
+            closeWithdrawModal();
+            openLockModal();
+        }
+
+        function updateHistoryModalContent() {
+            let container = document.getElementById('historyReceiptsContainer');
+            if(withdrawalHistory.length === 0) {
+                container.innerHTML = `<div style="text-align:center; color:#64748b; font-size:12px; padding: 20px;">Huna historia ya miamala bado.</div>`;
+                return;
+            }
+
+            let html = "";
+            withdrawalHistory.forEach((item, index) => {
+                html += `
+                    <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 10px; font-size: 11px; color: #334155;">
+                        <div style="display:flex; justify-content:space-between; font-weight:900; color:#0284c7; margin-bottom:4px;">
+                            <span>Muamala #${withdrawalHistory.length - index}</span>
+                            <span style="color:#059669;">SUCCESSFUL</span>
+                        </div>
+                        <div><b>Namba:</b> ${item.phone}</div>
+                        <div><b>Kiasi Kilichopokelewa:</b> TZS ${item.amount.toLocaleString()}</div>
+                        <div><b>Makato:</b> TZS ${item.fee.toLocaleString()}</div>
+                        <div><b>Jumla Iliyotolewa:</b> TZS ${item.total.toLocaleString()}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function openMenuModal() { document.getElementById('menuModal').classList.add('active'); }
+        function closeMenuModal() { document.getElementById('menuModal').classList.remove('active'); }
+        function openHowItWorksModal() { document.getElementById('howItWorksModal').classList.add('active'); }
+        function closeHowItWorksModal() { document.getElementById('howItWorksModal').classList.remove('active'); }
+        function openWithdrawModal() { document.getElementById('withdrawModal').classList.add('active'); }
+        function closeWithdrawModal() { document.getElementById('withdrawModal').classList.remove('active'); }
+        function openLockModal() { document.getElementById('lockModal').classList.add('active'); }
+        function closeLockModal() { document.getElementById('lockModal').classList.remove('active'); }
+        function openHistoryModal() { updateHistoryModalContent(); document.getElementById('historyModal').classList.add('active'); }
+        function closeHistoryModal() { document.getElementById('historyModal').classList.remove('active'); }
+        function openChatFinishModal() { document.getElementById('chatFinishModal').classList.add('active'); }
+        function closeChatFinishModal() { document.getElementById('chatFinishModal').classList.remove('active'); }
+        function openSupportModal() { document.getElementById('supportModal').classList.add('active'); }
+        function closeSupportModal() { document.getElementById('supportModal').classList.remove('active'); }
+    </script>
 </body>
 </html>
