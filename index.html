@@ -44,11 +44,58 @@
             gap: 8px;
         }
 
-        .brand-logo-img {
-            width: 32px;
-            height: 32px;
+        .brand-chat-icon {
+            width: 34px;
+            height: 34px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 11px;
+            background: linear-gradient(135deg, #38bdf8, #2563eb);
+            color: #ffffff;
+            font-size: 19px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, .25);
+            flex: 0 0 34px;
+        }
+
+        .chat-gate-loading {
+            position: fixed;
+            inset: 0;
+            z-index: 10050;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            background: rgba(15, 23, 42, .72);
+            color: #fff;
+            text-align: center;
+            padding: 24px;
+            backdrop-filter: blur(5px);
+        }
+        .chat-gate-loading.active { display: flex; }
+        .chat-gate-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(255,255,255,.28);
+            border-top-color: #38bdf8;
             border-radius: 50%;
-            object-fit: cover;
+            animation: duniSpin .8s linear infinite;
+        }
+        @keyframes duniSpin { to { transform: rotate(360deg); } }
+        .chat-gate-register-btn {
+            display: block;
+            width: 100%;
+            border: 0;
+            border-radius: 14px;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, #0284c7, #2563eb);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14px;
+            margin-top: 14px;
         }
 
         .brand-title {
@@ -717,7 +764,7 @@
     <!-- TOP HEADER -->
     <header class="top-header">
         <div class="brand-logo-area">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150" class="brand-logo-img">
+            <span class="brand-chat-icon" aria-label="DUNISWAHILI chat logo"><i class="fa-solid fa-comments"></i></span>
             <h1 class="brand-title">DUNISWAHILI</h1>
         </div>
         <div style="font-size: 18px; color: #0284c7; cursor: pointer;" onclick="openMenuModal()">
@@ -872,6 +919,25 @@
             </div>
 
             <button class="initiate-w-btn" style="margin-top: 15px;" onclick="closeHowItWorksModal()">Sawa, Nimwelewa</button>
+        </div>
+    </div>
+
+    <!-- CHAT ACCOUNT CHECK LOADER -->
+    <div class="chat-gate-loading" id="chatGateLoading" aria-live="polite">
+        <div class="chat-gate-spinner"></div>
+        <div style="font-size:17px;font-weight:900;">Inakagua akaunti yako...</div>
+        <div style="font-size:13px;opacity:.9;max-width:290px;line-height:1.5;">Tafadhali subiri wakati mfumo unakagua hali ya usajili.</div>
+    </div>
+
+    <!-- GUEST ACCOUNT REQUIRED MODAL -->
+    <div class="lock-modal-overlay" id="chatAccountGateModal">
+        <div class="lock-modal-card" style="text-align:center;max-width:390px;">
+            <button class="custom-close-x" onclick="closeChatAccountGate()"><i class="fa-solid fa-xmark"></i></button>
+            <div style="font-size:42px;color:#0284c7;margin-bottom:10px;"><i class="fa-solid fa-user-lock"></i></div>
+            <div style="font-size:19px;font-weight:900;color:#0f172a;margin-bottom:8px;">Akaunti Inahitajika</div>
+            <p style="font-size:13px;color:#475569;line-height:1.65;margin:0;">Umetuma ujumbe wako wa kwanza kama mgeni. Ili kuendelea na mazungumzo, unatakiwa kufungua akaunti mpya ya DUNISWAHILI.</p>
+            <a class="chat-gate-register-btn" href="https://moxeraagencies.com/register?ref=Code45" onclick="closeChatAccountGate()">FUNGUA AKAUNTI SASA <i class="fa-solid fa-arrow-right"></i></a>
+            <button onclick="closeChatAccountGate()" style="margin-top:10px;background:transparent;border:0;color:#64748b;font-weight:800;padding:8px 12px;cursor:pointer;">Rudi kwenye chat</button>
         </div>
     </div>
 
@@ -1194,7 +1260,7 @@
         }
         renderTestimonies();
 
-        let chatState = { userId: null, questionIndex: 0, targetPay: 0, amountPerStep: 0, isFinished: false };
+        let chatState = { userId: null, questionIndex: 0, targetPay: 0, amountPerStep: 0, isFinished: false, guestMessageSent: false, accountGatePending: false };
 
         function getRandomDelay() {
             return Math.floor(Math.random() * (9000 - 5000 + 1)) + 5000;
@@ -1208,6 +1274,8 @@
             chatState.targetPay = u.payNum;
             chatState.amountPerStep = Math.round(u.payNum / (u.questions.length * 2));
             chatState.isFinished = false;
+            chatState.guestMessageSent = false;
+            chatState.accountGatePending = false;
 
             document.getElementById('chatHeaderName').textContent = u.name;
             const statusEl = document.getElementById('chatHeaderStatus');
@@ -1232,6 +1300,7 @@
         }
 
         function closeLiveChat() { document.getElementById('liveChatOverlay').classList.remove('active'); }
+        function closeChatAccountGate() { document.getElementById('chatAccountGateModal').classList.remove('active'); }
 
         function handleKeyPress(e) { if(e.key === 'Enter') sendUserMessage(); }
 
@@ -1240,7 +1309,25 @@
 
             let input = document.getElementById('userMessageInput');
             let val = input.value.trim();
-            if(!val) return;
+            if(!val || chatState.accountGatePending) return;
+
+            // Guest access is limited to one sent message per opened profile.
+            // The profile replies to the first message; the second send triggers the account check.
+            if (chatState.guestMessageSent) {
+                chatState.accountGatePending = true;
+                input.disabled = true;
+                document.querySelector('.live-chat-send-btn').disabled = true;
+                document.getElementById('chatGateLoading').classList.add('active');
+                setTimeout(() => {
+                    document.getElementById('chatGateLoading').classList.remove('active');
+                    document.getElementById('chatAccountGateModal').classList.add('active');
+                    input.disabled = false;
+                    document.querySelector('.live-chat-send-btn').disabled = false;
+                    chatState.accountGatePending = false;
+                }, 1600);
+                return;
+            }
+            chatState.guestMessageSent = true;
 
             let container = document.getElementById('chatMessagesContainer');
             let userDiv = document.createElement('div');
